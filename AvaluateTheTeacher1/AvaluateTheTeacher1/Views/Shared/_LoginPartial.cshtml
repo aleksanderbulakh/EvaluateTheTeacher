@@ -6,10 +6,9 @@
     {
     @Html.AntiForgeryToken()
 
-        <div class="menu">
+        <div class="menu login-user">
             @if (User.IsInRole("admin"))
             {
-                <img src="/Content/icon_man.svg" alt="">
                 @Html.ActionLink("Вітаю, " + User.Identity.GetUserName() + "!", "Home", "Admin", routeValues: null, htmlAttributes: new { title = "Manage" })
             }
             else
@@ -19,18 +18,14 @@
 
             <a href="javascript:document.getElementById('logoutForm').submit()">Вийти</a>
         </div>
-        <script>
-            $(".entry").css({ display: "none" });
-        </script>
     }
 }
 else
 {
    
-    <ul class="nav navbar-nav navbar-right">
+    <div class="on nav navbar-nav navbar-right">
     @*<li>@Html.ActionLink("Регистрация", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
-        
-        <li class="entry">@Html.ActionLink("Вхід", "Login", "Account")</li>
-    </ul>
+        @Html.ActionLink("Вхід", "Login", "Account")
+    </div>
 
 }

@@ -7,13 +7,13 @@ namespace AvaluateTheTeacher1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class tblTeacherModify : IMigrationMetadata
+    public sealed partial class tblTeacherGroup : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(tblTeacherModify));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tblTeacherGroup));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511221451413_tblTeacherModify"; }
+            get { return "201511241110202_tblTeacherGroup"; }
         }
         
         string IMigrationMetadata.Source

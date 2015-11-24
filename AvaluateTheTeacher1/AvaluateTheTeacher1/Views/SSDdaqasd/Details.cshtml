@@ -1,0 +1,50 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.Voting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Voting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelevantToStudents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelevantToStudents)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

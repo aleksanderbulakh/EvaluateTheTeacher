@@ -13,9 +13,12 @@ namespace AvaluateTheTeacher1.Models.Students
         public string Name { get; set; }  
         
         public ICollection<ApplicationUser>  Users { get; set; }
+
+        public ICollection<Teachers.Teacher> Teachers { get; set; }
         public Group()
         {
             Users = new List<ApplicationUser>();
+            Teachers = new List<Teachers.Teacher>();
         }    
     }
 }

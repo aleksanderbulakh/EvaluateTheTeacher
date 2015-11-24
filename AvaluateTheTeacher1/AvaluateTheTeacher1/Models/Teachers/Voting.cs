@@ -15,7 +15,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
 
         public float RelevantToStudents { get; set; }
 
-        public int TeacherId { get; set; }
+        public int? TeacherId { get; set; }
         public Teacher Teacher { get; set; }
         
     }

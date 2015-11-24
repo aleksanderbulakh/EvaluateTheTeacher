@@ -1,7 +1,7 @@
 ﻿span
 {
     font-weight: bold;
-    font-size: 55px;
+    font-size: 15px;
     margin-top: 200px;
 
 }
@@ -43,11 +43,27 @@ header
 {
     float: left;
     margin-left: 3%;
-    width: 335px;
+    width: 280px;
     letter-spacing: 1px;
 }
 .menu .entry{
     display: none;
+}
+.navbar-nav.on{
+    width: 60px;
+    margin-right: 4%;
+}
+.on a{
+    font-weight: bold;
+    padding: 12.5px 13px;
+    float: left;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.on a:hover{
+    color: rgb(255, 255, 255);
 }
 .entry
 {
@@ -55,13 +71,6 @@ header
     margin-right: 3%;
     letter-spacing: 1px;
     cursor: pointer;
-}
-.entry img
-{
-    width: 21px;
-    height: auto;
-    margin-top: -3px;
-    margin-right: 5px;
 }
 .entry label{
     color: #2a6496;
@@ -75,7 +84,10 @@ header .menu a, header > a
     text-transform: uppercase;
     text-decoration: none;
 }
-header .menu a:first-child
+.login-user a:nth-child(1){
+    text-transform: inherit;
+}
+header .menu a:active
 {
     background: rgb(53, 105, 155);
     color: rgb(255, 255, 255);
@@ -176,9 +188,12 @@ content
     display: block;
 }
 .header-img{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 1px;
     position: absolute;
     z-index: 16;
-    top: 12%;
+    top: 10%;
     left: 14%;
 }
 .header-img h1
@@ -191,6 +206,28 @@ content
     text-transform: uppercase;
     margin: 0;
     letter-spacing: 7px;
+}
+.header-img p{
+    float: right;
+    width: 390px;
+}
+.header-img div{
+    display: table;
+    float: right;
+    width: 400px;
+    margin: 5% 15px 0;
+}
+.header-img a{
+    padding: 15px 15px;
+    font-size: 16px;
+    float: right;
+    background: #334878;
+    margin-top: 25px;
+    color: rgb(255, 255, 255);
+        box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
+}
+.header-img a:hover{
+    color: rgb(255, 255, 255);
 }
 .content
 {
@@ -362,14 +399,38 @@ footer
     right: 8%;
 }
 .teachers{
-    margin: 20px 0 0;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: table;
+    margin-bottom: 15px;
 }
-.teachers tr, .teachers th{
-    height: 30px;
-    text-align: center;
+.teachers img{
+    width: 35%;
+    height: auto;
+    float: left;
 }
-.teachers tr td{
-    width: 100px;
+.about_teacher{
+    display: block;
+    float: right;
+    width: 63%;
+    min-height: 210px;
+    margin-left: 2%;
+}
+.vote-teacher{
+    float: right;
+    padding: 10px 15px;
+    font-size: 14px;
+    float: right;
+    background: #334878;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.vote-teacher:hover{    
+    color: rgb(255, 255, 255);
+}
+.about_teacher span{
+    font-size: 16px;
 }
 .page-header{
     background: rgb(53, 120, 155);

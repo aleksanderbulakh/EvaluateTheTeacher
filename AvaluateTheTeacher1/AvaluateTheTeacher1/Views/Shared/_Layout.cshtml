@@ -17,17 +17,11 @@
 </head>
 <body>
     <header>
-        <div class="backing" onclick="hidden_block()"></div>
-        <a class="entry">
-            <img src="~/Content/icon_man.svg" alt="" />
-            @Html.Partial("_LoginPartial")
-        </a>
-
+        @Html.Partial("_LoginPartial")
         <div class="menu">
             <a href="/">Головна</a>
             @Html.ActionLink("Рейтинг", "ListOfTeachers", "ListOfTeachers")
         </div>
-        
     </header>
     <content>@RenderBody()</content>
     <footer>© 2015 Всі права захищено. Команда Good Developer</footer>

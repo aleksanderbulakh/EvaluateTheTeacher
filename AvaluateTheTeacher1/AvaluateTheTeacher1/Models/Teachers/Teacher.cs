@@ -15,32 +15,24 @@ namespace AvaluateTheTeacher1.Models.Teachers
 
         public string LastName { get; set; }
 
-        public float ForTheEntirePeriod { get; set; }
-
-        public float PreviousMonth { get; set; }
-
-        public float AvgRating { get; set; }
-
-        public float AvgInterest { get; set; }
-
-        public float AvgQuality { get; set; }
-
-        public float AvgRelevantToStudents { get; set; }
-
         public string PathToPhoto { get; set; }
 
         public string Description { get; set; }
 
-        public int?  CathedraId { get; set; }
+        public int? CathedraId { get; set; }
 
         public Cathedra Cathedra { get; set; }
 
         public ICollection<Subject> Subjects { get; set; }
-        public ICollection<Voting> Votes { get; set; }
+        public ICollection<Voting> Votings { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
+        public ICollection<Students.Group> Groups { get; set; }
         public Teacher()
         {
             Subjects = new List<Subject>();
-            Votes = new List<Voting>();
+            Votings = new List<Voting>();
+            Ratings = new List<Rating>();
+            Groups = new List<Students.Group>();
         }
     }
 }

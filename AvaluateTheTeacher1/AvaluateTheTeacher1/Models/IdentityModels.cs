@@ -32,6 +32,7 @@ namespace AvaluateTheTeacher1.Models
         public DbSet<Teachers.Cathedra> Cathedras { get; set; }
         public DbSet<Teachers.Subject> Subjects { get; set; }
         public DbSet<Teachers.Voting> Votings { get; set; }
+        public DbSet<Teachers.Rating> Ratings { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -51,7 +52,13 @@ namespace AvaluateTheTeacher1.Models
                 .WithMany(s => s.Subjects)
                 .Map(t => t.MapLeftKey("SubjectId")
                 .MapRightKey("TeacherId")
-                .ToTable("SubjectTeacher"));            
+                .ToTable("SubjectTeacher"));
+
+            modelBuilder.Entity<Teachers.Teacher>().HasMany(c => c.Groups)
+                .WithMany(s => s.Teachers)
+                .Map(t => t.MapLeftKey("TeacherId")
+                .MapRightKey("GroupId")
+                .ToTable("TeacherGroup"));
         }
     }
 }

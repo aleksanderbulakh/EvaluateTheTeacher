@@ -4,23 +4,16 @@
 }
 
 <h2 class="title">Список викладачів</h2>
-<table class="teachers">
-    <tr class="page-header">        
-        <th>Прізвище</th>
-        <th>Ім'я</th>
-        <th>По-батькові</th>
-        <th>Skill</th>
-        <th>Фотографія</th>
-    </tr>
-    @foreach(var T in ViewBag.Teachers)
-    {
-        <tr>
-            <td>@T.LastName</td>
-            <td>@T.Name</td>
-            <td>@T.SurName</td>
-            <td>@T.Skill</td>
-            <div class="img-rounded"><img src="@T.PathToPhoto" alt="Нет фотографии"></div>
-        </tr>
-    }
-</table>
-
+@foreach (var T in ViewBag.Teachers)
+{
+    <div class="teachers">
+        <img src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
+        <div class="about_teacher">
+            <span>@T.LastName</span>
+            <span>@T.Name</span>
+            <span>@T.SurName</span>
+            <p>@T.Description</p>
+        </div>
+        <a class="vote-teacher">Проголосувати за викладача</a>
+    </div>
+}

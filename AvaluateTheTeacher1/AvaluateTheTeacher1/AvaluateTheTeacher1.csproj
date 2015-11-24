@@ -175,6 +175,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListOfTeachersController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SSDdaqasdController.cs" />
+    <Compile Include="Controllers\VotingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,10 +216,6 @@
     <Compile Include="Migrations\201511221310344_tblCathedra.Designer.cs">
       <DependentUpon>201511221310344_tblCathedra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511221451413_tblTeacherModify.cs" />
-    <Compile Include="Migrations\201511221451413_tblTeacherModify.Designer.cs">
-      <DependentUpon>201511221451413_tblTeacherModify.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201511221541350_tblSubjectTeacher.cs" />
     <Compile Include="Migrations\201511221541350_tblSubjectTeacher.Designer.cs">
       <DependentUpon>201511221541350_tblSubjectTeacher.cs</DependentUpon>
@@ -230,6 +228,18 @@
     <Compile Include="Migrations\201511221555486_tblVotes1.Designer.cs">
       <DependentUpon>201511221555486_tblVotes1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511241040552_TeaherModify.cs" />
+    <Compile Include="Migrations\201511241040552_TeaherModify.Designer.cs">
+      <DependentUpon>201511241040552_TeaherModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511241054511_tblRating.cs" />
+    <Compile Include="Migrations\201511241054511_tblRating.Designer.cs">
+      <DependentUpon>201511241054511_tblRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511241110202_tblTeacherGroup.cs" />
+    <Compile Include="Migrations\201511241110202_tblTeacherGroup.Designer.cs">
+      <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -237,6 +247,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Students\Group.cs" />
     <Compile Include="Models\Teachers\Cathedra.cs" />
+    <Compile Include="Models\Teachers\Rating.cs" />
     <Compile Include="Models\Teachers\Subject.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
@@ -316,10 +327,16 @@
     <Content Include="Views\AddingStudent\AddNewStudent.cshtml" />
     <Content Include="Views\ListOfTeachers\ListOfTeachers.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
+    <Content Include="Views\SSDdaqasd\Create.cshtml" />
+    <Content Include="Views\SSDdaqasd\Delete.cshtml" />
+    <Content Include="Views\SSDdaqasd\Details.cshtml" />
+    <Content Include="Views\SSDdaqasd\Edit.cshtml" />
+    <Content Include="Views\SSDdaqasd\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="TeacherImg\" />
+    <Folder Include="Views\Votings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -357,9 +374,6 @@
     <EmbeddedResource Include="Migrations\201511221310344_tblCathedra.resx">
       <DependentUpon>201511221310344_tblCathedra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221451413_tblTeacherModify.resx">
-      <DependentUpon>201511221451413_tblTeacherModify.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511221541350_tblSubjectTeacher.resx">
       <DependentUpon>201511221541350_tblSubjectTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +382,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511221555486_tblVotes1.resx">
       <DependentUpon>201511221555486_tblVotes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511241040552_TeaherModify.resx">
+      <DependentUpon>201511241040552_TeaherModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511241054511_tblRating.resx">
+      <DependentUpon>201511241054511_tblRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511241110202_tblTeacherGroup.resx">
+      <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

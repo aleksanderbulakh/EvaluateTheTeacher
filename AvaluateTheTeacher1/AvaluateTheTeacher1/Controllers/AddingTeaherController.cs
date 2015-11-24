@@ -33,7 +33,7 @@ namespace AvaluateTheTeacher1.Controllers
                 string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
                 string filename = System.IO.Path.GetFileName(model.Photo.FileName);
                 model.Photo.SaveAs(System.IO.Path.Combine(path, filename));
-                teacher.PathToPhoto = Server.MapPath(model.Photo.FileName);
+                teacher.PathToPhoto = System.IO.Path.GetFileName(model.Photo.FileName);
 
                 db.Teachers.Add(teacher);
                 db.SaveChanges();

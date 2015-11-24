@@ -1,0 +1,56 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.Voting
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Voting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelevantToStudents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelevantToStudents)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
