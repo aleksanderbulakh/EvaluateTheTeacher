@@ -13,6 +13,13 @@
             <span>@T.Name</span>
             <span>@T.SurName</span>
             <p>@T.Description</p>
+            @foreach (var t in T.Ratings)
+            {
+                <span>@t.AvgRating</span>
+                <span>@t.AvgInterest</span>
+                <span>@t.AvgQuality</span>
+                <span>@t.AvgRelevantToStudents</span>
+            }
         </div>
         <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
     </div>

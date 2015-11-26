@@ -7,6 +7,7 @@ using System.Data;
 using System.Net;
 using System.Web.Mvc;
 using AvaluateTheTeacher1.Models;
+using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Controllers
 {
@@ -16,7 +17,6 @@ namespace AvaluateTheTeacher1.Controllers
         // GET: ListOfTeachers
         public ActionResult ListOfTeachers()
         {
-            
             var teachers = db.Teachers.Include(t => t.Cathedra).Include(c=>c.Ratings).ToList();
             return View(teachers);
         }

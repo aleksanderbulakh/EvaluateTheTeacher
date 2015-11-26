@@ -23,7 +23,7 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 return HttpNotFound();
             }
-            
+
             TeacherIdInController = Int32.Parse(id.ToString());
             return View();
         }
@@ -43,9 +43,46 @@ namespace AvaluateTheTeacher1.Controllers
                 db.Votings.Add(voting);
                 db.SaveChanges();
 
+                var listId = db.Votings.ToList();
+
+                foreach (var num in listId)
+                {
+                    int id = int.Parse(num.TeacherId.ToString());
+                    float avgRelevant = 0, avgInterest = 0, avgQuality = 0, count = 0;
+                    foreach (var voit in listId)
+                    {
+                        if (id == voit.TeacherId)
+                        {
+                            avgInterest += voit.Interest;
+                            avgRelevant += voit.RelevantToStudents;
+                            avgQuality += voit.Quality;
+                            count++;
+                        }
+                    }
+                    int countFind = 0;
+                    foreach (var h in db.Ratings.ToList())
+                    {
+                        if (h.TeacherId.Equals(id))
+                            countFind++;
+                    }
+                    if (countFind == 0)
+                    {
+                        var rait = new Rating { TeacherId = id };
+                        db.Ratings.Add(rait);
+                        db.SaveChanges();
+                    }
+                    var query = from ord in db.Ratings where ord.TeacherId == id select ord;
+                    foreach (Rating rating in query)
+                    {
+                        rating.AvgInterest = avgInterest / count;
+                        rating.AvgQuality = avgQuality / count;
+                        rating.AvgRelevantToStudents = avgRelevant / count;
+                        rating.AvgRating = (avgInterest / count + avgQuality / count + avgRelevant / count) / 3;
+                    }
+                    db.SaveChanges();
+                }
                 return RedirectToAction("Index", "Home");
             }
-
             return View(model);
         }
     }
