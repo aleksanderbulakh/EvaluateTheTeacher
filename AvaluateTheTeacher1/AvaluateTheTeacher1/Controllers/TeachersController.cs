@@ -11,112 +11,112 @@ using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Controllers
 {
-    public class SSDdaqasdController : Controller
+    public class TeachersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: SSDdaqasd
+        // GET: Teachers
         public ActionResult Index()
         {
-            var votings = db.Votings.Include(v => v.Teacher);
-            return View(votings.ToList());
+            var teachers = db.Teachers.Include(t => t.Cathedra);
+            return View(teachers.ToList());
         }
 
-        // GET: SSDdaqasd/Details/5
+        // GET: Teachers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Voting voting = db.Votings.Find(id);
-            if (voting == null)
+            Teacher teacher = db.Teachers.Find(id);
+            if (teacher == null)
             {
                 return HttpNotFound();
             }
-            return View(voting);
+            return View(teacher);
         }
 
-        // GET: SSDdaqasd/Create
+        // GET: Teachers/Create
         public ActionResult Create()
         {
-            ViewBag.TeacherId = new SelectList(db.Teachers, "TeacherId", "Name");
+            ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra");
             return View();
         }
 
-        // POST: SSDdaqasd/Create
+        // POST: Teachers/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Interest,Quality,RelevantToStudents,TeacherId")] Voting voting)
+        public ActionResult Create([Bind(Include = "TeacherId,Name,SurName,LastName,PathToPhoto,Description,CathedraId")] Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                db.Votings.Add(voting);
+                db.Teachers.Add(teacher);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TeacherId = new SelectList(db.Teachers, "TeacherId", "Name", voting.TeacherId);
-            return View(voting);
+            ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
+            return View(teacher);
         }
 
-        // GET: SSDdaqasd/Edit/5
+        // GET: Teachers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Voting voting = db.Votings.Find(id);
-            if (voting == null)
+            Teacher teacher = db.Teachers.Find(id);
+            if (teacher == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.TeacherId = new SelectList(db.Teachers, "TeacherId", "Name", voting.TeacherId);
-            return View(voting);
+            ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
+            return View(teacher);
         }
 
-        // POST: SSDdaqasd/Edit/5
+        // POST: Teachers/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Interest,Quality,RelevantToStudents,TeacherId")] Voting voting)
+        public ActionResult Edit([Bind(Include = "TeacherId,Name,SurName,LastName,PathToPhoto,Description,CathedraId")] Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(voting).State = EntityState.Modified;
+                db.Entry(teacher).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.TeacherId = new SelectList(db.Teachers, "TeacherId", "Name", voting.TeacherId);
-            return View(voting);
+            ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
+            return View(teacher);
         }
 
-        // GET: SSDdaqasd/Delete/5
+        // GET: Teachers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Voting voting = db.Votings.Find(id);
-            if (voting == null)
+            Teacher teacher = db.Teachers.Find(id);
+            if (teacher == null)
             {
                 return HttpNotFound();
             }
-            return View(voting);
+            return View(teacher);
         }
 
-        // POST: SSDdaqasd/Delete/5
+        // POST: Teachers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Voting voting = db.Votings.Find(id);
-            db.Votings.Remove(voting);
+            Teacher teacher = db.Teachers.Find(id);
+            db.Teachers.Remove(teacher);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

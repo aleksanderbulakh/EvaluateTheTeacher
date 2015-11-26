@@ -1,10 +1,10 @@
-﻿
+﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.Teacher>
 @{
     ViewBag.Title = "ListOfTeachers";
 }
 
 <h2 class="title">Список викладачів</h2>
-@foreach (var T in ViewBag.Teachers)
+@foreach (var T in Model)
 {
     <div class="teachers">
         <img src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
@@ -14,6 +14,6 @@
             <span>@T.SurName</span>
             <p>@T.Description</p>
         </div>
-        <a class="vote-teacher">Проголосувати за викладача</a>
+        <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
     </div>
 }

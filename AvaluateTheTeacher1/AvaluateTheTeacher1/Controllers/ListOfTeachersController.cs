@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using System.Data;
+using System.Net;
 using System.Web.Mvc;
 using AvaluateTheTeacher1.Models;
 
@@ -13,8 +16,9 @@ namespace AvaluateTheTeacher1.Controllers
         // GET: ListOfTeachers
         public ActionResult ListOfTeachers()
         {
-            ViewBag.Teachers = db.Teachers;
-            return View();
+            
+            var teachers = db.Teachers.Include(t => t.Cathedra).Include(c=>c.Ratings).ToList();
+            return View(teachers);
         }
     }
 }

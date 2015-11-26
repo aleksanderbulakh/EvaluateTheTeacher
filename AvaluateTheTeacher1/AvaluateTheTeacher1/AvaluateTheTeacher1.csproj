@@ -175,7 +175,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListOfTeachersController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SSDdaqasdController.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\VotingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -327,16 +327,16 @@
     <Content Include="Views\AddingStudent\AddNewStudent.cshtml" />
     <Content Include="Views\ListOfTeachers\ListOfTeachers.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
-    <Content Include="Views\SSDdaqasd\Create.cshtml" />
-    <Content Include="Views\SSDdaqasd\Delete.cshtml" />
-    <Content Include="Views\SSDdaqasd\Details.cshtml" />
-    <Content Include="Views\SSDdaqasd\Edit.cshtml" />
-    <Content Include="Views\SSDdaqasd\Index.cshtml" />
+    <Content Include="Views\Votings\Votings.cshtml" />
+    <Content Include="Views\Teachers\Create.cshtml" />
+    <Content Include="Views\Teachers\Delete.cshtml" />
+    <Content Include="Views\Teachers\Details.cshtml" />
+    <Content Include="Views\Teachers\Edit.cshtml" />
+    <Content Include="Views\Teachers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="TeacherImg\" />
-    <Folder Include="Views\Votings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
