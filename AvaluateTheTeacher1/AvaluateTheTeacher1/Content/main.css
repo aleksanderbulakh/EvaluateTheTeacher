@@ -42,8 +42,8 @@ header
 .menu
 {
     float: left;
-    margin-left: 3%;
-    width: 280px;
+    width: auto;
+    margin: 0 3%;
     letter-spacing: 1px;
 }
 .menu .entry{
@@ -84,8 +84,29 @@ header .menu a, header > a
     text-transform: uppercase;
     text-decoration: none;
 }
+.login-user{
+    margin: 0;
+}
 .login-user a:nth-child(1){
     text-transform: inherit;
+    
+}
+.login-user div{
+    float: left;
+    max-width: 350px;
+    overflow: hidden;
+    padding: 12.5px 13px;
+}
+.login-user div a:hover{
+}
+.login-user div:hover{
+    background: rgb(53, 105, 155);
+    color: rgb(255, 255, 255);
+}
+.login-user div a{
+    height: 20px;
+    overflow:hidden;
+    padding: 0;
 }
 header .menu a:active
 {
@@ -438,7 +459,7 @@ footer
 
 }
 .wrapper{
-    width: 105.3%;
+    width: 105.21%;
     margin-left: -31px;
 }
 .admin_menu{
@@ -459,4 +480,7 @@ footer
 }
 .admin_menu a:hover{
     color: white;
+}
+.value th{
+    width: 250px;
 }

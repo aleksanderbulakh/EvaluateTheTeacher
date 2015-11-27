@@ -13,26 +13,28 @@
             <span>@T.Name</span>
             <span>@T.SurName</span>
             <p>@T.Description</p>
-            <table>
-                <thead>
+            <table class="value">
+            <tbody>
+                @foreach (var t in T.Ratings)
+                {
                     <tr>
                         <th><span>Рейтингова оцінка</span></th>
-                        <th><span>Цікавість</span></th>
-                        <th><span>Якість викладання</span></th>
-                        <th><span>Відношення до студентів</span></th>
+                        <td>@t.AvgRating</td>
                     </tr>
-                </thead>
-                    <tbody>
-                        @foreach (var t in T.Ratings)
-                        {
-                            <tr>
-                                <td>@t.AvgRating</td>
-                                <td>@t.AvgInterest</td>
-                                <td>@t.AvgQuality</td>
-                                <td>@t.AvgRelevantToStudents</td>
-                            </tr>
-                        }
-                    </tbody>
+                    <tr>
+                        <th><span>Цікавість</span></th>
+                        <td>@t.AvgInterest</td>
+                    </tr>
+                    <tr>
+                        <th><span>Якість викладання</span></th>
+                        <td>@t.AvgQuality</td>
+                    </tr>
+                    <tr>
+                        <th><span>Ставлення до студентів</span></th>
+                        <td>@t.AvgRelevantToStudents</td>
+                    </tr>
+                }
+            </tbody>
                 </table>
         </div>
         <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
