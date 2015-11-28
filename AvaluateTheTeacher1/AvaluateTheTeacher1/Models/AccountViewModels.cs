@@ -7,7 +7,7 @@ namespace AvaluateTheTeacher1.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Адреса електронної пошти")]
         public string Email { get; set; }
     }
 
@@ -43,7 +43,7 @@ namespace AvaluateTheTeacher1.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Адреса електронної пошти")]
         public string Email { get; set; }
     }
 
@@ -58,7 +58,7 @@ namespace AvaluateTheTeacher1.Models
         [Display(Name = "Пароль")]
         public string Password { get; set; }
 
-        [Display(Name = "Запомнить меня")]
+        [Display(Name = "Запа'ятати мене")]
         public bool RememberMe { get; set; }
     }
 
@@ -69,16 +69,17 @@ namespace AvaluateTheTeacher1.Models
         public string userName { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать не менее {2} символов.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Значення {0} повинне містити не менше {2} символів.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение пароля")]
-        [Compare("Password", ErrorMessage = "Пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Підтвердження пароля")]
+        [Compare("Password", ErrorMessage = "Пароль та його підтвердження не збігаються.")]
         public string ConfirmPassword { get; set; }
         
+        [Display(Name ="Група студента")]
         public int SelectedGroupId { get; set; } 
         
         public   System.Web.Mvc.SelectList Groups { get; set; }     
@@ -121,7 +122,7 @@ namespace AvaluateTheTeacher1.Models
         public string GroupName { get; set; }
 
         [Required]
-        [RegularExpression(@"[123]\d", ErrorMessage = "Число студентів повинно бути не більше 40.")]
+        [RegularExpression(@"[123]?\d", ErrorMessage = "Число студентів повинно бути не більше 40.")]
         [Display(Name = "Кількість студентів")]
         public int CountOfStudent { get; set; }
 
@@ -130,29 +131,32 @@ namespace AvaluateTheTeacher1.Models
     public class AddNewTeacherViewModel
     {
         [Required]
-        [RegularExpression(@"[А-Я][а-я]+", ErrorMessage = "Некоректне ім'я (ім'я повинно починатись з великої літери та не містити пробілів чи цифр)")]
+        [RegularExpression(@"[А-ЯІЄЇ][а-яієї']+", ErrorMessage = "Некоректне ім'я (ім'я повинно починатись з великої літери та не містити пробілів чи цифр)")]
         [StringLength(20, MinimumLength = 4, ErrorMessage = "Длина строки должна быть от 4 до 20 символов")]
         [Display(Name = "Ім'я викладача:")]
         public string Name { get; set; }
 
         [Required]
-        [RegularExpression(@"[А-Я][а-я]+", ErrorMessage = "Некоректне прізвище (прізвище повинно починатись з великої літери та не містити пробілів чи цифр)")]
+        [RegularExpression(@"[А-ЯІЄЇ][а-яієї']+", ErrorMessage = "Некоректне прізвище (прізвище повинно починатись з великої літери та не містити пробілів чи цифр)")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Длина строки должна быть от 5 до 20 символов")]
         [Display(Name = "Прізвище викладача:")]
         public string LastName { get; set; }
 
         [Required]
-        [RegularExpression(@"[А-Я][а-я]+", ErrorMessage = "Некоректне ім'я по-батькові (воно повинно починатись з великої літери та не містити пробілів чи цифр)")]
+        [RegularExpression(@"[А-ЯІЄЇ][а-яієї']+", ErrorMessage = "Некоректне ім'я по-батькові (воно повинно починатись з великої літери та не містити пробілів чи цифр)")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Длина строки должна быть от 5 до 20 символов")]
         [Display(Name = "По-батькові викладача:")]
         public string SurName { get; set; }
                 
         [Required]
         [Display(Name = "Характеристика викладач:")]
-        public string Skill { get; set; }
+        public string Description { get; set; }
 
         [Required]
         [Display(Name="Фото")]
         public System.Web.HttpPostedFileBase Photo { get; set; }
     }
+   
+
+    
 }

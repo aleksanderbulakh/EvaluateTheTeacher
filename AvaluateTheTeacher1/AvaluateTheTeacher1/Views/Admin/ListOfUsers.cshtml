@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "ListOfUsers";
+}
+
+<h2>ListOfUsers</h2>
+
+<table>
+    <tr>
+        <th>UserName</th>
+        <th>Password</th>
+    </tr>
+
+    @foreach (var S in ViewBag.Students)
+    {
+        <tr>
+            <td>@S.UserName</td>
+            <td>@S.PasswordTxt</td>
+        </tr>
+    }
+</table>

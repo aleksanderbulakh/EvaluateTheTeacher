@@ -87,7 +87,7 @@ namespace AvaluateTheTeacher1.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Неудачная попытка входа.");
+                    ModelState.AddModelError("", "Невдала спроба входу.");
                     return View(model);
             }
         }
@@ -179,7 +179,7 @@ namespace AvaluateTheTeacher1.Controllers
                 // Отправка сообщения электронной почты с этой ссылкой
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                await UserManager.SendEmailAsync(user.Id, "Сброс пароля", "Сбросьте ваш пароль, щелкнув <a href=\"" + callbackUrl + "\">здесь</a>");
+                await UserManager.SendEmailAsync(user.Id, "Зміна пароля", "Змініть ваш пароль, перейшовши по <a href=\"" + callbackUrl + "\">посиланню</a>");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
