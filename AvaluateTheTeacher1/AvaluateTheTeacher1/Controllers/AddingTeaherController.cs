@@ -28,7 +28,7 @@ namespace AvaluateTheTeacher1.Controllers
                 teacher.Name = model.Name;
                 teacher.SurName = model.SurName;
                 teacher.LastName = model.LastName;
-                
+                teacher.Description = model.Description;
 
                 string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
                 string filename = System.IO.Path.GetFileName(model.Photo.FileName);

@@ -18,10 +18,12 @@ namespace AvaluateTheTeacher1.Models
         {
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType            
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
-                                               
+            userIdentity.AddClaim(new Claim("Password", this.PasswordTxt));
+                                                           
             return userIdentity;
         }
 
+        public string PasswordTxt { get; set; }
         
     }
 

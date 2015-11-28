@@ -15,11 +15,10 @@ namespace AvaluateTheTeacher1.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult AddNewStudent()
         {
-            var teachModel = new AddNewStudentViewModel();
-            teachModel.Groups = new SelectList(db.Groups, "GroupId", "Name", 1);
-            
-            ViewBag.Groups = db.Groups;
-            return View();
+            var studentModel = new AddNewStudentViewModel();
+            studentModel.Groups = new SelectList(db.Groups, "GroupId", "Name", 1);
+                        
+            return View(studentModel);
         }
 
         //
@@ -31,7 +30,7 @@ namespace AvaluateTheTeacher1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var student = new ApplicationUser { UserName = model.userName };
+                var student = new ApplicationUser { UserName = model.userName, PasswordTxt = model.Password };
                 var result = await UserManager.CreateAsync(student, model.Password);
                 if (result.Succeeded)
                 {

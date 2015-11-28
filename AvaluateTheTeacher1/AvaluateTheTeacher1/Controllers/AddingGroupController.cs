@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.Mvc;
 using AvaluateTheTeacher1.Models;
 
@@ -29,22 +30,12 @@ namespace AvaluateTheTeacher1.Controllers
                 group.Name = model.GroupName;
                 db.Groups.Add(group);
                 db.SaveChanges();
-                int n;
-                string password = "", s1, st;
-                st = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                Random rnd = new Random();
-
+                               
+               
                 for (int index = 0; index < model.CountOfStudent; index++)
                 {
-                    for (int j = 0; j < 16; j++)
-                    {
-                        n = rnd.Next(0, 61);
-                        Guid.NewGuid();
-                        s1 = st.Substring(n, 1);
-                        password += s1;
-                    }
-
-                    var student = new ApplicationUser { UserName = model.GroupName + "_" + index, GroupId = group.GroupId };
+                    string password = Membership.GeneratePassword(15, 6);
+                    var student = new ApplicationUser { UserName = model.GroupName + "_" + index, GroupId = group.GroupId, PasswordTxt = password };                    
                     var result = await UserManager.CreateAsync(student, password);
                     if (result.Succeeded)
                     {
@@ -53,7 +44,7 @@ namespace AvaluateTheTeacher1.Controllers
                                                
                     }
                     AddErrors(result);                   
-                    password = "";
+                    
 
                 }
                 return RedirectToAction("Index", "Home");

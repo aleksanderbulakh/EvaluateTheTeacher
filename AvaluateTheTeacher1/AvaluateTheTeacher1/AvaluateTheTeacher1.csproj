@@ -239,6 +239,10 @@
     <Compile Include="Migrations\201511241110202_tblTeacherGroup.Designer.cs">
       <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511272314380_PasswordTxt.cs" />
+    <Compile Include="Migrations\201511272314380_PasswordTxt.Designer.cs">
+      <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -327,6 +331,7 @@
     <Content Include="Views\ListOfTeachers\ListOfTeachers.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Votings\Votings.cshtml" />
+    <Content Include="Views\Admin\ListOfUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -385,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511241110202_tblTeacherGroup.resx">
       <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511272314380_PasswordTxt.resx">
+      <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
