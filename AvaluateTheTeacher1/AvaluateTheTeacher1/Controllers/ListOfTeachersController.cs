@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class ListOfTeachersController : Controller
     {
-        List<SelectListItem> Cathedras { get; set; }
+        //List<SelectListItem> Cathedras { get; set; }
 
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: ListOfTeachers
@@ -41,7 +41,7 @@ namespace AvaluateTheTeacher1.Controllers
                         AvgQuality = listRaitings.AvgQuality,
                         AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
                     };
-            var cathedra = db.Cathedras.ToList();
+            /*var cathedra = db.Cathedras.ToList();
             Cathedras = new List<SelectListItem>();
             foreach(var item in cathedra)
             {
@@ -51,7 +51,7 @@ namespace AvaluateTheTeacher1.Controllers
                     Value =item.Id.ToString()
                 });
             }
-            ViewBag.CahtedrasList = Cathedras;
+            ViewBag.CahtedrasList = Cathedras;*/
             return View(q.ToList());
         }
 

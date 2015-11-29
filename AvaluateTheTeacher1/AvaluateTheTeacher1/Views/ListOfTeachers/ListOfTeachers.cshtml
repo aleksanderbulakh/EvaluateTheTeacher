@@ -2,15 +2,15 @@
 @{
     ViewBag.Title = "ListOfTeachers";
 }
-<form method="get">
+<!--<form method="get">
     <div class="form-group">
-        @Html.Label("Виберіть кафедру", new { @class = "col-md-2 control-label" })
+        Html.Label("Виберіть кафедру", new { class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownList("CahtedrasList")
-            <!--Html.DropDownListFor(m => m.SelectedId, T.Cathedras, "Оберіть групу для студента", new { class = "form-control" })-->
+            Html.DropDownList("CahtedrasList")
+            Html.DropDownListFor(m => m.SelectedId, T.Cathedras, "Оберіть групу для студента", new { class = "form-control" })
         </div>
     </div>
-</form>
+</form>-->
 <h2 class="title">Список викладачів</h2>
 @foreach (var T in Model)
 {    
