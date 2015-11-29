@@ -1,42 +1,45 @@
-﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.Teacher>
+﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.ListOfTeachers>
 @{
     ViewBag.Title = "ListOfTeachers";
 }
-
+<form method="get">
+    <div class="form-group">
+        @Html.Label("Виберіть кафедру", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownList("CahtedrasList")
+            <!--Html.DropDownListFor(m => m.SelectedId, T.Cathedras, "Оберіть групу для студента", new { class = "form-control" })-->
+        </div>
+    </div>
+</form>
 <h2 class="title">Список викладачів</h2>
 @foreach (var T in Model)
-{
+{    
     <div class="teachers">
         <img src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
-        <div class="about_teacher">
-            <span>@T.LastName</span>
-            <span>@T.Name</span>
-            <span>@T.SurName</span>
-            <p>@T.Description</p>
-            <table class="value">
-            <tbody>
-                @foreach (var t in T.Ratings)
-                {
+            <div class="about_teacher">
+                <span>@T.LastName</span>
+                <span>@T.Name</span>
+                <span>@T.SurName</span>
+                <p>@T.Description</p>
+                <table class="value">
                     <tr>
                         <th><span>Рейтингова оцінка</span></th>
-                        <td>@t.AvgRating</td>
+                        <td>@T.AvgRating</td>
                     </tr>
                     <tr>
                         <th><span>Цікавість</span></th>
-                        <td>@t.AvgInterest</td>
+                        <td>@T.AvgInterest</td>
                     </tr>
                     <tr>
                         <th><span>Якість викладання</span></th>
-                        <td>@t.AvgQuality</td>
+                        <td>@T.AvgQuality</td>
                     </tr>
                     <tr>
                         <th><span>Ставлення до студентів</span></th>
-                        <td>@t.AvgRelevantToStudents</td>
+                        <td>@T.AvgRelevantToStudents</td>
                     </tr>
-                }
-            </tbody>
                 </table>
-        </div>
+            </div>
         <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
     </div>
 }

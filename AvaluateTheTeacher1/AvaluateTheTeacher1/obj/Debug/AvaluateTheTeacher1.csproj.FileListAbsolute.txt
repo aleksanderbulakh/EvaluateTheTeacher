@@ -411,3 +411,4 @@ D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\Ava
 D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
 D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
 D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources

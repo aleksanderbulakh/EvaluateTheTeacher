@@ -18,6 +18,5 @@ namespace AvaluateTheTeacher1.Models.Teachers
             Teachers = new List<Teacher>();
             Subjects = new List<Subject>();
         }
-             
     }
 }
