@@ -55,7 +55,7 @@ namespace AvaluateTheTeacher1.Controllers
             return View(q.ToList());
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public ActionResult ListOfTeachers(int? CathedraId)
         {
             /*var q =
@@ -82,8 +82,8 @@ namespace AvaluateTheTeacher1.Controllers
                     };
             var CathedraList = new CathedraList();
             CathedraList.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra", 1);
-            ViewBag.List = CathedraList;*/
+            ViewBag.List = CathedraList;
             return View();
-        }
+        }*/
     }
 }
