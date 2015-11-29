@@ -14,7 +14,9 @@ namespace AvaluateTheTeacher1.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult AddNewTeacher()
         {
-            return View();
+            var teacherModel = new AddNewTeacherViewModel();
+            teacherModel.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra");
+            return View(teacherModel);
         }
 
         [HttpPost]
@@ -29,6 +31,7 @@ namespace AvaluateTheTeacher1.Controllers
                 teacher.SurName = model.SurName;
                 teacher.LastName = model.LastName;
                 teacher.Description = model.Description;
+                teacher.CathedraId = model.SelectedCathedraId;
 
                 string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
                 string filename = System.IO.Path.GetFileName(model.Photo.FileName);
@@ -41,6 +44,7 @@ namespace AvaluateTheTeacher1.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            model.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra");
             return View(model);
         }
     }

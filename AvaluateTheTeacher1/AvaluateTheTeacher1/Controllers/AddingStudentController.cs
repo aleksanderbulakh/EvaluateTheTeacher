@@ -30,7 +30,7 @@ namespace AvaluateTheTeacher1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var student = new ApplicationUser { UserName = model.userName, PasswordTxt = model.Password };
+                var student = new ApplicationUser { UserName = model.userName, PasswordTxt = model.Password, GroupId = model.SelectedGroupId };
                 var result = await UserManager.CreateAsync(student, model.Password);
                 if (result.Succeeded)
                 {

@@ -147,7 +147,13 @@ namespace AvaluateTheTeacher1.Models
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Длина строки должна быть от 5 до 20 символов")]
         [Display(Name = "По-батькові викладача:")]
         public string SurName { get; set; }
+
+        
+        [Display(Name = "Кафедра викладача")]
+        public int SelectedCathedraId { get; set; }
                 
+        public System.Web.Mvc.SelectList Cathedras { get; set; }
+
         [Required]
         [Display(Name = "Характеристика викладач:")]
         public string Description { get; set; }
