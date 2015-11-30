@@ -13,17 +13,89 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class ListOfTeachersController : Controller
     {
-        //List<SelectListItem> Cathedras { get; set; }
+        private int? SelectedCathedraId { get; set; }
+        private IQueryable<ListOfTeachers> query { get; set; }
 
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: ListOfTeachers
-        public ActionResult ListOfTeachers()
+
+        [HttpGet]
+        public ActionResult ListOfTeachers(FilterDataModel model)
         {
+            if(model.SelectedId == null || model.SelectedId == 0)
+            {
+                query =
+                    from listCathedras in db.Cathedras
+                    from listRaitings in db.Ratings
+                    from listTeachers in db.Teachers
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id))
+                    orderby listRaitings.AvgRating descending
+                    select new ListOfTeachers()
+                    {
+                        TeacherId = listTeachers.TeacherId,
+                        NameCathedra = listCathedras.NameCathedra,
+                        Name = listTeachers.Name,
+                        SurName = listTeachers.SurName,
+                        LastName = listTeachers.LastName,
+                        PathToPhoto = listTeachers.PathToPhoto,
+                        Description = listTeachers.Description,
+                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
+                        PreviousMonth = listRaitings.PreviousMonth,
+                        AvgRating = listRaitings.AvgRating,
+                        AvgInterest = listRaitings.AvgRating,
+                        AvgQuality = listRaitings.AvgQuality,
+                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
+                    };
+            }
+            else
+            {
+                SelectedCathedraId = model.SelectedId;
+                query =
+                    from listCathedras in db.Cathedras
+                    from listRaitings in db.Ratings
+                    from listTeachers in db.Teachers
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && ((listTeachers1.CathedraId == SelectedCathedraId) && (listTeachers1.CathedraId == listCathedras.Id)))
+                    orderby listRaitings.AvgRating descending
+                    select new ListOfTeachers()
+                    {
+                        TeacherId = listTeachers.TeacherId,
+                        NameCathedra = listCathedras.NameCathedra,
+                        Name = listTeachers.Name,
+                        SurName = listTeachers.SurName,
+                        LastName = listTeachers.LastName,
+                        PathToPhoto = listTeachers.PathToPhoto,
+                        Description = listTeachers.Description,
+                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
+                        PreviousMonth = listRaitings.PreviousMonth,
+                        AvgRating = listRaitings.AvgRating,
+                        AvgInterest = listRaitings.AvgRating,
+                        AvgQuality = listRaitings.AvgQuality,
+                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
+                    };
+            }
+            List<Cathedra> cathedra = db.Cathedras.ToList();
+            cathedra.Insert(0, new Cathedra { NameCathedra = "Всі", Id = 0 });
+            FilterDataModel data = new FilterDataModel
+            {
+                Teachers = query.ToList(),
+                Cathedras=new SelectList(cathedra, "Id", "NameCathedra")
+            };
+            return View(data);
+        }
+
+        /*[HttpGet]
+        
+        public ActionResult ListOfTeachersFilter(FilterDataModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             var q =
                     from listCathedras in db.Cathedras
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id))
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listCathedras.Id == model.SelectedId))
                     orderby listRaitings.AvgRating descending
                     select new ListOfTeachers()
                     {
@@ -41,49 +113,14 @@ namespace AvaluateTheTeacher1.Controllers
                         AvgQuality = listRaitings.AvgQuality,
                         AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
                     };
-            /*var cathedra = db.Cathedras.ToList();
-            Cathedras = new List<SelectListItem>();
-            foreach(var item in cathedra)
+            List<Cathedra> cathedra = db.Cathedras.ToList();
+            cathedra.Insert(0, new Cathedra { NameCathedra = "Всі", Id = 0 });
+            FilterDataModel teacherList = new FilterDataModel
             {
-                Cathedras.Add(new SelectListItem
-                {
-                    Text =item.NameCathedra,
-                    Value =item.Id.ToString()
-                });
-            }
-            ViewBag.CahtedrasList = Cathedras;*/
-            return View(q.ToList());
-        }
-
-        /*[HttpGet]
-        public ActionResult ListOfTeachers(int? CathedraId)
-        {
-            /*var q =
-                    from listCathedras in db.Cathedras
-                    from listRaitings in db.Ratings
-                    from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id))
-                    orderby listRaitings.AvgRating descending
-                    select new ListOfTeachers()
-                    {
-                        TeacherId = listTeachers.TeacherId,
-                        NameCathedra = listCathedras.NameCathedra,
-                        Name = listTeachers.Name,
-                        SurName = listTeachers.SurName,
-                        LastName = listTeachers.LastName,
-                        PathToPhoto = listTeachers.PathToPhoto,
-                        Description = listTeachers.Description,
-                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
-                        PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating,
-                        AvgInterest = listRaitings.AvgRating,
-                        AvgQuality = listRaitings.AvgQuality,
-                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
-                    };
-            var CathedraList = new CathedraList();
-            CathedraList.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra", 1);
-            ViewBag.List = CathedraList;
-            return View();
+                Teachers = q.ToList(),
+                Cathedras = new SelectList(cathedra, "Id", "NameCathedra")
+            };
+            return View("ListOfTeachers", teacherList);
         }*/
     }
 }

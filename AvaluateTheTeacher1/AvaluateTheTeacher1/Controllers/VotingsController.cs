@@ -48,7 +48,7 @@ namespace AvaluateTheTeacher1.Controllers
                 foreach (var num in listId)
                 {
                     int id = int.Parse(num.TeacherId.ToString());
-                    float avgRelevant = 0, avgInterest = 0, avgQuality = 0, count = 0;
+                    double avgRelevant = 0, avgInterest = 0, avgQuality = 0, count = 0;
                     foreach (var voit in listId)
                     {
                         if (id == voit.TeacherId)
@@ -74,10 +74,10 @@ namespace AvaluateTheTeacher1.Controllers
                     var query = from ord in db.Ratings where ord.TeacherId == id select ord;
                     foreach (Rating rating in query)
                     {
-                        rating.AvgInterest = avgInterest / count;
-                        rating.AvgQuality = avgQuality / count;
-                        rating.AvgRelevantToStudents = avgRelevant / count;
-                        rating.AvgRating = (avgInterest / count + avgQuality / count + avgRelevant / count) / 3;
+                        rating.AvgInterest = float.Parse(Math.Round((avgInterest / count), 1).ToString());
+                        rating.AvgQuality = float.Parse(Math.Round((avgQuality / count), 1).ToString());
+                        rating.AvgRelevantToStudents = float.Parse(Math.Round((avgRelevant / count), 1).ToString());
+                        rating.AvgRating = float.Parse(Math.Round(((avgInterest / count + avgQuality / count + avgRelevant / count) / 3), 1).ToString());
                     }
                     db.SaveChanges();
                 }

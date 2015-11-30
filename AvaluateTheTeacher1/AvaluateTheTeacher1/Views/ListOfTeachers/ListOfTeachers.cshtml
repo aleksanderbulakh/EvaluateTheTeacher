@@ -1,19 +1,27 @@
-﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.ListOfTeachers>
+﻿@model AvaluateTheTeacher1.Models.Teachers.FilterDataModel
 @{
     ViewBag.Title = "ListOfTeachers";
 }
-<!--<form method="get">
-    <div class="form-group">
-        Html.Label("Виберіть кафедру", new { class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            Html.DropDownList("CahtedrasList")
-            Html.DropDownListFor(m => m.SelectedId, T.Cathedras, "Оберіть групу для студента", new { class = "form-control" })
+@using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Список кафедр", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "form-control" })
+            </div>
         </div>
-    </div>
-</form>-->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Фільтрувати" class="btn btn-default" />
+            </div>
+        </div>
+    }
 <h2 class="title">Список викладачів</h2>
-@foreach (var T in Model)
-{    
+@foreach (var T in Model.Teachers)
+{
     <div class="teachers">
         <img src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
             <div class="about_teacher">
@@ -40,6 +48,7 @@
                     </tr>
                 </table>
             </div>
-        <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
-    </div>
-}
+            <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
+            </div>
+        }
+

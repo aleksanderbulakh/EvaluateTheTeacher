@@ -250,6 +250,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Students\Group.cs" />
     <Compile Include="Models\Teachers\Cathedra.cs" />
+    <Compile Include="Models\Teachers\FilterDataModel.cs" />
     <Compile Include="Models\Teachers\ListOfTeachers.cs" />
     <Compile Include="Models\Teachers\Rating.cs" />
     <Compile Include="Models\Teachers\Subject.cs" />
