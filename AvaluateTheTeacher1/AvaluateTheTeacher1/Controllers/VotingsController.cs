@@ -45,9 +45,9 @@ namespace AvaluateTheTeacher1.Controllers
 
                 var listId = db.Votings.ToList();
 
+                int id = TeacherIdInController;
                 foreach (var num in listId)
                 {
-                    int id = int.Parse(num.TeacherId.ToString());
                     double avgRelevant = 0, avgInterest = 0, avgQuality = 0, count = 0;
                     foreach (var voit in listId)
                     {

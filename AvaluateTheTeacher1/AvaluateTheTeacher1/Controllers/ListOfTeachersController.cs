@@ -82,45 +82,5 @@ namespace AvaluateTheTeacher1.Controllers
             };
             return View(data);
         }
-
-        /*[HttpGet]
-        
-        public ActionResult ListOfTeachersFilter(FilterDataModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            var q =
-                    from listCathedras in db.Cathedras
-                    from listRaitings in db.Ratings
-                    from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listCathedras.Id == model.SelectedId))
-                    orderby listRaitings.AvgRating descending
-                    select new ListOfTeachers()
-                    {
-                        TeacherId = listTeachers.TeacherId,
-                        NameCathedra = listCathedras.NameCathedra,
-                        Name = listTeachers.Name,
-                        SurName = listTeachers.SurName,
-                        LastName = listTeachers.LastName,
-                        PathToPhoto = listTeachers.PathToPhoto,
-                        Description = listTeachers.Description,
-                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
-                        PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating,
-                        AvgInterest = listRaitings.AvgRating,
-                        AvgQuality = listRaitings.AvgQuality,
-                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
-                    };
-            List<Cathedra> cathedra = db.Cathedras.ToList();
-            cathedra.Insert(0, new Cathedra { NameCathedra = "Всі", Id = 0 });
-            FilterDataModel teacherList = new FilterDataModel
-            {
-                Teachers = q.ToList(),
-                Cathedras = new SelectList(cathedra, "Id", "NameCathedra")
-            };
-            return View("ListOfTeachers", teacherList);
-        }*/
     }
 }
