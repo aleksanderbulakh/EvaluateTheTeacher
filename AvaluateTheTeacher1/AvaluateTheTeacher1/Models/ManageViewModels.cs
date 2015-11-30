@@ -83,4 +83,15 @@ namespace AvaluateTheTeacher1.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+
+    public class AddEmailViewModel
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Електронна адреса")]
+        public string Email { get; set; }
+    }
+
+    
 }

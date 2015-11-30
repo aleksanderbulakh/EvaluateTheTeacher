@@ -168,8 +168,8 @@ namespace AvaluateTheTeacher1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindByNameAsync(model.Email);
-                if (user == null /*|| !(await UserManager.IsEmailConfirmedAsync(user.Id))*/)
+                var user = await UserManager.FindByEmailAsync(model.Email);
+                if (user == null || !(await UserManager.IsEmailConfirmedAsync(user.Id)))
                 {
                     // Не показывать, что пользователь не существует или не подтвержден
                     return View("ForgotPasswordConfirmation");
@@ -178,8 +178,17 @@ namespace AvaluateTheTeacher1.Controllers
                 // Дополнительные сведения о том, как включить подтверждение учетной записи и сброс пароля, см. по адресу: http://go.microsoft.com/fwlink/?LinkID=320771
                 // Отправка сообщения электронной почты с этой ссылкой
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                await UserManager.SendEmailAsync(user.Id, "Зміна пароля", "Змініть ваш пароль, перейшовши по <a href=\"" + callbackUrl + "\">посиланню</a>");
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                
+                GMailer.GmailUsername = "assess.teacher.project@gmail.com";
+                GMailer.GmailPassword = "jwsybnbdbrkflfxf";
+
+                GMailer mailer = new GMailer();
+                mailer.ToEmail = model.Email;
+                mailer.Subject = "Hey" + user.UserName + "! Do you forgot your passwrod???";
+                mailer.Body = "Сбросьте ваш пароль, щелкнув <a href=\"" + callbackUrl + "\">здесь</a>";
+                mailer.IsHtml = true;
+                mailer.Send();
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 

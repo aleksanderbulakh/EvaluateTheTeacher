@@ -24,7 +24,7 @@ namespace AvaluateTheTeacher1
             var from = "assess.teacher.project@gmail.com";
             var pass = "jwsybnbdbrkflfxf";
 
-            SmtpClient client = new SmtpClient("smtp.google.com", 587);
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 465);
 
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
