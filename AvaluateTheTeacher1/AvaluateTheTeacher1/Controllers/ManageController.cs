@@ -16,6 +16,8 @@ namespace AvaluateTheTeacher1.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        ApplicationDbContext db = new ApplicationDbContext();
+
         public ManageController()
         {
         }
@@ -48,6 +50,46 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 _userManager = value;
             }
+        }
+
+        [HttpGet]
+        public ActionResult AddEmail()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult> AddEmail(AddEmailViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var userEmail = User.Identity.GetUserId();
+                var user = UserManager.FindById(userEmail);
+                user.Email = model.Email;
+                IdentityResult result = await UserManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code },
+                       protocol: Request.Url.Scheme);                  
+
+                    GMailer.GmailUsername = "assess.teacher.project@gmail.com";
+                    GMailer.GmailPassword = "jwsybnbdbrkflfxf";
+
+                    GMailer mailer = new GMailer();
+                    mailer.ToEmail = model.Email;
+                    mailer.Subject = "Вітаю, " + user.UserName + "!";
+                    mailer.Body = "Пыдтвердыть вашу електронну адресу, перейшовши по посиланню <a href=\"" + callbackUrl + "\">Підтвердити</a>.";
+                    mailer.IsHtml = true;
+                    mailer.Send();
+                    return View("DisplayEmail");
+                }
+
+            }
+
+            return View(model);
+
         }
 
         //

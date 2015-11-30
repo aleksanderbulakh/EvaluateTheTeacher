@@ -246,6 +246,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
+    <Compile Include="Models\GMailer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Students\Group.cs" />
@@ -333,6 +334,9 @@
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Votings\Votings.cshtml" />
     <Content Include="Views\Admin\ListOfUsers.cshtml" />
+    <Content Include="Views\Manage\AddEmail.cshtml" />
+    <Content Include="Views\Manage\SuccessEmail.cshtml" />
+    <Content Include="Views\Manage\DisplayEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
