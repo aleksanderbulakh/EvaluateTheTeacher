@@ -42,7 +42,7 @@ namespace AvaluateTheTeacher1.Controllers
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
                         AvgRating = listRaitings.AvgRating,
-                        AvgInterest = listRaitings.AvgRating,
+                        AvgInterest = listRaitings.AvgInterest,
                         AvgQuality = listRaitings.AvgQuality,
                         AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
                     };

@@ -7,6 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
 using AvaluateTheTeacher1.Models;
+using Moveax.Mvc.ErrorHandler;
 
 namespace AvaluateTheTeacher1
 {
@@ -20,6 +21,16 @@ namespace AvaluateTheTeacher1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void Application_Error(object sender, System.EventArgs e)
+        {
+            var errorHandel = new MvcApplicationErrorHandler(application: this, exception: this.Server.GetLastError())
+            {
+                EnableHttpReturnCodes = true,
+                PassThroughHttp401 = false
+            };
+            errorHandel.Execute();
         }
     }
 }

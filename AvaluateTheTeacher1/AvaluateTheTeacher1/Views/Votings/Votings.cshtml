@@ -1,7 +1,7 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.Voting
 
 @{
-    ViewBag.Title = "Votings";
+    ViewBag.Title = "Проголосуйте";
 }
 
 @using (Html.BeginForm()) 
@@ -9,7 +9,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Voting</h4>
+        <h4>Проголосуйте</h4>
         <hr />
         <div class="form-group">
             @Html.Label("Цікавість викладання матеріалу: ", htmlAttributes: new { @class = "control-label col-md-2" })

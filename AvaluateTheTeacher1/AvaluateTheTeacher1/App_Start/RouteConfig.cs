@@ -18,6 +18,15 @@ namespace AvaluateTheTeacher1
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
+
+
+            routes.MapRoute(
+                name: "CatchAll",
+                url: "{*url}",
+                defaults: new { controller = "Error", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }
