@@ -259,8 +259,10 @@
     <Compile Include="Models\Teachers\Cathedra.cs" />
     <Compile Include="Models\Teachers\FilterDataModel.cs" />
     <Compile Include="Models\Teachers\ListOfTeachers.cs" />
+    <Compile Include="Models\Teachers\MessageForModerator.cs" />
     <Compile Include="Models\Teachers\Rating.cs" />
     <Compile Include="Models\Teachers\Subject.cs" />
+    <Compile Include="Models\Teachers\Suggestions.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
