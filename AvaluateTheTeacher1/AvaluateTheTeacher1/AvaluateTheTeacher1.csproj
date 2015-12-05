@@ -249,6 +249,10 @@
     <Compile Include="Migrations\201511272314380_PasswordTxt.Designer.cs">
       <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512051549399_DBupdate.cs" />
+    <Compile Include="Migrations\201512051549399_DBupdate.Designer.cs">
+      <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -354,9 +358,9 @@
     <Content Include="Views\Manage\SuccessEmail.cshtml" />
     <Content Include="Views\Manage\DisplayEmail.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Manage\EditUserName.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
-    <Content Include="Views\Manage\EditUserName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -417,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511272314380_PasswordTxt.resx">
       <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512051549399_DBupdate.resx">
+      <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

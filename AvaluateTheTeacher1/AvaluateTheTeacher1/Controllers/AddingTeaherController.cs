@@ -19,6 +19,7 @@ namespace AvaluateTheTeacher1.Controllers
             return View(teacherModel);
         }
 
+        /*
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
@@ -66,6 +67,6 @@ namespace AvaluateTheTeacher1.Controllers
 
             model.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra");
             return View(model);
-        }
+        }*/
     }
 }

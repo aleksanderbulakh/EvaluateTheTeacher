@@ -19,6 +19,7 @@ namespace AvaluateTheTeacher1.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: ListOfTeachers
 
+        /*
         [HttpGet]
         public ActionResult ListOfTeachers(FilterDataModel model)
         {
@@ -81,6 +82,6 @@ namespace AvaluateTheTeacher1.Controllers
                 Cathedras=new SelectList(cathedra, "Id", "NameCathedra")
             };
             return View(data);
-        }
+        }*/
     }
 }
