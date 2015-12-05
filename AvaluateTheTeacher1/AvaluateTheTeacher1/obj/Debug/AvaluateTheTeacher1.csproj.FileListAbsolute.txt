@@ -518,3 +518,4 @@ D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\Avaluate
 D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Moveax.Mvc.ErrorHandler.dll

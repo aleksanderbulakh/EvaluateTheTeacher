@@ -300,6 +300,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="TeacherImg\ag_tkachuk.jpg" />
+    <Content Include="TeacherImg\am_kovalchuk.jpg" />
+    <Content Include="TeacherImg\ao_danilchenko.jpg" />
+    <Content Include="TeacherImg\av_morozov.jpg" />
+    <Content Include="TeacherImg\pt_dederkal.jpg" />
+    <Content Include="TeacherImg\si_yaremchuk.jpg" />
+    <Content Include="TeacherImg\vb_krizhanivskiy.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -347,10 +354,10 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
+    <Content Include="Views\Manage\EditUserName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="TeacherImg\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

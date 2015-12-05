@@ -64,7 +64,9 @@ namespace AvaluateTheTeacher1.Models
 
     public class AddNewStudentViewModel
     {
-        [Required]        
+        [Required]
+        [StringLength(100, ErrorMessage = "Значення {0} повинне містити не менше {2} символів.", MinimumLength = 5)]
+        [RegularExpression(@"[A-Za-z]+", ErrorMessage = "Логін повинен містити лише цифри та літери латинського алфавіту.")]
         [Display(Name = "Логін")]
         public string userName { get; set; }
 
@@ -163,6 +165,5 @@ namespace AvaluateTheTeacher1.Models
         public System.Web.HttpPostedFileBase Photo { get; set; }
     }
    
-
-    
+       
 }

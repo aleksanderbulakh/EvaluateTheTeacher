@@ -93,5 +93,10 @@ namespace AvaluateTheTeacher1.Models
         public string Email { get; set; }
     }
 
-    
+    public class EditUserNameViewModel
+    {
+        [StringLength(100, ErrorMessage = "Значення {0} повинне містити не менше {2} символів.", MinimumLength = 5)]
+        [RegularExpression(@"[A-Za-z]+", ErrorMessage = "Логін повинен містити лише цифри та літери латинського алфавіту.")]
+        public string Username { get; set; }
+    }
 }

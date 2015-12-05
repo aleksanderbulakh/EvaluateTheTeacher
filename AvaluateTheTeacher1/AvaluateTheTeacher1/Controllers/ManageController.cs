@@ -362,6 +362,45 @@ namespace AvaluateTheTeacher1.Controllers
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
         }
 
+        [HttpGet]
+        public async Task<ActionResult> EditUserName()
+        {
+            ApplicationUser user = await UserManager.FindByNameAsync(User.Identity.Name);
+            if (user != null)
+            {
+                EditUserNameViewModel model = new EditUserNameViewModel { Username = user.UserName};
+                return View(model);
+            }
+
+            return RedirectToAction("Index", "Manage");
+        }
+
+
+        public async Task<ActionResult> EditUserName (EditUserNameViewModel model)
+        {
+            ApplicationUser user = await UserManager.FindByNameAsync(User.Identity.Name);
+            if (user != null)
+            {
+                user.UserName = model.Username;
+                IdentityResult result = await UserManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("_LoginPartial");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Щось пішло не так.");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Користувача не знайдено.");
+            }
+
+            return View(model);
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && _userManager != null)
