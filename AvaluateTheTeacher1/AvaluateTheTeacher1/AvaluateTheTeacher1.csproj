@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201512051549399_DBupdate.Designer.cs">
       <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512061547376_tblStudentVotings.cs" />
+    <Compile Include="Migrations\201512061547376_tblStudentVotings.Designer.cs">
+      <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -260,6 +264,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Students\Group.cs" />
+    <Compile Include="Models\Students\StudentVoting.cs" />
     <Compile Include="Models\Teachers\Cathedra.cs" />
     <Compile Include="Models\Teachers\FilterDataModel.cs" />
     <Compile Include="Models\Teachers\ListOfTeachers.cs" />
@@ -424,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512051549399_DBupdate.resx">
       <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061547376_tblStudentVotings.resx">
+      <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
