@@ -650,3 +650,5 @@ D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateT
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 >>>>>>> origin/master
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblStudentVotingsMod.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Conflicts.resources

@@ -42,6 +42,9 @@ namespace AvaluateTheTeacher1.Models
         public DbSet<Teachers.Subject> Subjects { get; set; }
         public DbSet<Teachers.Voting> Votings { get; set; }
         public DbSet<Teachers.Rating> Ratings { get; set; }
+        public DbSet<Teachers.MessageForModerator> MessageForModerators { get; set; }
+        public DbSet<Teachers.Suggestions> Suggestions { get; set; }
+        public DbSet<Students.StudentVoting> StudentVotings { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

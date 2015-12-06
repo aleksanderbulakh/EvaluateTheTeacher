@@ -9,7 +9,7 @@
     }
 }
 
-@using (Html.BeginForm(Html.BeginForm("Voting", "Voting", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" })))
+@using (Html.BeginForm(Html.BeginForm("Votings", "Votings", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" })))
 {
     @Html.AntiForgeryToken()
 

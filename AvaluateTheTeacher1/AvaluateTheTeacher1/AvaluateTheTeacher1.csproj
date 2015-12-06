@@ -257,6 +257,14 @@
     <Compile Include="Migrations\201512061547376_tblStudentVotings.Designer.cs">
       <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512061858279_tblStudentVotingsMod.cs" />
+    <Compile Include="Migrations\201512061858279_tblStudentVotingsMod.Designer.cs">
+      <DependentUpon>201512061858279_tblStudentVotingsMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512061932195_Conflicts.cs" />
+    <Compile Include="Migrations\201512061932195_Conflicts.Designer.cs">
+      <DependentUpon>201512061932195_Conflicts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -366,6 +374,7 @@
     <Content Include="Views\Manage\EditUserName.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
+    <Content Include="Views\Votings\TimeOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -432,6 +441,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512061547376_tblStudentVotings.resx">
       <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061858279_tblStudentVotingsMod.resx">
+      <DependentUpon>201512061858279_tblStudentVotingsMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061932195_Conflicts.resx">
+      <DependentUpon>201512061932195_Conflicts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
