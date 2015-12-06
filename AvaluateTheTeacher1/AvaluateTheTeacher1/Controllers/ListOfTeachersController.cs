@@ -19,7 +19,7 @@ namespace AvaluateTheTeacher1.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: ListOfTeachers
 
-        /*
+        
         [HttpGet]
         public ActionResult ListOfTeachers(FilterDataModel model)
         {
@@ -43,9 +43,23 @@ namespace AvaluateTheTeacher1.Controllers
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
                         AvgRating = listRaitings.AvgRating,
-                        AvgInterest = listRaitings.AvgInterest,
-                        AvgQuality = listRaitings.AvgQuality,
-                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
+                        ActivityInClass=listRaitings.ActivityInClass,
+                        AvailabilityTeacherOutsideLessons=listRaitings.AvailabilityTeacherOutsideLessons,
+                        ClarityAndAccessibility=listRaitings.ClarityAndAccessibility,
+                        CommentsTheWork=listRaitings.CommentsTheWork,
+                        DepthPossessionOf=listRaitings.DepthPossessionOf,
+                        HowWellTheProcedurePerformedGrading=listRaitings.HowWellTheProcedurePerformedGrading,
+                        InterestInTheSubject=listRaitings.InterestInTheSubject,
+                        NumberOfAttendance=listRaitings.NumberOfAttendance,
+                        OverallSubject=listRaitings.OverallSubject,
+                        PreparationTime=listRaitings.PreparationTime,
+                        ProcedureGrading=listRaitings.ProcedureGrading,
+                        QualityMasteringTheSubject=listRaitings.QualityMasteringTheSubject,
+                        QualityTeachingMaterials=listRaitings.QualityTeachingMaterials,
+                        RelevantToStudents=listRaitings.RelevantToStudents,
+                        SomethingNew=listRaitings.SomethingNew,
+                        TheDifficultyOfTheCourse=listRaitings.TheDifficultyOfTheCourse,
+                        ThePracticalValue=listRaitings.ThePracticalValue  
                     };
             }
             else
@@ -69,9 +83,23 @@ namespace AvaluateTheTeacher1.Controllers
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
                         AvgRating = listRaitings.AvgRating,
-                        AvgInterest = listRaitings.AvgRating,
-                        AvgQuality = listRaitings.AvgQuality,
-                        AvgRelevantToStudents = listRaitings.AvgRelevantToStudents
+                        ActivityInClass = listRaitings.ActivityInClass,
+                        AvailabilityTeacherOutsideLessons = listRaitings.AvailabilityTeacherOutsideLessons,
+                        ClarityAndAccessibility = listRaitings.ClarityAndAccessibility,
+                        CommentsTheWork = listRaitings.CommentsTheWork,
+                        DepthPossessionOf = listRaitings.DepthPossessionOf,
+                        HowWellTheProcedurePerformedGrading = listRaitings.HowWellTheProcedurePerformedGrading,
+                        InterestInTheSubject = listRaitings.InterestInTheSubject,
+                        NumberOfAttendance = listRaitings.NumberOfAttendance,
+                        OverallSubject = listRaitings.OverallSubject,
+                        PreparationTime = listRaitings.PreparationTime,
+                        ProcedureGrading = listRaitings.ProcedureGrading,
+                        QualityMasteringTheSubject = listRaitings.QualityMasteringTheSubject,
+                        QualityTeachingMaterials = listRaitings.QualityTeachingMaterials,
+                        RelevantToStudents = listRaitings.RelevantToStudents,
+                        SomethingNew = listRaitings.SomethingNew,
+                        TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse,
+                        ThePracticalValue = listRaitings.ThePracticalValue
                     };
             }
             List<Cathedra> cathedra = db.Cathedras.ToList();
@@ -82,6 +110,6 @@ namespace AvaluateTheTeacher1.Controllers
                 Cathedras=new SelectList(cathedra, "Id", "NameCathedra")
             };
             return View(data);
-        }*/
+        }
     }
 }
