@@ -9,11 +9,8 @@ namespace AvaluateTheTeacher1.Models.Teachers
     {
         public int Id { get; set; }
         public float ForTheEntirePeriod { get; set; }
-
         public float PreviousMonth { get; set; }
-
         public float AvgRating { get; set; }
-
         public float OverallSubject { get; set; }
         public float SomethingNew { get; set; }
         public float ThePracticalValue { get; set; }
