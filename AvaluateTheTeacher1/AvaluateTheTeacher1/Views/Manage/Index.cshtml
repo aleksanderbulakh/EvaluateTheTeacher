@@ -12,16 +12,16 @@
     <dl class="dl-horizontal">
         <dt>Пароль:</dt>
         <dd>
-            [
+            
             @if (Model.HasPassword)
             {
                 @Html.ActionLink("Змінити пароль", "ChangePassword")
             }
             else
             {
-                @Html.ActionLink("Создать", "SetPassword")
+                @Html.ActionLink("Створити", "SetPassword")
             }
-            ]
+            
         </dd>
         
         @*

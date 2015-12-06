@@ -43,18 +43,18 @@ namespace AvaluateTheTeacher1.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Текущий пароль")]
+        [Display(Name = "Поточний пароль")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать символов не менее: {2}.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Значення {0} повинно мати не менше символів: {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Новый пароль")]
+        [Display(Name = "Новий пароль")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение нового пароля")]
-        [Compare("NewPassword", ErrorMessage = "Новый пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Підтвердження нового пароля")]
+        [Compare("NewPassword", ErrorMessage = "Новій пароль та його підтвердження не співпадають.")]
         public string ConfirmPassword { get; set; }
     }
 

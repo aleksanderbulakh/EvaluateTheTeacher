@@ -29,6 +29,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public ICollection<Rating> Ratings { get; set; }
         public ICollection<Students.Group> Groups { get; set; }
         public ICollection<MessageForModerator> Message { get; set; }
+        public ICollection<Students.StudentVoting> StudentVotings { get; set; }
         public Teacher()
         {
             Subjects = new List<Subject>();
@@ -37,6 +38,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
             Groups = new List<Students.Group>();
             Suggestion = new List<Suggestions>();
             Message = new List<MessageForModerator>();
+            StudentVotings = new List<Students.StudentVoting>();
         }
     }
 }

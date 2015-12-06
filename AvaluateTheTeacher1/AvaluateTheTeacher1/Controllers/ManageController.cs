@@ -375,17 +375,19 @@ namespace AvaluateTheTeacher1.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-
+        [HttpPost]
         public async Task<ActionResult> EditUserName (EditUserNameViewModel model)
         {
             ApplicationUser user = await UserManager.FindByNameAsync(User.Identity.Name);
             if (user != null)
             {
-                user.UserName = model.Username;
+                user.UserName = model.Username;                
                 IdentityResult result = await UserManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("_LoginPartial");
+                    AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+                    
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

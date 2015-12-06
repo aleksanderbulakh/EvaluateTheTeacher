@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 using AvaluateTheTeacher1.Models.Students;
 
 namespace AvaluateTheTeacher1.Models
@@ -13,6 +14,12 @@ namespace AvaluateTheTeacher1.Models
         public int? GroupId { get; set; }
 
         public Group Group { get; set; }
+
+        public ICollection<StudentVoting> StudentVotings { get; set; }
+        public ApplicationUser()
+        {
+            StudentVotings = new List<StudentVoting>();
+        }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
