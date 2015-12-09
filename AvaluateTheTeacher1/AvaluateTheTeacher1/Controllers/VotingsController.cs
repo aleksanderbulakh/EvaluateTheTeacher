@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class VotingsController : AccountController
     {
-        private static int TeacherIdInController;
+        private static int TeacherIdInController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
         
@@ -37,15 +37,19 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 return HttpNotFound();
             }
-
             TeacherIdInController = Int32.Parse(id.ToString());
+            var query = (from listTeachers in db.Teachers
+                        .Where(listTeachers1 => listTeachers1.TeacherId == TeacherIdInController)
+                        select listTeachers).ToList();
+            ViewBag.Name = query[0].Name.ToString() + " " + query[0].LastName.ToString();
+            ViewBag.Photo = query[0].PathToPhoto;
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "student")]
-        public async System.Threading.Tasks.Task<ActionResult> Votings(Voting model)
+        public async System.Threading.Tasks.Task<ActionResult> VotingsGet(VotingFull model)
         {
             if (ModelState.IsValid)
             {
@@ -71,7 +75,16 @@ namespace AvaluateTheTeacher1.Controllers
                     TeacherId = TeacherIdInController
                 };
 
+                var suggestion = new Suggestions
+                {
+                    TeacherId = TeacherIdInController,
+                    SuggestionsForImprovement = model.Suggestions
+                };
+
                 db.Votings.Add(voting);
+                db.SaveChanges();
+
+                db.Suggestions.Add(suggestion);
                 db.SaveChanges();
 
                 var listId = db.Votings.ToList();

@@ -282,6 +282,7 @@
     <Compile Include="Models\Teachers\Suggestions.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
+    <Compile Include="Models\Teachers\VotingFull.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -300,7 +301,6 @@
     <Content Include="Content\slider1.jpg" />
     <Content Include="Content\slider2.jpg" />
     <Content Include="Content\slider3.jpg" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -372,9 +372,9 @@
     <Content Include="Views\Manage\DisplayEmail.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Manage\EditUserName.cshtml" />
+    <Content Include="Views\Votings\TimeOut.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
-    <Content Include="Views\Votings\TimeOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -383,7 +383,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
