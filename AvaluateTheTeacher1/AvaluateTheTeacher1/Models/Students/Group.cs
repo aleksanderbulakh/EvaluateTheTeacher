@@ -13,15 +13,12 @@ namespace AvaluateTheTeacher1.Models.Students
         public string Name { get; set; }  
         
         public virtual ICollection<ApplicationUser>  Users { get; set; }
+        public virtual ICollection<Teachers.TeacherSubject> TeachersSubjects { get; set; }
 
-        public virtual ICollection<Teachers.Teacher> Teachers { get; set; }
-
-        public virtual ICollection<Teachers.Subject> Subjects { get; set; }
         public Group()
         {
             Users = new List<ApplicationUser>();
-            Teachers = new List<Teachers.Teacher>();
-            Subjects = new List<Teachers.Subject>();
+            TeachersSubjects = new List<Teachers.TeacherSubject>();
         }    
     }
 }

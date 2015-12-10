@@ -26,7 +26,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public int ProcedureGrading { get; set; }
         public int HowWellTheProcedurePerformedGrading { get; set; }
         public int QualityMasteringTheSubject { get; set; }
-        public int? TeacherId { get; set; }
-        public Teacher Teacher { get; set; }
+        public int? TeacherSubjectId { get; set; }
+        public TeacherSubject TeacherSubject { get; set; }
     }
 }

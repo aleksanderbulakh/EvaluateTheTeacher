@@ -12,8 +12,8 @@ namespace AvaluateTheTeacher1.Models.Students
         public string StudentId { get; set; }        
         public ApplicationUser Student { get; set; }
 
-        public int? TeacherId { get; set; }
-        public Teachers.Teacher Teacher { get; set; }
+        public int? TeachersSubjectId { get; set; }
+        public Teachers.TeacherSubject TeachersSubjects { get; set; }
 
         public DateTime Date { get; set; }
     }

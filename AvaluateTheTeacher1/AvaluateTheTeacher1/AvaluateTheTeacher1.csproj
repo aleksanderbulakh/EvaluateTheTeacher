@@ -272,6 +272,10 @@
     <Compile Include="Migrations\201512091359004_tblGroupSubject.Designer.cs">
       <DependentUpon>201512091359004_tblGroupSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512102312008_FullDB.cs" />
+    <Compile Include="Migrations\201512102312008_FullDB.Designer.cs">
+      <DependentUpon>201512102312008_FullDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -284,10 +288,12 @@
     <Compile Include="Models\Teachers\FilterDataModel.cs" />
     <Compile Include="Models\Teachers\ListOfTeachers.cs" />
     <Compile Include="Models\Teachers\MessageForModerator.cs" />
+    <Compile Include="Models\Teachers\RaitingTeacherSubject.cs" />
     <Compile Include="Models\Teachers\Rating.cs" />
     <Compile Include="Models\Teachers\Subject.cs" />
     <Compile Include="Models\Teachers\Suggestions.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
+    <Compile Include="Models\Teachers\TeacherSubject.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
     <Compile Include="Models\Teachers\VotingFull.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -312,6 +318,8 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -479,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512091359004_tblGroupSubject.resx">
       <DependentUpon>201512091359004_tblGroupSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512102312008_FullDB.resx">
+      <DependentUpon>201512102312008_FullDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

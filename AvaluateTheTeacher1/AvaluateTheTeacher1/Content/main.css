@@ -27,7 +27,7 @@ body
 {
     width: 92%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto !important;
     position: relative;
     box-shadow: 0 0 40px 11px rgba(0, 0, 0, 0.3);
 }

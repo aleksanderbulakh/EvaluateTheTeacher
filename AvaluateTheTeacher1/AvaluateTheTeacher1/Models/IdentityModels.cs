@@ -60,23 +60,11 @@ namespace AvaluateTheTeacher1.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Teachers.Subject>().HasMany(c => c.Teachers)                
-                .WithMany(s => s.Subjects)                
-                .Map(t => t.MapLeftKey("SubjectId")
-                .MapRightKey("TeacherId")               
-                .ToTable("SubjectTeacher"));
-
-            modelBuilder.Entity<Students.Group>().HasMany(c => c.Subjects)
-                .WithMany(s => s.Groups)
-                .Map(t => t.MapLeftKey("GroupId")
-                .MapRightKey("SubjectId")
-                .ToTable("GroupSubject"));
-
-            modelBuilder.Entity<Teachers.Teacher>().HasMany(c => c.Groups)
-                .WithMany(s => s.Teachers)
-                .Map(t => t.MapLeftKey("TeacherId")
+            modelBuilder.Entity<Teachers.TeacherSubject>().HasMany(c => c.Groups)
+                .WithMany(s => s.TeachersSubjects)
+                .Map(t => t.MapLeftKey("TeacherSubjectId")
                 .MapRightKey("GroupId")
-                .ToTable("TeacherGroup"));
+                .ToTable("GroupTeacherSubject"));
         }
     }
 }

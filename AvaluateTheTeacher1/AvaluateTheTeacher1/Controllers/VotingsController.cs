@@ -18,7 +18,7 @@ namespace AvaluateTheTeacher1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         
         // GET: Votings
-        [Authorize(Roles ="student")]
+        /*[Authorize(Roles ="student")]
         public async System.Threading.Tasks.Task<ActionResult> Votings(int? id)
         {
             //Перевірка, чи не голосував студент вже в цьому місяці//
@@ -162,6 +162,6 @@ namespace AvaluateTheTeacher1.Controllers
         public ActionResult TimeOut()
         {
             return View();
-        }
+        }*/
     }
 }

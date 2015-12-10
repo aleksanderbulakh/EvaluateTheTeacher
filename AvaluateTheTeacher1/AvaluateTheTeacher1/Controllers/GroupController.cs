@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class GroupController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        /*private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Group
         public ActionResult Index()
@@ -136,9 +136,6 @@ namespace AvaluateTheTeacher1.Controllers
             return RedirectToAction("Index");
         }
 
-       
-
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -146,6 +143,6 @@ namespace AvaluateTheTeacher1.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
+        }*/
     }
 }
