@@ -4,9 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h1 class="title">Адміністрація сайту</h1>
-<div class="admin_menu">
-    @Html.ActionLink("Додавання групи", "AddNewGroup", "AddingGroup", routeValues: null, htmlAttributes: new { title = "" })
+<div class="admin_menu">   
     @Html.ActionLink("Додавання студента", "AddNewStudent", "AddingStudent", routeValues: null, htmlAttributes: new { title = "" })
     @Html.ActionLink("Список студентів", "ListOfUsers", "Admin", routeValues: null, htmlAttributes: new { title = "" })
-    @Html.ActionLink("Додавання викладача", "AddNewTeacher", "AddingTeacher", routeValues: null, htmlAttributes: new { title = "" })   
+    @Html.ActionLink("Групи студентів", "Index", "Group", routeValues: null, htmlAttributes: new { title = "" })
+    @Html.ActionLink("Викладачі", "Index", "Teachers", routeValues: null, htmlAttributes: new { title = "" })   
+    @Html.ActionLink("Предмети", "Index", "Subjects", routeValues: null, htmlAttributes: new { title = "" })
+    
 </div>

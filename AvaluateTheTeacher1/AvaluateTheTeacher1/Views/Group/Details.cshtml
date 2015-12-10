@@ -1,0 +1,42 @@
+﻿@model AvaluateTheTeacher1.Models.Students.Group
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Group</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            Кількість студентів
+        </dt>
+        <dd>
+            @ViewBag.CountStudents
+        </dd>
+
+        <dt>
+            Викладачі, які викладають в цій групі
+        </dt>
+        
+            @foreach(var c in ViewBag.Teachers)
+            {
+                <dd>@c.SurName @c.Name</dd>
+            }
+        
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GroupId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

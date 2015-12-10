@@ -16,9 +16,13 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public Cathedra Cathedra { get; set; }
 
         public ICollection<Teacher> Teachers { get; set; }
+
+        public virtual ICollection<Students.Group> Groups { get; set; }
+
         public Subject()
         {
             Teachers = new List<Teacher>();
+            Groups = new List<Students.Group>();
         }
     }
 }
