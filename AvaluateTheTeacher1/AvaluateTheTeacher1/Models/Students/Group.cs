@@ -18,6 +18,11 @@ namespace AvaluateTheTeacher1.Models.Students
 
         public virtual ICollection<Teachers.Subject> Subjects { get; set; }
 
+<<<<<<< HEAD
+=======
+        
+        public ICollection<Teachers.Teacher> Teachers { get; set; }
+>>>>>>> origin/master
         public Group()
         {
             Users = new List<ApplicationUser>();
