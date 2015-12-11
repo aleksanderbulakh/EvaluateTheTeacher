@@ -1,3 +1,4 @@
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
