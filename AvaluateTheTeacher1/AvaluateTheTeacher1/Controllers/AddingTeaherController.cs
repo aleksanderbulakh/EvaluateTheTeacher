@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AvaluateTheTeacher1.Models;
+using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Controllers
 {
@@ -19,7 +20,7 @@ namespace AvaluateTheTeacher1.Controllers
             return View(teacherModel);
         }
 
-        /*
+        
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
@@ -27,7 +28,7 @@ namespace AvaluateTheTeacher1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var teacher = new Models.Teachers.Teacher();
+                var teacher = new Teacher();
                 teacher.Name = model.Name;
                 teacher.SurName = model.SurName;
                 teacher.LastName = model.LastName;
@@ -48,18 +49,58 @@ namespace AvaluateTheTeacher1.Controllers
                 var teacherId = querty.ToList();
                 foreach (var obj in teacherId)
                 {
-                    var raiting = new Models.Teachers.Rating
+                    var raiting = new Rating
                     {
-                        AvgInterest = 0,
-                        AvgQuality = 0,
+                        ActivityInClass=0,
+                        AvailabilityTeacherOutsideLessons=0,
+                        ClarityAndAccessibility = 0,
+                        CommentsTheWork = 0,
+                        DepthPossessionOf = 0,
+                        HowWellTheProcedurePerformedGrading = 0,
+                        InterestInTheSubject = 0,
+                        NumberOfAttendance = 0,
+                        OverallSubject = 0,
+                        PreparationTime = 0,
+                        ProcedureGrading = 0,
+                        QualityMasteringTheSubject = 0,
+                        QualityTeachingMaterials = 0,
+                        RelevantToStudents = 0,
+                        SomethingNew = 0,
+                        TheDifficultyOfTheCourse = 0,
+                        ThePracticalValue = 0,
                         AvgRating = 0,
-                        AvgRelevantToStudents = 0,
                         ForTheEntirePeriod = 0,
                         PreviousMonth = 0,
                         TeacherId = obj.TeacherId
                     };
                     db.Ratings.Add(raiting);
                     db.SaveChanges();
+                    /*var raitingSubject = new RaitingTeacherSubject
+                    {
+                        ActivityInClass = 0,
+                        AvailabilityTeacherOutsideLessons = 0,
+                        ClarityAndAccessibility = 0,
+                        CommentsTheWork = 0,
+                        DepthPossessionOf = 0,
+                        HowWellTheProcedurePerformedGrading = 0,
+                        InterestInTheSubject = 0,
+                        NumberOfAttendance = 0,
+                        OverallSubject = 0,
+                        PreparationTime = 0,
+                        ProcedureGrading = 0,
+                        QualityMasteringTheSubject = 0,
+                        QualityTeachingMaterials = 0,
+                        RelevantToStudents = 0,
+                        SomethingNew = 0,
+                        TheDifficultyOfTheCourse = 0,
+                        ThePracticalValue = 0,
+                        AvgRating = 0,
+                        ForTheEntirePeriod = 0,
+                        PreviousMonth = 0,
+                        TeacherSubjectId = obj.TeacherId
+                    };
+                    db.RaitingTeacherSubject.Add(raitingSubject);
+                    db.SaveChanges();*/
                 }
                 
                 return RedirectToAction("Index", "Home");
@@ -67,6 +108,6 @@ namespace AvaluateTheTeacher1.Controllers
 
             model.Cathedras = new SelectList(db.Cathedras, "Id", "NameCathedra");
             return View(model);
-        }*/
+        }
     }
 }

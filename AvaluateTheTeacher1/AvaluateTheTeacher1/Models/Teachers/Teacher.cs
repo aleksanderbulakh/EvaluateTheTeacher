@@ -22,23 +22,17 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public int? CathedraId { get; set; }
 
         public Cathedra Cathedra { get; set; }
-
-        public ICollection<Subject> Subjects { get; set; }
-        public ICollection<Voting> Votings { get; set; }
-        public ICollection<Suggestions> Suggestion { get; set; }
-        public ICollection<Rating> Ratings { get; set; }
-        public ICollection<Students.Group> Groups { get; set; }
-        public ICollection<MessageForModerator> Message { get; set; }
-        public ICollection<Students.StudentVoting> StudentVotings { get; set; }
+        
+        public virtual ICollection<Suggestions> Suggestion { get; set; }
+        public virtual ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<MessageForModerator> Message { get; set; }
+        public virtual ICollection<TeacherSubject> TeachersSubjects { get; set; }
         public Teacher()
         {
-            Subjects = new List<Subject>();
-            Votings = new List<Voting>();
             Ratings = new List<Rating>();
-            Groups = new List<Students.Group>();
             Suggestion = new List<Suggestions>();
             Message = new List<MessageForModerator>();
-            StudentVotings = new List<Students.StudentVoting>();
+            TeachersSubjects = new List<TeacherSubject>();
         }
     }
 }
