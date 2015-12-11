@@ -1,0 +1,50 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.FilterDataModel
+@{
+    ViewBag.Title = "ListOfTeachers";
+}
+@using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Список кафедр", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Фільтрувати" class="btn btn-default" />
+            </div>
+        </div>
+    }
+<h2 class="title">Список викладачів</h2>
+@foreach (var T in Model.Teachers)
+{
+    <div class="teachers">
+        <img src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
+            <div class="about_teacher">
+                <span>@T.LastName</span>
+                <span>@T.Name</span>
+                <span>@T.SurName</span>
+                <p>@T.Description</p>
+                <table class="value">
+                    <tr>
+                        <th><span>За весь період:</span></th>
+                        <td>@T.ForTheEntirePeriod</td>
+                    </tr>
+                    <tr>
+                        <th><span>За минулий місяць:</span></th>
+                        <td>@T.PreviousMonth</td>
+                    </tr>
+                    <tr>
+                        <th><span>Рейтингова оцінка:</span></th>
+                        <td>@T.AvgRating</td>
+                    </tr>
+                </table>
+            </div>
+            <a class="vote-teacher" href="/Votings/Votings/@T.TeacherId">Проголосувати за викладача</a>
+            </div>
+        }
+

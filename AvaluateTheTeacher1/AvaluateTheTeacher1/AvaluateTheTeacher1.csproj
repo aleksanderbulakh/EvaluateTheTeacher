@@ -216,7 +216,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aspnet-AvaluateTheTeacher1-20151114122241_log.ldf" />
     <Content Include="Content\1.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
