@@ -67,11 +67,11 @@
         </div>
 
         <div class="editor-label"><b>Предмети</b></div>
-        @foreach (var c in ViewBag.Subjects)
+        <!--foreach (var c in ViewBag.Subjects)
         {
-            <input type="checkbox" name="selectedSubjects" value="@c.Id"
-                   @(Model.Subjects.Contains(c) ? "checked=\"checked\"" : "") />@c.Name <br />
-        }
+            <input type="checkbox" name="selectedSubjects" value="c.Id"
+                   (Model.TeachersSubjects.Contains(c) ? "checked=\"checked\"" : "") />c.Name <br />
+        }-->
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

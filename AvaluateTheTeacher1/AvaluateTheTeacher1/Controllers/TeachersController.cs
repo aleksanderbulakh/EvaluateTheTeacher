@@ -83,7 +83,7 @@ namespace AvaluateTheTeacher1.Controllers
         // POST: Teachers/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
-        /*[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "TeacherId,Name,SurName,LastName,PathToPhoto,Description,CathedraId")] Teacher teacher, int [] selectedSubjects)
         {
@@ -96,13 +96,18 @@ namespace AvaluateTheTeacher1.Controllers
                 newteacher.PathToPhoto = teacher.PathToPhoto;
                 newteacher.Description = teacher.Description;
 
-                newteacher.Subjects.Clear();
-                teacher.Subjects.Clear();
+                newteacher.TeachersSubjects.Clear();
+                teacher.TeachersSubjects.Clear();
                 if (selectedSubjects != null)
                 {
                     foreach (var c in db.Subjects.Where(co => selectedSubjects.Contains(co.Id)))
                     {
-                        newteacher.Subjects.Add(c);
+                        var teachersubject = new TeacherSubject
+                        {
+                            TeacherId = teacher.TeacherId,
+                            SubjectId = c.Id
+                        };
+                        newteacher.TeachersSubjects.Add(teachersubject);
                     }
 
                 }   
@@ -147,6 +152,6 @@ namespace AvaluateTheTeacher1.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }*/
+        }
     }
 }
