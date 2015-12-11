@@ -87,7 +87,8 @@ dfn {
 
 hr {
   height: 0;
-  -moz-box-sizing: content-box;
+  -moz-box-sizing: 
+      -box;
        box-sizing: content-box;
 }
 

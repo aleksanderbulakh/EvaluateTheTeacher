@@ -1,4 +1,6 @@
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.FullBD.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -87,5 +89,3 @@ D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateT
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.FullBD.resources
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
