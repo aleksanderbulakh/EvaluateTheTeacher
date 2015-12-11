@@ -67,11 +67,14 @@
         </div>
 
         <div class="editor-label"><b>Предмети</b></div>
-        <!--foreach (var c in ViewBag.Subjects)
+        @foreach (var k in ViewBag.DictionaryTS)
         {
-            <input type="checkbox" name="selectedSubjects" value="c.Id"
-                   (Model.TeachersSubjects.Contains(c) ? "checked=\"checked\"" : "") />c.Name <br />
-        }-->
+            foreach (var k1 in k.Value)
+            {
+                <input type="checkbox" name="selectedSubjects" value="@k1.Key" 
+                   @(k.Key ? "checked=\"checked\"" : "") />@k1.Value <br />
+            }
+        }
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

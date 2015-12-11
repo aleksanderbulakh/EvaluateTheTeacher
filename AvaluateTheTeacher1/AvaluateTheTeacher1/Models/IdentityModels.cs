@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using AvaluateTheTeacher1.Models.Students;
+using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Models
 {
@@ -37,14 +38,16 @@ namespace AvaluateTheTeacher1.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Group> Groups { get; set; }
-        public DbSet<Teachers.Teacher> Teachers { get; set; }
-        public DbSet<Teachers.Cathedra> Cathedras { get; set; }
-        public DbSet<Teachers.Subject> Subjects { get; set; }
-        public DbSet<Teachers.Voting> Votings { get; set; }
-        public DbSet<Teachers.Rating> Ratings { get; set; }
-        public DbSet<Teachers.MessageForModerator> MessageForModerators { get; set; }
-        public DbSet<Teachers.Suggestions> Suggestions { get; set; }
-        public DbSet<Students.StudentVoting> StudentVotings { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Cathedra> Cathedras { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Voting> Votings { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
+        public DbSet<MessageForModerator> MessageForModerators { get; set; }
+        public DbSet<Suggestions> Suggestions { get; set; }
+        public DbSet<StudentVoting> StudentVotings { get; set; }
+        public DbSet<RaitingTeacherSubject> RaitingTeacherSubject { get; set; }
+        public DbSet<TeacherSubject> TeacherSubject { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

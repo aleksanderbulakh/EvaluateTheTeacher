@@ -76,7 +76,41 @@ namespace AvaluateTheTeacher1.Controllers
                 return HttpNotFound();
             }
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
-            ViewBag.Subjects = db.Subjects.Where(m => m.CathedraId == teacher.CathedraId).ToList();
+            var Subjects = db.Subjects.Where(m => m.CathedraId == teacher.CathedraId).ToList();
+            var TeacherSubject = db.TeacherSubject.Where(m => m.TeacherId == teacher.TeacherId).ToList();
+            var dictionarySTrue = new Dictionary<int, string>();
+            var dictionarySFalse = new Dictionary<int, string>();
+            string dictOut;
+            int count_search = 0, count = 0;
+            if (TeacherSubject.Count == 0)
+                foreach (var Subj in Subjects)
+                {
+                    dictionarySFalse.Add(Subj.Id, Subj.Name);
+                }
+            else
+            {
+                foreach (var TeachSubj in TeacherSubject)
+                {
+                    count = count_search = 0;
+                    foreach (var Subj in Subjects)
+                    {
+                        count_search++;
+                        if (TeachSubj.SubjectId == Subj.Id)
+                        {
+                            dictionarySTrue.Add(Subj.Id, Subj.Name);
+                            count++;
+                        }
+                    }
+                }
+                foreach (var Subj in Subjects)
+                    if (!dictionarySTrue.TryGetValue(Subj.Id, out dictOut))
+                            dictionarySFalse.Add(Subj.Id, Subj.Name);      
+            }
+            var dictionaryTS = new Dictionary<bool, Dictionary<int, string>>();
+            dictionaryTS.Add(true, dictionarySTrue);
+            dictionaryTS.Add(false, dictionarySFalse);
+            ViewBag.DictionaryTS = dictionaryTS;
+            
             return View(teacher);
         }
 
