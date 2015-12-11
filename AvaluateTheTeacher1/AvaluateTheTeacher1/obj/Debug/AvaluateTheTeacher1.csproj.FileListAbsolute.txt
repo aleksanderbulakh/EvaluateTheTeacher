@@ -1,4 +1,568 @@
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+C:\Users\Vit-i\Source\Repos\1\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherModify.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\типу програміст\ЖДТУ\ISM-Project\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherModify.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\Education\University\Проект ISM\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.TeaherModify.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblRating.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherGroup.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.TeaherModify.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblRating.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherGroup.resources
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\New\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Collections.Immutable.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\System.Reflection.Metadata.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\vbc.exe
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\VBCSCompiler.exe.config
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll.config
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\AvaluateTheTeacher1.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Web.Infrastructure.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Owin.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\WebGrease.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Helpers.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Mvc.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Optimization.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Deployment.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\System.Web.WebPages.Razor.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Antlr3.Runtime.pdb
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Newtonsoft.Json.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\EntityFramework.SqlServer.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Google.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.TeaherModify.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblRating.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherGroup.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Moveax.Mvc.ErrorHandler.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Helpers.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Mvc.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Optimization.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Razor.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\EntityFramework.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\Moveax.Mvc.ErrorHandler.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Helpers.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Mvc.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Optimization.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.Razor.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\EntityFramework.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DBupdate.resources
+<<<<<<< HEAD
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblStudentVotings.resources
+=======
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.TeaherModify.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblRating.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherGroup.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DBupdate.resources
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\csc.exe
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -85,7 +649,30 @@ D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateT
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.FullBD.resources
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+>>>>>>> origin/master
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblStudentVotingsMod.resources
+D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Conflicts.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.InitialCreate.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration1.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DataMigration2.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Group_Null.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeachers.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PhotoOfTeacher.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.ConnectingTablesUsersGroups.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblCathedra.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblSubjectTeacher.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblVotes1.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.TeaherModify.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblRating.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblTeacherGroup.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.PasswordTxt.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.DBupdate.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblStudentVotings.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.tblStudentVotingsMod.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Conflicts.resources
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
+D:\Education\University\Проект ISM\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb

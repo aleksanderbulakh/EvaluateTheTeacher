@@ -11,3 +11,6 @@ function hidden_block() {
     $(".login-form").css({ display: "none" });
     $(".backing").css({ display: "none" });
 }
+$(".form-control").change(function () {
+    var value = $(this).val('["Courseware"]');
+});
