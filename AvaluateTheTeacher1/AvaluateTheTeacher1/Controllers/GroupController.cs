@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class GroupController : Controller
     {
-        /*private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Group
         public ActionResult Index()
@@ -33,7 +33,7 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Teachers = group.Teachers.ToList();
+            ViewBag.Teachers = group.TeachersSubjects.ToList();
             ViewBag.CountStudents = group.Users.Count();
             return View(group);
         }
@@ -94,13 +94,13 @@ namespace AvaluateTheTeacher1.Controllers
                 Group newgroup = db.Groups.Find(group.GroupId);
                 newgroup.Name = group.Name;
 
-                newgroup.Teachers.Clear();
+                newgroup.TeachersSubjects.Clear();
                 if(selectedTeachers != null)
                 {
-                    foreach (var c in db.Teachers.Where(t => selectedTeachers.Contains(t.TeacherId)))
+                    /*foreach (var c in db.Teachers.Where(t => selectedTeachers.Contains(t.TeacherId)))
                     {
-                        newgroup.Teachers.Add(c);
-                    }
+                        newgroup.TeachersSubjects.Add(c);
+                    }*/
                 }
 
                 db.Entry(newgroup).State = EntityState.Modified;
@@ -143,6 +143,6 @@ namespace AvaluateTheTeacher1.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }*/
+        }
     }
 }

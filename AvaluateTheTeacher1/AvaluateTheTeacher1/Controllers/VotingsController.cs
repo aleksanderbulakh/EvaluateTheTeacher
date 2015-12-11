@@ -13,17 +13,17 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class VotingsController : AccountController
     {
-        private static int TeacherIdInController { get; set; }
+        private static int TSIdInController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
         
         // GET: Votings
-        /*[Authorize(Roles ="student")]
+        [Authorize(Roles ="student")]
         public async System.Threading.Tasks.Task<ActionResult> Votings(int? id)
         {
             //Перевірка, чи не голосував студент вже в цьому місяці//
             var student = await UserManager.FindByNameAsync(User.Identity.Name);
-            var listStudentVotings = db.StudentVotings.Where(m => m.TeacherId == id && m.StudentId == student.Id).ToList();
+            var listStudentVotings = db.StudentVotings.Where(m => m.TeachersSubjectId == id && m.StudentId == student.Id).ToList();
             if(listStudentVotings!=null)
             {
                 foreach (var stVt in listStudentVotings)
@@ -32,14 +32,13 @@ namespace AvaluateTheTeacher1.Controllers
                 }
             }
             //- - - - - - - - - - - - - - - - - - - - - - - -//
-
             if (id == null)
             {
                 return HttpNotFound();
             }
-            TeacherIdInController = Int32.Parse(id.ToString());
+            TSIdInController = Int32.Parse(id.ToString());
             var query = (from listTeachers in db.Teachers
-                        .Where(listTeachers1 => listTeachers1.TeacherId == TeacherIdInController)
+                        .Where(listTeachers1 => listTeachers1.TeacherId == TSIdInController)
                         select listTeachers).ToList();
             ViewBag.Name = query[0].Name.ToString() + " " + query[0].LastName.ToString();
             ViewBag.Photo = query[0].PathToPhoto;
@@ -72,12 +71,12 @@ namespace AvaluateTheTeacher1.Controllers
                     SomethingNew = model.SomethingNew,
                     TheDifficultyOfTheCourse = model.TheDifficultyOfTheCourse,
                     ThePracticalValue = model.ThePracticalValue,
-                    TeacherId = TeacherIdInController
+                    TeacherSubjectId = TSIdInController
                 };
 
                 var suggestion = new Suggestions
                 {
-                    TeacherId = TeacherIdInController,
+                    TeacherSubjectId = TSIdInController,
                     SuggestionsForImprovement = model.Suggestions
                 };
 
@@ -89,14 +88,14 @@ namespace AvaluateTheTeacher1.Controllers
 
                 var listId = db.Votings.ToList();
 
-                int id = TeacherIdInController;
+                int id = TSIdInController;
 
                 // Фіксація голосування за календарем
                 var student = await UserManager.FindByNameAsync(User.Identity.Name);
                 var StVoting = new Models.Students.StudentVoting();
                 StVoting.Date = DateTime.Now.Date;
                 StVoting.StudentId = student.Id;
-                StVoting.TeacherId = id;
+                StVoting.TeachersSubjectId = id;
                 db.StudentVotings.Add(StVoting);
                 //- - - - - - - - - - - - - - - - - - - - - - - -//
 
@@ -106,7 +105,7 @@ namespace AvaluateTheTeacher1.Controllers
                     double PG = 0, QMTS = 0, QTM = 0, RTS = 0, SN = 0, TDOTC = 0, TPV = 0, avgRelevant = 0, count = 0;
                     foreach (var voit in listId)
                     {
-                        if (id == voit.TeacherId)
+                        if (id == voit.TeacherSubjectId)
                         {
                             AIC += voit.ActivityInClass;
                             ATOL += voit.AvailabilityTeacherOutsideLessons;
@@ -162,6 +161,6 @@ namespace AvaluateTheTeacher1.Controllers
         public ActionResult TimeOut()
         {
             return View();
-        }*/
+        }
     }
 }

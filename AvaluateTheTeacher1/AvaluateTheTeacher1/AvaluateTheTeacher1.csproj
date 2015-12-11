@@ -188,93 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511141103558_InitialCreate.cs" />
-    <Compile Include="Migrations\201511141103558_InitialCreate.Designer.cs">
-      <DependentUpon>201511141103558_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511141138493_DataMigration.cs" />
-    <Compile Include="Migrations\201511141138493_DataMigration.Designer.cs">
-      <DependentUpon>201511141138493_DataMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511141216324_DataMigration1.cs" />
-    <Compile Include="Migrations\201511141216324_DataMigration1.Designer.cs">
-      <DependentUpon>201511141216324_DataMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511142115313_DataMigration2.cs" />
-    <Compile Include="Migrations\201511142115313_DataMigration2.Designer.cs">
-      <DependentUpon>201511142115313_DataMigration2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511142145511_Group_Null.cs" />
-    <Compile Include="Migrations\201511142145511_Group_Null.Designer.cs">
-      <DependentUpon>201511142145511_Group_Null.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511151756565_tblTeachers.cs" />
-    <Compile Include="Migrations\201511151756565_tblTeachers.Designer.cs">
-      <DependentUpon>201511151756565_tblTeachers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511201227315_PhotoOfTeacher.cs" />
-    <Compile Include="Migrations\201511201227315_PhotoOfTeacher.Designer.cs">
-      <DependentUpon>201511201227315_PhotoOfTeacher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511221203311_ConnectingTablesUsersGroups.cs" />
-    <Compile Include="Migrations\201511221203311_ConnectingTablesUsersGroups.Designer.cs">
-      <DependentUpon>201511221203311_ConnectingTablesUsersGroups.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511221310344_tblCathedra.cs" />
-    <Compile Include="Migrations\201511221310344_tblCathedra.Designer.cs">
-      <DependentUpon>201511221310344_tblCathedra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511221541350_tblSubjectTeacher.cs" />
-    <Compile Include="Migrations\201511221541350_tblSubjectTeacher.Designer.cs">
-      <DependentUpon>201511221541350_tblSubjectTeacher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511221552365_tblVotes.cs" />
-    <Compile Include="Migrations\201511221552365_tblVotes.Designer.cs">
-      <DependentUpon>201511221552365_tblVotes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511221555486_tblVotes1.cs" />
-    <Compile Include="Migrations\201511221555486_tblVotes1.Designer.cs">
-      <DependentUpon>201511221555486_tblVotes1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511241040552_TeaherModify.cs" />
-    <Compile Include="Migrations\201511241040552_TeaherModify.Designer.cs">
-      <DependentUpon>201511241040552_TeaherModify.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511241054511_tblRating.cs" />
-    <Compile Include="Migrations\201511241054511_tblRating.Designer.cs">
-      <DependentUpon>201511241054511_tblRating.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511241110202_tblTeacherGroup.cs" />
-    <Compile Include="Migrations\201511241110202_tblTeacherGroup.Designer.cs">
-      <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511272314380_PasswordTxt.cs" />
-    <Compile Include="Migrations\201511272314380_PasswordTxt.Designer.cs">
-      <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512051549399_DBupdate.cs" />
-    <Compile Include="Migrations\201512051549399_DBupdate.Designer.cs">
-      <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512061547376_tblStudentVotings.cs" />
-    <Compile Include="Migrations\201512061547376_tblStudentVotings.Designer.cs">
-      <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512061858279_tblStudentVotingsMod.cs" />
-    <Compile Include="Migrations\201512061858279_tblStudentVotingsMod.Designer.cs">
-      <DependentUpon>201512061858279_tblStudentVotingsMod.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512061932195_Conflicts.cs" />
-    <Compile Include="Migrations\201512061932195_Conflicts.Designer.cs">
-      <DependentUpon>201512061932195_Conflicts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512091359004_tblGroupSubject.cs" />
-    <Compile Include="Migrations\201512091359004_tblGroupSubject.Designer.cs">
-      <DependentUpon>201512091359004_tblGroupSubject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512102312008_FullDB.cs" />
-    <Compile Include="Migrations\201512102312008_FullDB.Designer.cs">
-      <DependentUpon>201512102312008_FullDB.cs</DependentUpon>
+    <Compile Include="Migrations\201512111302555_FullBD.cs" />
+    <Compile Include="Migrations\201512111302555_FullBD.Designer.cs">
+      <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -425,71 +341,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511141103558_InitialCreate.resx">
-      <DependentUpon>201511141103558_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511141138493_DataMigration.resx">
-      <DependentUpon>201511141138493_DataMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511141216324_DataMigration1.resx">
-      <DependentUpon>201511141216324_DataMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511142115313_DataMigration2.resx">
-      <DependentUpon>201511142115313_DataMigration2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511142145511_Group_Null.resx">
-      <DependentUpon>201511142145511_Group_Null.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511151756565_tblTeachers.resx">
-      <DependentUpon>201511151756565_tblTeachers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511201227315_PhotoOfTeacher.resx">
-      <DependentUpon>201511201227315_PhotoOfTeacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221203311_ConnectingTablesUsersGroups.resx">
-      <DependentUpon>201511221203311_ConnectingTablesUsersGroups.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221310344_tblCathedra.resx">
-      <DependentUpon>201511221310344_tblCathedra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221541350_tblSubjectTeacher.resx">
-      <DependentUpon>201511221541350_tblSubjectTeacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221552365_tblVotes.resx">
-      <DependentUpon>201511221552365_tblVotes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511221555486_tblVotes1.resx">
-      <DependentUpon>201511221555486_tblVotes1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511241040552_TeaherModify.resx">
-      <DependentUpon>201511241040552_TeaherModify.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511241054511_tblRating.resx">
-      <DependentUpon>201511241054511_tblRating.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511241110202_tblTeacherGroup.resx">
-      <DependentUpon>201511241110202_tblTeacherGroup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511272314380_PasswordTxt.resx">
-      <DependentUpon>201511272314380_PasswordTxt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512051549399_DBupdate.resx">
-      <DependentUpon>201512051549399_DBupdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512061547376_tblStudentVotings.resx">
-      <DependentUpon>201512061547376_tblStudentVotings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512061858279_tblStudentVotingsMod.resx">
-      <DependentUpon>201512061858279_tblStudentVotingsMod.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512061932195_Conflicts.resx">
-      <DependentUpon>201512061932195_Conflicts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512091359004_tblGroupSubject.resx">
-      <DependentUpon>201512091359004_tblGroupSubject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512102312008_FullDB.resx">
-      <DependentUpon>201512102312008_FullDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512111302555_FullBD.resx">
+      <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

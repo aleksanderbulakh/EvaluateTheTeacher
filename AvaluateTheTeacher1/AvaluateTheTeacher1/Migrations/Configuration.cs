@@ -10,7 +10,6 @@ namespace AvaluateTheTeacher1.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AvaluateTheTeacher1.Models.ApplicationDbContext";
         }
 
         protected override void Seed(AvaluateTheTeacher1.Models.ApplicationDbContext context)
