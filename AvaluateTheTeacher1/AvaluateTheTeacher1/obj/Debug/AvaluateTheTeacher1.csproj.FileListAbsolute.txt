@@ -180,3 +180,4 @@ D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\Avaluat
 D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
 D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
 D:\типу програміст\ЖДТУ\ISM-Project\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Pole.resources

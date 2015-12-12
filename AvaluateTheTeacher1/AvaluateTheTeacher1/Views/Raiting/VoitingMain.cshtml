@@ -1,0 +1,42 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.VotingList
+@{
+    ViewBag.Title = "VoitingMain";
+}
+<div class="title">
+    <hr/><h1>Список викладачів</h1>
+</div>
+
+@foreach(var data in Model.Info)
+{
+    var name_class = "";
+    if (@data.AvgRating >= 9) { name_class = "grean1"; }
+    if (@data.AvgRating >= 6 && @data.AvgRating < 9) { name_class = "yellow"; }
+    if (@data.AvgRating >= 0 && @data.AvgRating < 6) { name_class = "red1"; }
+
+    <div class="teachers">
+        <img class="img-teacher" src="~/TeacherImg/@data.PathToPhoto" alt="Нет фотографии">
+        <div class="about_teacher">
+            <span>@data.SubjectName</span><br />
+            <span class="pib">@data.SurName</span>
+            <span class="pib">@data.Name</span> 
+            <span class="pib">@data.LastName</span>
+            <p>@data.Description</p>
+            <table class="value">
+                <tr>
+                    <th><span>За весь період:</span></th>
+                    <td>@data.ForTheEntirePeriod</td>
+                </tr>
+                <tr>
+                    <th><span>За минулий місяць:</span></th>
+                    <td>@data.PreviousMonth</td>
+                </tr>
+                <tr>
+                    <th><span>Рейтингова оцінка:</span></th>
+                    <td class="@name_class">@data.AvgRating</td>
+                </tr>
+            </table>
+            <a href="/Votings/Votings/@data.IdForVoiting">Проголосувати</a>
+        </div>
+    </div>
+}
+

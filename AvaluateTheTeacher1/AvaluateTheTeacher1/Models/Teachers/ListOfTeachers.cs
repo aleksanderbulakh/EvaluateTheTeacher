@@ -18,6 +18,8 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public float ForTheEntirePeriod { get; set; }
         public float PreviousMonth { get; set; }
         public float AvgRating { get; set; }
+        public int IdForVoiting { get; set; }
+        public string SubjectName { get; set; }
         public List<Subject> Subjects { get; set; }
     }
 }
