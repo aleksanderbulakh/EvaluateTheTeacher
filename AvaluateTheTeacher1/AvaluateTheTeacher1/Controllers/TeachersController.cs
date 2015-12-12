@@ -22,22 +22,6 @@ namespace AvaluateTheTeacher1.Controllers
             return View(teachers.ToList());
         }
 
-        // GET: Teachers/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Teacher teacher = db.Teachers.Find(id);
-            
-            if (teacher == null)
-            {
-                return HttpNotFound();
-            }
-            return View(teacher);
-        }
-
         // GET: Teachers/Create
         public ActionResult Create()
         {

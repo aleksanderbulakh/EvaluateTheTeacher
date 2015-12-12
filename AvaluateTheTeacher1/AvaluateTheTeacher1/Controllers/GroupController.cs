@@ -41,9 +41,12 @@ namespace AvaluateTheTeacher1.Controllers
 
             foreach (var c in GroupTeacherSubject)
             {
-                teacher_buf = db.Teachers.Find(c.TeacherId);
-                subj_buf = db.Subjects.Find(c.SubjectId);
-                GTS.Add(teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                if (c.TeacherId != null)
+                {
+                    teacher_buf = db.Teachers.Find(c.TeacherId);
+                    subj_buf = db.Subjects.Find(c.SubjectId);
+                    GTS.Add(teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                }
             }
             ViewBag.Teachers = GTS;
             ViewBag.CountStudents = group.Users.Count();
@@ -80,6 +83,9 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            var search = db.TeacherSubject.Where(x => x.TeacherId == null);
+            foreach (var del in search.ToList())
+                db.TeacherSubject.Remove(del);
             Group group = db.Groups.Find(id);
 
             if (group == null)
@@ -112,14 +118,17 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 foreach (var GTS in GroupTeacherSubject)
                 {
-                    teacher_buf = db.Teachers.Find(GTS.TeacherId);
-                    subj_buf = db.Subjects.Find(GTS.SubjectId);
-                    dictionaryTSTrue.Add(GTS.Id, teacher_buf.SurName.ToString() + " " + teacher_buf.Name.ToString()+ " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name.ToString());
+                    if (GTS.TeacherId != null)
+                    {
+                        teacher_buf = db.Teachers.Find(GTS.TeacherId);
+                        subj_buf = db.Subjects.Find(GTS.SubjectId);
+                        dictionaryTSTrue.Add(GTS.Id, teacher_buf.SurName.ToString() + " " + teacher_buf.Name.ToString() + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name.ToString());
+                    }
                 }
 
                 foreach (var GTS in TeacherSubject)
                 {
-                    if (dictionaryTSTrue.Any(m => m.Key == GTS.Id) == false)
+                    if (dictionaryTSTrue.Any(m => m.Key == GTS.Id) == false && GTS.TeacherId != null)
                     {
                         teacher_buf = db.Teachers.Find(GTS.TeacherId);
                         subj_buf = db.Subjects.Find(GTS.SubjectId);
