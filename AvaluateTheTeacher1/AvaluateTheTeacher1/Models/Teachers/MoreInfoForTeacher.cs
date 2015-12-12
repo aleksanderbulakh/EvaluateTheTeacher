@@ -5,9 +5,15 @@ using System.Web;
 
 namespace AvaluateTheTeacher1.Models.Teachers
 {
-    public class Rating
+    public class MoreInfoForTeacher
     {
-        public int Id { get; set; }
+        public string NameCathedra { get; set; }
+        public int TeacherId { get; set; }
+        public string Name { get; set; }
+        public string SurName { get; set; }
+        public string LastName { get; set; }
+        public string PathToPhoto { get; set; }
+        public string Description { get; set; }
         public float ForTheEntirePeriod { get; set; }
         public float PreviousMonth { get; set; }
         public float AvgRating { get; set; }
@@ -29,8 +35,5 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public float HowWellTheProcedurePerformedGrading { get; set; }
         public float QualityMasteringTheSubject { get; set; }
         public int CountRaitingVoting { get; set; }
-        public int TeacherId { get; set; }
-
-        public Teacher Teacher { get; set; }
     }
 }

@@ -89,3 +89,4 @@ D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateT
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.pdb
+D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Pole.resources

@@ -32,26 +32,27 @@
 
     <div class="teachers">
         <img class="img-teacher" src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
-            <div class="about_teacher">
-                <span class="pib">@T.LastName</span>
-                <span class="pib">@T.Name</span>
-                <span class="pib">@T.SurName</span>
-                <p>@T.Description</p>
-                <table class="value">
-                    <tr>
-                        <th><span>За весь період:</span></th>
-                        <td>@T.ForTheEntirePeriod</td>
-                    </tr>
-                    <tr>
-                        <th><span>За минулий місяць:</span></th>
-                        <td>@T.PreviousMonth</td>
-                    </tr>
-                    <tr>
-                        <th><span>Рейтингова оцінка:</span></th>
-                        <td class="@name_class">@T.AvgRating</td>
-                    </tr>
-                </table>
-            </div>
-            </div>
-        }
+        <div class="about_teacher">
+            <span class="pib">@T.LastName</span>
+            <span class="pib">@T.Name</span>
+            <span class="pib">@T.SurName</span>
+            <p>@T.Description</p>
+            <table class="value">
+            <tr>
+                <th><span>За весь період:</span></th>
+                <td>@T.ForTheEntirePeriod</td>
+            </tr>
+            <tr>
+                <th><span>За минулий місяць:</span></th>
+                <td>@T.PreviousMonth</td>
+            </tr>
+            <tr>
+                <th><span>Рейтингова оцінка:</span></th>
+                <td class="@name_class">@T.AvgRating</td>
+            </tr>
+            </table>
+            <a href="/Home/EditPokemon/@T.TeacherId">Більше інформації</a>
+        </div>
+    </div>
+}
 

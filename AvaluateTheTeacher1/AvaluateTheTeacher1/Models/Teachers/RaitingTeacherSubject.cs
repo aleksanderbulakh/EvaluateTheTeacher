@@ -28,6 +28,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public float ProcedureGrading { get; set; }
         public float HowWellTheProcedurePerformedGrading { get; set; }
         public float QualityMasteringTheSubject { get; set; }
+        public int CountVoting { get; set; }
 
         public int? TeacherSubjectId { get; set; }
 

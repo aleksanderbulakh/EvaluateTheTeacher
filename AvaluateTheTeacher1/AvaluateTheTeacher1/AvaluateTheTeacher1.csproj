@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201512111302555_FullBD.Designer.cs">
       <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512121132299_Pole.cs" />
+    <Compile Include="Migrations\201512121132299_Pole.Designer.cs">
+      <DependentUpon>201512121132299_Pole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
@@ -204,6 +208,7 @@
     <Compile Include="Models\Teachers\FilterDataModel.cs" />
     <Compile Include="Models\Teachers\ListOfTeachers.cs" />
     <Compile Include="Models\Teachers\MessageForModerator.cs" />
+    <Compile Include="Models\Teachers\MoreInfoForTeacher.cs" />
     <Compile Include="Models\Teachers\RaitingTeacherSubject.cs" />
     <Compile Include="Models\Teachers\Rating.cs" />
     <Compile Include="Models\Teachers\Subject.cs" />
@@ -216,7 +221,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aspnet-AvaluateTheTeacher1-20151114122241_log.ldf" />
     <Content Include="Content\01.png" />
     <Content Include="Content\02.jpg" />
     <Content Include="Content\03.jpg" />
@@ -353,6 +357,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512111302555_FullBD.resx">
       <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121132299_Pole.resx">
+      <DependentUpon>201512121132299_Pole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

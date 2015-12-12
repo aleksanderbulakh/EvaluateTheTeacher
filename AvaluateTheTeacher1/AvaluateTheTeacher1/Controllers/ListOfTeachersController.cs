@@ -42,24 +42,7 @@ namespace AvaluateTheTeacher1.Controllers
                         Description = listTeachers.Description,
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating,
-                        ActivityInClass=listRaitings.ActivityInClass,
-                        AvailabilityTeacherOutsideLessons=listRaitings.AvailabilityTeacherOutsideLessons,
-                        ClarityAndAccessibility=listRaitings.ClarityAndAccessibility,
-                        CommentsTheWork=listRaitings.CommentsTheWork,
-                        DepthPossessionOf=listRaitings.DepthPossessionOf,
-                        HowWellTheProcedurePerformedGrading=listRaitings.HowWellTheProcedurePerformedGrading,
-                        InterestInTheSubject=listRaitings.InterestInTheSubject,
-                        NumberOfAttendance=listRaitings.NumberOfAttendance,
-                        OverallSubject=listRaitings.OverallSubject,
-                        PreparationTime=listRaitings.PreparationTime,
-                        ProcedureGrading=listRaitings.ProcedureGrading,
-                        QualityMasteringTheSubject=listRaitings.QualityMasteringTheSubject,
-                        QualityTeachingMaterials=listRaitings.QualityTeachingMaterials,
-                        RelevantToStudents=listRaitings.RelevantToStudents,
-                        SomethingNew=listRaitings.SomethingNew,
-                        TheDifficultyOfTheCourse=listRaitings.TheDifficultyOfTheCourse,
-                        ThePracticalValue=listRaitings.ThePracticalValue  
+                        AvgRating = listRaitings.AvgRating
                     };
             }
             else
@@ -82,24 +65,7 @@ namespace AvaluateTheTeacher1.Controllers
                         Description = listTeachers.Description,
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating,
-                        ActivityInClass = listRaitings.ActivityInClass,
-                        AvailabilityTeacherOutsideLessons = listRaitings.AvailabilityTeacherOutsideLessons,
-                        ClarityAndAccessibility = listRaitings.ClarityAndAccessibility,
-                        CommentsTheWork = listRaitings.CommentsTheWork,
-                        DepthPossessionOf = listRaitings.DepthPossessionOf,
-                        HowWellTheProcedurePerformedGrading = listRaitings.HowWellTheProcedurePerformedGrading,
-                        InterestInTheSubject = listRaitings.InterestInTheSubject,
-                        NumberOfAttendance = listRaitings.NumberOfAttendance,
-                        OverallSubject = listRaitings.OverallSubject,
-                        PreparationTime = listRaitings.PreparationTime,
-                        ProcedureGrading = listRaitings.ProcedureGrading,
-                        QualityMasteringTheSubject = listRaitings.QualityMasteringTheSubject,
-                        QualityTeachingMaterials = listRaitings.QualityTeachingMaterials,
-                        RelevantToStudents = listRaitings.RelevantToStudents,
-                        SomethingNew = listRaitings.SomethingNew,
-                        TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse,
-                        ThePracticalValue = listRaitings.ThePracticalValue
+                        AvgRating = listRaitings.AvgRating
                     };
             }
             List<Cathedra> cathedra = db.Cathedras.ToList();
