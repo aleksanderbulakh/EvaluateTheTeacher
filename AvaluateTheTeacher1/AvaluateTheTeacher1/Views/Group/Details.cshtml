@@ -28,12 +28,12 @@
         <dt>
             Викладачі, які викладають в цій групі
         </dt>
-        
-            @foreach(var c in ViewBag.Teachers)
-            {
-                <dd>@c.SurName @c.Name</dd>
-            }
-        
+
+        @foreach (var c in ViewBag.Teachers)
+        {
+            <dd>@c</dd>
+        }
+
     </dl>
 </div>
 <p>
