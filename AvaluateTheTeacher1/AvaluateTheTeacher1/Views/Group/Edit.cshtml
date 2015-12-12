@@ -11,7 +11,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Group</h4>
         <hr />
@@ -26,27 +26,33 @@
             </div>
         </div>
 
-        <div class="editor-label"><b>Викладачі</b></div>
-        @foreach (var c in ViewBag.Teachers)
+        <div class="editor-label"><b>Предмети</b></div>
+        @foreach (var k in ViewBag.DictionaryTS)
         {
-            <input type="checkbox" name="selectedTeachers" value="@c.TeacherId"
-                   @(Model.Teachers.Contains(c) ? "checked=\"checked\"" : "") />@c.SurName@c.Name @c.LastName<br />
+            foreach (var k1 in k.Value)
+            {
+                <input type="checkbox" name="TeachersSubjects" value="@k1.Key"
+                       @(k.Key ? "checked=\"checked\"" : "") />@k1.Value <br />
+            }
         }
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
-                </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
+    </div>
 }
-   
+
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
-  
+
     @Scripts.Render("~/scripts/jquery-1.10.2.min.js")
     @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
 }
