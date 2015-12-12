@@ -144,9 +144,40 @@ namespace AvaluateTheTeacher1.Controllers
                         newteacher.TeachersSubjects.Add(teachersubject);
                     }
 
-                }   
+                }
                 db.Entry(newteacher).State = EntityState.Modified;
                 db.SaveChanges();
+                var TeacherSubjectId = db.TeacherSubject.Where(x => x.TeacherId == teacher.TeacherId);
+                foreach (var lest in TeacherSubjectId.ToList())
+                {
+                    var raitingSubject = new RaitingTeacherSubject
+                    {
+                        ActivityInClass = 0,
+                        AvailabilityTeacherOutsideLessons = 0,
+                        ClarityAndAccessibility = 0,
+                        CommentsTheWork = 0,
+                        DepthPossessionOf = 0,
+                        HowWellTheProcedurePerformedGrading = 0,
+                        InterestInTheSubject = 0,
+                        NumberOfAttendance = 0,
+                        OverallSubject = 0,
+                        PreparationTime = 0,
+                        ProcedureGrading = 0,
+                        QualityMasteringTheSubject = 0,
+                        QualityTeachingMaterials = 0,
+                        RelevantToStudents = 0,
+                        SomethingNew = 0,
+                        TheDifficultyOfTheCourse = 0,
+                        ThePracticalValue = 0,
+                        AvgRating = 0,
+                        ForTheEntirePeriod = 0,
+                        PreviousMonth = 0,
+                        TeacherSubjectId = lest.Id
+                    };
+                    db.RaitingTeacherSubject.Add(raitingSubject);
+                    db.SaveChanges();
+                }
+
                 return RedirectToAction("Index");
             }
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
