@@ -359,10 +359,9 @@
     <Content Include="Views\Error\Default.cshtml" />
     <Content Include="Views\Raiting\VoitingMain.cshtml" />
     <Content Include="Views\Teachers\Dashboard.cshtml" />
+    <Content Include="Views\MoreInfoForteacher\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\MoreInfoForteacher\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
