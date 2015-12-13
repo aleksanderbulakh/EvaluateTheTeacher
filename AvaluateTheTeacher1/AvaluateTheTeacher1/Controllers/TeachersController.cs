@@ -22,22 +22,6 @@ namespace AvaluateTheTeacher1.Controllers
             return View(teachers.ToList());
         }
 
-        // GET: Teachers/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Teacher teacher = db.Teachers.Find(id);
-            
-            if (teacher == null)
-            {
-                return HttpNotFound();
-            }
-            return View(teacher);
-        }
-
         // GET: Teachers/Create
         public ActionResult Create()
         {
@@ -144,9 +128,40 @@ namespace AvaluateTheTeacher1.Controllers
                         newteacher.TeachersSubjects.Add(teachersubject);
                     }
 
-                }   
+                }
                 db.Entry(newteacher).State = EntityState.Modified;
                 db.SaveChanges();
+                var TeacherSubjectId = db.TeacherSubject.Where(x => x.TeacherId == teacher.TeacherId);
+                foreach (var lest in TeacherSubjectId.ToList())
+                {
+                    var raitingSubject = new RaitingTeacherSubject
+                    {
+                        ActivityInClass = 0,
+                        AvailabilityTeacherOutsideLessons = 0,
+                        ClarityAndAccessibility = 0,
+                        CommentsTheWork = 0,
+                        DepthPossessionOf = 0,
+                        HowWellTheProcedurePerformedGrading = 0,
+                        InterestInTheSubject = 0,
+                        NumberOfAttendance = 0,
+                        OverallSubject = 0,
+                        PreparationTime = 0,
+                        ProcedureGrading = 0,
+                        QualityMasteringTheSubject = 0,
+                        QualityTeachingMaterials = 0,
+                        RelevantToStudents = 0,
+                        SomethingNew = 0,
+                        TheDifficultyOfTheCourse = 0,
+                        ThePracticalValue = 0,
+                        AvgRating = 0,
+                        ForTheEntirePeriod = 0,
+                        PreviousMonth = 0,
+                        TeacherSubjectId = lest.Id
+                    };
+                    db.RaitingTeacherSubject.Add(raitingSubject);
+                    db.SaveChanges();
+                }
+
                 return RedirectToAction("Index");
             }
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", teacher.CathedraId);
@@ -178,6 +193,46 @@ namespace AvaluateTheTeacher1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+         public ActionResult Dashboard()
+        {
+            var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).ToList();
+
+
+            Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
+            Models.Teachers.TopTeachersViewModel[] topTeacher = new Models.Teachers.TopTeachersViewModel[6];
+
+
+            //Обираємо трьох найкращих та трьох найгірших викладачів
+            int i = 0, j = 0;
+            foreach (var TR in TeachersRatings)
+            {
+                if (i < 2 || i > TeachersRatings.Count() - 2)
+                {
+                    int mae = TR.TeacherId;
+                    teacher_buf = db.Teachers.Find(TR.TeacherId);
+
+                    topTeacher[j] = new Models.Teachers.TopTeachersViewModel();
+                    topTeacher[j].Name = teacher_buf.Name;
+                    topTeacher[j].LastName = teacher_buf.LastName;
+                    topTeacher[j].SurName = teacher_buf.SurName;
+                    topTeacher[j].Rating = Math.Round(TR.AvgRating, 1);
+                    topTeacher[j].PathToPhoto = teacher_buf.PathToPhoto;
+
+                    j++;
+                }
+
+                i++;
+            }
+            
+            //Якщо в масиві є значення null - заповнюємо їх даними.
+            for(int a=0; a<topTeacher.Length; a++)
+            {
+                if (topTeacher[a] == null) topTeacher[a] = new TopTeachersViewModel { Name = "Full", LastName = "Full", PathToPhoto = "1.jpg", Rating =404, SurName = "Full" };
+            }
+            return View(topTeacher);
+        }
+
 
         protected override void Dispose(bool disposing)
         {

@@ -150,7 +150,14 @@ namespace AvaluateTheTeacher1.Controllers
                 db.SaveChanges();
                 AIC = ATOL = CAA = CTW = DPO = HWTPPG = IITS = NOA = OS = PT = 0;
                 PG = QMTS = QTM = RTS = SN = TDOTC = TPV = avgRelevant = count = 0;
-                var listIdRaiting = db.RaitingTeacherSubject.Where(x => x.TeacherSubjectId == TSIdInController).ToList();
+                var teach = db.TeacherSubject.Find(TSIdInController);
+                var teachId = db.TeacherSubject.Where(x => x.TeacherId == teach.TeacherId);
+                var listS = new List<int>();
+                foreach (var s in teachId)
+                {
+                    listS.Add(s.Id);
+                }
+                var listIdRaiting = db.RaitingTeacherSubject.Where(x => x.TeacherSubject.TeacherId==teach.TeacherId).ToList();
                 foreach (var voit in listIdRaiting)
                 {
                     AIC += voit.ActivityInClass;
@@ -174,7 +181,6 @@ namespace AvaluateTheTeacher1.Controllers
                     count++;
 
                 }
-                var teach = db.TeacherSubject.Find(TSIdInController);
                 var raitTeach = db.Ratings.Where(x => x.TeacherId == teach.TeacherId).ToList();
                 foreach (var rating in raitTeach)
                 {

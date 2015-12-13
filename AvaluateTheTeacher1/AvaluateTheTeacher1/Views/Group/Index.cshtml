@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Виберіть дію</h2>
 
 <p>
     @Html.ActionLink("Додати нову групу", "AddNewGroup", "AddingGroup")
@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GroupId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GroupId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GroupId })
+            @Html.ActionLink("Рудагувати", "Edit", new { id=item.GroupId }) |
+            @Html.ActionLink("Детальніше", "Details", new { id=item.GroupId }) |
+            @Html.ActionLink("Видалити", "Delete", new { id=item.GroupId })
         </td>
     </tr>
 }

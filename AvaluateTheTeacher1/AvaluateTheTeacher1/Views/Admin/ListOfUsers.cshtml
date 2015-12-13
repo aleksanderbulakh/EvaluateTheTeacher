@@ -1,11 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Список студентів";
+    ViewBag.Title = "ListOfUsers";
 }
-<div class="title">
-    <hr /><h1>@ViewBag.Title</h1>
-</div>
-<table class="list-students">
+
+<h2>Список користувачівs</h2>
+
+<table>
     <tr>
         <th>Логін</th>
         <th>Пароль</th>
@@ -13,10 +13,9 @@
 
     @foreach (var S in ViewBag.Students)
     {
-        <tr class="student">
+        <tr>
             <td>@S.UserName</td>
             <td>@S.PasswordTxt</td>
         </tr>
     }
 </table>
-<img class="minion-allstudents" src="~/Content/13.jpg" />

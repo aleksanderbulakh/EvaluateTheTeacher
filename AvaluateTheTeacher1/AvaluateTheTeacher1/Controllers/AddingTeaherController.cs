@@ -75,32 +75,6 @@ namespace AvaluateTheTeacher1.Controllers
                     };
                     db.Ratings.Add(raiting);
                     db.SaveChanges();
-                    /*var raitingSubject = new RaitingTeacherSubject
-                    {
-                        ActivityInClass = 0,
-                        AvailabilityTeacherOutsideLessons = 0,
-                        ClarityAndAccessibility = 0,
-                        CommentsTheWork = 0,
-                        DepthPossessionOf = 0,
-                        HowWellTheProcedurePerformedGrading = 0,
-                        InterestInTheSubject = 0,
-                        NumberOfAttendance = 0,
-                        OverallSubject = 0,
-                        PreparationTime = 0,
-                        ProcedureGrading = 0,
-                        QualityMasteringTheSubject = 0,
-                        QualityTeachingMaterials = 0,
-                        RelevantToStudents = 0,
-                        SomethingNew = 0,
-                        TheDifficultyOfTheCourse = 0,
-                        ThePracticalValue = 0,
-                        AvgRating = 0,
-                        ForTheEntirePeriod = 0,
-                        PreviousMonth = 0,
-                        TeacherSubjectId = obj.TeacherId
-                    };
-                    db.RaitingTeacherSubject.Add(raitingSubject);
-                    db.SaveChanges();*/
                 }
                 
                 return RedirectToAction("Index", "Home");

@@ -30,6 +30,7 @@ namespace AvaluateTheTeacher1.Controllers
                     listS.Add(st.Id);
                 }
             }
+            
             var query = from listTeacher in db.Teachers
                     from listRaiting in db.RaitingTeacherSubject
                     from listSubject in db.Subjects
