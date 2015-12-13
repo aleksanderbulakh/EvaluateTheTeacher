@@ -179,6 +179,46 @@ namespace AvaluateTheTeacher1.Controllers
             return RedirectToAction("Index");
         }
 
+         public ActionResult Dashboard()
+        {
+            var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).ToList();
+
+
+            Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
+            Models.Teachers.TopTeachersViewModel[] topTeacher = new Models.Teachers.TopTeachersViewModel[6];
+
+
+            //Обираємо трьох найкращих та трьох найгірших викладачів
+            int i = 0, j = 0;
+            foreach (var TR in TeachersRatings)
+            {
+                if (i < 2 || i > TeachersRatings.Count() - 2)
+                {
+                    int mae = TR.TeacherId;
+                    teacher_buf = db.Teachers.Find(TR.TeacherId);
+
+                    topTeacher[j] = new Models.Teachers.TopTeachersViewModel();
+                    topTeacher[j].Name = teacher_buf.Name;
+                    topTeacher[j].LastName = teacher_buf.LastName;
+                    topTeacher[j].SurName = teacher_buf.SurName;
+                    topTeacher[j].Rating = Math.Round(TR.AvgRating, 1);
+                    topTeacher[j].PathToPhoto = teacher_buf.PathToPhoto;
+
+                    j++;
+                }
+
+                i++;
+            }
+            
+            //Якщо в масиві є значення null - заповнюємо їх даними.
+            for(int a=0; a<topTeacher.Length; a++)
+            {
+                if (topTeacher[a] == null) topTeacher[a] = new TopTeachersViewModel { Name = "Full", LastName = "Full", PathToPhoto = "1.jpg", Rating =404, SurName = "Full" };
+            }
+            return View(topTeacher);
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

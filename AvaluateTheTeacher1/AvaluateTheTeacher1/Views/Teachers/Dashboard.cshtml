@@ -1,0 +1,51 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.TopTeachersViewModel[]
+@{
+    ViewBag.Title = "Index";
+}
+<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+<div class="dashboard">
+    <img src="~/Content/dashboard.jpg" />
+    <img class="minion1" src="~/Content/02.jpg" />
+    <div class="title title-dashboard">
+        <h1>ТОП придумаємо потім</h1>
+    </div>
+</div>
+
+<div class="row dashboard1">
+    <div class="col-lg-6 green">
+        <h2 class="text-center">Найкращі викладачі!</h2>
+        <img class="text-center" width="30%" src="/TeacherImg/@Model[0].PathToPhoto" />
+        <h5 class="text-center">@Model[0].SurName @Model[0].Name @Model[0].LastName</h5>
+        <h5 class="text-center">@Model[0].Rating</h5>
+    </div>
+    <div class="col-lg-6 red">
+        <h2 class="text-center">Найгірші викладачі!</h2>
+        <img class="text-center" width="30%" src="/TeacherImg/@Model[3].PathToPhoto" />
+        <h5 class="text-center">@Model[3].SurName @Model[3].Name @Model[3].LastName</h5>
+        <h5 class="text-center">@Model[3].Rating</h5>
+    </div>
+</div>
+<div class="row dashboard2">
+    <div class="col-lg-3 green">
+        <img class="text-center" width="50%" src="/TeacherImg/@Model[1].PathToPhoto" />
+        <h5 class="text-center">@Model[1].SurName @Model[1].Name @Model[1].LastName</h5>
+        <h5 class="text-center">@Model[1].Rating</h5>
+    </div>
+    <div class="col-lg-3 green">
+        <img class="text-center" width="50%" src="/TeacherImg/@Model[2].PathToPhoto" />
+        <h5 class="text-center">@Model[2].SurName @Model[2].Name @Model[2].LastName</h5>
+        <h5 class="text-center">@Model[2].Rating</h5>
+    </div>
+    <div class="col-lg-3 red">
+        <img class="text-center" width="50%" src="/TeacherImg/@Model[4].PathToPhoto" />
+        <h5 class="text-center">@Model[4].SurName @Model[4].Name @Model[4].LastName</h5>
+        <h5 class="text-center">@Model[4].Rating</h5>
+    </div>
+    <div class="col-lg-3 red">
+        <img class="text-center" width="50%" src="/TeacherImg/@Model[5].PathToPhoto" />
+        <h5 class="text-center">@Model[5].SurName @Model[5].Name @Model[5].LastName</h5>
+        <h5 class="text-center">@Model[5].Rating</h5>
+    </div>
+</div>
+
+

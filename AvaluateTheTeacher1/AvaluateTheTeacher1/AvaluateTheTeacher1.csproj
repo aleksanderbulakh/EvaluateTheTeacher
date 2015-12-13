@@ -176,7 +176,6 @@
     <Compile Include="Controllers\AddingStudentController.cs" />
     <Compile Include="Controllers\AddingTeaherController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GroupController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -217,6 +216,7 @@
     <Compile Include="Models\Teachers\Suggestions.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
     <Compile Include="Models\Teachers\TeacherSubject.cs" />
+    <Compile Include="Models\Teachers\TeacherViewModel.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
     <Compile Include="Models\Teachers\VotingFull.cs" />
     <Compile Include="Models\Teachers\VotingList.cs" />
@@ -322,7 +322,6 @@
     <Content Include="Views\Manage\AddEmail.cshtml" />
     <Content Include="Views\Manage\SuccessEmail.cshtml" />
     <Content Include="Views\Manage\DisplayEmail.cshtml" />
-    <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Manage\EditUserName.cshtml" />
     <Content Include="Views\Votings\TimeOut.cshtml" />
     <Content Include="Views\Votings\TimeOut.cshtml" />
@@ -344,6 +343,7 @@
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
     <Content Include="Views\Raiting\VoitingMain.cshtml" />
+    <Content Include="Views\Teachers\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
