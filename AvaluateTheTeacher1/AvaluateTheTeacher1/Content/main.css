@@ -639,6 +639,7 @@ footer
 .dashboard{
     width: 100%;
     height: auto;
+    margin-top: -15px;
 }
 .dashboard > img{
     position: relative;
