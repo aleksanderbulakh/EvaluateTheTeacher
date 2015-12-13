@@ -1,17 +1,17 @@
 ﻿@using AvaluateTheTeacher1.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Виконати вхід";
+    ViewBag.Title = "Авторизація";
 }
 
-<h2 class="title">@ViewBag.Title</h2>
-<div class="row">
+<div class="title"><hr/><h1>@ViewBag.Title</h1></div>
+<img class="minion-in" src="~/Content/01.png"/>
     <div class="col-md-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Введіть логін та пароль, що увійти.</h4>
+                <!--<h4>Введіть логін та пароль, що увійти.</h4>-->
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.LabelFor(m => m.userName, new { @class = "col-md-2 control-label" })
@@ -28,15 +28,16 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <p>
+                        @Html.ActionLink("Забули пароль?", "ForgotPassword")
+                    </p>
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Ввійти" class="btn btn-default" />
                     </div>
                 </div>
                 
                
-                    <p>
-                        @Html.ActionLink("Забули пароль?", "ForgotPassword")
-                    </p>
+                    
             }
         </section>
     </div>

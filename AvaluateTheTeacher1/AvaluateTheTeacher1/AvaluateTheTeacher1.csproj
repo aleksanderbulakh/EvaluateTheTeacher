@@ -224,14 +224,30 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Start\13.jpg" />
+    <Content Include="App_Start\14.jpg" />
+    <Content Include="Content\13.jpg" />
+    <Content Include="Content\14.jpg" />
+    <Content Include="Content\App_Data\09.jpg" />
+    <Content Include="Content\App_Data\13.jpg" />
+    <Content Include="Content\App_Data\14.jpg" />
     <Content Include="Content\01.png" />
     <Content Include="Content\02.jpg" />
     <Content Include="Content\03.jpg" />
     <Content Include="Content\04.jpg" />
     <Content Include="Content\05.jpg" />
+    <Content Include="Content\06.jpg" />
+    <Content Include="Content\07.jpg" />
+    <Content Include="Content\08.jpg" />
+    <Content Include="Content\09.jpg" />
     <Content Include="Content\1.jpg" />
+    <Content Include="Content\10.jpg" />
+    <Content Include="Content\11.jpg" />
+    <Content Include="Content\12.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
+    <Content Include="Content\line-home01.jpg" />
+    <Content Include="Content\line-home02.jpg" />
     <Content Include="Content\~1.jpg" />
     <Content Include="Content\~2.jpg" />
     <Content Include="Content\~3.jpg" />
@@ -346,7 +362,6 @@
     <Content Include="Views\Raiting\VoitingMain.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\MoreInfoForteacher\" />
   </ItemGroup>
   <ItemGroup>

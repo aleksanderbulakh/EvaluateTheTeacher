@@ -97,6 +97,7 @@ namespace AvaluateTheTeacher1.Models
     {
         [StringLength(100, ErrorMessage = "Значення {0} повинне містити не менше {2} символів.", MinimumLength = 5)]
         [RegularExpression(@"[A-Za-z]+", ErrorMessage = "Логін повинен містити лише цифри та літери латинського алфавіту.")]
+        [Display(Name = "Логін")]
         public string Username { get; set; }
     }
 }

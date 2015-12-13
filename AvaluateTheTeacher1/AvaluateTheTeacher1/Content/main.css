@@ -16,6 +16,7 @@ form.form-horizontal {
 }
 .form-group label{
     padding: 0;
+    width: auto;
 }
 .form-group.list-kaf .form-control{
     width: 110px;
@@ -217,7 +218,7 @@ content
 {
     width: 95%;
     margin: 0 auto;
-    min-height: 592px;
+    min-height: 568px;
     position: relative;
     display: table;
 }
@@ -269,6 +270,9 @@ content
     float: right;
     width: 400px;
     border-top: 1px solid;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     margin: 3% 15px 0;
 }
 .header-img a{
@@ -287,7 +291,18 @@ content
 .header-img a:hover{
     border: 1px solid #FFF;
     background-color: transparent;
+    text-decoration: none;
     color: #FFF;
+}
+.col-md-10 input[type=submit]{
+    border-color: #334878;
+    color: #fff;
+    background-color: #334878;
+}
+.col-md-10 input[type=submit]:hover{
+    border-color: #adadad;
+    color: #333;
+    background-color: #fff;
 }
 .content
 {
@@ -339,7 +354,7 @@ content
 {
     display: block;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     color: #FFA507;
     text-align: center;
     font-weight: bold;
@@ -352,6 +367,7 @@ content
     display: inline-table;
     padding: 0 25px;
     margin: 0 auto;
+    font-weight: bolder;
     position: relative;
     z-index: 3;
     background: white;
@@ -534,6 +550,14 @@ footer
     width: 65%;
     margin-left: 4%;
 }
+.about_teacher > a{
+    float: left;
+    font-style: italic;
+    text-decoration: initial;
+    /* padding-bottom: 5px; */
+    margin-top: -25px;
+    color: #334878;
+}
 .about_teacher span{
     font-size: 16px;
 }
@@ -552,10 +576,10 @@ footer
     margin-bottom: 40px;
 }
 .admin_menu{
-    margin: 20px 10px;
+    margin: 20px 10px 0 40px;
     width: 230px;
     float: left;
-    border-right: 2px solid rgb(53, 105, 155);
+    border-right: 3px solid rgb(53, 105, 155);
 }
 .admin_menu a{
     padding: 8px 20px;
@@ -569,6 +593,7 @@ footer
 }
 .admin_menu a:hover{
     color: white;
+    text-decoration: none;
 }
 .value th{
     width: 250px;
@@ -637,3 +662,116 @@ footer
         display: block;
         margin: 0 auto;
     }
+.col-md-10{
+    width: 135px !important;
+}
+.minion-in{
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    height: 500px;
+}
+#loginForm{
+    font-size: 20px;
+    width: 360px;
+    float: left;
+    margin: 9% 13%;
+
+}
+.form-group > p {
+    width: 120px;
+    float: left;
+    font-size: 14px;
+    margin: 15px 0 0 110px;
+}
+#loginForm .control-label{
+    width: 120px;
+}
+#loginForm .col-md-10{
+    width: 250px !important;
+    float: left;
+    margin-left: 0;
+    text-align: right;
+}
+#loginForm .col-md-offset-2{
+    width: 150px !important;
+    float: left;
+    margin-left: 0;
+    text-align: right;
+    float: right;
+}
+.form-group .control-label{
+    width: 150px;
+}
+.form-group .col-md-10{
+    width: 265px !important;
+    float: left;
+    margin-left: 0;
+    text-align: right;
+}
+.form-horizontal{
+    width: 350px;
+}
+.form-group .col-md-offset-2{
+    width: 150px !important;
+    float: left;
+    margin-left: 0;
+    text-align: right;
+    float: right;
+}
+.minion-login{
+    position: absolute;
+    top: 120px;
+    right: 140px;
+}
+.dl-horizontal{
+    font-size: 17px;
+}
+.dl-horizontal dt{
+    width: 220px !important;
+}
+.dl-horizontal dd{
+    margin-left: 240px !important;
+}
+.form-group{
+    min-width: 415px;
+}
+.minion-admin{
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 810px;
+}
+.minion-student{
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    width: 540px;
+}
+.minion-edit{
+    position: absolute;
+    left: 35px;
+    width: 221px;
+}
+.minion-allstudents{
+    position: absolute;
+    top: 63px;
+    right: 5px;
+    width: 898px;
+}
+.list-students{
+    font-size: 18px;
+    text-align: center;
+}
+.list-students th{
+    text-transform: uppercase;
+    color: #c9302c;
+    text-align: center;
+    border-bottom: 2px solid #334878;
+}
+.list-students > tr:first-child{
+}
+.student > td:first-child {
+    font-weight: bolder;
+    padding: 0 20px;
+}

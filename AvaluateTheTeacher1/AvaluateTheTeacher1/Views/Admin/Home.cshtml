@@ -1,9 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Admin";
+    ViewBag.Title = "Адміністрація сайту";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1 class="title">Адміністрація сайту</h1>
+<div class="title">
+    <hr /><h1>@ViewBag.Title</h1>
+</div>
 <div class="admin_menu">   
     @Html.ActionLink("Додавання студента", "AddNewStudent", "AddingStudent", routeValues: null, htmlAttributes: new { title = "" })
     @Html.ActionLink("Список студентів", "ListOfUsers", "Admin", routeValues: null, htmlAttributes: new { title = "" })
@@ -12,3 +14,4 @@
     @Html.ActionLink("Предмети", "Index", "Subjects", routeValues: null, htmlAttributes: new { title = "" })
     
 </div>
+<img class="minion-admin" src="~/Content/11.jpg" />

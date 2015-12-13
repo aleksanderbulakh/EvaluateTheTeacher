@@ -3,7 +3,9 @@
     ViewBag.Title = "Додати нового студента";
 }
 
-<h2 class="title">@ViewBag.Title</h2>
+<div class="title">
+    <hr /><h1>@ViewBag.Title</h1>
+</div>
 
 @using (Html.BeginForm("AddNewStudent", "AddingStudent", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -40,7 +42,8 @@
         </div>
     </div>
 }
-
+<img class="minion-edit" src="~/Content/03.jpg" />
+<img class="minion-student" src="~/Content/07.jpg" />
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

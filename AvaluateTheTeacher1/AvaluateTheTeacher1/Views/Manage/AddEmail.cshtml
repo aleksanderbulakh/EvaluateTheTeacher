@@ -1,15 +1,16 @@
 ﻿@model AvaluateTheTeacher1.Models.AddEmailViewModel
 @{
-    ViewBag.Title = "AddEmail";
+    ViewBag.Title = "Додавання E-mail";
 }
 
-<h2>AddEmail</h2>
+<div class="title">
+    <hr /><h1>@ViewBag.Title</h1>
+</div>
 
 @using (Html.BeginForm("AddEmail", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <h4>Додавання електронної адреси</h4>
-    <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
@@ -23,3 +24,4 @@
         </div>
     </div>
 }
+<img class="minion-login" src="~/Content/06.jpg" />
