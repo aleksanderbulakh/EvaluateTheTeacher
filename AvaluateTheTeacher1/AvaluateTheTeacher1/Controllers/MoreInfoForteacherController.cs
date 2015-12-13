@@ -16,44 +16,41 @@ namespace AvaluateTheTeacher1.Controllers
         public ActionResult Index(int id)
         {
             Teacher teacher = db.Teachers.Find(id);
-            query =
-                   from listCathedras in db.Cathedras
-                   from listRaitings in db.Ratings
-                   from listTeachers in db.Teachers
-                   .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id))
-                   orderby listRaitings.AvgRating descending
-                   select new MoreInfoForTeacher()
-                   {
-                       TeacherId = listTeachers.TeacherId,
-                       NameCathedra = listCathedras.NameCathedra,
-                       Name = listTeachers.Name,
-                       SurName = listTeachers.SurName,
-                       LastName = listTeachers.LastName,
-                       PathToPhoto = listTeachers.PathToPhoto,
-                       Description = listTeachers.Description,
-                       ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
-                       PreviousMonth = listRaitings.PreviousMonth,
-                       AvgRating = listRaitings.AvgRating,
-                       ActivityInClass = listRaitings.ActivityInClass,
-                       AvailabilityTeacherOutsideLessons = listRaitings.AvailabilityTeacherOutsideLessons,
-                       ClarityAndAccessibility = listRaitings.ClarityAndAccessibility,
-                       CommentsTheWork = listRaitings.CommentsTheWork,
-                       CountRaitingVoting = listRaitings.CountRaitingVoting,
-                       DepthPossessionOf = listRaitings.DepthPossessionOf,
-                       HowWellTheProcedurePerformedGrading = listRaitings.HowWellTheProcedurePerformedGrading,
-                       InterestInTheSubject = listRaitings.InterestInTheSubject,
-                       NumberOfAttendance = listRaitings.NumberOfAttendance,
-                       OverallSubject = listRaitings.OverallSubject,
-                       PreparationTime = listRaitings.PreparationTime,
-                       ProcedureGrading = listRaitings.ProcedureGrading,
-                       QualityMasteringTheSubject = listRaitings.QualityMasteringTheSubject,
-                       QualityTeachingMaterials = listRaitings.QualityTeachingMaterials,
-                       RelevantToStudents = listRaitings.RelevantToStudents,
-                       SomethingNew = listRaitings.SomethingNew,
-                       TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse,
-                       ThePracticalValue = listRaitings.ThePracticalValue
-                   };
-            return View();
+
+
+            Rating rating = db.Ratings.First(m => m.TeacherId == teacher.TeacherId);
+            MoreInfoForTeacher TeacherInf = new MoreInfoForTeacher();
+            TeacherInf.TeacherId = teacher.TeacherId;
+            TeacherInf.NameCathedra = db.Cathedras.Find(teacher.CathedraId).NameCathedra;
+            TeacherInf.Name = teacher.Name;
+            TeacherInf.SurName = teacher.SurName;
+            TeacherInf.LastName = teacher.LastName;
+            TeacherInf.PathToPhoto = teacher.PathToPhoto;
+            TeacherInf.Description = teacher.Description;
+            TeacherInf.ForTheEntirePeriod = rating.ForTheEntirePeriod;
+            TeacherInf.PreviousMonth = rating.PreviousMonth;
+            TeacherInf.AvgRating = rating.AvgRating;
+            TeacherInf.ActivityInClass = rating.ActivityInClass;
+            TeacherInf.AvailabilityTeacherOutsideLessons = rating.AvailabilityTeacherOutsideLessons;
+            TeacherInf.ClarityAndAccessibility = rating.ClarityAndAccessibility;
+            TeacherInf.CommentsTheWork = rating.CommentsTheWork;
+            TeacherInf.CountRaitingVoting = rating.CountRaitingVoting;
+            TeacherInf.DepthPossessionOf = rating.DepthPossessionOf;
+            TeacherInf.HowWellTheProcedurePerformedGrading = rating.HowWellTheProcedurePerformedGrading;
+            TeacherInf.InterestInTheSubject = rating.InterestInTheSubject;
+            TeacherInf.NumberOfAttendance = rating.NumberOfAttendance;
+            TeacherInf.OverallSubject = rating.OverallSubject;
+            TeacherInf.PreparationTime = rating.PreparationTime;
+            TeacherInf.ProcedureGrading = rating.ProcedureGrading;
+            TeacherInf.QualityMasteringTheSubject = rating.QualityMasteringTheSubject;
+            TeacherInf.QualityTeachingMaterials = rating.QualityTeachingMaterials;
+            TeacherInf.RelevantToStudents = rating.RelevantToStudents;
+            TeacherInf.SomethingNew = rating.SomethingNew;
+            TeacherInf.TheDifficultyOfTheCourse = rating.TheDifficultyOfTheCourse;
+            TeacherInf.ThePracticalValue = rating.ThePracticalValue;
+
+
+            return View(TeacherInf);
         }
     }
 }

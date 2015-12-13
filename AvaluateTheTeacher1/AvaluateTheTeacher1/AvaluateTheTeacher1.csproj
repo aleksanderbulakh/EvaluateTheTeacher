@@ -200,8 +200,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
+    <Compile Include="Models\FilterUser.cs" />
     <Compile Include="Models\GMailer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ListOfUsers.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Students\Group.cs" />
     <Compile Include="Models\Students\StudentVoting.cs" />
@@ -360,10 +362,9 @@
     <Content Include="Views\Error\Default.cshtml" />
     <Content Include="Views\Raiting\VoitingMain.cshtml" />
     <Content Include="Views\Teachers\Dashboard.cshtml" />
+    <Content Include="Views\MoreInfoForteacher\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\MoreInfoForteacher\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
