@@ -228,7 +228,7 @@ namespace AvaluateTheTeacher1.Controllers
             //Якщо в масиві є значення null - заповнюємо їх даними.
             for(int a=0; a<topTeacher.Length; a++)
             {
-                if (topTeacher[a] == null) topTeacher[a] = new TopTeachersViewModel { Name = "Full", LastName = "Full", PathToPhoto = "1.jpg", Rating =404, SurName = "Full" };
+                if (topTeacher[a] == null) topTeacher[a] = new TopTeachersViewModel { Name = "Full", LastName = "Full", PathToPhoto = "07.jpg", Rating =404, SurName = "Full" };
             }
             return View(topTeacher);
         }

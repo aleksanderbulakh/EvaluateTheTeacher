@@ -19,7 +19,7 @@ form.form-horizontal {
     width: auto;
 }
 .form-group.list-kaf .form-control{
-    width: 110px;
+    /*width: 110px;*/
 }
 html{
     background: url(bg.jpg);
@@ -638,18 +638,14 @@ footer
 }
 .dashboard{
     width: 100%;
-    height: auto;
-}
-.dashboard > img{
-    position: relative;
-    top: 0;
-    opacity: 0.91;
-    float: left;
+    height: 615px;
 }
 .minion1{
     float: left;
-    width: 200px;
-    height: auto
+    width: 275px;
+    position: absolute;
+    top: 380px;
+    height: auto;
 }
     .dashboard1>div{
         height: 360px;
@@ -710,7 +706,7 @@ footer
     text-align: right;
 }
 .form-horizontal{
-    width: 350px;
+    width: 555px;
 }
 .form-group .col-md-offset-2{
     width: 150px !important;
@@ -774,4 +770,72 @@ footer
 .student > td:first-child {
     font-weight: bolder;
     padding: 0 20px;
+}
+.dashboard-img{
+    position: absolute;
+    top: 0;
+    opacity: 0.9;
+    float: left;
+}
+.col-lg-6{
+    width: 260px !important;
+}
+.name-top{
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 230px;
+    text-transform: uppercase;
+    color: #FFA507;
+}
+.img-top-teacher{
+    margin: 0 auto;
+    width: 160px;
+    background: #fff;
+    text-align: center;
+    color: #334878;
+   /*border-bottom: 30px solid #fff*/
+}
+.img-top-teacher img {
+    width: 160px;
+    min-height: 185px;
+    border: 15px solid #fff;
+    border-bottom: 0;
+}
+.img-top-teacher span{
+    font-size: 25px;
+    font-weight: 800;
+}
+.piramida{
+    width: 545px;
+    height: auto;
+    display: table;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    float: left;
+}
+.piramida1{
+    margin-left: -40px;
+    margin-top: -3px;
+}
+.piramida2{
+    margin-left: -115px;
+    margin-top: -5px;
+}
+.one-top{
+    margin: 0 auto;
+    margin-left: 24%;
+}
+.piramida2 h2{
+    color: #fff;
+    margin: 0;
+    margin-left: -25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
 }
