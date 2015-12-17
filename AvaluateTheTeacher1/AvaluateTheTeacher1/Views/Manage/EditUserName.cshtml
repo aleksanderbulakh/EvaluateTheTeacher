@@ -2,25 +2,26 @@
 @{
     ViewBag.Title = "Логін";
 }
-
-<div class="title">
-    <hr /><h1>@ViewBag.Title</h1>
-</div>
-@using (Html.BeginForm("EditUserName", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Редагувати логін</h4>
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
-        </div>
+<content>
+    <div class="title">
+        <hr /><h1>@ViewBag.Title</h1>
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Змінити" />
+    @using (Html.BeginForm("EditUserName", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Редагувати логін</h4>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+            </div>
         </div>
-    </div>
-}
-<img class="minion-login" src="~/Content/06.jpg" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Змінити" />
+            </div>
+        </div>
+    }
+    <img class="minion-login" src="~/Content/06.jpg" />
+</content>

@@ -2,36 +2,37 @@
 @{
     ViewBag.Title = "ListOfUsers";
 }
+<content>
+    <h2>Список користувачівs</h2>
+    @using (@Html.BeginForm("ListOfUsers", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-<h2>Список користувачівs</h2>
-@using (@Html.BeginForm("ListOfUsers", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-    <div class="form-group list-kaf">
-        @Html.Label("Список груп", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.DropDownListFor(m => m.SelectedId, Model.Group, new { @class = "form-control" })
+        <div class="form-group list-kaf">
+            @Html.Label("Список груп", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.SelectedId, Model.Group, new { @class = "form-control" })
+            </div>
         </div>
-    </div>
         <div class="form-group kaf-submit">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Фільтрувати" class="btn btn-default" />
             </div>
         </div>
-}
-<table>
-    <tr>
-        <th>Логін</th>
-        <th>Пароль</th>
-    </tr>
-
-    @foreach (var S in Model.List)
-    {
-        <tr>
-            <td>@S.UserName</td>
-            <td>@S.Password</td>
-        </tr>
     }
-</table>
+    <table>
+        <tr>
+            <th>Логін</th>
+            <th>Пароль</th>
+        </tr>
+
+        @foreach (var S in Model.List)
+        {
+            <tr>
+                <td>@S.UserName</td>
+                <td>@S.Password</td>
+            </tr>
+        }
+    </table>
+</content>

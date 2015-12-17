@@ -1,33 +1,32 @@
 ﻿@using Microsoft.AspNet.Identity
-
-@if (Request.IsAuthenticated)
-{
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    @if (Request.IsAuthenticated)
     {
-    @Html.AntiForgeryToken()
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="menu login-user">
-            @if (User.IsInRole("admin"))
-            {
-                <div>
-                    @Html.ActionLink("Вітаю, " + User.Identity.GetUserName() + "!", "Home", "Admin", routeValues: null, htmlAttributes: new { title = "Manage" })
-                </div>
-            }
-            else
-            {
-                @Html.ActionLink("Вітаю, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-            }
+            <div class="menu login-user">
+                @if (User.IsInRole("admin"))
+                {
+                    <div>
+                        @Html.ActionLink("Вітаю, " + User.Identity.GetUserName() + "!", "Home", "Admin", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    </div>
+                }
+                else
+                {
+                    @Html.ActionLink("Вітаю, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                }
 
-            <a href="javascript:document.getElementById('logoutForm').submit()">Вийти</a>
-        </div>
+                <a href="javascript:document.getElementById('logoutForm').submit()">Вийти</a>
+            </div>
+        }
     }
-}
-else
-{
-   
-    <div class="on nav navbar-nav navbar-right">
-    @*<li>@Html.ActionLink("Регистрация", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
-        @Html.ActionLink("Вхід", "Login", "Account")
-    </div>
+    else
+    {
 
-}
+        <div class="on nav navbar-nav navbar-right">
+            @*<li>@Html.ActionLink("Регистрация", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+            @Html.ActionLink("Вхід", "Login", "Account")
+        </div>
+
+    }
