@@ -4,7 +4,7 @@ namespace AvaluateTheTeacher1.Controllers
     using System.Web.Mvc;
 	using Moveax.Mvc.ErrorHandler;
 
-    /*public class ErrorController : ErrorHandlerControllerBase
+    public class ErrorController : ErrorHandlerControllerBase
     {
         /// <summary>Default action.</summary>
         /// <param name="errorDescription">The error description.</param>
@@ -26,5 +26,5 @@ namespace AvaluateTheTeacher1.Controllers
         {
             // TODO: Add a logging code here (just a reminder).
         }
-    }*/
+    }
 }
