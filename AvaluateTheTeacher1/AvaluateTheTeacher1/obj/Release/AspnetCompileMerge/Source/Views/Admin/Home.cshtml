@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Адміністрація сайту";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<content>
+    <div class="title">
+        <hr /><h1>@ViewBag.Title</h1>
+    </div>
+    <div class="admin_menu">
+        @Html.ActionLink("Додавання студента", "AddNewStudent", "AddingStudent", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.ActionLink("Список студентів", "ListOfUsers", "Admin", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.ActionLink("Групи студентів", "Index", "Group", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.ActionLink("Викладачі", "Index", "Teachers", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.ActionLink("Предмети", "Index", "Subjects", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.ActionLink("Налаштування", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "" })
+    </div>
+    <img class="minion-admin" src="~/Content/11.jpg" />
+</content>
+
