@@ -12,7 +12,7 @@ namespace AvaluateTheTeacher1.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            var first = from list in db.StudentVotings select list;
+            /*var first = from list in db.StudentVotings select list;
             foreach (var time in first.ToList())
             {
                 if (time.Date.Month < DateTime.Now.Month || time.Date.Year < DateTime.Now.Year)
@@ -94,7 +94,7 @@ namespace AvaluateTheTeacher1.Controllers
                     db.SaveChanges();
                     break;
                 }
-            }
+            }*/
             return View();
         }
 
