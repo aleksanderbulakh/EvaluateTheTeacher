@@ -16,12 +16,14 @@ namespace AvaluateTheTeacher1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Group
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             return View(db.Groups.ToList());
         }
 
         // GET: Group/Details/5
+        [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -54,6 +56,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Group/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -64,6 +67,7 @@ namespace AvaluateTheTeacher1.Controllers
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Create([Bind(Include = "GroupId,Name")] Group group)
         {
             if (ModelState.IsValid)
@@ -77,6 +81,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Group/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -150,6 +155,7 @@ namespace AvaluateTheTeacher1.Controllers
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "GroupId,Name")] Group group, int[] TeachersSubjects)
         {
             if (ModelState.IsValid)
@@ -174,6 +180,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Group/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -189,6 +196,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // POST: Group/Delete/5
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -198,8 +206,6 @@ namespace AvaluateTheTeacher1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-
        
         protected override void Dispose(bool disposing)
         {

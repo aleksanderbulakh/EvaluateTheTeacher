@@ -26,94 +26,94 @@
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                <div>
+                <div class="col-md-10">
                     @Html.Label("Як Ви загалом оцінюєте курс? ", htmlAttributes: new { @class = "control-label" })
-                </div>
-                <div class="col-md-10">
-                    <table>
-                        <thead>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <th>@info[0, i]</th>
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <td>
-                                        @Html.RadioButtonFor(model => model.OverallSubject, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <th>@info[0, i]</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <td>
+                                            @Html.RadioButtonFor(model => model.OverallSubject, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
 
-                                    </td>
-                                }
-                            </tr>
-                        </tbody>
-                    </table>
-                    @Html.ValidationMessageFor(m => m.OverallSubject, "", new { @class = "text-danger" })
+                                        </td>
+                                    }
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.ValidationMessageFor(m => m.OverallSubject, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
             <div class="form-group">
-                <div>
+                <div  class="col-md-10">
                     @Html.Label("Чи дізались Ви щось нове? ", htmlAttributes: new { @class = "control-label" })
-                </div>
-                <div class="col-md-10">
-                    <table>
-                        <thead>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <th>@info[0, i]</th>
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <td>
-                                        @Html.RadioButtonFor(model => model.SomethingNew, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                    </td>
-                                }
-                            </tr>
-                        </tbody>
-                    </table>
-                    @Html.ValidationMessageFor(m => m.SomethingNew, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div>
-                    @Html.Label("Практична цінність курсу: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                </div>
-                <div class="col-md-10">
-                    <table>
-                        <thead>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <th>@info[0, i]</th>
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                @for (int i = 0; i < 10; i++)
-                                {
-                                    <td>
-                                        @Html.RadioButtonFor(model => model.ThePracticalValue, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                    </td>
-                                }
-                            </tr>
-                        </tbody>
-                    </table>
-                    @Html.ValidationMessageFor(m => m.ThePracticalValue, "", new { @class = "text-danger" })
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <th>@info[0, i]</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <td>
+                                            @Html.RadioButtonFor(model => model.SomethingNew, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
+                                        </td>
+                                    }
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.ValidationMessageFor(m => m.SomethingNew, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Рівень обізнаності викладача матеріалом, який він викладає: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Практична цінність курсу: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <th>@info[0, i]</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    @for (int i = 0; i < 10; i++)
+                                    {
+                                        <td>
+                                            @Html.RadioButtonFor(model => model.ThePracticalValue, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
+                                        </td>
+                                    }
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.ValidationMessageFor(m => m.ThePracticalValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div  class="col-md-10">
+                    @Html.Label("Рівень обізнаності викладача матеріалом, який він викладає: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -139,9 +139,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Ясність та доступність викладення матеріалу: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Ясність та доступність викладення матеріалу: ", htmlAttributes: new { @class = "control-label" })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -167,9 +167,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Якість навчальних матеріалів: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Якість навчальних матеріалів: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -195,9 +195,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("На скільки викладач зацікавив Вас предметом? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("На скільки викладач зацікавив Вас предметом? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -223,15 +223,15 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Як багато занять цього курсу Ви відвідали? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div class="col-md-10">
+                    @Html.Label("Як багато занять цього курсу Ви відвідали? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
                                     @for (int i = 0; i < 10; i++)
                                     {
-                                        <th>@info[1, i]</th>
+                                        <th>@info[1, i]%</th>
                                     }
                                 </tr>
                             </thead>
@@ -251,9 +251,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("На скільки активним Ви були під час семінарів та дискусій? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("На скільки активним Ви були під час семінарів та дискусій? ", htmlAttributes: new { @class = "control-label" })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -279,9 +279,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("На скільки складним виявився курс? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div class="col-md-10">
+                    @Html.Label("На скільки складним виявився курс? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -307,9 +307,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Скільки годин в день Ви витрачали на підготовку? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Скільки годин в день Ви витрачали на підготовку? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -335,9 +335,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Доступність викладача поза заняттями: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Доступність викладача поза заняттями: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -363,9 +363,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -391,9 +391,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("Неупередженість викладача: ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("Неупередженість викладача: ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -419,9 +419,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("На скільки зрозумілою була процедура оцінювання? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("На скільки зрозумілою була процедура оцінювання? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -447,9 +447,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div>
-                    @Html.Label("На скільки хорошою була заявлена процедура оцінювання? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div  class="col-md-10">
+                    @Html.Label("На скільки хорошою була заявлена процедура оцінювання? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -475,9 +475,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="form-group">
-                    @Html.Label("Як добре, на Вашу думку, Ви засвоїли матеріал? ", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                <div class="col-md-10">
+                    @Html.Label("Як добре, на Вашу думку, Ви засвоїли матеріал? ", htmlAttributes: new { @class = "control-label  " })
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -502,14 +502,14 @@
                     @Html.ValidationMessageFor(m => m.QualityMasteringTheSubject, "", new { @class = "text-danger" })
                 </div>
             </div>
-            <div class="form-group">
-                @Html.Label("Що варто було б змінити в цьому курсу, що зробити краще?", new { @class = "col-md-2 control-label" })
+            <!--<div class="form-group">
+                Html.Label("Що варто було б змінити в цьому курсу, що зробити краще?", new { class = "  control-label" })
                 <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.Suggestions, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Suggestions, "", new { @class = "text-danger" })
+                    Html.TextBoxFor(m => m.Suggestions, new { class = "form-control" })
+                    Html.ValidationMessageFor(m => m.Suggestions, "", new { class = "text-danger" })
                 </div>
 
-            </div>
+            </div>-->
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

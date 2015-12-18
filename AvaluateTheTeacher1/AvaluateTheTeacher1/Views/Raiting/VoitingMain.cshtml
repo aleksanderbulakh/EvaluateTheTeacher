@@ -25,37 +25,15 @@
                 <table class="value">
                     <tr>
                         <th><span>За весь період:</span></th>
-                        @if (data.ForTheEntirePeriod != 0)
-                {
-                            <td>@data.ForTheEntirePeriod</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td>@(data.ForTheEntirePeriod != 0 ? data.ForTheEntirePeriod.ToString() : "-")</td>
                     </tr>
                     <tr>
                         <th><span>За минулий місяць:</span></th>
-                        @if (data.PreviousMonth != 0)
-                {
-                            <td>@data.PreviousMonth</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td>@(data.PreviousMonth != 0 ? data.PreviousMonth.ToString() : "-")</td>
                     </tr>
                     <tr>
                         <th><span>Рейтингова оцінка:</span></th>
-
-                        @if (data.PreviousMonth != 0)
-                {
-                            <td class="@name_class">@data.AvgRating</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td class="@name_class">@(data.AvgRating != 0 ? data.AvgRating.ToString() : "-")</td>
                     </tr>
                 </table>
                 <a class="button2" href="/Votings/Votings/@data.IdForVoiting">Проголосувати</a>

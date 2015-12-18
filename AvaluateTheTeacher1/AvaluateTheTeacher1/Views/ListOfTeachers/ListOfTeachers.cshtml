@@ -41,37 +41,15 @@
                 <table class="value">
                     <tr>
                         <th><span>За весь період:</span></th>
-                        @if (T.ForTheEntirePeriod != 0)
-                {
-                            <td>@T.ForTheEntirePeriod</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td>@(T.ForTheEntirePeriod != 0 ? T.ForTheEntirePeriod.ToString() : "-")</td>
                     </tr>
                     <tr>
                         <th><span>За минулий місяць:</span></th>
-                        @if (T.PreviousMonth != 0)
-                {
-                            <td>@T.PreviousMonth</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td>@(T.PreviousMonth != 0 ? T.PreviousMonth.ToString() : "-")</td>
                     </tr>
                     <tr>
                         <th><span>Рейтингова оцінка:</span></th>
-
-                        @if (T.PreviousMonth != 0)
-                {
-                            <td class="@name_class">@T.AvgRating</td>
-                        }
-                        else
-                        {
-                            <td>Немає даних</td>
-                        }
+                        <td class="@name_class">@(T.AvgRating != 0 ? T.AvgRating.ToString() : "-")</td>
                     </tr>
                 </table>
                 <a href="~/MoreInfoForteacher/Index/@T.TeacherId">Більше інформації</a>

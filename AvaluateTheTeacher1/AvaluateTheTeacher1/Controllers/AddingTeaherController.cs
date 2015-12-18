@@ -8,6 +8,7 @@ using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Controllers
 {
+
     public class AddingTeacherController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();

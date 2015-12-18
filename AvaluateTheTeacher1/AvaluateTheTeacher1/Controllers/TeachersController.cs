@@ -16,6 +16,7 @@ namespace AvaluateTheTeacher1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Teachers
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             var teachers = db.Teachers.Include(t => t.Cathedra);
@@ -23,6 +24,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Teachers/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra");
@@ -32,7 +34,9 @@ namespace AvaluateTheTeacher1.Controllers
         // POST: Teachers/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
+        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "TeacherId,Name,SurName,LastName,PathToPhoto,Description,CathedraId")] Teacher teacher)
         {
@@ -48,6 +52,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Teachers/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -103,6 +108,7 @@ namespace AvaluateTheTeacher1.Controllers
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "TeacherId,Name,SurName,LastName,PathToPhoto,Description,CathedraId")] Teacher teacher, int [] selectedSubjects)
         {
             if (ModelState.IsValid)
@@ -169,6 +175,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // GET: Teachers/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -184,6 +191,7 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         // POST: Teachers/Delete/5
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -194,13 +202,13 @@ namespace AvaluateTheTeacher1.Controllers
             return RedirectToAction("Index");
         }
 
-         public ActionResult Dashboard()
+        public ActionResult Dashboard()
         {
             var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).ToList();
 
 
-            Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
-            Models.Teachers.TopTeachersViewModel[] topTeacher = new Models.Teachers.TopTeachersViewModel[6];
+            Teacher teacher_buf = new Teacher();
+            TopTeachersViewModel[] topTeacher = new TopTeachersViewModel[6];
 
 
             //Обираємо трьох найкращих та трьох найгірших викладачів
@@ -232,8 +240,7 @@ namespace AvaluateTheTeacher1.Controllers
             }
             return View(topTeacher);
         }
-
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)

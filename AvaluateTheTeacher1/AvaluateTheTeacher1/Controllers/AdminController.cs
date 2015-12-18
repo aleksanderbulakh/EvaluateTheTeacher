@@ -13,12 +13,15 @@ namespace AvaluateTheTeacher1.Controllers
         private IQueryable<ListOfUsers> query { get; set; }
         // GET: Admin
         ApplicationDbContext db = new ApplicationDbContext();
+
+        [Authorize(Roles = "admin")]
         public ActionResult Home()
         {
 
             return View();
         }
 
+        [Authorize(Roles = "admin")]
         public ActionResult ListOfUsers(FilterUser model)
         {
             //ViewBag.Students = db.Users;

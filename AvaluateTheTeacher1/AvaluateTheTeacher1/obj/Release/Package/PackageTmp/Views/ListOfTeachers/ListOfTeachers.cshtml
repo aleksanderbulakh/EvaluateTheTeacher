@@ -2,14 +2,15 @@
 @{
     ViewBag.Title = "ListOfTeachers";
 }
-<div class="title">
-    <hr><h1>Список викладачів</h1>
-</div>
-@using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+<content>
+    <div class="title">
+        <hr><h1>Список викладачів</h1>
+    </div>
+    @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    
+
         <div class="form-group list-kaf kaf2">
             @Html.Label("Список кафедр", new { @class = "col-md-2 col-md-2-1 control-label" })
             <div class="col-md-10">
@@ -23,58 +24,36 @@
         </div>
     }
 
-@foreach (var T in Model.Teachers)
-{
-    var name_class = "";
-    if (@T.AvgRating >= 9) { name_class = "grean1"; }
-    if (@T.AvgRating >= 6 && @T.AvgRating < 9) { name_class = "yellow"; }
-    if (@T.AvgRating >= 0 && @T.AvgRating < 6) { name_class = "red1"; }
+    @foreach (var T in Model.Teachers)
+    {
+        var name_class = "";
+        if (@T.AvgRating >= 9) { name_class = "grean1"; }
+        if (@T.AvgRating >= 6 && @T.AvgRating < 9) { name_class = "yellow"; }
+        if (@T.AvgRating >= 0 && @T.AvgRating < 6) { name_class = "red1"; }
 
-    <div class="teachers">
-        <img class="img-teacher" src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
-        <div class="about_teacher">
-            <span class="pib">@T.LastName</span>
-            <span class="pib">@T.Name</span>
-            <span class="pib">@T.SurName</span>
-            <p>@T.Description</p>
-            <table class="value">
-            <tr>
-                <th><span>За весь період:</span></th>
-                @if (T.ForTheEntirePeriod != 0)
-                {
-                    <td>@T.ForTheEntirePeriod</td>
-                }
-                else
-                {
-                    <td>Немає даних</td>
-                }
-            </tr>
-            <tr>
-                <th><span>За минулий місяць:</span></th>
-                @if (T.PreviousMonth != 0)
-                {
-                    <td>@T.PreviousMonth</td>
-                }
-                else
-                {
-                    <td>Немає даних</td>
-                }
-            </tr>
-            <tr>
-                <th><span>Рейтингова оцінка:</span></th>
-                
-                @if (T.PreviousMonth != 0)
-                {
-                    <td class="@name_class">@T.AvgRating</td>
-                }
-                else
-                {
-                    <td>Немає даних</td>
-                }
-            </tr>
-            </table>
-            <a href="~/MoreInfoForteacher/Index/@T.TeacherId">Більше інформації</a>
+        <div class="teachers">
+            <img class="img-teacher" src="~/TeacherImg/@T.PathToPhoto" alt="Нет фотографии">
+            <div class="about_teacher">
+                <span class="pib">@T.LastName</span>
+                <span class="pib">@T.Name</span>
+                <span class="pib">@T.SurName</span>
+                <p>@T.Description</p>
+                <table class="value">
+                    <tr>
+                        <th><span>За весь період:</span></th>
+                        <td>@(T.ForTheEntirePeriod != 0 ? T.ForTheEntirePeriod.ToString() : "-")</td>
+                    </tr>
+                    <tr>
+                        <th><span>За минулий місяць:</span></th>
+                        <td>@(T.PreviousMonth != 0 ? T.PreviousMonth.ToString() : "-")</td>
+                    </tr>
+                    <tr>
+                        <th><span>Рейтингова оцінка:</span></th>
+                        <td class="@name_class">@(T.AvgRating != 0 ? T.AvgRating.ToString() : "-")</td>
+                    </tr>
+                </table>
+                <a href="~/MoreInfoForteacher/Index/@T.TeacherId">Більше інформації</a>
+            </div>
         </div>
-    </div>
-}
-
+    }
+</content>

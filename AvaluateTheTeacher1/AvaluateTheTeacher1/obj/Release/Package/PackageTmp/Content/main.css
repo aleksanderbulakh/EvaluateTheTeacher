@@ -1,4 +1,9 @@
-﻿span
+﻿@media(max-width: 980px) {
+    .wrapper .header-img h1{
+        font-size: 50px;
+    }
+}
+span
 {
     font-weight: bold;
     font-size: 15px;
@@ -10,7 +15,6 @@ thead
     width: 100%;
     height: 10%;
 }
-/*less*/
 form.form-horizontal {
     margin-top: -15px;
 }
@@ -222,14 +226,13 @@ content
     position: relative;
     display: table;
 }
-.header-img{
+.header-img {
     color: rgb(255, 255, 255);
     font-size: 20px;
     letter-spacing: 1px;
     position: absolute;
-    z-index: 16;
-    top: 6.835%;
-    left: 14%;
+    z-index: 39;
+    width: 100%;
 }
 .header-img h1
 {
@@ -239,27 +242,25 @@ content
     font-size: 80px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0;
+    margin-top: 7%;
     letter-spacing: 7px;
 }
-.header-img p{
-    float: right;
-    width: 390px;
-}
 .header-img p:nth-child(1){
-    width: 860px;
+    width: 85%;
     text-align: center;
-    margin-top: 60px;
+    margin: 0 auto;
+    margin-top: 7%;
 }
 .header-img p:nth-child(2){
     text-align: right;
     border-right: 3px solid;
     padding-right: 10px;
-    margin-top: 45px;
     font-style: italic;
-    width: 355px;
+    width: 95%;
     font-size: 17px;
-    margin-left: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-right: 2%;
 }
 .header-img p:nth-child(2):hover{
     border-right: 3px solid #334878;
@@ -267,13 +268,10 @@ content
 }
 .header-img div{
     display: table;
-    float: right;
-    width: 400px;
+    width: 80%;
     border-top: 1px solid;
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
-    margin: 3% 15px 0;
+    margin: 0 auto;
+    margin-top: 3%;
 }
 .header-img a{
     padding: 15px 20px;
@@ -436,7 +434,6 @@ footer
 .nivoSlider {
 	position:relative;
 	width: 100%;
-	height: 610px;
 	overflow: hidden;
 }
 .nivoSlider img {
@@ -488,7 +485,7 @@ footer
 }
 .nivo-controlNav {
 	text-align:center;
-    top: 29%;
+    top: 31%;
     left: 45%;
     z-index: 21;
     position: absolute;
@@ -571,9 +568,7 @@ footer
 
 }
 .wrapper{
-    width: 105.22%;
-    margin-left: -31px;
-    margin-bottom: 40px;
+    width: 100%;
 }
 .admin_menu{
     margin: 20px 10px 0 40px;
@@ -645,7 +640,7 @@ footer
 .dashboard > img{
     position: absolute;
     top: 0;
-    opacity: 0.91;
+    opacity: 0.8;
     float: left;
 }
 .minion1{
@@ -706,13 +701,13 @@ footer
         width: 200px !important;
 }
 .kaf2{
-    min-width: 420px !important;
+    min-width: 530px !important;
 }
 .form-group .control-label{
     width: 510px;
     text-align: left !important;
 }
-.form-group .col-md-10{
+.form-horizontal .form-group .col-md-10{
     width: 265px !important;
     float: left;
     margin-left: 0;
@@ -793,7 +788,7 @@ footer
     position: absolute;
     height: auto;
     border: 0;
-    top: 21px;
+    top: 135px;
     left: 485px;
     border-radius: 0;
 
@@ -849,13 +844,31 @@ width: 155px;
 }
 .name-top{
     font-size: 19px;
-    text-align: center;
-    font-weight: 700;
-        color: #FFA507;
+    text-align: center; 
+    font-weight: 900;
+    color: black;
 }
 .minion1{
     position: absolute !important;
     top: 446px !important;
     opacity: 1 !important;
     right: 20px;
+}
+.more-theacher{
+    float: left;
+}
+.more-theacher tr > td + td{
+    text-align: center;
+}
+.more-img{
+    float: left;
+    width: 20%;
+    margin: 0 5%;
+}
+.more-img img{
+    width: 100%;
+}
+.form-group .col-md-2{
+    width: auto;
+    margin-left: 10%;
 }

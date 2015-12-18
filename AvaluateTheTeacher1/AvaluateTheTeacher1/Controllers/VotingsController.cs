@@ -16,9 +16,9 @@ namespace AvaluateTheTeacher1.Controllers
         private static int TSIdInController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
-        
+
         // GET: Votings
-        
+        [Authorize(Roles = "student")]
         public async System.Threading.Tasks.Task<ActionResult> Votings(int? id)
         {
             //Перевірка, чи не голосував студент вже в цьому місяці//
@@ -41,7 +41,7 @@ namespace AvaluateTheTeacher1.Controllers
                          from listTeacherSubject in db.TeacherSubject
                         .Where(list => list.Id == TSIdInController && list.TeacherId == listTeachers.TeacherId)
                         select listTeachers).ToList();
-            ViewBag.Name = query[0].SurName.ToString() + " " + query[0].Name.ToString() + " " + query[0].LastName.ToString();
+            ViewBag.Name = query[0].Name.ToString() + " " +query[0].SurName.ToString() + " " + query[0].LastName.ToString();
             ViewBag.Photo = query[0].PathToPhoto;
             return View();
         }
