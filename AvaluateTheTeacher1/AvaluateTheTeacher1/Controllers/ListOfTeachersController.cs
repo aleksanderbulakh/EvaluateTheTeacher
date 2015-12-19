@@ -29,7 +29,7 @@ namespace AvaluateTheTeacher1.Controllers
                     from listCathedras in db.Cathedras
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id))
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating!=0))
                     orderby listRaitings.AvgRating descending
                     select new ListOfTeachers()
                     {

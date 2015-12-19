@@ -204,7 +204,7 @@ namespace AvaluateTheTeacher1.Controllers
 
         public ActionResult Dashboard()
         {
-            var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).ToList();
+            var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).Where(x=>x.AvgRating !=0 ).ToList();
 
 
             Teacher teacher_buf = new Teacher();
@@ -215,21 +215,18 @@ namespace AvaluateTheTeacher1.Controllers
             int i = 0, j = 0;
             foreach (var TR in TeachersRatings)
             {
-                if (i < 2 || i > TeachersRatings.Count() - 2)
+                if (i <= 2 || i >= TeachersRatings.Count() - 3)
                 {
-                    int mae = TR.TeacherId;
                     teacher_buf = db.Teachers.Find(TR.TeacherId);
 
-                    topTeacher[j] = new Models.Teachers.TopTeachersViewModel();
+                    topTeacher[j] = new TopTeachersViewModel();
                     topTeacher[j].Name = teacher_buf.Name;
                     topTeacher[j].LastName = teacher_buf.LastName;
                     topTeacher[j].SurName = teacher_buf.SurName;
                     topTeacher[j].Rating = Math.Round(TR.AvgRating, 1);
                     topTeacher[j].PathToPhoto = teacher_buf.PathToPhoto;
-
                     j++;
                 }
-
                 i++;
             }
             

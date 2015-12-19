@@ -37,9 +37,8 @@ namespace AvaluateTheTeacher1.Controllers
             }
             else
             {
-                query = from listGroup in db.Groups
-                        from list in db.Users
-                        .Where(x => (x.GroupId == listGroup.GroupId))
+                query = from list in db.Users
+                        .Where(x => (x.GroupId == model.SelectedId))
                         select new ListOfUsers()
                         {
                             UserName = list.UserName,
@@ -47,7 +46,7 @@ namespace AvaluateTheTeacher1.Controllers
                         };
             }
             List<Group> group = db.Groups.ToList();
-            group.Insert(0, new Group { GroupId = 0, Name = "All" });
+            group.Insert(0, new Group { GroupId = 0, Name = "Всі" });
             var data = new FilterUser
             {
                 List = query.ToList(),
