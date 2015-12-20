@@ -8,13 +8,13 @@
     </div>
     <table class="more-theacher">
         <tr>
-            <td>Загальна оцінка курсу:</td>
+            <td>Загальна оцінка курсів, які веде викладач:</td>
             <td width="20%">@Model.OverallSubject</td>
         </tr>
 
 
         <tr>
-            <td>Практична цінність курсу:</td>
+            <td>Практична цінність курсів:</td>
             <td>@Model.ThePracticalValue</td>
         </tr>
 
@@ -34,17 +34,17 @@
         </tr>
 
         <tr>
-            <td>На скільки викладач може зацікавити своїм предметом:</td>
+            <td>Наскільки викладач може зацікавити своїми предметами:</td>
             <td>@Model.InterestInTheSubject</td>
         </tr>
 
         <tr>
             <td>Відвідуваність студентами пар викладача:</td>
-            <td>@Model.NumberOfAttendance</td>
+            <td>@(Model.NumberOfAttendance*10)%</td>
         </tr>
 
         <tr>
-            <td>Активність студентів на заняття:</td>
+            <td>Активність студентів на заняттях:</td>
             <td>@Model.ActivityInClass</td>
         </tr>
 

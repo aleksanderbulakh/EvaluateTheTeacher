@@ -269,8 +269,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -295,7 +293,9 @@
     <Content Include="TeacherImg\am_kovalchuk%281%29.jpg" />
     <Content Include="TeacherImg\am_shostachuk%281%29.jpg" />
     <Content Include="TeacherImg\ao_danilchenko%281%29.jpg" />
+    <Content Include="TeacherImg\ao_maslov%281%29.jpg" />
     <Content Include="TeacherImg\av_koval%281%29.jpg" />
+    <Content Include="TeacherImg\av_morozov.jpg" />
     <Content Include="TeacherImg\ayu_levchenko%281%29.jpg" />
     <Content Include="TeacherImg\ayu_sazonov%281%29.jpg" />
     <Content Include="TeacherImg\dd_plechistiy%281%29.jpg" />
@@ -304,6 +304,7 @@
     <Content Include="TeacherImg\dv_goychuk%281%29.jpg" />
     <Content Include="TeacherImg\es_kypkin%281%29.jpg" />
     <Content Include="TeacherImg\gi_parfenyuk%281%29.jpg" />
+    <Content Include="TeacherImg\go_raykovska.jpg" />
     <Content Include="TeacherImg\gv_kireyceva%281%29.jpg" />
     <Content Include="TeacherImg\gv_skiba%281%29.jpg" />
     <Content Include="TeacherImg\ia_orinchak%281%29.jpg" />
@@ -359,6 +360,7 @@
     <Content Include="TeacherImg\ov_vlasenko%281%29.jpg" />
     <Content Include="TeacherImg\pm_povidayko%281%29.jpg" />
     <Content Include="TeacherImg\pp_martinchuk%281%29.jpg" />
+    <Content Include="TeacherImg\pp_moskvin.jpg" />
     <Content Include="TeacherImg\pt_dederkal%281%29.jpg" />
     <Content Include="TeacherImg\rm_golovnya%281%29.jpg" />
     <Content Include="TeacherImg\ro_kolomiec%281%29.jpg" />
@@ -412,6 +414,7 @@
     <Content Include="TeacherImg\yum_rosinskiy%281%29.jpg" />
     <Content Include="TeacherImg\yun_mandro%281%29.jpg" />
     <Content Include="TeacherImg\yuo_shavurskiy%281%29.jpg" />
+    <Content Include="TeacherImg\yus_kondratyuk%281%29.jpg" />
     <Content Include="TeacherImg\zhm_homenko.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

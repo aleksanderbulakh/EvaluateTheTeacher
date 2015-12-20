@@ -157,7 +157,7 @@ namespace AvaluateTheTeacher1.Controllers
                 {
                     listS.Add(s.Id);
                 }
-                var listIdRaiting = db.RaitingTeacherSubject.Where(x => x.TeacherSubject.TeacherId==teach.TeacherId).ToList();
+                var listIdRaiting = db.RaitingTeacherSubject.Where(x => x.TeacherSubject.TeacherId==teach.TeacherId && x.AvgRating != 0).ToList();
                 foreach (var voit in listIdRaiting)
                 {
                     AIC += voit.ActivityInClass;
