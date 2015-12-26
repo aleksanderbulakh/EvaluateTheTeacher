@@ -30,7 +30,7 @@ namespace AvaluateTheTeacher1.Controllers
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
                     .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating!=0))
-                    orderby listRaitings.AvgRating descending
+                    orderby listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending, listRaitings.AvgRating descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
@@ -42,7 +42,9 @@ namespace AvaluateTheTeacher1.Controllers
                         Description = listTeachers.Description,
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating
+                        AvgRating = listRaitings.AvgRating,
+                        Count = listRaitings.CountRaitingVoting,
+                        TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse
                     };
             }
             else
@@ -53,7 +55,7 @@ namespace AvaluateTheTeacher1.Controllers
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
                     .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && ((listTeachers1.CathedraId == SelectedCathedraId) && (listTeachers1.CathedraId == listCathedras.Id)))
-                    orderby listRaitings.AvgRating descending
+                    orderby listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending, listRaitings.AvgRating descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
@@ -65,7 +67,9 @@ namespace AvaluateTheTeacher1.Controllers
                         Description = listTeachers.Description,
                         ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
                         PreviousMonth = listRaitings.PreviousMonth,
-                        AvgRating = listRaitings.AvgRating
+                        AvgRating = listRaitings.AvgRating,
+                        Count = listRaitings.CountRaitingVoting,
+                        TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse
                     };
             }
             List<Cathedra> cathedra = db.Cathedras.ToList();

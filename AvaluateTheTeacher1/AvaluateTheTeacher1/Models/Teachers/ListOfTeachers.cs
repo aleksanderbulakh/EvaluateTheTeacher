@@ -20,6 +20,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public float AvgRating { get; set; }
         public int IdForVoiting { get; set; }
         public string SubjectName { get; set; }
-        public List<Subject> Subjects { get; set; }
+        public float TheDifficultyOfTheCourse { get; set; }
+        public float Count { get; set; }
     }
 }

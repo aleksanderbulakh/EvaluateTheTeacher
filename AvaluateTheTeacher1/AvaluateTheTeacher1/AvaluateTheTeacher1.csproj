@@ -269,6 +269,8 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -322,6 +324,7 @@
     <Content Include="TeacherImg\iyu_cherepanska%281%29.jpg" />
     <Content Include="TeacherImg\le_glembocka%281%29.jpg" />
     <Content Include="TeacherImg\li_fyrsova%281%29.jpg" />
+    <Content Include="TeacherImg\li_shulyarenko%281%29.jpg" />
     <Content Include="TeacherImg\ll_otdelnova%281%29.jpg" />
     <Content Include="TeacherImg\lo_chepyuk%281%29.jpg" />
     <Content Include="TeacherImg\lv_rudyuk%281%29.jpg" />
@@ -392,6 +395,7 @@
     <Content Include="TeacherImg\vd_babiy%281%29.jpg" />
     <Content Include="TeacherImg\vd_golovnya%281%29.jpg" />
     <Content Include="TeacherImg\ve_stacenko%281%29.jpg" />
+    <Content Include="TeacherImg\vf_zagurska-antonyuk%281%29.jpg" />
     <Content Include="TeacherImg\vg_ciporenko%281%29.jpg" />
     <Content Include="TeacherImg\vg_levickiy%281%29.jpg" />
     <Content Include="TeacherImg\vg_snicar%281%29.jpg" />

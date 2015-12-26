@@ -77,17 +77,6 @@ namespace AvaluateTheTeacher1.Controllers
                 db.Votings.Add(voting);
                 db.SaveChanges();
 
-                if (model.Suggestions != null)
-                {
-                    var suggestion = new Suggestions
-                    {
-                        TeacherSubjectId = TSIdInController,
-                        SuggestionsForImprovement = model.Suggestions
-                    };
-                    db.Suggestions.Add(suggestion);
-                    db.SaveChanges();
-                }
-
                 // Фіксація голосування за календарем
                 var student = await UserManager.FindByNameAsync(User.Identity.Name);
                 var StVoting = new Models.Students.StudentVoting();
@@ -95,6 +84,7 @@ namespace AvaluateTheTeacher1.Controllers
                 StVoting.StudentId = student.Id;
                 StVoting.TeachersSubjectId = TSIdInController;
                 db.StudentVotings.Add(StVoting);
+                db.SaveChanges();
                 //- - - - - - - - - - - - - - - - - - - - - - - -//
 
                 var listId = db.Votings.Where(x=>x.TeacherSubjectId == TSIdInController).ToList();
@@ -144,7 +134,7 @@ namespace AvaluateTheTeacher1.Controllers
                     rating.SomethingNew = float.Parse(Math.Round((SN / count), 1).ToString());
                     rating.TheDifficultyOfTheCourse = float.Parse(Math.Round((TDOTC / count), 1).ToString());
                     rating.ThePracticalValue = float.Parse(Math.Round((TPV / count), 1).ToString());
-                    rating.AvgRating = float.Parse(Math.Round(((AIC / count + ATOL / count + CAA / count + CTW / count + DPO / count + HWTPPG / count + IITS / count + NOA / count + OS / count + PT / count + PG / count + QMTS / count + QTM / count + RTS / count + SN / count + TDOTC / count + TPV / count) / 17), 1).ToString());
+                    rating.AvgRating = float.Parse(Math.Round(((AIC / count + ATOL / count + CAA / count + CTW / count + DPO / count + HWTPPG / count + IITS / count + NOA / count + OS / count + PT / count + PG / count + QMTS / count + QTM / count + RTS / count + SN / count + TPV / count) / 16), 1).ToString());
                     rating.CountVoting = count;
                 }
                 db.SaveChanges();
@@ -201,7 +191,7 @@ namespace AvaluateTheTeacher1.Controllers
                     rating.SomethingNew = float.Parse(Math.Round((SN / count), 1).ToString());
                     rating.TheDifficultyOfTheCourse = float.Parse(Math.Round((TDOTC / count), 1).ToString());
                     rating.ThePracticalValue = float.Parse(Math.Round((TPV / count), 1).ToString());
-                    rating.AvgRating = float.Parse(Math.Round(((AIC / count + ATOL / count + CAA / count + CTW / count + DPO / count + HWTPPG / count + IITS / count + NOA / count + OS / count + PT / count + PG / count + QMTS / count + QTM / count + RTS / count + SN / count + TDOTC / count + TPV / count) / 17), 1).ToString());
+                    rating.AvgRating = float.Parse(Math.Round(((AIC / count + ATOL / count + CAA / count + CTW / count + DPO / count + HWTPPG / count + IITS / count + NOA / count + OS / count + PT / count + PG / count + QMTS / count + QTM / count + RTS / count + SN / count + TPV / count) / 16), 1).ToString());
                     rating.CountRaitingVoting = count;
                 }
                 db.SaveChanges();
