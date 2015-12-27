@@ -119,20 +119,47 @@ namespace AvaluateTheTeacher1.Controllers
                 newteacher.LastName = teacher.LastName;
                 newteacher.PathToPhoto = teacher.PathToPhoto;
                 newteacher.Description = teacher.Description;
-
-                newteacher.TeachersSubjects.Clear();
-                teacher.TeachersSubjects.Clear();
+                
+                                                
                 if (selectedSubjects != null)
-                {
+                {                    
+                    var lastTeacherSubjects = db.TeacherSubject.Where(m => m.TeacherId == newteacher.TeacherId).ToList();
                     foreach (var c in db.Subjects.Where(co => selectedSubjects.Contains(co.Id)))
                     {
-                        var teachersubject = new TeacherSubject
+                        //Додає нові предмети
+                        if (lastTeacherSubjects.FirstOrDefault(m => m.SubjectId == c.Id) == null)
                         {
-                            TeacherId = teacher.TeacherId,
-                            SubjectId = c.Id
-                        };
-                        newteacher.TeachersSubjects.Add(teachersubject);
-                    }
+                            var teachersubject = new TeacherSubject
+                            {
+                                TeacherId = teacher.TeacherId,
+                                SubjectId = c.Id
+                            };
+
+                            db.TeacherSubject.Add(teachersubject);
+                        }
+
+                        else
+                        {                            
+                            foreach (var lsbj in lastTeacherSubjects)
+                            {
+                                
+                                if (lsbj.SubjectId == c.Id)
+                                {
+                                    lastTeacherSubjects.Remove(lsbj);
+                                    break;
+                                }
+
+                            }
+                          
+                        }
+                                                                                              
+                    } 
+                    //Видаляє зняті прапорці
+                    foreach(var lsbj in lastTeacherSubjects)
+                    {
+                        TeacherSubject teachersubjectDel = db.TeacherSubject.Include(c => c.RaitingTeacherSubject).First(m => m.SubjectId == lsbj.SubjectId && m.TeacherId == teacher.TeacherId);
+                        db.TeacherSubject.Remove(teachersubjectDel);
+                    }                 
 
                 }
                 db.Entry(newteacher).State = EntityState.Modified;
@@ -196,7 +223,7 @@ namespace AvaluateTheTeacher1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Teacher teacher = db.Teachers.Find(id);
+            Teacher teacher = db.Teachers.Include(a => a.Ratings).Include(b => b.TeachersSubjects).Include(c => c.Suggestion).Include(d => d.Message).FirstOrDefault(m => m.TeacherId == id);
             db.Teachers.Remove(teacher);
             db.SaveChanges();
             return RedirectToAction("Index");
