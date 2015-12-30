@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class VotingsController : AccountController
     {
-        private int TSIdInController { get; set; }
+        private static int TSIdInController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
