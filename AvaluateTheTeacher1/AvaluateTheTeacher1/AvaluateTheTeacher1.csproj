@@ -248,6 +248,7 @@
     <Content Include="Content\12.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
+    <Content Include="Content\demo.css" />
     <Content Include="Content\line-home01.jpg" />
     <Content Include="Content\line-home02.jpg" />
     <Content Include="Content\~1.jpg" />

@@ -13,7 +13,7 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class VotingsController : AccountController
     {
-        private static int TSIdInController { get; set; }
+        private int TSIdInController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -140,6 +140,7 @@ namespace AvaluateTheTeacher1.Controllers
                 db.SaveChanges();
                 AIC = ATOL = CAA = CTW = DPO = HWTPPG = IITS = NOA = OS = PT = 0;
                 PG = QMTS = QTM = RTS = SN = TDOTC = TPV = avgRelevant = count = 0;
+                int countVoting = 0;
                 var teach = db.TeacherSubject.Find(TSIdInController);
                 var teachId = db.TeacherSubject.Where(x => x.TeacherId == teach.TeacherId);
                 var listS = new List<int>();
@@ -168,6 +169,7 @@ namespace AvaluateTheTeacher1.Controllers
                     TDOTC += voit.TheDifficultyOfTheCourse;
                     TPV += voit.ThePracticalValue;
                     avgRelevant += voit.RelevantToStudents;
+                    countVoting += voit.CountVoting;
                     count++;
 
                 }
@@ -192,7 +194,7 @@ namespace AvaluateTheTeacher1.Controllers
                     rating.TheDifficultyOfTheCourse = float.Parse(Math.Round((TDOTC / count), 1).ToString());
                     rating.ThePracticalValue = float.Parse(Math.Round((TPV / count), 1).ToString());
                     rating.AvgRating = float.Parse(Math.Round(((AIC / count + ATOL / count + CAA / count + CTW / count + DPO / count + HWTPPG / count + IITS / count + NOA / count + OS / count + PT / count + PG / count + QMTS / count + QTM / count + RTS / count + SN / count + TPV / count) / 16), 1).ToString());
-                    rating.CountRaitingVoting = count;
+                    rating.CountRaitingVoting = countVoting;
                 }
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");

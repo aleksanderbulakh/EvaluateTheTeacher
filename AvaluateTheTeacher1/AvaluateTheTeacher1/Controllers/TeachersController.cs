@@ -231,7 +231,7 @@ namespace AvaluateTheTeacher1.Controllers
 
         public ActionResult Dashboard()
         {
-            var TeachersRatings = db.Ratings.OrderByDescending(m => m.AvgRating).Where(x=>x.AvgRating !=0 ).ToList();
+            var TeachersRatings = db.Ratings.OrderByDescending(q=>q.TheDifficultyOfTheCourse).OrderByDescending(t => t.CountRaitingVoting).OrderByDescending(m => m.AvgRating).Where(x=>x.AvgRating !=0 ).ToList();
 
 
             Teacher teacher_buf = new Teacher();

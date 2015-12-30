@@ -8,55 +8,55 @@ namespace AvaluateTheTeacher1.Models.Teachers
 {
     public class VotingFull 
     {
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int OverallSubject { get; set; }//оцінка курсу
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int SomethingNew { get; set; }//чи дізнались щось нове
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int ThePracticalValue { get; set; }//практична ціність курсу
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int DepthPossessionOf { get; set; }//володіння викладачем матеріалом
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int ClarityAndAccessibility { get; set; }//зрозумілість та доступність матеріалу
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int QualityTeachingMaterials { get; set; }//якість навчальних матеріалів
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int InterestInTheSubject { get; set; }//зацікавленість предметом
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int NumberOfAttendance { get; set; }//кількість відвіданих занять
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int ActivityInClass { get; set; }//активність на заняттях
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int TheDifficultyOfTheCourse { get; set; }//складність курсу
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int PreparationTime { get; set; }//час для підготовки
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int AvailabilityTeacherOutsideLessons { get; set; }//доступність викладача
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int CommentsTheWork { get; set; }//зворотній зв'язок та коментарі
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int RelevantToStudents { get; set; }//предвзятість викладача
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int ProcedureGrading { get; set; }//зрозумілість процедури оцінки
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int HowWellTheProcedurePerformedGrading { get; set; }//виконання заявленої процедури оцінки
-        [Required]
+        [Required(ErrorMessage = "Виберіть&nbspзначення.")]
         [RegularExpression(@"\d{1,2}", ErrorMessage = "Виберіть значення.")]
         public int QualityMasteringTheSubject { get; set; }//засвоєння курсу
         public string Suggestions { get; set; }

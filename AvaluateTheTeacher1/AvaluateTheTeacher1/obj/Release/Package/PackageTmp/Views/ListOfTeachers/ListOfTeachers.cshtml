@@ -1,6 +1,8 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.FilterDataModel
 @{
     ViewBag.Title = "ListOfTeachers";
+
+    var name_class = "";
 }
 <content>
     <div class="title">
@@ -26,7 +28,6 @@
 
     @foreach (var T in Model.Teachers)
     {
-            var name_class = "";
             if (@T.AvgRating >= 9) { name_class = "grean1"; }
             if (@T.AvgRating >= 6 && @T.AvgRating < 9) { name_class = "yellow"; }
             if (@T.AvgRating >= 0 && @T.AvgRating < 6) { name_class = "red1"; }
@@ -46,6 +47,14 @@
                     <tr>
                         <th><span>За минулий місяць:</span></th>
                         <td>@(T.PreviousMonth != 0 ? T.PreviousMonth.ToString() : "-")</td>
+                    </tr>
+                    <tr>
+                        <th><span>Кількість глосів:</span></th>
+                        <td>@(T.Count != 0 ? T.Count.ToString() : "-")</td>
+                    </tr>
+                    <tr>
+                        <th><span>Складність курсів:</span></th>
+                        <td>@(T.TheDifficultyOfTheCourse != 0 ? T.TheDifficultyOfTheCourse.ToString() : "-")</td>
                     </tr>
                     <tr>
                         <th><span>Рейтингова оцінка:</span></th>

@@ -1,8 +1,202 @@
-﻿@media(max-width: 980px) {
-    .wrapper .header-img h1{
-        font-size: 50px;
+﻿@media(max-width: 775px) {
+    .wrapper .header-img h1 {
+        font-size: 20px;
+    }
+    .img-block .block a:before{
+        background: hsla(0,0%,0%,0.5);
+    }
+    .img-block .block a p{
+        opacity: 1;
+    }
+    .header-img p:nth-child(1){
+        display: none;
+    }
+    content .minion-in{
+        display: none;
+    }
+    body header .cmn-toggle-switch{
+        display: block;
+    }
+    body header .cmn-toggle-switch.close_mob{
+        display: none;
+    }
+    .wrapper .header-img p:nth-child(2){
+        border-right: 0;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+    .history_home .content-history, .content-map{
+        font-size: 15px;
+        margin-left: 0;
+    }
+    .nivo-directionNav .nivo-prevNav{
+        left: 3%;
+    }
+    .nivo-directionNav .nivo-nextNav{
+        right: 3%;
+    }
+    .slider-wrapper .nivo-controlNav{
+        display: none;
+    }
+    .wrapper .header-img a{
+        padding: 10px 15px;
+        margin-top: 4%;
+    }
+    content .title{
+        margin-bottom: 3%;
+    }
+    .img-block .block{
+        margin: 0 auto;
+        float: none;
+    }
+    .col-md-8 #loginForm{
+        margin: 0;
+        width: 100%;
+        margin-top: 9%;
+    }
+    .col-md-8 #loginForm .control-label{
+        width: 20%;
+        float: left;
+        margin-left: 7%;
+    }
+    content .minion-in{
+        right: 5%;
+        top: auto;
+        height: 65%;
+        bottom: 0;
+    }
+    .col-md-10 .btn{
+        padding: 7px 20px;
+        font-size: 20px;
+    }
+    content .content .title-history h1{
+        width: 85%;
+        font-size: 25px;
+    }
+    .nav.navbar-right.navbar-nav{
+        margin: 0;
+        float: left;
+        left: 5%;
+        position: relative;
+    }
+    header > .menu{
+        position: fixed;
+        top: 0;
+        z-index: 52;
+        margin: 0;
+        background: #334878;
+        font-size: 20px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    header > .menu:before{
+        content:"";
+        background: hsla(0,0%,0%,0.7);
+        z-index: 50;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+            top: 159px;
+        /*display: none;*/
+    }
+    header .close_mob span {
+        background: none;
+    }
+    header .close_mob{
+        z-index: 99999;
+        top: 12%;
+        display: none;
+        left: 16%;
+    }
+    .teachers .golos{
+        display: none;
+    }
+    .close_mob span:before{
+        top: -14px !important;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .close_mob span:after {
+        bottom: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    header > .menu a:last-child{
+        display: none;
+    }
+    content .form-group .control-label{
+        width: 55%!important;
+        margin-right: -5px;
+        float: left;
+    }
+    .content .title-history hr, .content .title-map hr{
+        width: 90%;
+    }
+    .minion-login{
+        display: none;
+    }
+    content .form-group .col-md-10 {
+        float: left;
+    }
+    content .form-group > div{
+        width: 100%;
+    }
+    .content{
+        width: 90%;
+    }
+    content form.form-horizontal{
+        margin-top: 0 !important;
+    }
+    content .kaf2{
+        min-width: 100% !important;
+    }
+    content .title h1{
+        padding: 0 15px;
+        font-size: 25px;
+    }
+    content hr{
+        margin-top: 12px;
+    }
+    content .form-group .col-md-2{
+        margin-left: 0;
+    }
+    content .form-horizontal .form-group .col-md-10{
+        width: 215px !important;
+    }
+    content .form-horizontal .form-group.list-kaf{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    body header > .menu a{
+        padding-left: 10%;
+        width: 85%;
+        border-left: 3px solid;
+    }
+    content .teachers{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    content .teachers img{
+        width: 145px;
+        height: 188px;
+    }
+    content .about_teacher{
+        width: 64%;
+        margin-left: 1%;
+    }
+    content .about_teacher > a{
+        position: relative;
+        left: -145px;
+        margin-top: -85px;
     }
 }
+
+
 span
 {
     font-weight: bold;
@@ -348,6 +542,9 @@ content
     margin-left: 30px;
     border-left: 5px solid #334878;
 }
+header .cmn-toggle-switch{
+    display: none;
+}
 .title
 {
     display: block;
@@ -357,13 +554,14 @@ content
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: 34px;
+    /*font-size: 34px;*/
     text-transform: uppercase;
 }
 .title h1{
     width: auto;
     display: inline-table;
     padding: 0 25px;
+    font-size: 30px;
     margin: 0 auto;
     font-weight: bolder;
     position: relative;
@@ -485,7 +683,7 @@ footer
 }
 .nivo-controlNav {
 	text-align:center;
-    top: 31%;
+    bottom: 5%;
     left: 45%;
     z-index: 21;
     position: absolute;
@@ -528,7 +726,7 @@ footer
     display: table;
     margin-bottom: 35px;
     margin-left: 15px;
-    /* border-bottom: 1px solid #333; */
+    border-bottom: 1px solid #333;
 }
 .teachers img{
     width: 170px;
@@ -561,6 +759,8 @@ footer
 .about_teacher > p{
     font-style: italic;
     margin: 0;
+    overflow: hidden;
+    height: 60px;
 }
 .page-header{
     background: rgb(53, 120, 155);
@@ -568,6 +768,7 @@ footer
 
 }
 .wrapper{
+    position: relative;
     width: 100%;
 }
 .admin_menu{
@@ -788,7 +989,7 @@ footer
     position: absolute;
     height: auto;
     border: 0;
-    top: 135px;
+    top: 21px;
     left: 485px;
     border-radius: 0;
 
@@ -803,18 +1004,18 @@ footer
     margin-left: 14px;
 }
 .piramida1{
-    margin-left: -14px;
+    margin-left: -15px;
 }
 .piramida2{
-    margin-top: 75px;
-    margin-left: -171px;
+    margin-top: 35px;
+    margin-left: -155px;
 }
 .piramida2 h2{
     font-size: 28px;
     font-weight: 900;
     color: #fff;
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     position: relative;
     text-transform: uppercase;
     
@@ -832,7 +1033,7 @@ width: 155px;
     background: #fff;
 }
 .img-top-teacher img{
-    width: 130px;
+    width: 120px;
 }
 .test-top-teacher{
     font-size: 22px;
@@ -840,10 +1041,10 @@ width: 155px;
     font-weight: 900;
 }
 .col-lg-6{
-    width: 270px !important;
+    width: 250px !important;
 }
 .name-top{
-    font-size: 19px;
+    font-size: 18px;
     text-align: center; 
     font-weight: 900;
     color: black;

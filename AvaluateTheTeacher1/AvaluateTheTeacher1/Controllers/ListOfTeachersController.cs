@@ -30,7 +30,7 @@ namespace AvaluateTheTeacher1.Controllers
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
                     .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating!=0))
-                    orderby listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending, listRaitings.AvgRating descending
+                    orderby listRaitings.AvgRating descending, listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
@@ -55,7 +55,7 @@ namespace AvaluateTheTeacher1.Controllers
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
                     .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && ((listTeachers1.CathedraId == SelectedCathedraId) && (listTeachers1.CathedraId == listCathedras.Id)))
-                    orderby listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending, listRaitings.AvgRating descending
+                    orderby listRaitings.AvgRating descending, listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
