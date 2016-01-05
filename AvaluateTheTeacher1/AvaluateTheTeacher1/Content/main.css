@@ -726,13 +726,11 @@ footer
     display: table;
     margin-bottom: 35px;
     margin-left: 15px;
-    border-bottom: 1px solid #333;
 }
 .teachers img{
-    width: 170px;
-    height: 225px;
+    width: auto;
+    height: 180px;
     float: left;
-    border: 1px solid #d4d6d9;
     border-radius: 10px;
 }
 .pib{
@@ -939,7 +937,7 @@ footer
     margin-left: 240px !important;
 }
 .form-group{
-        display: table;
+        display: inline-block;
     min-width: 100%;
 }
 .minion-admin{
@@ -1072,4 +1070,27 @@ width: 155px;
 .form-group .col-md-2{
     width: auto;
     margin-left: 10%;
+}
+
+/*-----------------*/
+.column1
+{
+    float: left;
+    width: 33%;
+}
+.column2
+{
+    width: 33%;
+    float: left;
+}
+.column3
+{
+    width: 33%;
+    float: left;
+}
+.voting
+{
+    width: 100%;
+    height: auto;
+    display: table;
 }
