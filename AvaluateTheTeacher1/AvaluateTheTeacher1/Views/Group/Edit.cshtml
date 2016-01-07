@@ -1,9 +1,11 @@
 ﻿@model AvaluateTheTeacher1.Models.Students.Group
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Група " + Model.Name + " - Оціни викладача";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<title>@ViewBag.Title</title>
 <content>
     <h2>Редагування</h2>
 

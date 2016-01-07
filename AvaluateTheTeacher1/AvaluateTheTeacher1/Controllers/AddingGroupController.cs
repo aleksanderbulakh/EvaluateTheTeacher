@@ -47,7 +47,7 @@ namespace AvaluateTheTeacher1.Controllers
                     
 
                 }
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Group");
             }
 
 

@@ -152,7 +152,7 @@
         margin-top: 0 !important;
     }
     content .kaf2{
-        min-width: 100% !important;
+        width: 100% !important;
     }
     content .title h1{
         padding: 0 15px;
@@ -167,10 +167,8 @@
     content .form-horizontal .form-group .col-md-10{
         width: 215px !important;
     }
-    content .form-horizontal .form-group.list-kaf{
-        margin-left: 0;
-        margin-right: 0;
-    }
+    
+
     body header > .menu a{
         padding-left: 10%;
         width: 85%;

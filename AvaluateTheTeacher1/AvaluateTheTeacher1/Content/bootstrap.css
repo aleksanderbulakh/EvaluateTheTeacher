@@ -1713,6 +1713,14 @@ input[type="number"]::-webkit-inner-spin-button {
           transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+.list-kaf{
+        margin: 0;
+        font-size: 20px !important;
+        color: #FFA507 !important;
+        height: auto !important;
+        text-align: center !important;
+    }
+
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;

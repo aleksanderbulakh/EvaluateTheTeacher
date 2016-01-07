@@ -1,4 +1,8 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.VotingFull
+@{ 
+    ViewBag.Title = "Викладча - Оціни викладача";
+}
+<title>@ViewBag.Title</title>
 <content>
     @{
         string[,] info = new string[2, 10];
@@ -13,7 +17,7 @@
             <hr /><h1>Проголосуйте</h1>
         </div>
         <div class="teachers">
-            <img src="~/TeacherImg/@ViewBag.Photo" alt="Нет фотографии">
+            <img src="~/TeacherImg/@ViewBag.Photo" alt="Немає фотографії">
             <div class="about_teacher">
                 <span>@ViewBag.Name</span>
             </div>

@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="~/favicon3.ico" type="image/x-icon"/>
-    <title>Оціни викладача</title>
+    
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/main.js"></script>
     <script type="text/javascript" src="/Scripts/jquery.nivo.slider.js"></script>
@@ -29,7 +30,13 @@
         <div class="menu">
             <a href="/">Головна</a>
             @Html.ActionLink("Рейтинг", "ListOfTeachers", "ListOfTeachers")
-            @Html.ActionLink("Голосування", "VoitingMain", "Raiting")
+            @if (!User.IsInRole("admin"))
+            {
+                if (User.IsInRole("student"))
+                {
+                    @Html.ActionLink("Голосування", "VoitingMain", "Raiting")
+                }
+            }
             @Html.ActionLink("Дошка відзнаки", "Dashboard", "Teachers")
         </div>
     </header>

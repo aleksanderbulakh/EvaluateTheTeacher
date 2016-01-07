@@ -1,30 +1,22 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.FilterDataModel
 @{
-    ViewBag.Title = "ListOfTeachers";
+    ViewBag.Title = "Рейтинг викладачів - Оціни викладача";
 
     var name_class = "";
 }
+<title>@ViewBag.Title</title>
 <content>
     <div class="title">
-        <hr><h1>Список викладачів</h1>
+        <hr><h1>
+                @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get))
+                {
+                    @Html.AntiForgeryToken()
+                    
+                    @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "form-control list-kaf", onchange = "this.form.submit();" })
+                }
+        </h1>
     </div>
-    @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-        <div class="form-group list-kaf kaf2">
-            @Html.Label("Список кафедр", new { @class = "col-md-2 col-md-2-1 control-label" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group kaf-submit">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Фільтрувати" class="btn btn-default" />
-            </div>
-        </div>
-    }
+   
 
     @foreach (var T in Model.Teachers)
     {

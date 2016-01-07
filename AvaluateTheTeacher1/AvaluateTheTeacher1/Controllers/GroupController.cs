@@ -127,7 +127,7 @@ namespace AvaluateTheTeacher1.Controllers
                     {
                         teacher_buf = db.Teachers.Find(GTS.TeacherId);
                         subj_buf = db.Subjects.Find(GTS.SubjectId);
-                        dictionaryTSTrue.Add(GTS.Id, teacher_buf.SurName.ToString() + " " + teacher_buf.Name.ToString() + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name.ToString());
+                        dictionaryTSTrue.Add(GTS.Id, teacher_buf.LastName.ToString() + " " + teacher_buf.Name.ToString() + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name.ToString());
                     }
                 }
 
@@ -137,7 +137,7 @@ namespace AvaluateTheTeacher1.Controllers
                     {
                         teacher_buf = db.Teachers.Find(GTS.TeacherId);
                         subj_buf = db.Subjects.Find(GTS.SubjectId);
-                        dictionaryTSFalse.Add(GTS.Id, teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                        dictionaryTSFalse.Add(GTS.Id, teacher_buf.LastName + " " + teacher_buf.Name + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name);
                     }
                 }
             }
