@@ -47,8 +47,8 @@ namespace AvaluateTheTeacher1.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         [Authorize(Roles = "student")]
+        [ValidateAntiForgeryToken]
         public async System.Threading.Tasks.Task<ActionResult> VotingsGet(VotingFull model)
         {
             if (ModelState.IsValid)

@@ -1,593 +1,244 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.VotingFull
 @{ 
-    ViewBag.Title = "Викладча - Оціни викладача";
+    ViewBag.Title = "Викладач - Оціни викладача";
+    string[,] infoMas = new string[1, 10];
+    for (int i = 0; i < 10; i++)
+    {
+        infoMas[0, i] = (i + 1).ToString();
+    }
 }
 <title>@ViewBag.Title</title>
 <content>
-    @{
-        string[,] info = new string[2, 10];
-        for (int i = 0; i < 10; i++)
-        {
-            info[0, i] = (i + 1).ToString();
-            info[1, i] = ((i + 1) * 10).ToString();
-        }
-    }
     <div class="form-qwestion">
         <div class="title">
             <hr /><h1>Проголосуйте</h1>
         </div>
-        <div class="teachers">
-            <img src="~/TeacherImg/@ViewBag.Photo" alt="Немає фотографії">
-            <div class="about_teacher">
-                <span>@ViewBag.Name</span>
+        <div class="teacher">
+            <img src="~/TeacherImg/@ViewBag.Photo" alt="Нет фотографии" class="img-style">
+            <div>
+                <span>@ViewBag.Name</span><br />
+                @Html.ActionLink("Повернутись до списку викладачів", "VoitingMain", "Raiting", htmlAttributes: new { @class = "link" })
             </div>
         </div>
-
     </div>
-    @using (Html.BeginForm(Html.BeginForm("VotingsGet", "Votings", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-qwestion", role = "form", enctype = "multipart/form-data" })))
+    @using (Html.BeginForm(Html.BeginForm("VotingsGet", "Votings", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", enctype = "multipart/form-data" })))
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="voting">
-            <div class="column1">
-                <div class="form-group">
-                <div class="col-md-10">
-                    @Html.Label("Як Ви загалом оцінюєте курс? ", htmlAttributes: new { @class = "control-label" })
-                    <div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    @for (int i = 0; i < 10; i++)
-                                    {
-                                        <th>@info[0, i]</th>
-                                    }
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Не&nbspкорисний </td>
-                                    @for (int i = 0; i < 10; i++)
-                                    {
-                                        <td>
-                                            @Html.RadioButtonFor(model => model.OverallSubject, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-
-                                        </td>
-                                    }
-                                    <td> Корисний</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        @Html.ValidationMessageFor(m => m.OverallSubject, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-            </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Чи дізались Ви щось нове? ", htmlAttributes: new { @class = "control-label" })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspдізнались</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.SomethingNew, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Дізнались</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            @Html.ValidationMessageFor(m => m.SomethingNew, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Практична цінність курсу: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspцінний</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.ThePracticalValue, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Цінний</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            @Html.ValidationMessageFor(m => m.ThePracticalValue, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Рівень обізнаності викладача матеріалом, який він викладає: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspкваліфікований</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.DepthPossessionOf, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Кваліфікований</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.DepthPossessionOf, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Ясність та доступність викладення матеріалу: ", htmlAttributes: new { @class = "control-label" })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Могли&nbspбути&nbspкраще</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.ClarityAndAccessibility, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Якісні</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.ClarityAndAccessibility, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Якість навчальних матеріалів: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Могло&nbspбути&nbspкраще</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.QualityTeachingMaterials, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Якісні</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.QualityTeachingMaterials, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("На скільки викладач зацікавив Вас предметом? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspзацікавив</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.InterestInTheSubject, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Зацікавив</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.InterestInTheSubject, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Як багато занять цього курсу Ви відвідали? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[1, i]%</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>На&nbspкількох</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.NumberOfAttendance, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>На&nbspвсіх</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.NumberOfAttendance, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("На скільки активним Ви були під час семінарів та дискусій? ", htmlAttributes: new { @class = "control-label" })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspвідповідав</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.ActivityInClass, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Відповідав&nbspна&nbspкожному&nbspзанятті</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.ActivityInClass, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("На скільки складним виявився курс? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Легкий</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.TheDifficultyOfTheCourse, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Складний</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.TheDifficultyOfTheCourse, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Скільки годин на тиждень Ви витрачали на підготовку? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.PreparationTime, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.PreparationTime, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Доступність викладача поза заняттями: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspприділяє&nbspуваги</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.AvailabilityTeacherOutsideLessons, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Відповідає&nbspна&nbspвсі&nbspпитання</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.AvailabilityTeacherOutsideLessons, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-            </div>
-            <div class="column3">
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspприділяє&nbspуваги</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.CommentsTheWork, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Відповідає&nbspна&nbspвсі&nbspзапитання</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.CommentsTheWork, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Неупередженість викладача: ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Злий</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.RelevantToStudents, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Неупереджений</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.RelevantToStudents, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("На скільки зрозумілою була процедура оцінювання? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Не&nbspзрозуміла</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.ProcedureGrading, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Зрозуміла</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.ProcedureGrading, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("На скільки хорошою була заявлена процедура оцінювання? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Погано</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.HowWellTheProcedurePerformedGrading, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Добре</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.HowWellTheProcedurePerformedGrading, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        @Html.Label("Як добре, на Вашу думку, Ви засвоїли матеріал? ", htmlAttributes: new { @class = "control-label  " })
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <th>@info[0, i]</th>
-                                        }
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Погано</td>
-                                        @for (int i = 0; i < 10; i++)
-                                        {
-                                            <td>
-                                                @Html.RadioButtonFor(model => model.QualityMasteringTheSubject, info[0, i].ToString(), new { htmlAttributes = new { @class = "form-control" } })
-                                            </td>
-                                        }
-                                        <td>Добре</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        @Html.ValidationMessageFor(m => m.QualityMasteringTheSubject, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Проголосувати" class="btn btn-default" />
-                    </div>
-                </div>
-            </div>
+        <div class="component">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Питання</th>
+                        @for(int i=0; i<10; i++)
+                        {
+                            <th>@Html.Label((i+1).ToString())</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody class="answers">
+                    <tr>
+                        <th>
+                            @Html.Label("Як Ви загалом оцінюєте курс? ")<br/>
+                            @Html.ValidationMessageFor(model => model.OverallSubject, "", new { @class = "text-danger" })
+                        </th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.OverallSubject, infoMas[0, i], htmlAttributes: new { @id="answer1"+(i+1).ToString() })
+                                <label for=@("answer1"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Чи дізались Ви щось нове? ")<br />
+                        @Html.ValidationMessageFor(model => model.SomethingNew, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.SomethingNew, infoMas[0, i], htmlAttributes: new { @id = "answer2" + (i + 1).ToString() })
+                            <label for=@("answer2"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Практична цінність курсу: ")<br />
+                        @Html.ValidationMessageFor(model => model.ThePracticalValue, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.ThePracticalValue, infoMas[0, i], htmlAttributes: new { @id = "answer3" + (i + 1).ToString() })
+                            <label for=@("answer3"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Рівень обізнаності викладача матеріалом, який він викладає: ")<br />
+                        @Html.ValidationMessageFor(model => model.DepthPossessionOf, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.DepthPossessionOf, infoMas[0, i], htmlAttributes: new { @id = "answer4" + (i + 1).ToString() })
+                                <label for=@("answer4"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Ясність та доступність викладення матеріалу: ")<br />
+                        @Html.ValidationMessageFor(model => model.ClarityAndAccessibility, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.ClarityAndAccessibility, infoMas[0, i], htmlAttributes: new { @id = "answer5" + (i + 1).ToString() })
+                            <label for=@("answer5"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Якість навчальних матеріалів: ")<br />
+                        @Html.ValidationMessageFor(model => model.QualityTeachingMaterials, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.QualityTeachingMaterials, infoMas[0, i], htmlAttributes: new { @id = "answer6" + (i + 1).ToString() })
+                            <label for=@("answer6"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("На скільки викладач зацікавив Вас предметом? ")<br />
+                        @Html.ValidationMessageFor(model => model.InterestInTheSubject, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.InterestInTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer7" + (i + 1).ToString() })
+                                <label for=@("answer7"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Як багато занять цього курсу Ви відвідали? ")<br />
+                        @Html.ValidationMessageFor(model => model.NumberOfAttendance, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.NumberOfAttendance, infoMas[0, i], htmlAttributes: new { @id = "answer8" + (i + 1).ToString() })
+                                <label for=@("answer8"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("На скільки активним Ви були під час семінарів та дискусій? ")<br />
+                        @Html.ValidationMessageFor(model => model.ActivityInClass, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.ActivityInClass, infoMas[0, i], htmlAttributes: new { @id = "answer9" + (i + 1).ToString() })
+                            <label for=@("answer9"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("На скільки складним виявився курс? ")<br />
+                        @Html.ValidationMessageFor(model => model.TheDifficultyOfTheCourse, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.TheDifficultyOfTheCourse, infoMas[0, i], htmlAttributes: new { @id = "answer10" + (i + 1).ToString() })
+                                <label for=@("answer10"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr> 
+                    <tr>
+                        <th>@Html.Label("Скільки годин на тиждень Ви витрачали на підготовку? ")<br />
+                        @Html.ValidationMessageFor(model => model.PreparationTime, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.PreparationTime, infoMas[0, i], htmlAttributes: new { @id = "answer11" + (i + 1).ToString() })
+                                <label for=@("answer11"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Доступність викладача поза заняттями: ")<br />
+                        @Html.ValidationMessageFor(model => model.AvailabilityTeacherOutsideLessons, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.AvailabilityTeacherOutsideLessons, infoMas[0, i], htmlAttributes: new { @id = "answer12" + (i + 1).ToString() })
+                                <label for=@("answer12"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ")<br />
+                        @Html.ValidationMessageFor(model => model.CommentsTheWork, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.CommentsTheWork, infoMas[0, i], htmlAttributes: new { @id = "answer13" + (i + 1).ToString() })
+                                <label for=@("answer13"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Неупередженість викладача: ")<br />
+                        @Html.ValidationMessageFor(model => model.RelevantToStudents, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.RelevantToStudents, infoMas[0, i], htmlAttributes: new { @id = "answer14" + (i + 1).ToString() })
+                                <label for=@("answer14"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("На скільки зрозумілою була процедура оцінювання? ")<br />
+                        @Html.ValidationMessageFor(model => model.ProcedureGrading, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <td>
+                            @Html.RadioButtonFor(model => model.ProcedureGrading, infoMas[0, i], htmlAttributes: new { @id = "answer15" + (i + 1).ToString() })
+                            <label for=@("answer15"+(i+1).ToString())> </label>
+                        </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("На скільки хорошою була заявлена процедура оцінювання? ")<br />
+                        @Html.ValidationMessageFor(model => model.HowWellTheProcedurePerformedGrading, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.HowWellTheProcedurePerformedGrading, infoMas[0, i], htmlAttributes: new { @id = "answer16" + (i + 1).ToString() })
+                                <label for=@("answer16"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <th>@Html.Label("Як добре, на Вашу думку, Ви засвоїли матеріал? ")<br />
+                        @Html.ValidationMessageFor(model => model.QualityMasteringTheSubject, "", new { @class = "text-danger" })</th>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <td>
+                                @Html.RadioButtonFor(model => model.QualityMasteringTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer17" + (i + 1).ToString() })
+                                <label for=@("answer17"+(i+1).ToString())> </label>
+                            </td>
+                        }
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="11" rowspan="1">
+                            <input type="submit" value="Проголосувати" class="btn btn-default" />
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
     }
-
-    <div>
-        @Html.ActionLink("Повернутись до списку викладачів", "ListOfTeachers", "ListOfTeachers")
-    </div>
-
+    <script type="text/javascript" src="~/Scripts/jquery.stickyheader.js"></script>
+    <script src="~/Scripts/jquery.ba-throttle-debounce.min.js"></script>
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
     }

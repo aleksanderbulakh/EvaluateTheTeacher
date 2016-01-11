@@ -248,9 +248,13 @@
     <Content Include="Content\12.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
+    <Content Include="Content\component.css" />
     <Content Include="Content\demo.css" />
+    <Content Include="Content\demo1.css" />
     <Content Include="Content\line-home01.jpg" />
     <Content Include="Content\line-home02.jpg" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\~1.jpg" />
     <Content Include="Content\~2.jpg" />
     <Content Include="Content\~3.jpg" />
@@ -275,8 +279,10 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.ba-throttle-debounce.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.nivo.slider.js" />
+    <Content Include="Scripts\jquery.stickyheader.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />

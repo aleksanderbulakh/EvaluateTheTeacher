@@ -1,0 +1,52 @@
+﻿.teacher .img-style {
+    height: 140px;
+    width: auto;
+    border-radius: 10px;
+    display: inline-block;
+    float: left;
+}
+.teacher span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.teacher .link {
+    font-size: 18px;
+    font-style: oblique;
+    padding-left: 20px;
+}
+/*-------------------------------------*/
+label[for*="answer"] {
+    position: relative;
+    cursor: pointer;
+}
+
+label[for*="answer"]::before,
+label[for*="answer"]::after {
+    position: absolute;
+    top: 0px;
+    content: '';
+    border-radius: 50%;
+}
+
+label[for*="answer"]::before {
+    width: 12px;
+    height: 12px;
+    border: solid 2px #5a5a5a;
+}
+
+label[for*="answer"]::after {
+    width: 16px;
+    height: 16px;
+    background-color: #00bad2;
+    transform: scale(0);
+    transition: transform 0.28s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked ~ label[for*="answer"]::after {
+    transform: scale(1.1);
+}
