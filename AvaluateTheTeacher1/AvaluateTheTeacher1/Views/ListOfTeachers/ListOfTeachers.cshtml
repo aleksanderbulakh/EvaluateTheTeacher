@@ -8,15 +8,18 @@
 <content>
     <div class="title">
         <hr><h1>
-                @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get))
-                {
-                    @Html.AntiForgeryToken()
-                    
-                    @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "form-control list-kaf", onchange = "this.form.submit();" })
-                }
+                РЕЙТИНГ ВИКЛАДАЧІВ
         </h1>
+    </div>    
+    <div>
+        <span class="filter_lable">Фільтрація по кафедрі:</span>
+        @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "dropdown-content", onchange = "this.form.submit();" })
+        }
     </div>
-   
 
     @foreach (var T in Model.Teachers)
     {
