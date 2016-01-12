@@ -196,26 +196,27 @@
 
 .filter_lable{
     display: block;
-    margin-top: 13px;
+    margin-top: 18px;
     float: left;
-    margin-right: 20px;
     font-size: 21px;
+    margin: 17px auto;
+    position: relative;
+    width: 60%;    
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    text-align: right;
 }
 
 .dropdown-content {    
     position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
     margin-bottom: 24px;
-    margin-top: 9px;
+    margin-top: 14px;
 }
 
 .dropdown-content:hover {
