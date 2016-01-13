@@ -73,7 +73,7 @@ namespace AvaluateTheTeacher1.Controllers
                     };
             }
             List<Cathedra> cathedra = db.Cathedras.ToList();
-            cathedra.Insert(0, new Cathedra { NameCathedra = "РЕЙТИНГ ВИКЛАДАЧІВ", Id = 0 });
+            cathedra.Insert(0, new Cathedra { NameCathedra = "ВСІ", Id = 0 });
             FilterDataModel data = new FilterDataModel
             {
                 Teachers = query.ToList(),

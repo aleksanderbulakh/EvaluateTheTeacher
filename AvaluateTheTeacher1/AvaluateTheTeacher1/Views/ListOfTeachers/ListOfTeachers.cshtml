@@ -11,12 +11,12 @@
                 РЕЙТИНГ ВИКЛАДАЧІВ
         </h1>
     </div>    
-    <div>
-        <span class="filter_lable">Фільтрація по кафедрі:</span>
+    <div class="dropdown">
+        
         @using (@Html.BeginForm("ListOfTeachers", "ListOfteachers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get))
         {
             @Html.AntiForgeryToken()
-
+            <div class="filter_lable">Виберіть кафедру:</div>
             @Html.DropDownListFor(m => m.SelectedId, Model.Cathedras, new { @class = "dropdown-content", onchange = "this.form.submit();" })
         }
     </div>

@@ -7,6 +7,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@media(max-width:775px) 
+{
+    .component th {
+    background-color: #00bad2;
+    font-weight: bold;
+}
+}
 .component {
 	line-height: 1.5em;
     margin-top: 2pc;
@@ -36,8 +44,7 @@
 	}
 .component th {
     background-color: #00bad2;
-    font-weight: bold;;
-    white-space: nowrap;
+    font-weight: bold;
 }
 .component tbody th {
 	background-color: #00bad2;

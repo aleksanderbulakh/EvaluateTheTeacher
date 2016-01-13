@@ -60,12 +60,12 @@
         float: left;
         margin-left: 7%;
     }
-  /*  content .minion-in{
+    content .minion-in{
         right: 5%;
         top: auto;
         height: 65%;
         bottom: 0;
-    }*/
+    }
     .col-md-10 .btn{
         padding: 7px 20px;
         font-size: 20px;
@@ -196,26 +196,27 @@
 
 .filter_lable{
     display: block;
-    margin-top: 13px;
+    margin-top: 18px;
     float: left;
-    margin-right: 20px;
     font-size: 21px;
+    margin: 17px auto;
+    position: relative;
+    width: 60%;    
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    text-align: right;
 }
 
 .dropdown-content {    
     position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
     margin-bottom: 24px;
-    margin-top: 9px;
+    margin-top: 14px;
 }
 
 .dropdown-content:hover {
@@ -869,12 +870,11 @@ footer
     opacity: 0.8;
     float: left;
 }
-/*
 .minion1{
     float: left;
     width: 200px;
     height: auto
-}*/
+}
     .dashboard1>div{
         height: 360px;
     }
@@ -889,14 +889,12 @@ footer
 .col-md-10{
     width: 135px !important;
 }
-/*
 .minion-in{
     position: absolute;
     right: 15%;
     top: 10%;
     height: 500px;
 }
-    */
 #loginForm{
     font-size: 20px;
     width: 360px;
@@ -952,12 +950,11 @@ footer
     text-align: right;
     float: right;
 }
-/*
 .minion-login{
     position: absolute;
     top: 120px;
     right: 140px;
-}*/
+}
 .dl-horizontal{
     font-size: 17px;
 }
@@ -971,7 +968,6 @@ footer
         display: inline-block;
     min-width: 100%;
 }
-/*
 .minion-admin{
     position: absolute;
     top: 60px;
@@ -994,7 +990,7 @@ footer
     top: 63px;
     right: 5px;
     width: 898px;
-}*/
+}
 .list-students{
     font-size: 18px;
     text-align: center;
@@ -1073,7 +1069,6 @@ width: 155px;
 .col-lg-6{
     width: 250px !important;
 }
-/*
 .name-top{
     font-size: 18px;
     text-align: center; 
@@ -1085,7 +1080,7 @@ width: 155px;
     top: 446px !important;
     opacity: 1 !important;
     right: 20px;
-}*/
+}
 .more-theacher{
     float: left;
 }
