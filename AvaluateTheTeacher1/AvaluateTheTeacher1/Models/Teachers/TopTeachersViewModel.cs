@@ -7,6 +7,8 @@ namespace AvaluateTheTeacher1.Models.Teachers
 {
     public class TopTeachersViewModel
     {
+        public int TeacherId { get; set; }
+
         public string Name { get; set; }
 
         public string SurName { get; set; }
@@ -16,7 +18,6 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public double Rating { get; set; }
 
         public string PathToPhoto { get; set; }
-
-        public int TeacherId { get; set; }
+        
     }
 }

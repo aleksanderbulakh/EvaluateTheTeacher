@@ -218,7 +218,7 @@
     <Compile Include="Models\Teachers\Suggestions.cs" />
     <Compile Include="Models\Teachers\Teacher.cs" />
     <Compile Include="Models\Teachers\TeacherSubject.cs" />
-    <Compile Include="Models\Teachers\TeacherViewModel.cs" />
+    <Compile Include="Models\Teachers\TopTeachersViewModel.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
     <Compile Include="Models\Teachers\VotingFull.cs" />
     <Compile Include="Models\Teachers\VotingList.cs" />
