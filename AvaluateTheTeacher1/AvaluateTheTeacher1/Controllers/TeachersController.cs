@@ -247,6 +247,7 @@ namespace AvaluateTheTeacher1.Controllers
                     teacher_buf = db.Teachers.Find(TR.TeacherId);
 
                     topTeacher[j] = new TopTeachersViewModel();
+                    topTeacher[j].TeacherId = teacher_buf.TeacherId;
                     topTeacher[j].Name = teacher_buf.Name;
                     topTeacher[j].LastName = teacher_buf.LastName;
                     topTeacher[j].SurName = teacher_buf.SurName;

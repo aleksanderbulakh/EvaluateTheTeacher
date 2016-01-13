@@ -60,12 +60,12 @@
         float: left;
         margin-left: 7%;
     }
-    content .minion-in{
+  /*  content .minion-in{
         right: 5%;
         top: auto;
         height: 65%;
         bottom: 0;
-    }
+    }*/
     .col-md-10 .btn{
         padding: 7px 20px;
         font-size: 20px;
@@ -869,11 +869,12 @@ footer
     opacity: 0.8;
     float: left;
 }
+/*
 .minion1{
     float: left;
     width: 200px;
     height: auto
-}
+}*/
     .dashboard1>div{
         height: 360px;
     }
@@ -888,12 +889,14 @@ footer
 .col-md-10{
     width: 135px !important;
 }
+/*
 .minion-in{
     position: absolute;
     right: 15%;
     top: 10%;
     height: 500px;
 }
+    */
 #loginForm{
     font-size: 20px;
     width: 360px;
@@ -949,11 +952,12 @@ footer
     text-align: right;
     float: right;
 }
+/*
 .minion-login{
     position: absolute;
     top: 120px;
     right: 140px;
-}
+}*/
 .dl-horizontal{
     font-size: 17px;
 }
@@ -967,6 +971,7 @@ footer
         display: inline-block;
     min-width: 100%;
 }
+/*
 .minion-admin{
     position: absolute;
     top: 60px;
@@ -989,7 +994,7 @@ footer
     top: 63px;
     right: 5px;
     width: 898px;
-}
+}*/
 .list-students{
     font-size: 18px;
     text-align: center;
@@ -1068,6 +1073,7 @@ width: 155px;
 .col-lg-6{
     width: 250px !important;
 }
+/*
 .name-top{
     font-size: 18px;
     text-align: center; 
@@ -1079,7 +1085,7 @@ width: 155px;
     top: 446px !important;
     opacity: 1 !important;
     right: 20px;
-}
+}*/
 .more-theacher{
     float: left;
 }

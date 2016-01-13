@@ -6,7 +6,7 @@
 <title>@ViewBag.Title</title>
 <content>
     <div class="title"><hr /><h1>@ViewBag.Title</h1></div>
-    <img class="minion-in" src="~/Content/01.png" />
+
     <div class="col-md-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))

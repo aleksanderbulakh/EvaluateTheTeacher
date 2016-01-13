@@ -35,7 +35,7 @@ $(".form-control").change(function () {
         var toggle = toggles[i];
         toggleHandler(toggle);
     };
-    s
+    
     function toggleHandler(toggle) {
         toggle.addEventListener("click", function (e) {
             e.preventDefault();

@@ -16,5 +16,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public double Rating { get; set; }
 
         public string PathToPhoto { get; set; }
+
+        public int TeacherId { get; set; }
     }
 }
