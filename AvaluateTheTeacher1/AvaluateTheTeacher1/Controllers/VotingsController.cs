@@ -14,6 +14,8 @@ namespace AvaluateTheTeacher1.Controllers
     public class VotingsController : AccountController
     {
         private static int TSIdInController { get; set; }
+        private static string  teacherNameController { get; set; }
+        private static string pathToPhotoController { get; set; }
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -41,15 +43,21 @@ namespace AvaluateTheTeacher1.Controllers
                          from listTeacherSubject in db.TeacherSubject
                         .Where(list => list.Id == TSIdInController && list.TeacherId == listTeachers.TeacherId)
                         select listTeachers).ToList();
-            ViewBag.Name = query[0].Name.ToString() + " " +query[0].SurName.ToString() + " " + query[0].LastName.ToString();
-            ViewBag.Photo = query[0].PathToPhoto;
-            return View();
+            teacherNameController = query[0].Name.ToString() + " " + query[0].SurName.ToString() + " " + query[0].LastName.ToString();
+            pathToPhotoController = query[0].PathToPhoto;
+            var info = new VotingFull
+            {
+                idTeacher = (int)id,
+                teacherName = teacherNameController,
+                pathToPhoto = pathToPhotoController
+            };
+            return View(info);
         }
 
         [HttpPost]
         [Authorize(Roles = "student")]
         [ValidateAntiForgeryToken]
-        public async System.Threading.Tasks.Task<ActionResult> VotingsGet(VotingFull model)
+        public async System.Threading.Tasks.Task<ActionResult> Votings(VotingFull model)
         {
             if (ModelState.IsValid)
             {
@@ -199,6 +207,8 @@ namespace AvaluateTheTeacher1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
+            //model.teacherName = teacherNameController;
+            //model.pathToPhoto = pathToPhotoController;
             return View(model);
         }
 

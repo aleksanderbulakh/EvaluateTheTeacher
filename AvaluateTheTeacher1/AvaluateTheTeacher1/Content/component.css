@@ -11,13 +11,13 @@
 @media(max-width:775px) 
 {
     .component th {
-    background-color: #00bad2;
-    font-weight: bold;
-}
+        background-color: #00bad2;
+        font-weight: bold;
+    }
 }
 .component {
 	line-height: 1.5em;
-    margin-top: 2pc;
+    margin-top: 3pc;
     padding-top: 2em;
     max-width: 100%;
 }

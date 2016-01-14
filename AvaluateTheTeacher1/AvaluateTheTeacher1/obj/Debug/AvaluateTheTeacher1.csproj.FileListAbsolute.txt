@@ -84,7 +84,6 @@ D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateT
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csprojResolveAssemblyReference.cache
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.FullBD.resources
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.Migrations.Pole.resources
 D:\Програмування\ЖДТУ\ProjectISMAT\EvaluateTheTeacher\AvaluateTheTeacher1\AvaluateTheTeacher1\obj\Debug\AvaluateTheTeacher1.csproj.GenerateResource.Cache
