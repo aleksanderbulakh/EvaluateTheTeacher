@@ -43,7 +43,7 @@ namespace AvaluateTheTeacher1.Controllers
                          from listTeacherSubject in db.TeacherSubject
                         .Where(list => list.Id == TSIdInController && list.TeacherId == listTeachers.TeacherId)
                         select listTeachers).ToList();
-            teacherNameController = query[0].Name.ToString() + " " + query[0].SurName.ToString() + " " + query[0].LastName.ToString();
+            teacherNameController = query[0].LastName.ToString() + " " + query[0].Name.ToString() + " " + query[0].SurName.ToString();
             pathToPhotoController = query[0].PathToPhoto;
             var info = new VotingFull
             {
