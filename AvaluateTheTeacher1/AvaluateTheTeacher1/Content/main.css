@@ -223,6 +223,14 @@
     border: 1px solid blue;
 }
 
+.teachers:nth-child(odd){
+    clear: left;
+}
+
+.img-teacher-wrapper {
+    width: 35%;
+    display: inline-block;
+}
 
 span
 {
@@ -757,19 +765,18 @@ footer
 }
 .teachers img{
     width: auto;
-    height: 180px;
-    float: left;
     border-radius: 10px;
+    max-width: 100%;
 }
 .pib{
     color: #334878;
     text-transform: uppercase;
 }
 .about_teacher{
-    display: block;
-    float: left;
+    display: inline-block;
     width: 65%;
-    margin-left: 4%;
+    padding-left: 4%;
+    box-sizing: border-box;
 }
 .about_teacher > a{
     float: left;

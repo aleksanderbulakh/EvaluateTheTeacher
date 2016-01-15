@@ -47,7 +47,7 @@
                             </th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer1"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.OverallSubject, infoMas[0, i], htmlAttributes: new { @id="answer1"+(i+1).ToString() })
                                     <label for=@("answer1"+(i+1).ToString())> </label>
                                 </td>
@@ -58,7 +58,7 @@
                             @Html.ValidationMessageFor(model => model.SomethingNew, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer2"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.SomethingNew, infoMas[0, i], htmlAttributes: new { @id = "answer2" + (i + 1).ToString() })
                                 <label for=@("answer2"+(i+1).ToString())> </label>
                             </td>
@@ -69,7 +69,7 @@
                             @Html.ValidationMessageFor(model => model.ThePracticalValue, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer3"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.ThePracticalValue, infoMas[0, i], htmlAttributes: new { @id = "answer3" + (i + 1).ToString() })
                                 <label for=@("answer3"+(i+1).ToString())> </label>
                             </td>
@@ -80,7 +80,7 @@
                             @Html.ValidationMessageFor(model => model.DepthPossessionOf, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer4"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.DepthPossessionOf, infoMas[0, i], htmlAttributes: new { @id = "answer4" + (i + 1).ToString() })
                                     <label for=@("answer4"+(i+1).ToString())> </label>
                                 </td>
@@ -91,7 +91,7 @@
                             @Html.ValidationMessageFor(model => model.ClarityAndAccessibility, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer5"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.ClarityAndAccessibility, infoMas[0, i], htmlAttributes: new { @id = "answer5" + (i + 1).ToString() })
                                 <label for=@("answer5"+(i+1).ToString())> </label>
                             </td>
@@ -102,7 +102,7 @@
                             @Html.ValidationMessageFor(model => model.QualityTeachingMaterials, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer6"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.QualityTeachingMaterials, infoMas[0, i], htmlAttributes: new { @id = "answer6" + (i + 1).ToString() })
                                 <label for=@("answer6"+(i+1).ToString())> </label>
                             </td>
@@ -113,7 +113,7 @@
                             @Html.ValidationMessageFor(model => model.InterestInTheSubject, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer7"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.InterestInTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer7" + (i + 1).ToString() })
                                     <label for=@("answer7"+(i+1).ToString())> </label>
                                 </td>
@@ -124,7 +124,7 @@
                             @Html.ValidationMessageFor(model => model.NumberOfAttendance, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer8"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.NumberOfAttendance, infoMas[0, i], htmlAttributes: new { @id = "answer8" + (i + 1).ToString() })
                                     <label for=@("answer8"+(i+1).ToString())> </label>
                                 </td>
@@ -135,7 +135,7 @@
                             @Html.ValidationMessageFor(model => model.ActivityInClass, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer9"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.ActivityInClass, infoMas[0, i], htmlAttributes: new { @id = "answer9" + (i + 1).ToString() })
                                 <label for=@("answer9"+(i+1).ToString())> </label>
                             </td>
@@ -146,7 +146,7 @@
                             @Html.ValidationMessageFor(model => model.TheDifficultyOfTheCourse, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer10"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.TheDifficultyOfTheCourse, infoMas[0, i], htmlAttributes: new { @id = "answer10" + (i + 1).ToString() })
                                     <label for=@("answer10"+(i+1).ToString())> </label>
                                 </td>
@@ -157,7 +157,7 @@
                             @Html.ValidationMessageFor(model => model.PreparationTime, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer11"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.PreparationTime, infoMas[0, i], htmlAttributes: new { @id = "answer11" + (i + 1).ToString() })
                                     <label for=@("answer11"+(i+1).ToString())> </label>
                                 </td>
@@ -168,7 +168,7 @@
                             @Html.ValidationMessageFor(model => model.AvailabilityTeacherOutsideLessons, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer12"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.AvailabilityTeacherOutsideLessons, infoMas[0, i], htmlAttributes: new { @id = "answer12" + (i + 1).ToString() })
                                     <label for=@("answer12"+(i+1).ToString())> </label>
                                 </td>
@@ -179,7 +179,7 @@
                             @Html.ValidationMessageFor(model => model.CommentsTheWork, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer13"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.CommentsTheWork, infoMas[0, i], htmlAttributes: new { @id = "answer13" + (i + 1).ToString() })
                                     <label for=@("answer13"+(i+1).ToString())> </label>
                                 </td>
@@ -190,7 +190,7 @@
                             @Html.ValidationMessageFor(model => model.RelevantToStudents, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer14"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.RelevantToStudents, infoMas[0, i], htmlAttributes: new { @id = "answer14" + (i + 1).ToString() })
                                     <label for=@("answer14"+(i+1).ToString())> </label>
                                 </td>
@@ -201,7 +201,7 @@
                             @Html.ValidationMessageFor(model => model.ProcedureGrading, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                            <td>
+                            <td id="@("answer15"+(i+1).ToString())">
                                 @Html.RadioButtonFor(model => model.ProcedureGrading, infoMas[0, i], htmlAttributes: new { @id = "answer15" + (i + 1).ToString() })
                                 <label for=@("answer15"+(i+1).ToString())> </label>
                             </td>
@@ -212,7 +212,7 @@
                             @Html.ValidationMessageFor(model => model.HowWellTheProcedurePerformedGrading, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer16"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.HowWellTheProcedurePerformedGrading, infoMas[0, i], htmlAttributes: new { @id = "answer16" + (i + 1).ToString() })
                                     <label for=@("answer16"+(i+1).ToString())> </label>
                                 </td>
@@ -223,7 +223,7 @@
                             @Html.ValidationMessageFor(model => model.QualityMasteringTheSubject, "", new { @class = "text-danger" })</th>
                             @for (int i = 0; i < 10; i++)
                             {
-                                <td>
+                                <td id="@("answer17"+(i+1).ToString())">
                                     @Html.RadioButtonFor(model => model.QualityMasteringTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer17" + (i + 1).ToString() })
                                     <label for=@("answer17"+(i+1).ToString())> </label>
                                 </td>
@@ -243,7 +243,7 @@
     }
     <script type="text/javascript" src="~/Scripts/jquery.stickyheader.js"></script>
     <script src="~/Scripts/jquery.ba-throttle-debounce.min.js"></script>
-    <script src="~/Scripts/jquery-radioChecked.js"></script>
+    <script src="~/Scripts/jquery-checked-labels.js"></script>
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
     }

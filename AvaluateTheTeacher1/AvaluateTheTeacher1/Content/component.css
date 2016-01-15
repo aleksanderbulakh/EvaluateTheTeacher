@@ -28,7 +28,7 @@
 .component table {
     border-collapse: collapse;
     margin-bottom: 3em;
-    width: 100%;
+    max-width: 100%;
     background: #fff;
 }
 .component td, th {
@@ -55,6 +55,7 @@
 }
 .component tbody td:hover {
     background-color: rgba(129,208,177,.3);
+    cursor: pointer;
 }
 
 .sticky-wrap {
@@ -95,6 +96,6 @@ td.user-name {
 	text-transform: capitalize;
 }
 .sticky-wrap.overflow-y {
-	overflow-y: auto;
+	overflow-y:hidden;
 	max-height: 50vh;
 }
