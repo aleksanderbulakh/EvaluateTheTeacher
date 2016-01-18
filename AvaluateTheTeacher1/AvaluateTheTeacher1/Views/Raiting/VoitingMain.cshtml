@@ -5,7 +5,7 @@
 <title>@ViewBag.Title</title>
 <content>
     <div class="title">
-        <hr /><h1>Рейтинг викладачів</h1>
+        <hr /><h1>Голосування</h1>
     </div>
 
     @foreach (var data in Model.Info)
@@ -15,16 +15,9 @@
         if (@data.AvgRating >= 6 && @data.AvgRating < 9) { name_class = "yellow"; }
         if (@data.AvgRating >= 0 && @data.AvgRating < 6) { name_class = "red1"; }
 
-        <div class="teachers">
-            <img class="img-teacher" src="~/TeacherImg/@data.PathToPhoto" alt="Нет фотографии">
-            <div class="about_teacher">
-                <span>@data.SubjectName</span><br />
-                <span class="pib">@data.LastName</span>
-                <span class="pib">@data.Name</span>
-                <span class="pib">@data.SurName</span>
-                <p>@data.Description</p>
-                <table class="value">
-                    <tr>
+        <div class="teachers-voiting">
+            <table class="value">
+                <!-- <tr>
                         <th><span>За весь період:</span></th>
                         <td>@(data.ForTheEntirePeriod != 0 ? data.ForTheEntirePeriod.ToString() : "-")</td>
                     </tr>
@@ -36,10 +29,29 @@
                         <th><span>Рейтингова оцінка:</span></th>
                         <td class="@name_class">@(data.AvgRating != 0 ? data.AvgRating.ToString() : "-")</td>
                     </tr>
-                </table>
-                <a class="button2" href="/Votings/Votings/@data.IdForVoiting">Проголосувати</a>
+                </table>-->
+                <tr>
+                    <td class="@name_class">@(data.AvgRating != 0 ? data.AvgRating.ToString() : "-")</td>
+                </tr>
+            </table>
+
+            <div class="img-teacher-wrapper">
+                <img class="img-teacher" src="~/TeacherAva/@data.PathToPhoto" alt="Нет фотографии">
             </div>
+            
+            <div class="about_teacher">
+                <span class="name">@data.SubjectName</span><br />
+                <div class="pib">
+                    <span class="pib">@data.LastName</span>
+                    <span class="pib">@data.Name</span>
+                    <span class="pib">@data.SurName</span>
+                </div>
+                <p>@data.Description</p>
+                <a class="btn btn-default" href="/Votings/Votings/@data.IdForVoiting">Проголосувати</a>
+            </div>
+            
         </div>
+
     }
 
 </content>

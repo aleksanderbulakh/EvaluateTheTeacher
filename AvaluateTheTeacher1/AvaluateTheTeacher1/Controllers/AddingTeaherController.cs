@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Drawing;
 using AvaluateTheTeacher1.Models;
 using AvaluateTheTeacher1.Models.Teachers;
 
@@ -40,6 +41,22 @@ namespace AvaluateTheTeacher1.Controllers
                 string filename = System.IO.Path.GetFileName(model.Photo.FileName);
                 model.Photo.SaveAs(System.IO.Path.Combine(path, filename));
                 teacher.PathToPhoto = System.IO.Path.GetFileName(model.Photo.FileName);
+
+                System.Drawing.Image oImage = System.Drawing.Image.FromFile(path+teacher.PathToPhoto);
+
+                var bmp = new System.Drawing.Bitmap(362, 362, oImage.PixelFormat);
+                var g = System.Drawing.Graphics.FromImage(bmp);
+                g.DrawImage(oImage, new Rectangle(0, 0, 362, 362), new Rectangle(50, 0, 362, 362), GraphicsUnit.Pixel);
+
+                System.Drawing.Imaging.ImageFormat frm = oImage.RawFormat;
+                oImage.Dispose();
+
+                path = AppDomain.CurrentDomain.BaseDirectory + "TeacherAva/";
+                string destFile = System.IO.Path.Combine(path, teacher.PathToPhoto);
+
+                bmp.Save(destFile, frm);
+
+
 
                 db.Teachers.Add(teacher);
                 db.SaveChanges();

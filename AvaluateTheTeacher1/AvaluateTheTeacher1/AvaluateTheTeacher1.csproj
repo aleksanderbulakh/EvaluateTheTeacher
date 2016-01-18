@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.0.4\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -166,6 +170,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advanced.aspx.designer.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -226,8 +235,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Advanced.aspx" />
     <Content Include="App_Start\13.jpg" />
     <Content Include="App_Start\14.jpg" />
+    <Content Include="Basic.htm" />
     <Content Include="Content\13.jpg" />
     <Content Include="Content\14.jpg" />
     <Content Include="Content\App_Data\09.jpg" />
@@ -251,6 +262,9 @@
     <Content Include="Content\component.css" />
     <Content Include="Content\demo.css" />
     <Content Include="Content\demo1.css" />
+    <Content Include="Content\images\Jcrop.gif" />
+    <Content Include="Content\jquery.Jcrop.css" />
+    <Content Include="Content\jquery.Jcrop.min.css" />
     <Content Include="Content\line-home01.jpg" />
     <Content Include="Content\line-home02.jpg" />
     <Content Include="Content\normalize.css" />
@@ -270,8 +284,16 @@
     <Content Include="Content\slider1.jpg" />
     <Content Include="Content\slider2.jpg" />
     <Content Include="Content\slider3.jpg" />
+    <Content Include="css\Jcrop.gif" />
+    <Content Include="css\jquery.Jcrop.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fountain-small.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="js\jquery.Jcrop.js" />
+    <Content Include="js\jquery.Jcrop.min.js" />
+    <Content Include="js\jquery.jcrop.preview.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="red-leaf.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
@@ -282,6 +304,8 @@
     <Content Include="Scripts\jquery-checked-labels.js" />
     <Content Include="Scripts\jquery.ba-throttle-debounce.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.Jcrop.js" />
+    <Content Include="Scripts\jquery.Jcrop.min.js" />
     <Content Include="Scripts\jquery.nivo.slider.js" />
     <Content Include="Scripts\jquery.stickyheader.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
@@ -497,7 +521,9 @@
     <Content Include="Views\Teachers\Dashboard.cshtml" />
     <Content Include="Views\MoreInfoForteacher\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TeacherAva\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
