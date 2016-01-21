@@ -172,16 +172,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Advanced.aspx.cs">
-      <DependentUpon>Advanced.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Advanced.aspx.designer.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CodeReview\Models\VotingModel.cs" />
+    <Compile Include="CodeReview\ViewModels\VotingViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddingGroupController.cs" />
     <Compile Include="Controllers\AddingStudentController.cs" />
@@ -237,28 +234,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Advanced.aspx" />
     <Content Include="App_Start\13.jpg" />
     <Content Include="App_Start\14.jpg" />
-    <Content Include="Basic.htm" />
-    <Content Include="Content\13.jpg" />
-    <Content Include="Content\14.jpg" />
     <Content Include="Content\App_Data\09.jpg" />
     <Content Include="Content\App_Data\13.jpg" />
     <Content Include="Content\App_Data\14.jpg" />
-    <Content Include="Content\01.png" />
-    <Content Include="Content\02.jpg" />
-    <Content Include="Content\03.jpg" />
-    <Content Include="Content\04.jpg" />
-    <Content Include="Content\05.jpg" />
-    <Content Include="Content\06.jpg" />
-    <Content Include="Content\07.jpg" />
-    <Content Include="Content\08.jpg" />
-    <Content Include="Content\09.jpg" />
     <Content Include="Content\1.jpg" />
-    <Content Include="Content\10.jpg" />
-    <Content Include="Content\11.jpg" />
-    <Content Include="Content\12.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
     <Content Include="Content\component.css" />
@@ -286,16 +267,8 @@
     <Content Include="Content\slider1.jpg" />
     <Content Include="Content\slider2.jpg" />
     <Content Include="Content\slider3.jpg" />
-    <Content Include="css\Jcrop.gif" />
-    <Content Include="css\jquery.Jcrop.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fountain-small.jpg" />
     <Content Include="Global.asax" />
-    <Content Include="js\jquery.Jcrop.js" />
-    <Content Include="js\jquery.Jcrop.min.js" />
-    <Content Include="js\jquery.jcrop.preview.js" />
-    <Content Include="js\jquery.min.js" />
-    <Content Include="red-leaf.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
@@ -304,6 +277,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-checked-labels.js" />
+    <Content Include="Scripts\jquery-validate-voting.js" />
     <Content Include="Scripts\jquery.ba-throttle-debounce.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.Jcrop.js" />

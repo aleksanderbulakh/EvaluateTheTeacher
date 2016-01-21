@@ -508,3 +508,514 @@ $('#answer179').click(function () {
 $('#answer1710').click(function () {
     $('#answer1710').children('input').prop('checked', true);
 });
+//--------------------------Mobile---------------------------//
+$('#answer181').click(function () {
+    $('#answer181').children('input').prop('checked', true);
+});
+$('#answer182').click(function () {
+    $('#answer182').children('input').prop('checked', true);
+});
+$('#answer183').click(function () {
+    $('#answer183').children('input').prop('checked', true);
+});
+$('#answer184').click(function () {
+    $('#answer184').children('input').prop('checked', true);
+});
+$('#answer185').click(function () {
+    $('#answer185').children('input').prop('checked', true);
+});
+$('#answer186').click(function () {
+    $('#answer186').children('input').prop('checked', true);
+});
+$('#answer187').click(function () {
+    $('#answer187').children('input').prop('checked', true);
+});
+$('#answer188').click(function () {
+    $('#answer188').children('input').prop('checked', true);
+});
+$('#answer189').click(function () {
+    $('#answer189').children('input').prop('checked', true);
+});
+$('#answer1810').click(function () {
+    $('#answer1810').children('input').prop('checked', true);
+});
+$('#answer191').click(function () {
+    $('#answer191').children('input').prop('checked', true);
+});
+$('#answer192').click(function () {
+    $('#answer192').children('input').prop('checked', true);
+});
+$('#answer193').click(function () {
+    $('#answer193').children('input').prop('checked', true);
+});
+$('#answer194').click(function () {
+    $('#answer194').children('input').prop('checked', true);
+});
+$('#answer195').click(function () {
+    $('#answer195').children('input').prop('checked', true);
+});
+$('#answer196').click(function () {
+    $('#answer196').children('input').prop('checked', true);
+});
+$('#answer197').click(function () {
+    $('#answer197').children('input').prop('checked', true);
+});
+$('#answer198').click(function () {
+    $('#answer198').children('input').prop('checked', true);
+});
+$('#answer199').click(function () {
+    $('#answer199').children('input').prop('checked', true);
+});
+$('#answer1910').click(function () {
+    $('#answer1910').children('input').prop('checked', true);
+});
+$('#answer201').click(function () {
+    $('#answer201').children('input').prop('checked', true);
+});
+$('#answer202').click(function () {
+    $('#answer202').children('input').prop('checked', true);
+});
+$('#answer203').click(function () {
+    $('#answer203').children('input').prop('checked', true);
+});
+$('#answer204').click(function () {
+    $('#answer204').children('input').prop('checked', true);
+});
+$('#answer205').click(function () {
+    $('#answer205').children('input').prop('checked', true);
+});
+$('#answer206').click(function () {
+    $('#answer206').children('input').prop('checked', true);
+});
+$('#answer207').click(function () {
+    $('#answer207').children('input').prop('checked', true);
+});
+$('#answer208').click(function () {
+    $('#answer208').children('input').prop('checked', true);
+});
+$('#answer209').click(function () {
+    $('#answer209').children('input').prop('checked', true);
+});
+$('#answer2010').click(function () {
+    $('#answer2010').children('input').prop('checked', true);
+});
+$('#answer211').click(function () {
+    $('#answer211').children('input').prop('checked', true);
+});
+$('#answer212').click(function () {
+    $('#answer212').children('input').prop('checked', true);
+});
+$('#answer213').click(function () {
+    $('#answer213').children('input').prop('checked', true);
+});
+$('#answer214').click(function () {
+    $('#answer214').children('input').prop('checked', true);
+});
+$('#answer215').click(function () {
+    $('#answer215').children('input').prop('checked', true);
+});
+$('#answer216').click(function () {
+    $('#answer216').children('input').prop('checked', true);
+});
+$('#answer217').click(function () {
+    $('#answer217').children('input').prop('checked', true);
+});
+$('#answer218').click(function () {
+    $('#answer218').children('input').prop('checked', true);
+});
+$('#answer219').click(function () {
+    $('#answer219').children('input').prop('checked', true);
+});
+$('#answer2110').click(function () {
+    $('#answer2110').children('input').prop('checked', true);
+});
+$('#answer221').click(function () {
+    $('#answer221').children('input').prop('checked', true);
+});
+$('#answer222').click(function () {
+    $('#answer222').children('input').prop('checked', true);
+});
+$('#answer223').click(function () {
+    $('#answer223').children('input').prop('checked', true);
+});
+$('#answer224').click(function () {
+    $('#answer224').children('input').prop('checked', true);
+});
+$('#answer225').click(function () {
+    $('#answer225').children('input').prop('checked', true);
+});
+$('#answer226').click(function () {
+    $('#answer226').children('input').prop('checked', true);
+});
+$('#answer227').click(function () {
+    $('#answer227').children('input').prop('checked', true);
+});
+$('#answer228').click(function () {
+    $('#answer228').children('input').prop('checked', true);
+});
+$('#answer229').click(function () {
+    $('#answer229').children('input').prop('checked', true);
+});
+$('#answer2210').click(function () {
+    $('#answer2210').children('input').prop('checked', true);
+});
+$('#answer231').click(function () {
+    $('#answer231').children('input').prop('checked', true);
+});
+$('#answer232').click(function () {
+    $('#answer232').children('input').prop('checked', true);
+});
+$('#answer233').click(function () {
+    $('#answer233').children('input').prop('checked', true);
+});
+$('#answer234').click(function () {
+    $('#answer234').children('input').prop('checked', true);
+});
+$('#answer235').click(function () {
+    $('#answer235').children('input').prop('checked', true);
+});
+$('#answer236').click(function () {
+    $('#answer236').children('input').prop('checked', true);
+});
+$('#answer237').click(function () {
+    $('#answer237').children('input').prop('checked', true);
+});
+$('#answer238').click(function () {
+    $('#answer238').children('input').prop('checked', true);
+});
+$('#answer239').click(function () {
+    $('#answer239').children('input').prop('checked', true);
+});
+$('#answer2310').click(function () {
+    $('#answer2310').children('input').prop('checked', true);
+});
+$('#answer241').click(function () {
+    $('#answer241').children('input').prop('checked', true);
+});
+$('#answer242').click(function () {
+    $('#answer242').children('input').prop('checked', true);
+});
+$('#answer243').click(function () {
+    $('#answer243').children('input').prop('checked', true);
+});
+$('#answer244').click(function () {
+    $('#answer244').children('input').prop('checked', true);
+});
+$('#answer245').click(function () {
+    $('#answer245').children('input').prop('checked', true);
+});
+$('#answer246').click(function () {
+    $('#answer246').children('input').prop('checked', true);
+});
+$('#answer247').click(function () {
+    $('#answer247').children('input').prop('checked', true);
+});
+$('#answer248').click(function () {
+    $('#answer248').children('input').prop('checked', true);
+});
+$('#answer249').click(function () {
+    $('#answer249').children('input').prop('checked', true);
+});
+$('#answer2410').click(function () {
+    $('#answer2410').children('input').prop('checked', true);
+});
+$('#answer251').click(function () {
+    $('#answer251').children('input').prop('checked', true);
+});
+$('#answer252').click(function () {
+    $('#answer252').children('input').prop('checked', true);
+});
+$('#answer253').click(function () {
+    $('#answer253').children('input').prop('checked', true);
+});
+$('#answer254').click(function () {
+    $('#answer254').children('input').prop('checked', true);
+});
+$('#answer255').click(function () {
+    $('#answer255').children('input').prop('checked', true);
+});
+$('#answer256').click(function () {
+    $('#answer256').children('input').prop('checked', true);
+});
+$('#answer257').click(function () {
+    $('#answer257').children('input').prop('checked', true);
+});
+$('#answer258').click(function () {
+    $('#answer258').children('input').prop('checked', true);
+});
+$('#answer259').click(function () {
+    $('#answer259').children('input').prop('checked', true);
+});
+$('#answer2510').click(function () {
+    $('#answer2510').children('input').prop('checked', true);
+});
+$('#answer261').click(function () {
+    $('#answer261').children('input').prop('checked', true);
+});
+$('#answer262').click(function () {
+    $('#answer262').children('input').prop('checked', true);
+});
+$('#answer263').click(function () {
+    $('#answer263').children('input').prop('checked', true);
+});
+$('#answer264').click(function () {
+    $('#answer264').children('input').prop('checked', true);
+});
+$('#answer265').click(function () {
+    $('#answer265').children('input').prop('checked', true);
+});
+$('#answer266').click(function () {
+    $('#answer266').children('input').prop('checked', true);
+});
+$('#answer267').click(function () {
+    $('#answer267').children('input').prop('checked', true);
+});
+$('#answer268').click(function () {
+    $('#answer268').children('input').prop('checked', true);
+});
+$('#answer269').click(function () {
+    $('#answer269').children('input').prop('checked', true);
+});
+$('#answer2610').click(function () {
+    $('#answer2610').children('input').prop('checked', true);
+});
+$('#answer271').click(function () {
+    $('#answer271').children('input').prop('checked', true);
+});
+$('#answer272').click(function () {
+    $('#answer272').children('input').prop('checked', true);
+});
+$('#answer273').click(function () {
+    $('#answer273').children('input').prop('checked', true);
+});
+$('#answer274').click(function () {
+    $('#answer274').children('input').prop('checked', true);
+});
+$('#answer275').click(function () {
+    $('#answer275').children('input').prop('checked', true);
+});
+$('#answer276').click(function () {
+    $('#answer276').children('input').prop('checked', true);
+});
+$('#answer277').click(function () {
+    $('#answer277').children('input').prop('checked', true);
+});
+$('#answer278').click(function () {
+    $('#answer278').children('input').prop('checked', true);
+});
+$('#answer279').click(function () {
+    $('#answer279').children('input').prop('checked', true);
+});
+$('#answer2710').click(function () {
+    $('#answer2710').children('input').prop('checked', true);
+});
+$('#answer281').click(function () {
+    $('#answer281').children('input').prop('checked', true);
+});
+$('#answer282').click(function () {
+    $('#answer282').children('input').prop('checked', true);
+});
+$('#answer283').click(function () {
+    $('#answer283').children('input').prop('checked', true);
+});
+$('#answer284').click(function () {
+    $('#answer284').children('input').prop('checked', true);
+});
+$('#answer285').click(function () {
+    $('#answer285').children('input').prop('checked', true);
+});
+$('#answer286').click(function () {
+    $('#answer286').children('input').prop('checked', true);
+});
+$('#answer287').click(function () {
+    $('#answer287').children('input').prop('checked', true);
+});
+$('#answer288').click(function () {
+    $('#answer288').children('input').prop('checked', true);
+});
+$('#answer289').click(function () {
+    $('#answer289').children('input').prop('checked', true);
+});
+$('#answer2810').click(function () {
+    $('#answer2810').children('input').prop('checked', true);
+});
+$('#answer291').click(function () {
+    $('#answer291').children('input').prop('checked', true);
+});
+$('#answer292').click(function () {
+    $('#answer292').children('input').prop('checked', true);
+});
+$('#answer293').click(function () {
+    $('#answer293').children('input').prop('checked', true);
+});
+$('#answer294').click(function () {
+    $('#answer294').children('input').prop('checked', true);
+});
+$('#answer295').click(function () {
+    $('#answer295').children('input').prop('checked', true);
+});
+$('#answer296').click(function () {
+    $('#answer296').children('input').prop('checked', true);
+});
+$('#answer297').click(function () {
+    $('#answer297').children('input').prop('checked', true);
+});
+$('#answer298').click(function () {
+    $('#answer298').children('input').prop('checked', true);
+});
+$('#answer299').click(function () {
+    $('#answer299').children('input').prop('checked', true);
+});
+$('#answer2910').click(function () {
+    $('#answer2910').children('input').prop('checked', true);
+});
+$('#answer301').click(function () {
+    $('#answer301').children('input').prop('checked', true);
+});
+$('#answer302').click(function () {
+    $('#answer302').children('input').prop('checked', true);
+});
+$('#answer303').click(function () {
+    $('#answer303').children('input').prop('checked', true);
+});
+$('#answer304').click(function () {
+    $('#answer304').children('input').prop('checked', true);
+});
+$('#answer305').click(function () {
+    $('#answer305').children('input').prop('checked', true);
+});
+$('#answer306').click(function () {
+    $('#answer306').children('input').prop('checked', true);
+});
+$('#answer307').click(function () {
+    $('#answer307').children('input').prop('checked', true);
+});
+$('#answer308').click(function () {
+    $('#answer308').children('input').prop('checked', true);
+});
+$('#answer309').click(function () {
+    $('#answer309').children('input').prop('checked', true);
+});
+$('#answer3010').click(function () {
+    $('#answer3010').children('input').prop('checked', true);
+});
+$('#answer311').click(function () {
+    $('#answer311').children('input').prop('checked', true);
+});
+$('#answer312').click(function () {
+    $('#answer312').children('input').prop('checked', true);
+});
+$('#answer313').click(function () {
+    $('#answer313').children('input').prop('checked', true);
+});
+$('#answer314').click(function () {
+    $('#answer314').children('input').prop('checked', true);
+});
+$('#answer315').click(function () {
+    $('#answer315').children('input').prop('checked', true);
+});
+$('#answer316').click(function () {
+    $('#answer316').children('input').prop('checked', true);
+});
+$('#answer317').click(function () {
+    $('#answer317').children('input').prop('checked', true);
+});
+$('#answer318').click(function () {
+    $('#answer318').children('input').prop('checked', true);
+});
+$('#answer319').click(function () {
+    $('#answer319').children('input').prop('checked', true);
+});
+$('#answer3110').click(function () {
+    $('#answer3110').children('input').prop('checked', true);
+});
+$('#answer321').click(function () {
+    $('#answer321').children('input').prop('checked', true);
+});
+$('#answer322').click(function () {
+    $('#answer322').children('input').prop('checked', true);
+});
+$('#answer323').click(function () {
+    $('#answer323').children('input').prop('checked', true);
+});
+$('#answer324').click(function () {
+    $('#answer324').children('input').prop('checked', true);
+});
+$('#answer325').click(function () {
+    $('#answer325').children('input').prop('checked', true);
+});
+$('#answer326').click(function () {
+    $('#answer326').children('input').prop('checked', true);
+});
+$('#answer327').click(function () {
+    $('#answer327').children('input').prop('checked', true);
+});
+$('#answer328').click(function () {
+    $('#answer328').children('input').prop('checked', true);
+});
+$('#answer329').click(function () {
+    $('#answer329').children('input').prop('checked', true);
+});
+$('#answer3210').click(function () {
+    $('#answer3210').children('input').prop('checked', true);
+});
+$('#answer331').click(function () {
+    $('#answer331').children('input').prop('checked', true);
+});
+$('#answer332').click(function () {
+    $('#answer332').children('input').prop('checked', true);
+});
+$('#answer333').click(function () {
+    $('#answer333').children('input').prop('checked', true);
+});
+$('#answer334').click(function () {
+    $('#answer334').children('input').prop('checked', true);
+});
+$('#answer335').click(function () {
+    $('#answer335').children('input').prop('checked', true);
+});
+$('#answer336').click(function () {
+    $('#answer336').children('input').prop('checked', true);
+});
+$('#answer337').click(function () {
+    $('#answer337').children('input').prop('checked', true);
+});
+$('#answer338').click(function () {
+    $('#answer338').children('input').prop('checked', true);
+});
+$('#answer339').click(function () {
+    $('#answer339').children('input').prop('checked', true);
+});
+$('#answer3310').click(function () {
+    $('#answer3310').children('input').prop('checked', true);
+});
+$('#answer341').click(function () {
+    $('#answer341').children('input').prop('checked', true);
+});
+$('#answer342').click(function () {
+    $('#answer342').children('input').prop('checked', true);
+});
+$('#answer343').click(function () {
+    $('#answer343').children('input').prop('checked', true);
+});
+$('#answer344').click(function () {
+    $('#answer344').children('input').prop('checked', true);
+});
+$('#answer345').click(function () {
+    $('#answer345').children('input').prop('checked', true);
+});
+$('#answer346').click(function () {
+    $('#answer346').children('input').prop('checked', true);
+});
+$('#answer347').click(function () {
+    $('#answer347').children('input').prop('checked', true);
+});
+$('#answer348').click(function () {
+    $('#answer348').children('input').prop('checked', true);
+});
+$('#answer349').click(function () {
+    $('#answer349').children('input').prop('checked', true);
+});
+$('#answer3410').click(function () {
+    $('#answer3410').children('input').prop('checked', true);
+});

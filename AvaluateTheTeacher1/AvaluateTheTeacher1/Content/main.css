@@ -1,4 +1,4 @@
-﻿@media(max-width: 775px) {
+﻿@media(max-width: 850px) {
     .wrapper .header-img h1 {
         font-size: 20px;
     }
@@ -516,19 +516,19 @@ content
 .header-img p:nth-child(1){
     width: 85%;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 7%;
+    margin: 0 auto !important;
+    margin-top: 7%  !important;
 }
 .header-img p:nth-child(2){
     text-align: right;
-    border-right: 3px solid;
+    border-right: 3px solid !important;
     padding-right: 10px;
     font-style: italic;
     width: 95%;
     font-size: 17px;
-    margin: 0 auto;
-    margin-top: 7%;
-    margin-right: 2%;
+    margin: 0 auto !important;
+    margin-top: 7% !important;
+    margin-right: 2% !important;
 }
 .header-img p:nth-child(2):hover{
     border-right: 3px solid #334878;
@@ -1233,4 +1233,3 @@ a:hover{
     text-decoration: none !important;
     background: #F5F5F5;
 }
-

@@ -1,4 +1,4 @@
-﻿@media(max-width:775px) {
+﻿@media(max-width:850px) {
     label[for*="answer"]::before,
     label[for*="answer"]::after {
         position: absolute;
@@ -6,7 +6,9 @@
         border-radius: 50%;
     }
 }
-
+.teacher {
+    margin-bottom: 6pc;
+}
 .teacher .img-style {
     height: 140px;
     width: auto;
@@ -29,12 +31,12 @@
 /*-------------------------------------*/
 input[type="radio"] {
     visibility:hidden;
+    position: absolute;
 }
 label[for*="answer"] {
-    position: relative;
+    position: absolute;
     cursor: pointer;
-    bottom: 9pt;
-    right: 13pt;
+    margin: -12px 0 0 -3px;
 }
 
 label[for*="answer"]::before,
@@ -53,7 +55,7 @@ label[for*="answer"]::before {
 label[for*="answer"]::after {
     width: 12px;
     height: 13px;
-    background-color: #00bad2;
+    background-color: #334878;
     transform: scale(0);
     transition: transform 0.28s;
     top: 6px;
@@ -64,17 +66,18 @@ input[type="radio"]:checked ~ label[for*="answer"]::after {
     transform: scale(1.1);
 }
 
-.component table li {
-    margin-left: 10pt;
-}
-
-.component ol {
-    padding:0;
-}
-
 input[type="submit"] 
 {
+    margin: 10px 0;
     float: right;
     color: white;
     background-color: #334878;
+}
+.validate-border td:last-child {
+    border-right: 5px solid red;
+}
+
+.teacher a {
+    color: #334878 !important;
+    margin-left: 20px;
 }
