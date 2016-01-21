@@ -1,9 +1,11 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.Teacher
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = Model.LastName + " " + Model.Name + " " + Model.SurName + " - Оціни викладача";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<title>@ViewBag.Title</title>
 <content>
     <h2>Редагування</h2>
 
@@ -13,10 +15,14 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Teacher</h4>
+            
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.TeacherId)
+
+            <div class="img-teacher-wrapper">
+                <img src="~/TeacherImg/@Model.PathToPhoto"/>
+            </div>
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })

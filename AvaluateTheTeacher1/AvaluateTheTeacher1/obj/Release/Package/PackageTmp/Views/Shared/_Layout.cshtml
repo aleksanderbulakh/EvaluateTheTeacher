@@ -1,17 +1,25 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="~/favicon3.ico" type="image/x-icon"/>
-    <title>Оціни викладача</title>
+    
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/main.js"></script>
     <script type="text/javascript" src="/Scripts/jquery.nivo.slider.js"></script>
+    
+
+
+
     <link href="~/Content/main.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet"/>
+    <link href="~/Content/demo1.css"rel="stylesheet"/>
+    <link href="~/Content/component.css" rel="stylesheet" />
     
     <!--<script src="/Scripts/modernizr.js"></script>
     <script src="/Scripts/demo.js"></script>
@@ -20,6 +28,7 @@
     
     <link href="~/Content/demo.css" rel="stylesheet" />
     @RenderSection("scripts", required: false)
+    @RenderSection("Styles", required: false)
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -29,7 +38,13 @@
         <div class="menu">
             <a href="/">Головна</a>
             @Html.ActionLink("Рейтинг", "ListOfTeachers", "ListOfTeachers")
-            @Html.ActionLink("Голосування", "VoitingMain", "Raiting")
+            @if (!User.IsInRole("admin"))
+            {
+                if (User.IsInRole("student"))
+                {
+                    @Html.ActionLink("Голосування", "VoitingMain", "Raiting")
+                }
+            }
             @Html.ActionLink("Дошка відзнаки", "Dashboard", "Teachers")
         </div>
     </header>

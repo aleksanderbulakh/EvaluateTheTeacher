@@ -1,6 +1,6 @@
 ﻿@model AvaluateTheTeacher1.Models.AddNewTeacherViewModel
 @{
-    ViewBag.Title = "AddNewTeacher";
+    ViewBag.Title = "Додати нового викладача - Оціни викладача";
 }
 <content>
     <h2 class="title">Додати нового викладача</h2>
@@ -57,13 +57,13 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.Photo, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Photo, new { type = "file" })
+                        @Html.TextBoxFor(m => m.Photo, new { type = "file", onupload="UploadYes", id="pathToPhoto" })
 
                         @Html.ValidationMessageFor(m => m.Photo, "", new { @class = "text-danger" })
                     </div>
 
                 </div>
-
+                
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">

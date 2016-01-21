@@ -1,0 +1,83 @@
+﻿@media(max-width:850px) {
+    label[for*="answer"]::before,
+    label[for*="answer"]::after {
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+    }
+}
+.teacher {
+    margin-bottom: 6pc;
+}
+.teacher .img-style {
+    height: 140px;
+    width: auto;
+    border-radius: 10px;
+    display: inline-block;
+    float: left;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+.teacher span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.teacher .link {
+    font-size: 18px;
+    font-style: oblique;
+    padding-left: 20px;
+}
+/*-------------------------------------*/
+input[type="radio"] {
+    visibility:hidden;
+    position: absolute;
+}
+label[for*="answer"] {
+    position: absolute;
+    cursor: pointer;
+    margin: -12px 0 0 -3px;
+}
+
+label[for*="answer"]::before,
+label[for*="answer"]::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+}
+
+label[for*="answer"]::before {
+    width: 24px;
+    height: 25px;
+    border: solid 2px #5a5a5a;
+}
+
+label[for*="answer"]::after {
+    width: 12px;
+    height: 13px;
+    background-color: #334878;
+    transform: scale(0);
+    transition: transform 0.28s;
+    top: 6px;
+    left: 6px;
+}
+
+input[type="radio"]:checked ~ label[for*="answer"]::after {
+    transform: scale(1.1);
+}
+
+input[type="submit"] 
+{
+    margin: 10px 0;
+    float: right;
+    color: white;
+    background-color: #334878;
+}
+.validate-border td:last-child {
+    border-right: 5px solid red;
+}
+
+.teacher a {
+    color: #334878 !important;
+    margin-left: 20px;
+}

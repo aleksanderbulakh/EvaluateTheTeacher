@@ -1,58 +1,39 @@
-﻿@model AvaluateTheTeacher1.Models.Teachers.TopTeachersViewModel[]
+﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Дошка відзнаки - Оціни викладача";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string s;
 }
+
+<title>@ViewBag.Title</title>
 <content>
     <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
     <div class="dashboard">
-        <img class="dashboard-img" src="~/Content/dashboard.jpg" />
-        <div class="piramida piramida1">
-            <div class="col-lg-6 one-top">
+      <img class="dashboard-img" src="~/Content/dashboard.jpg" />
+        
+        @for ( int j = 0; j < 2; j++)
+        {
+                            if(j == 1)
+                            { s = "piramida2"; }
+                            else { s = "piramida1"; }
+        <div class="piramida @s">
+            @for (int i = 3*j; i < 3*(j+1); i++)
+            {
+                var teacher = Model[i];
+            if (i == 0 || i == 5)
+            { s = "one-top"; }
+            else { s = ""; }
+            <div class="col-lg-6 @s">
                 <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[0].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[0].Rating != 0 ? Model[0].Rating.ToString() : "-")</span>
+                    <a href="~/MoreInfoForteacher/Index/@teacher.TeacherId">
+                        <img src="/TeacherImg/@teacher.PathToPhoto" /></a>
+                        <span class="test-top-teacher">@(teacher.Rating != 0 ? teacher.Rating.ToString() : "-")</span>
                 </div>
-                <div class="name-top">@Model[0].LastName @Model[0].Name @Model[0].SurName</div>
+                <div class="name-top">@teacher.LastName @teacher.Name @teacher.SurName </div>
             </div>
-            <div class="col-lg-6">
-                <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[1].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[1].Rating != 0 ? Model[1].Rating.ToString() : "-")</span>
-                </div>
-                <div class="name-top">@Model[1].LastName @Model[1].Name @Model[1].SurName</div>
-            </div>
-            <div class="col-lg-6">
-                <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[2].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[2].Rating != 0 ? Model[2].Rating.ToString() : "-")</span>
-                </div>
-                <div class="name-top">@Model[2].LastName @Model[2].Name @Model[2].SurName</div>
-            </div>
+            }
         </div>
-        <div class="piramida piramida2">
-            <h2>Могло бути і краще</h2>
-            <div class="col-lg-6">
-                <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[3].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[3].Rating != 0 ? Model[3].Rating.ToString() : "-")</span>
-                </div>
-                <div class="name-top">@Model[3].LastName @Model[3].Name @Model[3].SurName</div>
-            </div>
-            <div class="col-lg-6">
-                <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[4].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[4].Rating != 0 ? Model[4].Rating.ToString() : "-")</span>
-                </div>
-                <div class="name-top">@Model[4].LastName @Model[4].Name @Model[4].SurName</div>
-            </div>
-            <div class="col-lg-6 one-top">
-                <div class="img-top-teacher">
-                    <img src="/TeacherImg/@Model[5].PathToPhoto" />
-                    <span class="test-top-teacher">@(Model[5].Rating != 0 ? Model[5].Rating.ToString() : "-")</span>
-                </div>
-                <div class="name-top">@Model[5].LastName @Model[5].Name @Model[5].SurName</div>
-            </div>
+        }
         </div>
-        <img class="minion1" src="~/Content/02.jpg" />
-    </div>
+
 </content>

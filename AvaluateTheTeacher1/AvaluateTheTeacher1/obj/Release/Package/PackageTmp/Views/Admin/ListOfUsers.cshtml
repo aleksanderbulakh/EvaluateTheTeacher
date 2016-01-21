@@ -1,25 +1,21 @@
 ﻿@model AvaluateTheTeacher1.Models.FilterUser
 @{
-    ViewBag.Title = "ListOfUsers";
+    ViewBag.Title = "Список користувачів - Оціни викладача";
 }
+
+<title>@ViewBag.Title</title>
 <content>
-    <h2>Список користувачівs</h2>
-    @using (@Html.BeginForm("ListOfUsers", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    <h2>Список користувачів</h2>
+    @using (@Html.BeginForm("ListOfUsers", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get))
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group list-kaf">
-            @Html.Label("Список груп", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.DropDownListFor(m => m.SelectedId, Model.Group, new { @class = "form-control" })
+                @Html.DropDownListFor(m => m.SelectedId, Model.Group, new { @class = "form-control", onchange = "this.form.submit();" })
             </div>
-        </div>
-        <div class="form-group kaf-submit">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Фільтрувати" class="btn btn-default" />
-            </div>
-        </div>
+        </div>        
     }
     <table>
         <tr>

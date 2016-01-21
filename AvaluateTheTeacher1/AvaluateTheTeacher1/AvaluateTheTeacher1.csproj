@@ -172,6 +172,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advanced.aspx.designer.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -234,11 +241,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Advanced.aspx" />
     <Content Include="App_Start\13.jpg" />
     <Content Include="App_Start\14.jpg" />
-    <Content Include="Content\App_Data\09.jpg" />
-    <Content Include="Content\App_Data\13.jpg" />
-    <Content Include="Content\App_Data\14.jpg" />
+    <Content Include="Basic.htm" />
     <Content Include="Content\1.jpg" />
     <Content Include="Content\2.jpg" />
     <Content Include="Content\3.jpg" />
@@ -267,8 +273,17 @@
     <Content Include="Content\slider1.jpg" />
     <Content Include="Content\slider2.jpg" />
     <Content Include="Content\slider3.jpg" />
+    <Content Include="css\Jcrop.gif" />
+    <Content Include="css\jquery.Jcrop.css" />
+    <Content Include="favicon1.ico" />
+    <Content Include="favicon2.ico" />
+    <Content Include="favicon3.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="js\jquery.Jcrop.js" />
+    <Content Include="js\jquery.Jcrop.min.js" />
+    <Content Include="js\jquery.jcrop.preview.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
@@ -292,9 +307,60 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\reserv.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="TeacherAva\aa_ostapchuk%281%29.jpg" />
+    <Content Include="TeacherAva\am_babeshko.jpg" />
+    <Content Include="TeacherAva\ao_danilchenko%281%29.jpg" />
+    <Content Include="TeacherAva\ao_maslov%281%29.jpg" />
+    <Content Include="TeacherAva\av_morozov.jpg" />
+    <Content Include="TeacherAva\es_kypkin%281%29.jpg" />
+    <Content Include="TeacherAva\go_raykovska.jpg" />
+    <Content Include="TeacherAva\ia_orinchak%281%29.jpg" />
+    <Content Include="TeacherAva\ii_petrenko%281%29.jpg" />
+    <Content Include="TeacherAva\ii_sugonyak%281%29.jpg" />
+    <Content Include="TeacherAva\iv_krizhanivska%281%29.jpg" />
+    <Content Include="TeacherAva\le_glembocka%281%29.jpg" />
+    <Content Include="TeacherAva\li_fyrsova%281%29.jpg" />
+    <Content Include="TeacherAva\li_shulyarenko%281%29.jpg" />
+    <Content Include="TeacherAva\mf_efremov%281%29.jpg" />
+    <Content Include="TeacherAva\mo_burdeyniy%281%29.jpg" />
+    <Content Include="TeacherAva\ni_krushinska%281%29.jpg" />
+    <Content Include="TeacherAva\nm_bilodid%281%29.jpg" />
+    <Content Include="TeacherAva\np_kargopolova%281%29.jpg" />
+    <Content Include="TeacherAva\ol_gerasimchuk%281%29.jpg" />
+    <Content Include="TeacherAva\ov_luschikov%281%29.jpg" />
+    <Content Include="TeacherAva\ov_pidtychenko%281%29.jpg" />
+    <Content Include="TeacherAva\ov_vlasenko%281%29.jpg" />
+    <Content Include="TeacherAva\pm_povidayko%281%29.jpg" />
+    <Content Include="TeacherAva\pp_moskvin.jpg" />
+    <Content Include="TeacherAva\pt_dederkal%281%29.jpg" />
+    <Content Include="TeacherAva\ro_kolomiec%281%29.jpg" />
+    <Content Include="TeacherAva\rv_petrosyan%281%29.jpg" />
+    <Content Include="TeacherAva\si_skurativskiy%281%29.jpg" />
+    <Content Include="TeacherAva\sk_kobzar%281%29.jpg" />
+    <Content Include="TeacherAva\sp_davidchuk%281%29.jpg" />
+    <Content Include="TeacherAva\ts_voronova%281%29.jpg" />
+    <Content Include="TeacherAva\va_rudnickiy%281%29.jpg" />
+    <Content Include="TeacherAva\va_shadyra%281%29.jpg" />
+    <Content Include="TeacherAva\vb_krizhanivskiy%281%29.jpg" />
+    <Content Include="TeacherAva\vd_babiy%281%29.jpg" />
+    <Content Include="TeacherAva\vd_golovnya%281%29.jpg" />
+    <Content Include="TeacherAva\vf_zagurska-antonyuk%281%29.jpg" />
+    <Content Include="TeacherAva\vi_petrenko%281%29.jpg" />
+    <Content Include="TeacherAva\vi_tambov%281%29.jpg" />
+    <Content Include="TeacherAva\vl_dobryakov%281%29.jpg" />
+    <Content Include="TeacherAva\vm_yanchuk%281%29.jpg" />
+    <Content Include="TeacherAva\vn_kovalchuk%281%29.jpg" />
+    <Content Include="TeacherAva\vp_kazakov%281%29.jpg" />
+    <Content Include="TeacherAva\vv_lemeshko%281%29.jpg" />
+    <Content Include="TeacherAva\vv_zahlenyuk%281%29.jpg" />
+    <Content Include="TeacherAva\yum_rosinskiy%281%29.jpg" />
+    <Content Include="TeacherAva\yus_kondratyuk%281%29.jpg" />
+    <Content Include="TeacherAva\zhm_homenko.jpg" />
+    <Content Include="TeacherAva\МиколайовичAVA.jpg" />
     <Content Include="TeacherImg\07.jpg" />
     <Content Include="TeacherImg\aa_efimenko%281%29.jpg" />
     <Content Include="TeacherImg\aa_ostapchuk%281%29.jpg" />
@@ -498,7 +564,7 @@
     <Content Include="Views\MoreInfoForteacher\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TeacherAva\" />
+    <Folder Include="Content\App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,4 +1,8 @@
 ﻿@model AvaluateTheTeacher1.Models.Teachers.MoreInfoForTeacher
+@{ 
+    ViewBag.Title = Model.LastName+" "+Model.Name+" "+Model.SurName+" - Оціни викладача";
+}
+<title>@ViewBag.Title</title>
 <content>
     <div class="title">
         <hr><h1>@Model.LastName @Model.Name @Model.SurName</h1>
