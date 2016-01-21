@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -79,8 +79,7 @@ namespace AvaluateTheTeacher1.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    Console.Write(returnUrl);
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("VoitingMain", "Raiting");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

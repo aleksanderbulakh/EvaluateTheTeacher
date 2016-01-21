@@ -29,6 +29,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
         public virtual ICollection<TeacherSubject> TeachersSubjects { get; set; }
         public Teacher()
         {
+            PathToPhoto = "default.png";
             Ratings = new List<Rating>();
             Suggestion = new List<Suggestions>();
             Message = new List<MessageForModerator>();

@@ -37,26 +37,37 @@ namespace AvaluateTheTeacher1.Controllers
                 teacher.Description = model.Description;
                 teacher.CathedraId = model.SelectedCathedraId;
 
-                string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
-                string filename = System.IO.Path.GetFileName(model.Photo.FileName);
-                model.Photo.SaveAs(System.IO.Path.Combine(path, filename));
-                teacher.PathToPhoto = System.IO.Path.GetFileName(model.Photo.FileName);
+                if (model.Photo != null)
+                {
+                    string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
+                    string filename = System.IO.Path.GetFileName(model.Photo.FileName);
+                    model.Photo.SaveAs(System.IO.Path.Combine(path, filename));
+                    teacher.PathToPhoto = System.IO.Path.GetFileName(model.Photo.FileName);
 
-                System.Drawing.Image oImage = System.Drawing.Image.FromFile(path+teacher.PathToPhoto);
+                    System.Drawing.Image oImage = System.Drawing.Image.FromFile(path + teacher.PathToPhoto);
 
-                var bmp = new System.Drawing.Bitmap(362, 362, oImage.PixelFormat);
-                var g = System.Drawing.Graphics.FromImage(bmp);
-                g.DrawImage(oImage, new Rectangle(0, 0, 362, 362), new Rectangle(50, 0, 362, 362), GraphicsUnit.Pixel);
+                    int sizeImg;
+                    if (oImage.Width > oImage.Height)
+                    {
+                        sizeImg = oImage.Height - 20;
+                    }
+                    else
+                    {
+                        sizeImg = oImage.Width - 20;
+                    }
 
-                System.Drawing.Imaging.ImageFormat frm = oImage.RawFormat;
-                oImage.Dispose();
+                    var bmp = new System.Drawing.Bitmap(sizeImg, sizeImg, oImage.PixelFormat);
+                    var g = System.Drawing.Graphics.FromImage(bmp);
+                    g.DrawImage(oImage, new Rectangle(0, 0, sizeImg, sizeImg), new Rectangle(0, 20, sizeImg, sizeImg), GraphicsUnit.Pixel);
 
-                path = AppDomain.CurrentDomain.BaseDirectory + "TeacherAva/";
-                string destFile = System.IO.Path.Combine(path, teacher.PathToPhoto);
+                    System.Drawing.Imaging.ImageFormat frm = oImage.RawFormat;
+                    oImage.Dispose();
 
-                bmp.Save(destFile, frm);
+                    path = AppDomain.CurrentDomain.BaseDirectory + "TeacherAva/";
+                    string destFile = System.IO.Path.Combine(path, teacher.PathToPhoto);
 
-
+                    bmp.Save(destFile, frm);
+                }
 
                 db.Teachers.Add(teacher);
                 db.SaveChanges();

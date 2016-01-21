@@ -10,7 +10,7 @@ namespace AvaluateTheTeacher1.Models.Teachers
     {
         public IEnumerable<ListOfTeachers> Teachers { get; set; }
 
-        public SelectList Cathedras { get; set; }
+        public List<Cathedra> Cathedras { get; set; }
 
         public int? SelectedId { get; set; }
     }

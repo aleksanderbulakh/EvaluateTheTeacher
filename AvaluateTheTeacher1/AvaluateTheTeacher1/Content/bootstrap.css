@@ -3211,10 +3211,6 @@ input[type="button"].btn-block {
   content: "";
 }
 
-.dropdown {
-  position: relative;
-}
-
 .dropdown-toggle:focus {
   outline: 0;
 }

@@ -12,6 +12,7 @@ using System.Net;
 
 namespace AvaluateTheTeacher1.Controllers
 {
+    
     public class RaitingController : AccountController
     {
         ApplicationDbContext db = new ApplicationDbContext();
@@ -19,6 +20,7 @@ namespace AvaluateTheTeacher1.Controllers
         [Authorize(Roles = "student")]
         public async System.Threading.Tasks.Task<ActionResult> VoitingMain()
         {
+            if (User.IsInRole("admin")) return RedirectToAction("Home", "Admin");
             var student = await UserManager.FindByNameAsync(User.Identity.Name);
             
             var Group = db.Groups.Where(n => n.GroupId == student.GroupId).ToList();

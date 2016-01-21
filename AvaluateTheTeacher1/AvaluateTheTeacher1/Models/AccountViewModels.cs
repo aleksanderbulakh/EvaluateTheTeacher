@@ -160,7 +160,7 @@ namespace AvaluateTheTeacher1.Models
         [Display(Name = "Характеристика викладач:")]
         public string Description { get; set; }
 
-        [Required]
+        
         [Display(Name="Фото")]
         public System.Web.HttpPostedFileBase Photo { get; set; }
     }

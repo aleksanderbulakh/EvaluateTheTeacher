@@ -12,6 +12,7 @@ using AvaluateTheTeacher1.Models.Teachers;
 
 namespace AvaluateTheTeacher1.Controllers
 {
+
     public class ListOfTeachersController : Controller
     {
         private int? SelectedCathedraId { get; set; }
@@ -20,19 +21,30 @@ namespace AvaluateTheTeacher1.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: ListOfTeachers
 
-        
+
         [HttpGet]
-        public ActionResult ListOfTeachers(FilterDataModel model)
+        public ActionResult ListOfTeachers(int? id)
         {
             //var teachers = db.Teachers;
-            //foreach(var t in teachers)
+            //foreach (var t in teachers)
             //{
             //    string path = AppDomain.CurrentDomain.BaseDirectory + "TeacherImg/";
             //    System.Drawing.Image oImage = System.Drawing.Image.FromFile(path + t.PathToPhoto);
 
-            //    var bmp = new System.Drawing.Bitmap(362, 362, oImage.PixelFormat);
-            //    var g = System.Drawing.Graphics.FromImage(bmp);
-            //    g.DrawImage(oImage, new Rectangle(0, 0, 362, 362), new Rectangle(50, 50, 362, 362), GraphicsUnit.Pixel);
+            //    int sizeImg;
+            //    if (oImage.Width > oImage.Height)
+            //    {
+            //        sizeImg = oImage.Height-20;
+            //    }
+            //    else
+            //    {
+            //        sizeImg = oImage.Width-20;
+            //    }   
+
+            //    var bmp = new System.Drawing.Bitmap(sizeImg, sizeImg, oImage.PixelFormat);
+            //    var g = System.Drawing.Graphics.FromImage(bmp);                
+
+            //    g.DrawImage(oImage, new Rectangle(0, 0, sizeImg, sizeImg), new Rectangle(0, 20, sizeImg, sizeImg), GraphicsUnit.Pixel);
 
             //    System.Drawing.Imaging.ImageFormat frm = oImage.RawFormat;
             //    oImage.Dispose();
@@ -43,20 +55,20 @@ namespace AvaluateTheTeacher1.Controllers
             //    bmp.Save(destFile, frm);
             //}
 
-            if(model.SelectedId == null || model.SelectedId == 0)
+            if (id == 0 || id == null)
             {
                 query =
                     from listCathedras in db.Cathedras
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating!=0))
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating != 0))
                     orderby listRaitings.AvgRating descending, listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
                         NameCathedra = listCathedras.NameCathedra,
-                        Name = listTeachers.Name,
-                        SurName = listTeachers.SurName,
+                        Name = listTeachers.Name.Substring(0, 1),
+                        SurName = listTeachers.SurName.Substring(0, 1),
                         LastName = listTeachers.LastName,
                         PathToPhoto = listTeachers.PathToPhoto,
                         Description = listTeachers.Description,
@@ -69,19 +81,19 @@ namespace AvaluateTheTeacher1.Controllers
             }
             else
             {
-                SelectedCathedraId = model.SelectedId;
+                SelectedCathedraId = id;
                 query =
                     from listCathedras in db.Cathedras
                     from listRaitings in db.Ratings
                     from listTeachers in db.Teachers
-                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && ((listTeachers1.CathedraId == SelectedCathedraId) && (listTeachers1.CathedraId == listCathedras.Id)))
+                    .Where(listTeachers1 => (listTeachers1.TeacherId == listRaitings.TeacherId) && ((listTeachers1.CathedraId == SelectedCathedraId) && (listTeachers1.CathedraId == listCathedras.Id) && (listRaitings.AvgRating != 0)))
                     orderby listRaitings.AvgRating descending, listRaitings.CountRaitingVoting descending, listRaitings.TheDifficultyOfTheCourse descending
                     select new ListOfTeachers()
                     {
                         TeacherId = listTeachers.TeacherId,
                         NameCathedra = listCathedras.NameCathedra,
-                        Name = listTeachers.Name,
-                        SurName = listTeachers.SurName,
+                        Name = listTeachers.Name.Substring(0, 1),
+                        SurName = listTeachers.SurName.Substring(0, 1),
                         LastName = listTeachers.LastName,
                         PathToPhoto = listTeachers.PathToPhoto,
                         Description = listTeachers.Description,
@@ -93,12 +105,13 @@ namespace AvaluateTheTeacher1.Controllers
                     };
             }
             List<Cathedra> cathedra = db.Cathedras.ToList();
-            cathedra.Insert(0, new Cathedra { NameCathedra = "--Всі кафедри--", Id = 0 });
+            cathedra.Insert(0, new Cathedra { NameCathedra = "Всі кафедри", Id = 0 });
             FilterDataModel data = new FilterDataModel
             {
                 Teachers = query.ToList(),
-                Cathedras=new SelectList(cathedra, "Id", "NameCathedra")
+                Cathedras = cathedra
             };
+
             return View(data);
         }
     }

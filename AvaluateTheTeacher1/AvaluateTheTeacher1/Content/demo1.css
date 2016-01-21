@@ -13,9 +13,12 @@
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 
-
+.button2{
+    color: #334878;
+	text-decoration: underline;
+}
 a {
-	color: #31bc86;
+	color: #334878;
 	text-decoration: none;
 }
 
