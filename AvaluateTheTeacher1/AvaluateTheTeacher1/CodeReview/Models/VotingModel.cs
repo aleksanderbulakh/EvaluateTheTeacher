@@ -27,15 +27,20 @@ namespace AvaluateTheTeacher1.CodeReview.Models
         public VotingViewModel Voiting(int id)
         {
             var query = (from listTeachers in db.Teachers
+                         from Subjectslist in db.Subjects
                          from listTeacherSubject in db.TeacherSubject
-                        .Where(list => list.Id == id && list.TeacherId == listTeachers.TeacherId)
+                        .Where(list => list.Id == id && list.TeacherId == listTeachers.TeacherId && list.SubjectId == Subjectslist.Id)
                          select listTeachers).ToList();
-
+            var querySubjectName = (from subjectsList in db.Subjects
+                                    from teacherSubjectList in db.TeacherSubject
+                                    .Where(list => list.Id == id && list.SubjectId == subjectsList.Id)
+                                    select subjectsList).ToList();
             var info = new VotingViewModel
             {
                 idTeacher = id,
                 teacherName = query[0].LastName.ToString() + " " + query[0].Name.ToString() + " " + query[0].SurName.ToString(),
-                pathToPhoto = query[0].PathToPhoto
+                pathToPhoto = query[0].PathToPhoto,
+                SubjectName = querySubjectName[0].Name
             };
 
             return info;

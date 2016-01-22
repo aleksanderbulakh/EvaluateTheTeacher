@@ -119,7 +119,6 @@
 .sticky-wrap {
 	overflow: hidden;
     position: relative;
-    margin-top: 3em;
     width: 100%;
 }
 .sticky-wrap .sticky-thead,

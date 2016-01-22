@@ -17,6 +17,7 @@
             <div class="teacher">
                 <img src="~/TeacherImg/@Model.pathToPhoto" alt="Нет фотографии" class="img-style">
                 <div>
+                    <span>@Model.SubjectName</span><br />
                     <span>@Model.teacherName</span><br />
                     <div class="link">
                         <a href="/Raiting/VoitingMain/">&larr; Повернутись до списку викладачів</a>
@@ -31,6 +32,7 @@
             @Html.HiddenFor(model => model.teacherName, htmlAttributes: new { @value = Model.teacherName })
             @Html.HiddenFor(model => model.pathToPhoto, htmlAttributes: new { @value = Model.pathToPhoto })
             @Html.HiddenFor(model => model.idTeacher, htmlAttributes: new { @value = Model.idTeacher })
+            @Html.HiddenFor(model => model.SubjectName, htmlAttributes: new { @value = Model.SubjectName })
             <div class="component">
                 <table>
                     <thead>

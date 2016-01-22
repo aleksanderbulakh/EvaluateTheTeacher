@@ -81,3 +81,9 @@ input[type="submit"]
     color: #334878 !important;
     margin-left: 20px;
 }
+
+.validate-border .text-danger {
+    width: 87%;
+    margin-top: 1.5%;
+    text-align: right;
+}

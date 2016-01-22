@@ -7,6 +7,7 @@ namespace AvaluateTheTeacher1.CodeReview.ViewModels
         public int idTeacher { get; set; }
         public string teacherName { get; set; }
         public string pathToPhoto { get; set; }
+        public string SubjectName { get; set; }
 
         [Required(ErrorMessage = "Виберіть значення.")]
         [Range(1, 10, ErrorMessage = "Виберіть значення.")]
