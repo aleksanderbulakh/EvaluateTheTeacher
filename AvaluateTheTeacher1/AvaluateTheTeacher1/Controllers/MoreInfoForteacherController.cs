@@ -48,6 +48,7 @@ namespace AvaluateTheTeacher1.Controllers
             TeacherInf.SomethingNew = rating.SomethingNew;
             TeacherInf.TheDifficultyOfTheCourse = rating.TheDifficultyOfTheCourse;
             TeacherInf.ThePracticalValue = rating.ThePracticalValue;
+            TeacherInf.CountRaitingVoting = rating.CountRaitingVoting;
 
 
             return View(TeacherInf);

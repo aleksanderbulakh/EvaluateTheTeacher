@@ -15,7 +15,7 @@ namespace AvaluateTheTeacher1.Controllers
             var studentData = await UserManager.FindByNameAsync(User.Identity.Name);
 
             if (votingControle.CheckVote(int.Parse(id.ToString()), studentData))
-                RedirectToAction("TimeOut");
+                return RedirectToAction("TimeOut");
 
             if (id == null)
                 return HttpNotFound();
