@@ -263,5 +263,43 @@ namespace AvaluateTheTeacher1.CodeReview.Models
             RecalculaitingValuation(model.idTeacher);
             RecalculateRaitingValuation(model.idTeacher);
         }
+
+        public VotingList InfoForRaitingList(int? groupId)
+        {
+            var Group = db.Groups.Where(n => n.GroupId == groupId).ToList();
+            var listS = new List<int>();
+            foreach (var s in Group)
+            {
+                foreach (var st in s.TeachersSubjects)
+                {
+                    listS.Add(st.Id);
+                }
+            }
+
+            var query = from listTeacher in db.Teachers
+                        from listRaiting in db.Ratings
+                        from listSubject in db.Subjects
+                        from listTeachersSubject in db.TeacherSubject
+                        .Where(listTeachersSubj => (listS.Contains(listTeachersSubj.Id) && listSubject.Id == listTeachersSubj.SubjectId && listTeacher.TeacherId == listTeachersSubj.TeacherId && listRaiting.TeacherId == listTeacher.TeacherId))
+                        orderby listRaiting.AvgRating descending
+                        select new ListOfTeachers()
+                        {
+                            TeacherId = listTeacher.TeacherId,
+                            Name = listTeacher.Name,
+                            SurName = listTeacher.SurName,
+                            LastName = listTeacher.LastName,
+                            PathToPhoto = listTeacher.PathToPhoto,
+                            Description = listTeacher.Description,
+                            AvgRating = listRaiting.AvgRating,
+                            IdForVoiting = listTeachersSubject.Id,
+                            SubjectName = listSubject.Name
+                        };
+            var data = new VotingList
+            {
+                Info = query.ToList()
+            };
+
+            return data;
+        }
     }
 }

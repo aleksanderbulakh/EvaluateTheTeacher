@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Data;
 using System.Data.Entity;
 using System.Net;
+using AvaluateTheTeacher1.CodeReview.Models;
 
 namespace AvaluateTheTeacher1.Controllers
 {
@@ -20,44 +21,16 @@ namespace AvaluateTheTeacher1.Controllers
         [Authorize(Roles = "student")]
         public async System.Threading.Tasks.Task<ActionResult> VoitingMain()
         {
-            if (User.IsInRole("admin")) return RedirectToAction("Home", "Admin");
+            if (User.IsInRole("admin"))
+                return RedirectToAction("Home", "Admin");
+
             var student = await UserManager.FindByNameAsync(User.Identity.Name);
-            
-            var Group = db.Groups.Where(n => n.GroupId == student.GroupId).ToList();
-            var listS = new List<int>();
-            foreach (var s in Group)
-            {
-                foreach (var st in s.TeachersSubjects)
-                {
-                    listS.Add(st.Id);
-                }
-            }
-            
-            var query = from listTeacher in db.Teachers
-                    from listRaiting in db.RaitingTeacherSubject
-                    from listSubject in db.Subjects
-                    from listTeachersSubject in db.TeacherSubject
-                    .Where(listTeachersSubj => (listS.Contains(listTeachersSubj.Id) && listTeachersSubj.Id == listRaiting.TeacherSubjectId && listSubject.Id==listTeachersSubj.SubjectId && listTeacher.TeacherId== listTeachersSubj.TeacherId))
-                    orderby listRaiting.AvgRating descending 
-                    select new ListOfTeachers()
-                    {
-                        TeacherId = listTeacher.TeacherId,
-                        Name = listTeacher.Name,
-                        SurName = listTeacher.SurName,
-                        LastName = listTeacher.LastName,
-                        PathToPhoto = listTeacher.PathToPhoto,
-                        Description = listTeacher.Description,
-                        ForTheEntirePeriod = listRaiting.ForTheEntirePeriod,
-                        PreviousMonth = listRaiting.PreviousMonth,
-                        AvgRating = listRaiting.AvgRating,
-                        IdForVoiting = listTeachersSubject.Id,
-                        SubjectName = listSubject.Name
-                    };
-            var data = new VotingList
-            {
-                Info=query.ToList()
-            };
-            return View(data);
+
+            var data = new VotingModel();
+
+            var info = data.InfoForRaitingList(student.GroupId);
+
+            return View(info);
         }
     }
 }

@@ -72,8 +72,6 @@ namespace AvaluateTheTeacher1.Controllers
                         LastName = listTeachers.LastName,
                         PathToPhoto = listTeachers.PathToPhoto,
                         Description = listTeachers.Description,
-                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
-                        PreviousMonth = listRaitings.PreviousMonth,
                         AvgRating = listRaitings.AvgRating,
                         Count = listRaitings.CountRaitingVoting,
                         TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse
@@ -97,8 +95,6 @@ namespace AvaluateTheTeacher1.Controllers
                         LastName = listTeachers.LastName,
                         PathToPhoto = listTeachers.PathToPhoto,
                         Description = listTeachers.Description,
-                        ForTheEntirePeriod = listRaitings.ForTheEntirePeriod,
-                        PreviousMonth = listRaitings.PreviousMonth,
                         AvgRating = listRaitings.AvgRating,
                         Count = listRaitings.CountRaitingVoting,
                         TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse
