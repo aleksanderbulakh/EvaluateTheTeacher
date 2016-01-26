@@ -236,7 +236,6 @@
     <Compile Include="Models\Teachers\TeacherSubject.cs" />
     <Compile Include="Models\Teachers\TopTeachersViewModel.cs" />
     <Compile Include="Models\Teachers\Voting.cs" />
-    <Compile Include="Models\Teachers\VotingFull.cs" />
     <Compile Include="Models\Teachers\VotingList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

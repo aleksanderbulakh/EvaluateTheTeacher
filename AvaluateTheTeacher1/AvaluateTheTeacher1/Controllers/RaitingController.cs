@@ -28,7 +28,7 @@ namespace AvaluateTheTeacher1.Controllers
 
             var data = new VotingModel();
 
-            var info = data.InfoForRaitingList(student.GroupId);
+            var info = data.InfoForRaitingList(student.GroupId, student.Id);
 
             return View(info);
         }

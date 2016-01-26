@@ -1,11 +1,18 @@
 ﻿using System.Web.Mvc;
 using AvaluateTheTeacher1.CodeReview.Models;
 using AvaluateTheTeacher1.CodeReview.ViewModels;
+using System.Collections.Generic;
+using AvaluateTheTeacher1.Models.Teachers;
+using AvaluateTheTeacher1.Models.Students;
+using AvaluateTheTeacher1.Models;
+using System.Linq;
+using System;
 
 namespace AvaluateTheTeacher1.Controllers
 {
     public class VotingsController : AccountController
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Votings
         [Authorize(Roles = "student")]
         public async System.Threading.Tasks.Task<ActionResult> Votings(int? id)
@@ -20,7 +27,8 @@ namespace AvaluateTheTeacher1.Controllers
             if (id == null)
                 return HttpNotFound();
 
-            var info = votingControle.Voiting(int.Parse(id.ToString()));
+            var info = votingControle.Voiting(int.Parse(id.ToString()), studentData.GroupId, studentData.Id);
+
             return View(info);
         }
 

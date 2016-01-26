@@ -23,7 +23,7 @@ namespace AvaluateTheTeacher1
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        protected void Application_Error(object sender, System.EventArgs e)
+        /*protected void Application_Error(object sender, System.EventArgs e)
         {
             var errorHandel = new MvcApplicationErrorHandler(application: this, exception: this.Server.GetLastError())
             {
@@ -31,6 +31,6 @@ namespace AvaluateTheTeacher1
                 PassThroughHttp401 = false
             };
             errorHandel.Execute();
-        }
+        }*/
     }
 }

@@ -61,6 +61,7 @@ namespace AvaluateTheTeacher1.CodeReview.Models
                         TheDifficultyOfTheCourse = listRaitings.TheDifficultyOfTheCourse
                     };
             }
+
             List<Cathedra> cathedra = db.Cathedras.ToList();
             cathedra.Insert(0, new Cathedra { NameCathedra = "Всі кафедри", Id = 0 });
             FilterDataModel data = new FilterDataModel

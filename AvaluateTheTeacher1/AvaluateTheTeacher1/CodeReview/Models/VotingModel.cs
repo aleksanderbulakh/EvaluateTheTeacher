@@ -24,7 +24,7 @@ namespace AvaluateTheTeacher1.CodeReview.Models
             return false;
         }
 
-        public VotingViewModel Voiting(int id)
+        public VotingViewModel Voiting(int id, int? groupId, string userId)
         {
             var query = (from listTeachers in db.Teachers
                          from Subjectslist in db.Subjects
@@ -35,12 +35,61 @@ namespace AvaluateTheTeacher1.CodeReview.Models
                                     from teacherSubjectList in db.TeacherSubject
                                     .Where(list => list.Id == id && list.SubjectId == subjectsList.Id)
                                     select subjectsList).ToList();
+            
+
+
+            //-----
+            var Group = db.Groups.Where(n => n.GroupId == groupId).ToList();
+            var listS = new List<int>();
+            foreach (var s in Group)
+            {
+                foreach (var st in s.TeachersSubjects)
+                {
+                    listS.Add(st.Id);
+                }
+            }
+
+            var queryTeacherList = from listTeacher in db.Teachers
+                        from listRaiting in db.Ratings
+                        from listSubject in db.Subjects
+                        from listTeachersSubject in db.TeacherSubject
+                        .Where(listTeachersSubj => (listS.Contains(listTeachersSubj.Id) && listSubject.Id == listTeachersSubj.SubjectId && listTeacher.TeacherId == listTeachersSubj.TeacherId && listRaiting.TeacherId == listTeacher.TeacherId))
+                        orderby listRaiting.AvgRating descending
+                        select new ListOfTeachers()
+                        {
+                            TeacherId = listTeacher.TeacherId,
+                            Name = listTeacher.Name,
+                            SurName = listTeacher.SurName,
+                            LastName = listTeacher.LastName,
+                            PathToPhoto = listTeacher.PathToPhoto,
+                            Description = listTeacher.Description,
+                            AvgRating = listRaiting.AvgRating,
+                            IdForVoiting = listTeachersSubject.Id,
+                            SubjectName = listSubject.Name
+                        };
+
+            IEnumerable<StudentVoting> votingUserList = db.StudentVotings.Where(m => m.StudentId == userId && m.Date.Month == DateTime.Now.Month);
+            var teacherVote = new List<int>();
+            foreach (var votingUserData in votingUserList)
+            {
+                teacherVote.Add(int.Parse(votingUserData.TeachersSubjectId.ToString()));
+            }
+            var teacherNotVote = new List<int>();
+            foreach (var teacherData in queryTeacherList)
+            {
+                if (!teacherVote.Contains(teacherData.IdForVoiting))
+                    teacherNotVote.Add(teacherData.IdForVoiting);
+            }
+            
+            //--------
+
             var info = new VotingViewModel
             {
                 idTeacher = id,
                 teacherName = query[0].LastName.ToString() + " " + query[0].Name.ToString() + " " + query[0].SurName.ToString(),
                 pathToPhoto = query[0].PathToPhoto,
-                SubjectName = querySubjectName[0].Name
+                SubjectName = querySubjectName[0].Name,
+                TeacherNotVote = teacherNotVote
             };
 
             return info;
@@ -264,7 +313,7 @@ namespace AvaluateTheTeacher1.CodeReview.Models
             RecalculateRaitingValuation(model.idTeacher);
         }
 
-        public VotingList InfoForRaitingList(int? groupId)
+        public VotingList InfoForRaitingList(int? groupId, string userId)
         {
             var Group = db.Groups.Where(n => n.GroupId == groupId).ToList();
             var listS = new List<int>();
@@ -294,6 +343,11 @@ namespace AvaluateTheTeacher1.CodeReview.Models
                             IdForVoiting = listTeachersSubject.Id,
                             SubjectName = listSubject.Name
                         };
+
+            //---------------------------------//
+            
+            //-----------------------------------//
+
             var data = new VotingList
             {
                 Info = query.ToList()
