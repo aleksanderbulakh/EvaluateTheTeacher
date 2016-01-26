@@ -4,7 +4,7 @@
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Програмування\\ЖДТУ\\ProjectISMAT\\EvaluateTheTeacher\\AvaluateTheTeacher1\\AvaluateTheTeacher1\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Програмування\\ЖДТУ\\ProjectISMAT\\EvaluateTheTeacher\\AvaluateTheTeacher1\\AvaluateTheTeacher1\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Строка подключения в web.config, используемая приложением для доступа к базе данных." value="workstation id=EvaluateTheTeacher.mssql.somee.com;packet size=4096;user id=LexBulakh_SQLLogin_1;pwd=9uigmp7zwb;data source=EvaluateTheTeacher.mssql.somee.com;persist security info=False;initial catalog=EvaluateTheTeacher" tags="SqlConnectionString">
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=aspnet-AvaluateTheTeacher1-20151114122241;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\Програмування\\ЖДТУ\\ProjectISMAT\\EvaluateTheTeacher\\AvaluateTheTeacher1\\AvaluateTheTeacher1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
