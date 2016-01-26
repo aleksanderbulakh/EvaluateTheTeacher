@@ -19,7 +19,7 @@
                     @foreach (var li in Model.Cathedras)
                     {
                         <li class="dropdown-content">
-                            @Html.ActionLink(li.NameCathedra, "ListOfTeachers", "ListOfteachers", new { @id = li.Id }, null)
+                            @Html.ActionLink(li.NameCathedra, "ListOfTeachers", "ListOfteachers", new { @id = li.Id }, new { @class = Model.SelectedId == li.Id ? "active" : null })
                         </li>
                     }
                 </ul>

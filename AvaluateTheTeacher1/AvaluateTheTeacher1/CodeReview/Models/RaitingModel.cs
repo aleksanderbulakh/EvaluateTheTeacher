@@ -66,7 +66,8 @@ namespace AvaluateTheTeacher1.CodeReview.Models
             FilterDataModel data = new FilterDataModel
             {
                 Teachers = query.ToList(),
-                Cathedras = cathedra
+                Cathedras = cathedra,
+                SelectedId = id
             };
 
             return data;

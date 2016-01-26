@@ -36,6 +36,9 @@ namespace AvaluateTheTeacher1.Controllers
 
             var studentData = await UserManager.FindByNameAsync(User.Identity.Name);
 
+            if (votingControle.CheckVote(model.idTeacher, studentData))
+                return RedirectToAction("TimeOut");
+
             votingControle.FixVoting(int.Parse(model.idTeacher.ToString()), studentData);
 
             votingControle.CalculateVotings(model);

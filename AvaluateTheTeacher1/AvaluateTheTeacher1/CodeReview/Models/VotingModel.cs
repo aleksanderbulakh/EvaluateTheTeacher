@@ -12,9 +12,9 @@ namespace AvaluateTheTeacher1.CodeReview.Models
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public bool CheckVote(int id, ApplicationUser studentData)
+        public bool CheckVote(int idTeacher, ApplicationUser studentData)
         {
-            var listStudentVotings = db.StudentVotings.Where(m => m.TeachersSubjectId == id && m.StudentId == studentData.Id).ToList();
+            var listStudentVotings = db.StudentVotings.Where(m => m.TeachersSubjectId == idTeacher && m.StudentId == studentData.Id).ToList();
             if (listStudentVotings != null)
             {
                 foreach (var stVt in listStudentVotings)
