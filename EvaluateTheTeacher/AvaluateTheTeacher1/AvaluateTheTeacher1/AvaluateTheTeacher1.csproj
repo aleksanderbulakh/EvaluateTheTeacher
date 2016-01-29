@@ -186,6 +186,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="CodeReview\Models\RaitingModel.cs" />
     <Compile Include="CodeReview\Models\VotingModel.cs" />
+    <Compile Include="CodeReview\ViewModels\SubjectEditViewModel.cs" />
     <Compile Include="CodeReview\ViewModels\SubjectViewModel.cs" />
     <Compile Include="CodeReview\ViewModels\UpdateGroupViewModel.cs" />
     <Compile Include="CodeReview\ViewModels\VotingViewModel.cs" />

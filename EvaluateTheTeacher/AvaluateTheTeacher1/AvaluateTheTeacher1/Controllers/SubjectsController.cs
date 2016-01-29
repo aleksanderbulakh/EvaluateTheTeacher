@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using AvaluateTheTeacher1.Models;
 using AvaluateTheTeacher1.Models.Teachers;
+using AvaluateTheTeacher1.Models.Students;
+using AvaluateTheTeacher1.CodeReview.ViewModels;
 
 namespace AvaluateTheTeacher1.Controllers
 {
@@ -92,8 +94,31 @@ namespace AvaluateTheTeacher1.Controllers
             {
                 return HttpNotFound();
             }
+
+            var semestersForSubject = subject.Semesters.ToList();
+
+            var editSubject = new SubjectEditViewModel();
+            editSubject.Id = subject.Id;
+            editSubject.Name = subject.Name;
+            editSubject.CathedraId = subject.CathedraId;
+            editSubject.Semesters = new List<SemesterForSubject>();
+
+            foreach(var s in db.Semesters)
+            {
+                SemesterForSubject addSemester = new SemesterForSubject();
+                addSemester.Id = s.Id;
+                addSemester.From = s.From;
+                addSemester.To = s.To;
+                if (subject.Semesters.FirstOrDefault(subS => subS.Id == s.Id) == null)
+                    addSemester.IsChange = false;
+                else
+                    addSemester.IsChange = true;
+
+                editSubject.Semesters.Add(addSemester);
+            }
+
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", subject.CathedraId);
-            return View(subject);
+            return View(editSubject);
         }
 
         // POST: Subjects/Edit/5
@@ -103,11 +128,26 @@ namespace AvaluateTheTeacher1.Controllers
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,CathedraId")] Subject subject)
+        public ActionResult Edit([Bind(Include = "Id,Name,CathedraId")] SubjectEditViewModel subject, int [] Semesters)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(subject).State = EntityState.Modified;
+                Subject updateSubject = new Subject();
+                updateSubject = db.Subjects.Find(subject.Id);
+
+                updateSubject.Name = subject.Name;
+                updateSubject.CathedraId = subject.CathedraId;
+
+                updateSubject.Semesters.Clear();
+                var allSemesters = db.Semesters;
+                foreach(var item in Semesters)
+                {
+                    Semester addSemester = allSemesters.Find(item);
+                    updateSubject.Semesters.Add(addSemester);
+                }
+
+                                    
+                db.Entry(updateSubject).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

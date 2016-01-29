@@ -1,4 +1,4 @@
-﻿@model AvaluateTheTeacher1.Models.Teachers.Subject
+﻿@model AvaluateTheTeacher1.CodeReview.ViewModels.SubjectEditViewModel
 
 @{
     ViewBag.Title = "Предмет " + Model.Name + " - Оціни викладача";
@@ -34,6 +34,17 @@
                     @Html.DropDownList("CathedraId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.CathedraId, "", new { @class = "text-danger" })
                 </div>
+            </div>
+
+            <div class="form-group">
+                Семестри
+                @foreach (var k in Model.Semesters)
+                {
+                    <div class="form-control">
+                        <input type="checkbox" id="semester+@k.Id" name="Semesters" value="@k.Id" @(k.IsChange ? "checked=\"checked\"" : "") />
+                        <label for="semester+@k.Id">з @k.From.ToShortDateString() по @k.To.ToShortDateString()</label>
+                    </div>
+                }
             </div>
 
             <div class="form-group">
