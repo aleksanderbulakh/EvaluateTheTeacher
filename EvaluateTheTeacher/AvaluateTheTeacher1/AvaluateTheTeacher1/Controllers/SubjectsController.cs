@@ -34,11 +34,16 @@ namespace AvaluateTheTeacher1.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Subject subject = db.Subjects.Find(id);
+            SubjectDetailsViewModel detailsSubject = new SubjectDetailsViewModel();
+
+            detailsSubject.Name = subject.Name;
+            detailsSubject.Cathedra = db.Cathedras.Find(subject.CathedraId).NameCathedra;
+            detailsSubject.Semesters = subject.Semesters.ToList();
             if (subject == null)
             {
                 return HttpNotFound();
             }
-            return View(subject);
+            return View(detailsSubject);
         }
 
         // GET: Subjects/Create
@@ -48,7 +53,8 @@ namespace AvaluateTheTeacher1.Controllers
             var subject = new CodeReview.ViewModels.SubjectViewModel();
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra");
             subject.Semesters = db.Semesters.ToList();
-            
+            ViewBag.NoChange = false;
+
             return View(subject);
         }
 
@@ -60,7 +66,7 @@ namespace AvaluateTheTeacher1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,CathedraId")] CodeReview.ViewModels.SubjectViewModel subject, int [] semesters)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid&&semesters!=null)
             {
                 Subject newSubject = new Subject();
 
@@ -77,7 +83,9 @@ namespace AvaluateTheTeacher1.Controllers
                 return RedirectToAction("Index");
             }
 
+            subject.Semesters = db.Semesters.ToList();
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", subject.CathedraId);
+            ViewBag.NoChange = true;
             return View(subject);
         }
 
@@ -130,9 +138,10 @@ namespace AvaluateTheTeacher1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,CathedraId")] SubjectEditViewModel subject, int [] Semesters)
         {
-            if (ModelState.IsValid)
+            Subject updateSubject = new Subject();
+            if (ModelState.IsValid && Semesters != null)
             {
-                Subject updateSubject = new Subject();
+                
                 updateSubject = db.Subjects.Find(subject.Id);
 
                 updateSubject.Name = subject.Name;
@@ -152,6 +161,7 @@ namespace AvaluateTheTeacher1.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CathedraId = new SelectList(db.Cathedras, "Id", "NameCathedra", subject.CathedraId);
+            
             return View(subject);
         }
 

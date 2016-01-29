@@ -35,11 +35,12 @@
             </div>
 
             <div class="form-group">
-                Семестри
+                Семестри 
+                @if (ViewBag.NoChange) {<span class="text-danger">Оберіть семестр для предмету</span>}
                 @foreach (var k in Model.Semesters)
                 {
                     <div class="form-control">
-                        <input type="checkbox" id="semester+@k.Id" name="Semesters" value="@k.Id" />                        
+                        <input type="checkbox" id="semester+@k.Id" name="Semesters" value="@k.Id" />
                         <label for="semester+@k.Id">з @k.From.ToShortDateString() по @k.To.ToShortDateString()</label>
                     </div>
                 }

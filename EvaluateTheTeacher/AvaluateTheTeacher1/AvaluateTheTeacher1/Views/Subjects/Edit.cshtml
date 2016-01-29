@@ -38,6 +38,7 @@
 
             <div class="form-group">
                 Семестри
+                @Html.ValidationMessageFor(model => model.Semesters, "", new { @class = "text-danger" })
                 @foreach (var k in Model.Semesters)
                 {
                     <div class="form-control">
