@@ -1,0 +1,662 @@
+﻿@model AvaluateTheTeacher1.CodeReview.ViewModels.VotingViewModel
+@{
+    ViewBag.Title = Model.teacherName + " - Оціни викладача";
+    string[,] infoMas = new string[1, 10];
+    for (int i = 0; i < 10; i++)
+    {
+        infoMas[0, i] = (i + 1).ToString();
+    }
+}
+<title>@ViewBag.Title</title>
+<div class="pointer">
+    <content>
+        <div class="form-qwestion">
+            <div class="title">
+                <hr /><h1>Проголосуйте</h1>
+            </div>
+            <div class="teacher">
+                <img src="~/TeacherAva/@Model.pathToPhoto" alt="Нет фотографии" class="img-style">
+                <div>
+                    <span>@Model.SubjectName</span><br />
+                    <span>@Model.teacherName</span><br />
+                    <div class="link">
+                        <a href="/Raiting/VoitingMain/">&larr; Повернутись до списку викладачів</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm("Votings", "Votings", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", enctype = "multipart/form-data", name = "votingForm" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.teacherName, htmlAttributes: new { @value = Model.teacherName })
+            @Html.HiddenFor(model => model.pathToPhoto, htmlAttributes: new { @value = Model.pathToPhoto })
+            @Html.HiddenFor(model => model.idTeacher, htmlAttributes: new { @value = Model.idTeacher })
+            @Html.HiddenFor(model => model.SubjectName, htmlAttributes: new { @value = Model.SubjectName })
+            <div class="component">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Питання</th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <th>@Html.Label((i + 1).ToString())</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody class="answers">
+                        <tr id="answer1">
+                            <th>
+                                @Html.Label("", "1. Як Ви загалом оцінюєте курс? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer1"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.OverallSubject, infoMas[0, i], htmlAttributes: new { @id = "answer1" + (i + 1).ToString() })
+                                    <label for=@("answer1"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer2">
+                            <th>
+                                @Html.Label("", "2. Чи дізались Ви щось нове? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer2"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.SomethingNew, infoMas[0, i], htmlAttributes: new { @id = "answer2" + (i + 1).ToString() })
+                                    <label for=@("answer2"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer3">
+                            <th>
+                                @Html.Label("", "3. Практична цінність курсу: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer3"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.ThePracticalValue, infoMas[0, i], htmlAttributes: new { @id = "answer3" + (i + 1).ToString() })
+                                    <label for=@("answer3"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer4">
+                            <th>
+                                @Html.Label("", "4. Рівень обізнаності викладача матеріалом, який він викладає: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer4"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.DepthPossessionOf, infoMas[0, i], htmlAttributes: new { @id = "answer4" + (i + 1).ToString() })
+                                    <label for=@("answer4"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer5">
+                            <th>
+                                @Html.Label("", "5. Ясність та доступність викладення матеріалу: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer5"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.ClarityAndAccessibility, infoMas[0, i], htmlAttributes: new { @id = "answer5" + (i + 1).ToString() })
+                                    <label for=@("answer5"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer6">
+                            <th>
+                                @Html.Label("", "6. Якість навчальних матеріалів: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer6"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.QualityTeachingMaterials, infoMas[0, i], htmlAttributes: new { @id = "answer6" + (i + 1).ToString() })
+                                    <label for=@("answer6"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer7">
+                            <th>
+                                @Html.Label("", "7. На скільки викладач зацікавив Вас предметом? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer7"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.InterestInTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer7" + (i + 1).ToString() })
+                                    <label for=@("answer7"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer8">
+                            <th>
+                                @Html.Label("", "8. Як багато занять цього курсу Ви відвідали? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer8"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.NumberOfAttendance, infoMas[0, i], htmlAttributes: new { @id = "answer8" + (i + 1).ToString() })
+                                    <label for=@("answer8"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer9">
+                            <th>
+                                @Html.Label("", "9. На скільки активним Ви були під час семінарів та дискусій? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer9"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.ActivityInClass, infoMas[0, i], htmlAttributes: new { @id = "answer9" + (i + 1).ToString() })
+                                    <label for=@("answer9"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer10">
+                            <th>
+                                @Html.Label("", "10. На скільки складним виявився курс? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer10"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.TheDifficultyOfTheCourse, infoMas[0, i], htmlAttributes: new { @id = "answer10" + (i + 1).ToString() })
+                                    <label for=@("answer10"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer110">
+                            <th>
+                                @Html.Label("", "11. Скільки годин на тиждень Ви витрачали на підготовку? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer11"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.PreparationTime, infoMas[0, i], htmlAttributes: new { @id = "answer11" + (i + 1).ToString() })
+                                    <label for=@("answer11"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer120">
+                            <th>
+                                @Html.Label("", "12. Доступність викладача поза заняттями: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer12"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.AvailabilityTeacherOutsideLessons, infoMas[0, i], htmlAttributes: new { @id = "answer12" + (i + 1).ToString() })
+                                    <label for=@("answer12"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer130">
+                            <th>
+                                @Html.Label("", "13. Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer13"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.CommentsTheWork, infoMas[0, i], htmlAttributes: new { @id = "answer13" + (i + 1).ToString() })
+                                    <label for=@("answer13"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer140">
+                            <th>
+                                @Html.Label("", "14. Неупередженість викладача: ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer14"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.RelevantToStudents, infoMas[0, i], htmlAttributes: new { @id = "answer14" + (i + 1).ToString() })
+                                    <label for=@("answer14"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer150">
+                            <th>
+                                @Html.Label("", "15. На скільки зрозумілою була процедура оцінювання? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer15"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.ProcedureGrading, infoMas[0, i], htmlAttributes: new { @id = "answer15" + (i + 1).ToString() })
+                                    <label for=@("answer15"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer160">
+                            <th>
+                                @Html.Label("", "16. На скільки хорошою була заявлена процедура оцінювання? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer16"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.HowWellTheProcedurePerformedGrading, infoMas[0, i], htmlAttributes: new { @id = "answer16" + (i + 1).ToString() })
+                                    <label for=@("answer16"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                        <tr id="answer170">
+                            <th>
+                                @Html.Label("", "17. Як добре, на Вашу думку, Ви засвоїли матеріал? ", htmlAttributes: new { })
+                            </th>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <td id="@("answer17"+(i+1).ToString())">
+                                    @Html.RadioButtonFor(model => model.QualityMasteringTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer17" + (i + 1).ToString() })
+                                    <label for=@("answer17"+(i+1).ToString())> </label>
+                                </td>
+                            }
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="11" rowspan="1">
+                                <label class="text-danger" for=""></label>
+                                <input type="submit" value="Проголосувати" class="btn btn-default pc-submit" />
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="content-div">
+                <div class="mobile-component">
+                    <table>
+                        <tbody>
+                            <tr id="answer180">
+                                <th colspan="10">
+                                    @Html.Label("", "1. Як Ви загалом оцінюєте курс? ")
+                                </th>
+                            </tr>
+                            <tr id="answer180">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer180">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer18"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.OverallSubject, infoMas[0, i], htmlAttributes: new { @id = "answer18" + (i + 1).ToString() })
+                                        <label for=@("answer18"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer190">
+                                <th colspan="10">
+                                    @Html.Label("", "2. Чи дізались Ви щось нове? ")
+                                </th>
+                            </tr>
+                            <tr id="answer190">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer190">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer19"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.SomethingNew, infoMas[0, i], htmlAttributes: new { @id = "answer19" + (i + 1).ToString() })
+                                        <label for=@("answer19"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer20">
+                                <th colspan="10">
+                                    @Html.Label("", "3. Практична цінність курсу: ")
+                                </th>
+                            </tr>
+                            <tr id="answer20">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer20">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer20"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.ThePracticalValue, infoMas[0, i], htmlAttributes: new { @id = "answer20" + (i + 1).ToString() })
+                                        <label for=@("answer20"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer21">
+                                <th colspan="10">
+                                    @Html.Label("", "4. Рівень обізнаності викладача матеріалом, який він викладає: ")
+                                </th>
+                            </tr>
+                            <tr id="answer21">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer21">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer21"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.DepthPossessionOf, infoMas[0, i], htmlAttributes: new { @id = "answer21" + (i + 1).ToString() })
+                                        <label for=@("answer21"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer22">
+                                <th colspan="10">
+                                    @Html.Label("", "5. Ясність та доступність викладення матеріалу: ")
+                                </th>
+                            </tr>
+                            <tr id="answer22">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer22">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer22"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.ClarityAndAccessibility, infoMas[0, i], htmlAttributes: new { @id = "answer22" + (i + 1).ToString() })
+                                        <label for=@("answer22"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer23">
+                                <th colspan="10">
+                                    @Html.Label("", "6. Якість навчальних матеріалів: ")
+                                </th>
+                            </tr>
+                            <tr id="answer23">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer23">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer23"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.QualityTeachingMaterials, infoMas[0, i], htmlAttributes: new { @id = "answer23" + (i + 1).ToString() })
+                                        <label for=@("answer23"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer24">
+                                <th colspan="10">
+                                    @Html.Label("", "7. На скільки викладач зацікавив Вас предметом? ")
+                                </th>
+                            </tr>
+                            <tr id="answer24">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer24">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer24"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.InterestInTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer24" + (i + 1).ToString() })
+                                        <label for=@("answer24"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer25">
+                                <th colspan="10">
+                                    @Html.Label("", "8. Як багато занять цього курсу Ви відвідали? ")
+                                </th>
+                            </tr>
+                            <tr id="answer25">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer25">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer25"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.NumberOfAttendance, infoMas[0, i], htmlAttributes: new { @id = "answer25" + (i + 1).ToString() })
+                                        <label for=@("answer25"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer26">
+                                <th colspan="10">
+                                    @Html.Label("", "9. На скільки активним Ви були під час семінарів та дискусій? ")
+                                </th>
+                            </tr>
+                            <tr id="answer26">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer26">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer26"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.ActivityInClass, infoMas[0, i], htmlAttributes: new { @id = "answer26" + (i + 1).ToString() })
+                                        <label for=@("answer26"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer27">
+                                <th colspan="10">
+                                    @Html.Label("", "10. На скільки складним виявився курс? ")
+                                </th>
+                            </tr>
+                            <tr id="answer27">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer27">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer27"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.TheDifficultyOfTheCourse, infoMas[0, i], htmlAttributes: new { @id = "answer27" + (i + 1).ToString() })
+                                        <label for=@("answer27"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer28">
+                                <th colspan="10">
+                                    @Html.Label("", "11. Скільки годин на тиждень Ви витрачали на підготовку? ")
+                                </th>
+                            </tr>
+                            <tr id="answer28">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer28">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer28"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.PreparationTime, infoMas[0, i], htmlAttributes: new { @id = "answer28" + (i + 1).ToString() })
+                                        <label for=@("answer28"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer29">
+                                <th colspan="10">
+                                    @Html.Label("", "12. Доступність викладача поза заняттями: ")
+                                </th>
+                            </tr>
+                            <tr id="answer29">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer29">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer29"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.AvailabilityTeacherOutsideLessons, infoMas[0, i], htmlAttributes: new { @id = "answer29" + (i + 1).ToString() })
+                                        <label for=@("answer29"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer30">
+                                <th colspan="10">
+                                    @Html.Label("", "13. Зворотній зв'язок та коментарі викладача щодо Вашої роботи: ")
+                                </th>
+                            </tr>
+                            <tr id="answer30">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer30">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer30"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.CommentsTheWork, infoMas[0, i], htmlAttributes: new { @id = "answer30" + (i + 1).ToString() })
+                                        <label for=@("answer30"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer31">
+                                <th colspan="10">
+                                    @Html.Label("", "14. Неупередженість викладача: ")
+                                </th>
+                            </tr>
+                            <tr id="answer31">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer31">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer31"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.RelevantToStudents, infoMas[0, i], htmlAttributes: new { @id = "answer31" + (i + 1).ToString() })
+                                        <label for=@("answer31"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer32">
+                                <th colspan="10">
+                                    @Html.Label("", "15. На скільки зрозумілою була процедура оцінювання? ")
+                                </th>
+                            </tr>
+                            <tr id="answer32">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer32">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer32"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.ProcedureGrading, infoMas[0, i], htmlAttributes: new { @id = "answer32" + (i + 1).ToString() })
+                                        <label for=@("answer32"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer33">
+                                <th colspan="10">
+                                    @Html.Label("", "16. На скільки хорошою була заявлена процедура оцінювання?")
+                                </th>
+                            </tr>
+                            <tr id="answer33">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer33">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer33"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.HowWellTheProcedurePerformedGrading, infoMas[0, i], htmlAttributes: new { @id = "answer33" + (i + 1).ToString() })
+                                        <label for=@("answer33"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer34">
+                                <th colspan="10">
+                                    @Html.Label("", "17. Як добре, на Вашу думку, Ви засвоїли матеріал?")
+                                </th>
+                            </tr>
+                            <tr id="answer34">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td>
+                                        @Html.Label(infoMas[0, i])
+                                    </td>
+                                }
+                            </tr>
+                            <tr id="answer34">
+                                @for (int i = 0; i < 10; i++)
+                                {
+                                    <td id="@("answer34"+(i+1).ToString())">
+                                        @Html.RadioButtonFor(model => model.QualityMasteringTheSubject, infoMas[0, i], htmlAttributes: new { @id = "answer34" + (i + 1).ToString() })
+                                        <label for=@("answer34"+(i+1).ToString())> </label>
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="10" rowspan="1">
+                                    <label class="text-danger" for=""></label>
+                                    <input type="submit" value="Проголосувати" class="btn btn-default mobile-submit" />
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        }
+        <script type="text/javascript" src="~/Scripts/jquery.stickyheader.js"></script>
+        <script src="~/Scripts/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="~/Scripts/jquery-checked-labels.js"></script>
+        <script src="~/Scripts/jquery-validate-voting.js" type="text/javascript"></script>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </content>
+</div>

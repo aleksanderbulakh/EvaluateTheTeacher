@@ -1,0 +1,55 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.FilterDataModel
+@{
+    ViewBag.Title = "Рейтинг викладачів - Оціни викладача";
+
+    var name_class = "";
+}
+<title>@ViewBag.Title</title>
+<content>
+    <div class="content-wrapper">
+        <div class="title">
+            <hr><h1>
+                РЕЙТИНГ ВИКЛАДАЧІВ
+            </h1>
+        </div>
+        <div class="dropdown-wrapper">
+            <div class="dropdown">
+                <ul class="menu">
+
+                    @foreach (var li in Model.Cathedras)
+                    {
+                        <li class="dropdown-content">
+                            @Html.ActionLink(li.NameCathedra, "ListOfTeachers", "ListOfteachers", new { @id = li.Id }, new { @class = Model.SelectedId == li.Id ? "active" : null })
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="teachers-list-wrapper">
+            @foreach (var T in Model.Teachers)
+            {
+                if (@T.AvgRating >= 9) { name_class = "grean1"; }
+                if (@T.AvgRating >= 6 && @T.AvgRating < 9) { name_class = "yellow"; }
+                if (@T.AvgRating >= 0 && @T.AvgRating < 6) { name_class = "red1"; }
+
+                
+                    <div class="teachers-list">
+                        <a class="teacherCard" href="~/MoreInfoForteacher/Index/@T.TeacherId">
+                            <div class="img-teacher-wrapper">
+                                <img class="img-teacher" src="~/TeacherAva/@T.PathToPhoto" alt="Нет фотографии">
+                            </div>
+                            <div class="about_teacher">
+                                <div class="pib">
+                                    <span class="pib">@T.LastName</span>
+                                    <span class="pib">@T.Name</span>
+                                    <span class="pib">@T.SurName</span>
+                                    <strong class="@name_class">@(T.AvgRating != 0 ? T.AvgRating.ToString() : "-")</strong>
+                                </div>
+                                <p class="description">@T.Description</p>
+                            </div>
+                        </a>
+                    </div>
+            }
+        </div>
+    </div>
+</content>

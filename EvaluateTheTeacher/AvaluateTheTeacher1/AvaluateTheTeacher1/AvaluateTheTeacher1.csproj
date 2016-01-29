@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66416F5D-7BE1-4193-B1E8-4868C0373BFC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvaluateTheTeacher1</RootNamespace>
+    <AssemblyName>AvaluateTheTeacher1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.0.4\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moveax.Mvc.ErrorHandler, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moveax.Mvc.ErrorHandler.1.2.3.0\lib\net40\Moveax.Mvc.ErrorHandler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advanced.aspx.designer.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CodeReview\Models\RaitingModel.cs" />
+    <Compile Include="CodeReview\Models\VotingModel.cs" />
+    <Compile Include="CodeReview\ViewModels\SubjectViewModel.cs" />
+    <Compile Include="CodeReview\ViewModels\UpdateGroupViewModel.cs" />
+    <Compile Include="CodeReview\ViewModels\VotingViewModel.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddingGroupController.cs" />
+    <Compile Include="Controllers\AddingStudentController.cs" />
+    <Compile Include="Controllers\AddingTeaherController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GroupController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListOfTeachersController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoreInfoForteacherController.cs" />
+    <Compile Include="Controllers\RaitingController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
+    <Compile Include="Controllers\VotingsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512111302555_FullBD.cs" />
+    <Compile Include="Migrations\201512111302555_FullBD.Designer.cs">
+      <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512121132299_Pole.cs" />
+    <Compile Include="Migrations\201512121132299_Pole.Designer.cs">
+      <DependentUpon>201512121132299_Pole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601262241507_GroupTeacherSubject.cs" />
+    <Compile Include="Migrations\201601262241507_GroupTeacherSubject.Designer.cs">
+      <DependentUpon>201601262241507_GroupTeacherSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601270036152_Changetable.cs" />
+    <Compile Include="Migrations\201601270036152_Changetable.Designer.cs">
+      <DependentUpon>201601270036152_Changetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601280920134_tblSemester.cs" />
+    <Compile Include="Migrations\201601280920134_tblSemester.Designer.cs">
+      <DependentUpon>201601280920134_tblSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601282018577_Refactoring.cs" />
+    <Compile Include="Migrations\201601282018577_Refactoring.Designer.cs">
+      <DependentUpon>201601282018577_Refactoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601290632252_TeacherSubjectSemester.cs" />
+    <Compile Include="Migrations\201601290632252_TeacherSubjectSemester.Designer.cs">
+      <DependentUpon>201601290632252_TeacherSubjectSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AppDbInitializer.cs" />
+    <Compile Include="Models\FilterUser.cs" />
+    <Compile Include="Models\GMailer.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ListOfUsers.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Students\Group.cs" />
+    <Compile Include="Models\Students\Semester.cs" />
+    <Compile Include="Models\Students\StudentVoting.cs" />
+    <Compile Include="Models\Teachers\Cathedra.cs" />
+    <Compile Include="Models\Teachers\FilterDataModel.cs" />
+    <Compile Include="Models\Teachers\ListOfTeachers.cs" />
+    <Compile Include="Models\Teachers\MessageForModerator.cs" />
+    <Compile Include="Models\Teachers\MoreInfoForTeacher.cs" />
+    <Compile Include="Models\Teachers\RaitingTeacherSubject.cs" />
+    <Compile Include="Models\Teachers\Rating.cs" />
+    <Compile Include="Models\Teachers\Subject.cs" />
+    <Compile Include="Models\Teachers\Suggestions.cs" />
+    <Compile Include="Models\Teachers\Teacher.cs" />
+    <Compile Include="Models\Teachers\TeacherSubject.cs" />
+    <Compile Include="Models\Teachers\TopTeachersViewModel.cs" />
+    <Compile Include="Models\Teachers\Voting.cs" />
+    <Compile Include="Models\Teachers\VotingFull.cs" />
+    <Compile Include="Models\Teachers\VotingList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Advanced.aspx" />
+    <Content Include="App_Data\aspnet-AvaluateTheTeacher1-20151114122241.mdf" />
+    <Content Include="App_Data\aspnet-AvaluateTheTeacher1-20151114122241_log.ldf">
+      <DependentUpon>aspnet-AvaluateTheTeacher1-20151114122241.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Start\13.jpg" />
+    <Content Include="App_Start\14.jpg" />
+    <Content Include="Basic.htm" />
+    <Content Include="Content\1.jpg" />
+    <Content Include="Content\2.jpg" />
+    <Content Include="Content\3.jpg" />
+    <Content Include="Content\component.css" />
+    <Content Include="Content\demo.css" />
+    <Content Include="Content\demo1.css" />
+    <Content Include="Content\images\Jcrop.gif" />
+    <Content Include="Content\jquery.Jcrop.css" />
+    <Content Include="Content\jquery.Jcrop.min.css" />
+    <Content Include="Content\line-home01.jpg" />
+    <Content Include="Content\line-home02.jpg" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\~1.jpg" />
+    <Content Include="Content\~2.jpg" />
+    <Content Include="Content\~3.jpg" />
+    <Content Include="Content\bg.jpg" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.jpg" />
+    <Content Include="Content\icon_man.svg" />
+    <Content Include="Content\img.jpg" />
+    <Content Include="Content\left.svg" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\right.svg" />
+    <Content Include="Content\slider1.jpg" />
+    <Content Include="Content\slider2.jpg" />
+    <Content Include="Content\slider3.jpg" />
+    <Content Include="css\Jcrop.gif" />
+    <Content Include="css\jquery.Jcrop.css" />
+    <Content Include="favicon1.ico" />
+    <Content Include="favicon2.ico" />
+    <Content Include="favicon3.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="js\jquery.Jcrop.js" />
+    <Content Include="js\jquery.Jcrop.min.js" />
+    <Content Include="js\jquery.jcrop.preview.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EvaluateTheTeacher - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-checked-labels.js" />
+    <Content Include="Scripts\jquery-validate-voting.js" />
+    <Content Include="Scripts\jquery.ba-throttle-debounce.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.Jcrop.js" />
+    <Content Include="Scripts\jquery.Jcrop.min.js" />
+    <Content Include="Scripts\jquery.nivo.slider.js" />
+    <Content Include="Scripts\jquery.stickyheader.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\reserv.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="TeacherAva\aa_ostapchuk%281%29.jpg" />
+    <Content Include="TeacherAva\am_babeshko.jpg" />
+    <Content Include="TeacherAva\ao_danilchenko%281%29.jpg" />
+    <Content Include="TeacherAva\ao_maslov%281%29.jpg" />
+    <Content Include="TeacherAva\av_morozov.jpg" />
+    <Content Include="TeacherAva\es_kypkin%281%29.jpg" />
+    <Content Include="TeacherAva\go_raykovska.jpg" />
+    <Content Include="TeacherAva\ia_orinchak%281%29.jpg" />
+    <Content Include="TeacherAva\ii_petrenko%281%29.jpg" />
+    <Content Include="TeacherAva\ii_sugonyak%281%29.jpg" />
+    <Content Include="TeacherAva\iv_krizhanivska%281%29.jpg" />
+    <Content Include="TeacherAva\le_glembocka%281%29.jpg" />
+    <Content Include="TeacherAva\li_fyrsova%281%29.jpg" />
+    <Content Include="TeacherAva\li_shulyarenko%281%29.jpg" />
+    <Content Include="TeacherAva\mf_efremov%281%29.jpg" />
+    <Content Include="TeacherAva\mo_burdeyniy%281%29.jpg" />
+    <Content Include="TeacherAva\ni_krushinska%281%29.jpg" />
+    <Content Include="TeacherAva\nm_bilodid%281%29.jpg" />
+    <Content Include="TeacherAva\np_kargopolova%281%29.jpg" />
+    <Content Include="TeacherAva\ol_gerasimchuk%281%29.jpg" />
+    <Content Include="TeacherAva\ov_luschikov%281%29.jpg" />
+    <Content Include="TeacherAva\ov_pidtychenko%281%29.jpg" />
+    <Content Include="TeacherAva\ov_vlasenko%281%29.jpg" />
+    <Content Include="TeacherAva\pm_povidayko%281%29.jpg" />
+    <Content Include="TeacherAva\pp_moskvin.jpg" />
+    <Content Include="TeacherAva\pt_dederkal%281%29.jpg" />
+    <Content Include="TeacherAva\ro_kolomiec%281%29.jpg" />
+    <Content Include="TeacherAva\rv_petrosyan%281%29.jpg" />
+    <Content Include="TeacherAva\si_skurativskiy%281%29.jpg" />
+    <Content Include="TeacherAva\sk_kobzar%281%29.jpg" />
+    <Content Include="TeacherAva\sp_davidchuk%281%29.jpg" />
+    <Content Include="TeacherAva\ts_voronova%281%29.jpg" />
+    <Content Include="TeacherAva\va_rudnickiy%281%29.jpg" />
+    <Content Include="TeacherAva\va_shadyra%281%29.jpg" />
+    <Content Include="TeacherAva\vb_krizhanivskiy%281%29.jpg" />
+    <Content Include="TeacherAva\vd_babiy%281%29.jpg" />
+    <Content Include="TeacherAva\vd_golovnya%281%29.jpg" />
+    <Content Include="TeacherAva\vf_zagurska-antonyuk%281%29.jpg" />
+    <Content Include="TeacherAva\vi_petrenko%281%29.jpg" />
+    <Content Include="TeacherAva\vi_tambov%281%29.jpg" />
+    <Content Include="TeacherAva\vl_dobryakov%281%29.jpg" />
+    <Content Include="TeacherAva\vm_yanchuk%281%29.jpg" />
+    <Content Include="TeacherAva\vn_kovalchuk%281%29.jpg" />
+    <Content Include="TeacherAva\vp_kazakov%281%29.jpg" />
+    <Content Include="TeacherAva\vv_lemeshko%281%29.jpg" />
+    <Content Include="TeacherAva\vv_zahlenyuk%281%29.jpg" />
+    <Content Include="TeacherAva\yum_rosinskiy%281%29.jpg" />
+    <Content Include="TeacherAva\yus_kondratyuk%281%29.jpg" />
+    <Content Include="TeacherAva\zhm_homenko.jpg" />
+    <Content Include="TeacherAva\МиколайовичAVA.jpg" />
+    <Content Include="TeacherImg\07.jpg" />
+    <Content Include="TeacherImg\aa_efimenko%281%29.jpg" />
+    <Content Include="TeacherImg\aa_ostapchuk%281%29.jpg" />
+    <Content Include="TeacherImg\ag_tkachuk%281%29.jpg" />
+    <Content Include="TeacherImg\ai_korniychuk%281%29.jpg" />
+    <Content Include="TeacherImg\am_kovalchuk%281%29.jpg" />
+    <Content Include="TeacherImg\am_shostachuk%281%29.jpg" />
+    <Content Include="TeacherImg\ao_danilchenko%281%29.jpg" />
+    <Content Include="TeacherImg\ao_maslov%281%29.jpg" />
+    <Content Include="TeacherImg\av_koval%281%29.jpg" />
+    <Content Include="TeacherImg\av_morozov.jpg" />
+    <Content Include="TeacherImg\ayu_levchenko%281%29.jpg" />
+    <Content Include="TeacherImg\ayu_sazonov%281%29.jpg" />
+    <Content Include="TeacherImg\dd_plechistiy%281%29.jpg" />
+    <Content Include="TeacherImg\dm_shostachuk%281%29.jpg" />
+    <Content Include="TeacherImg\ds_morozov%281%29.jpg" />
+    <Content Include="TeacherImg\dv_goychuk%281%29.jpg" />
+    <Content Include="TeacherImg\es_kypkin%281%29.jpg" />
+    <Content Include="TeacherImg\gi_parfenyuk%281%29.jpg" />
+    <Content Include="TeacherImg\go_raykovska.jpg" />
+    <Content Include="TeacherImg\gv_kireyceva%281%29.jpg" />
+    <Content Include="TeacherImg\gv_skiba%281%29.jpg" />
+    <Content Include="TeacherImg\ia_orinchak%281%29.jpg" />
+    <Content Include="TeacherImg\ii_petrenko%281%29.jpg" />
+    <Content Include="TeacherImg\ii_samolyuk%281%29.jpg" />
+    <Content Include="TeacherImg\ii_sugonyak%281%29.jpg" />
+    <Content Include="TeacherImg\is_muratova%281%29.jpg" />
+    <Content Include="TeacherImg\iv_cud%281%29.jpg" />
+    <Content Include="TeacherImg\iv_davidova%281%29.jpg" />
+    <Content Include="TeacherImg\iv_kocyuba%281%29.jpg" />
+    <Content Include="TeacherImg\iv_korobiychuk%281%29.jpg" />
+    <Content Include="TeacherImg\iv_krizhanivska%281%29.jpg" />
+    <Content Include="TeacherImg\iv_odnovorchenko%281%29.jpg" />
+    <Content Include="TeacherImg\iv_orlovska%281%29.jpg" />
+    <Content Include="TeacherImg\iyu_cherepanska%281%29.jpg" />
+    <Content Include="TeacherImg\le_glembocka%281%29.jpg" />
+    <Content Include="TeacherImg\li_fyrsova%281%29.jpg" />
+    <Content Include="TeacherImg\li_shulyarenko%281%29.jpg" />
+    <Content Include="TeacherImg\ll_otdelnova%281%29.jpg" />
+    <Content Include="TeacherImg\lo_chepyuk%281%29.jpg" />
+    <Content Include="TeacherImg\lv_rudyuk%281%29.jpg" />
+    <Content Include="TeacherImg\mb_myanovska%281%29.jpg" />
+    <Content Include="TeacherImg\mf_efremov%281%29.jpg" />
+    <Content Include="TeacherImg\mf_homenko%281%29.jpg" />
+    <Content Include="TeacherImg\ml_ischenko%281%29.jpg" />
+    <Content Include="TeacherImg\mm_mozharovskiy%281%29.jpg" />
+    <Content Include="TeacherImg\mm_vinichuk%281%29.jpg" />
+    <Content Include="TeacherImg\mo_burdeyniy%281%29.jpg" />
+    <Content Include="TeacherImg\mv_bogdanovskiy%281%29.jpg" />
+    <Content Include="TeacherImg\ni_krushinska%281%29.jpg" />
+    <Content Include="TeacherImg\nm_bilodid%281%29.jpg" />
+    <Content Include="TeacherImg\no_kyrnosova%281%29.jpg" />
+    <Content Include="TeacherImg\np_kargopolova%281%29.jpg" />
+    <Content Include="TeacherImg\nv_muzhicka%281%29.jpg" />
+    <Content Include="TeacherImg\oa_polischuk%281%29.jpg" />
+    <Content Include="TeacherImg\ob_kravchuk%281%29.jpg" />
+    <Content Include="TeacherImg\od_zhelezniy%281%29.jpg" />
+    <Content Include="TeacherImg\og_bolotniy%281%29.jpg" />
+    <Content Include="TeacherImg\og_izyumova%281%29.jpg" />
+    <Content Include="TeacherImg\oi_grabar%281%29.jpg" />
+    <Content Include="TeacherImg\oi_prilipko%281%29.jpg" />
+    <Content Include="TeacherImg\ol_gerasimchuk%281%29.jpg" />
+    <Content Include="TeacherImg\ol_korenivska%281%29.jpg" />
+    <Content Include="TeacherImg\ol_ostapenko%281%29.jpg" />
+    <Content Include="TeacherImg\om_krupenin%281%29.jpg" />
+    <Content Include="TeacherImg\oo_dobrzhanskiy%281%29.jpg" />
+    <Content Include="TeacherImg\oo_shapovalova%281%29.jpg" />
+    <Content Include="TeacherImg\oo_zimaroev%281%29.jpg" />
+    <Content Include="TeacherImg\os_larina%281%29.jpg" />
+    <Content Include="TeacherImg\ov_andreev%281%29.jpg" />
+    <Content Include="TeacherImg\ov_goncharuk%281%29.jpg" />
+    <Content Include="TeacherImg\ov_luschikov%281%29.jpg" />
+    <Content Include="TeacherImg\ov_pidtychenko%281%29.jpg" />
+    <Content Include="TeacherImg\ov_vlasenko%281%29.jpg" />
+    <Content Include="TeacherImg\pm_povidayko%281%29.jpg" />
+    <Content Include="TeacherImg\pp_martinchuk%281%29.jpg" />
+    <Content Include="TeacherImg\pp_moskvin.jpg" />
+    <Content Include="TeacherImg\pt_dederkal%281%29.jpg" />
+    <Content Include="TeacherImg\rm_golovnya%281%29.jpg" />
+    <Content Include="TeacherImg\ro_kolomiec%281%29.jpg" />
+    <Content Include="TeacherImg\rv_kolodnicka%281%29.jpg" />
+    <Content Include="TeacherImg\rv_petrosyan%281%29.jpg" />
+    <Content Include="TeacherImg\sg_kyryata%281%29.jpg" />
+    <Content Include="TeacherImg\si_skurativskiy%281%29.jpg" />
+    <Content Include="TeacherImg\si_yaremchuk%281%29.jpg" />
+    <Content Include="TeacherImg\sk_kobzar%281%29.jpg" />
+    <Content Include="TeacherImg\sl_kondratovec%281%29.jpg" />
+    <Content Include="TeacherImg\sm_kravchenko%281%29.jpg" />
+    <Content Include="TeacherImg\sp_davidchuk%281%29.jpg" />
+    <Content Include="TeacherImg\ss_svistelnik%281%29.jpg" />
+    <Content Include="TeacherImg\sv_skripchenko%281%29.jpg" />
+    <Content Include="TeacherImg\sv_syhovecka%281%29.jpg" />
+    <Content Include="TeacherImg\ta_rasputna%281%29.jpg" />
+    <Content Include="TeacherImg\te_kamskih%281%29.jpg" />
+    <Content Include="TeacherImg\tm_loktikova%281%29.jpg" />
+    <Content Include="TeacherImg\tm_nikitchuk%281%29.jpg" />
+    <Content Include="TeacherImg\to_elnikova%281%29.jpg" />
+    <Content Include="TeacherImg\ts_voronova%281%29.jpg" />
+    <Content Include="TeacherImg\tv_kurbet%281%29.jpg" />
+    <Content Include="TeacherImg\va_kirilovich%281%29.jpg" />
+    <Content Include="TeacherImg\va_rudnickiy%281%29.jpg" />
+    <Content Include="TeacherImg\va_shadyra%281%29.jpg" />
+    <Content Include="TeacherImg\vb_beneditskiy%281%29.jpg" />
+    <Content Include="TeacherImg\vb_krizhanivskiy%281%29.jpg" />
+    <Content Include="TeacherImg\vb_krushinskiy%281%29.jpg" />
+    <Content Include="TeacherImg\vd_babiy%281%29.jpg" />
+    <Content Include="TeacherImg\vd_golovnya%281%29.jpg" />
+    <Content Include="TeacherImg\ve_stacenko%281%29.jpg" />
+    <Content Include="TeacherImg\vf_zagurska-antonyuk%281%29.jpg" />
+    <Content Include="TeacherImg\vg_ciporenko%281%29.jpg" />
+    <Content Include="TeacherImg\vg_levickiy%281%29.jpg" />
+    <Content Include="TeacherImg\vg_snicar%281%29.jpg" />
+    <Content Include="TeacherImg\vi_petrenko%281%29.jpg" />
+    <Content Include="TeacherImg\vi_tambov%281%29.jpg" />
+    <Content Include="TeacherImg\vl_dobryakov%281%29.jpg" />
+    <Content Include="TeacherImg\vm_ochich%281%29.jpg" />
+    <Content Include="TeacherImg\vn_kovalchuk%281%29.jpg" />
+    <Content Include="TeacherImg\vo_skachkov%281%29.jpg" />
+    <Content Include="TeacherImg\vp_kazakov%281%29.jpg" />
+    <Content Include="TeacherImg\vv_bondar%281%29.jpg" />
+    <Content Include="TeacherImg\vv_chuhov%281%29.jpg" />
+    <Content Include="TeacherImg\vv_ciporenko%281%29.jpg" />
+    <Content Include="TeacherImg\vv_doroschenko%281%29.jpg" />
+    <Content Include="TeacherImg\vv_gnilickiy%281%29.jpg" />
+    <Content Include="TeacherImg\vv_lemeshko%281%29.jpg" />
+    <Content Include="TeacherImg\vv_zahlenyuk%281%29.jpg" />
+    <Content Include="TeacherImg\yui_trostenyuk%281%29.jpg" />
+    <Content Include="TeacherImg\yum_efremov%281%29.jpg" />
+    <Content Include="TeacherImg\yum_rosinskiy%281%29.jpg" />
+    <Content Include="TeacherImg\yun_mandro%281%29.jpg" />
+    <Content Include="TeacherImg\yuo_shavurskiy%281%29.jpg" />
+    <Content Include="TeacherImg\yus_kondratyuk%281%29.jpg" />
+    <Content Include="TeacherImg\zhm_homenko.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AddingGroup\AddNewGroup.cshtml" />
+    <Content Include="Views\AddingTeacher\AddNewTeacher.cshtml" />
+    <Content Include="Views\AddingStudent\AddNewStudent.cshtml" />
+    <Content Include="Views\ListOfTeachers\ListOfTeachers.cshtml" />
+    <Content Include="Views\Admin\Home.cshtml" />
+    <Content Include="Views\Votings\Votings.cshtml" />
+    <Content Include="Views\Admin\ListOfUsers.cshtml" />
+    <Content Include="Views\Manage\AddEmail.cshtml" />
+    <Content Include="Views\Manage\SuccessEmail.cshtml" />
+    <Content Include="Views\Manage\DisplayEmail.cshtml" />
+    <Content Include="Views\Manage\EditUserName.cshtml" />
+    <Content Include="Views\Votings\TimeOut.cshtml" />
+    <Content Include="Views\Votings\TimeOut.cshtml" />
+    <Content Include="Views\Group\Create.cshtml" />
+    <Content Include="Views\Group\Delete.cshtml" />
+    <Content Include="Views\Group\Details.cshtml" />
+    <Content Include="Views\Group\Edit.cshtml" />
+    <Content Include="Views\Group\Index.cshtml" />
+    <Content Include="Views\Teachers\Create.cshtml" />
+    <Content Include="Views\Teachers\Delete.cshtml" />
+    <Content Include="Views\Teachers\Edit.cshtml" />
+    <Content Include="Views\Teachers\Index.cshtml" />
+    <Content Include="Views\Subjects\Create.cshtml" />
+    <Content Include="Views\Subjects\Delete.cshtml" />
+    <Content Include="Views\Subjects\Details.cshtml" />
+    <Content Include="Views\Subjects\Edit.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
+    <Content Include="Views\Error\Http404.cshtml" />
+    <Content Include="Views\Error\Default.cshtml" />
+    <Content Include="Views\Raiting\VoitingMain.cshtml" />
+    <Content Include="Views\Teachers\Dashboard.cshtml" />
+    <Content Include="Views\MoreInfoForteacher\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512111302555_FullBD.resx">
+      <DependentUpon>201512111302555_FullBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121132299_Pole.resx">
+      <DependentUpon>201512121132299_Pole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601262241507_GroupTeacherSubject.resx">
+      <DependentUpon>201601262241507_GroupTeacherSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601270036152_Changetable.resx">
+      <DependentUpon>201601270036152_Changetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601280920134_tblSemester.resx">
+      <DependentUpon>201601280920134_tblSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601282018577_Refactoring.resx">
+      <DependentUpon>201601282018577_Refactoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601290632252_TeacherSubjectSemester.resx">
+      <DependentUpon>201601290632252_TeacherSubjectSemester.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50393</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

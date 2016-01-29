@@ -1,0 +1,56 @@
+﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.Teacher>
+
+@{
+    ViewBag.Title = "Список викладачів - Оціни викладача";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@ViewBag.Title</title>
+<content>
+    <h2>Список викладачів</h2>
+
+    <p>
+        @Html.ActionLink("Додати викладача", "AddNewTeacher", "AddingTeacher")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.Label("Назва кафедри")
+            </th>
+            <th>
+                @Html.Label("Ім'я")
+            </th>
+            <th>
+                @Html.Label("Прізвище")
+            </th>
+            <th>
+                @Html.Label("По - батькові")
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cathedra.NameCathedra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SurName)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Редагувати", "Edit", new { id = item.TeacherId }) |
+                    @Html.ActionLink("Видалити", "Delete", new { id = item.TeacherId })
+                </td>
+            </tr>
+        }
+    </table>
+</content>
