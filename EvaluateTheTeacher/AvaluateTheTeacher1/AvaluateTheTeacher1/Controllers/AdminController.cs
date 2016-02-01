@@ -12,47 +12,48 @@ namespace AvaluateTheTeacher1.Controllers
     {
         private IQueryable<ListOfUsers> query { get; set; }
         // GET: Admin
-        ApplicationDbContext db = new ApplicationDbContext();
 
         [Authorize(Roles = "admin")]
         public ActionResult Home()
         {
-
             return View();
         }
 
         [Authorize(Roles = "admin")]
         public ActionResult ListOfUsers(FilterUser model)
         {
-            //ViewBag.Students = db.Users;
-            if (model.SelectedId == null || model.SelectedId == 0)
+            using (var db = new ApplicationDbContext())
             {
-                query = from listGroup in db.Groups 
-                        from list in db.Users
-                        select new ListOfUsers()
-                        {
-                            UserName = list.UserName,
-                            Password = list.PasswordTxt
-                        };
+                //ViewBag.Students = db.Users;
+                if (model.SelectedId == null || model.SelectedId == 0)
+                {
+                    query = from listGroup in db.Groups
+                            from list in db.Users
+                            select new ListOfUsers()
+                            {
+                                UserName = list.UserName,
+                                Password = list.PasswordTxt
+                            };
+                }
+                else
+                {
+                    query = from list in db.Users
+                            .Where(x => (x.GroupId == model.SelectedId))
+                            select new ListOfUsers()
+                            {
+                                UserName = list.UserName,
+                                Password = list.PasswordTxt
+                            };
+                }
+                List<Group> group = db.Groups.ToList();
+                group.Insert(0, new Group { GroupId = 0, Name = "Всі" });
+                var data = new FilterUser
+                {
+                    List = query.ToList(),
+                    Group = new SelectList(group, "GroupId", "Name")
+                };
+                return View(data);
             }
-            else
-            {
-                query = from list in db.Users
-                        .Where(x => (x.GroupId == model.SelectedId))
-                        select new ListOfUsers()
-                        {
-                            UserName = list.UserName,
-                            Password = list.PasswordTxt
-                        };
-            }
-            List<Group> group = db.Groups.ToList();
-            group.Insert(0, new Group { GroupId = 0, Name = "Всі" });
-            var data = new FilterUser
-            {
-                List = query.ToList(),
-                Group = new SelectList(group, "GroupId", "Name")
-            };
-            return View(data);
         }
     }
 }

@@ -34,7 +34,7 @@
 
                 
                     <div class="teachers-list">
-                        <a class="teacherCard" href="~/MoreInfoForteacher/Index/@T.TeacherId">
+                        <a class="teacherCard" href=@Url.RouteUrl("MoreInfoAboutTeacher", new { id = T.TeacherId })>
                             <div class="img-teacher-wrapper">
                                 <img class="img-teacher" src="~/TeacherAva/@T.PathToPhoto" alt="Нет фотографии">
                             </div>

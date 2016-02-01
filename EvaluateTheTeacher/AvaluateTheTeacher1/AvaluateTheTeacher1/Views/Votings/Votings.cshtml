@@ -25,6 +25,23 @@
                 </div>
             </div>
         </div>
+        <div class="navigation">
+            @for (int i = 0; i < Model.TeacherNotVote.Count; i++)
+            {
+                if (Model.TeacherNotVote[i] == Model.idTeacher)
+                {
+                    if (i != 0)
+                    {
+                        <a href="/Votings/Votings/@Model.TeacherNotVote[i - 1]" class="btn btn-default mobile-submit">&larr; Попередній викладач</a>
+                    }
+                    if (i != Model.TeacherNotVote.Count - 1)
+                    {
+                        <a href="/Votings/Votings/@Model.TeacherNotVote[i + 1]" class="btn btn-default mobile-submit">Наступний викладач &rarr;</a>
+                    }
+                    break;
+                }
+            }
+        </div>
         @using (Html.BeginForm("Votings", "Votings", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", enctype = "multipart/form-data", name = "votingForm" }))
         {
             @Html.AntiForgeryToken()

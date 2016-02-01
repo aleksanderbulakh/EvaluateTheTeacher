@@ -15,13 +15,13 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            
+
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.TeacherId)
 
             <div class="img-teacher-wrapper">
-                <img src="~/TeacherImg/@Model.PathToPhoto"/>
+                <img src="~/TeacherImg/@Model.PathToPhoto" />
             </div>
 
             <div class="form-group">
@@ -77,8 +77,11 @@
             {
                 foreach (var k1 in k.Value)
                 {
-                    <input type="checkbox" name="selectedSubjects" value="@k1.Key"
-                           @(k.Key ? "checked=\"checked\"" : "") />@k1.Value <br />
+                    foreach (var k2 in k1.Value)
+                    {
+                        <input type="checkbox" name="selectedSubjects" value="@k1.Key@k2.Key"
+                               @(k.Key ? "checked=\"checked\"" : "") />@:семестр @k1.Key Назва предмету: @k2.Value <br />
+                    }
                 }
             }
 
@@ -91,7 +94,7 @@
     }
 
     <div>
-        @Html.ActionLink("Назад", "Index")
+        @Html.RouteLink("Назад", "TeachersList")
     </div>
 
     @section Scripts {

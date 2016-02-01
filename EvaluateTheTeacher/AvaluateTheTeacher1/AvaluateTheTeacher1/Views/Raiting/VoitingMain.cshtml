@@ -47,7 +47,7 @@
                         <span class="pib">@data.SurName</span>
                     </div>
                     <p>@data.Description</p>
-                    <a class="btn btn-default" href="/Votings/Votings/@data.IdForVoiting">Проголосувати</a>
+                    @Html.RouteLink("Проголосувати", "Votings", new { id = data.IdForVoiting, }, htmlAttributes: new { @class = "btn btn-default" })
                 </div>
 
             </div>

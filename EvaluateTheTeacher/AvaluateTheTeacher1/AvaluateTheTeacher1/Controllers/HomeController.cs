@@ -9,7 +9,6 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class HomeController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
             /*var first = from list in db.StudentVotings select list;

@@ -13,43 +13,51 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class GroupController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
+        ApplicationDbContext dbList = new ApplicationDbContext();
         // GET: Group
         [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
-            return View(db.Groups.ToList());
+            using (var db = new ApplicationDbContext())
+            {
+                return View(db.Groups.ToList());
+            }
         }
 
         // GET: Group/Details/5
         [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            using (var db = new ApplicationDbContext())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Group group = db.Groups.Find(id);
-            if (group == null)
-            {
-                return HttpNotFound();
-            }
-            var groupTeacherSubject = group.TeachersSubjects.ToList() ;
-            List<string> GTS = new List<string>();
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Group group = db.Groups.Find(id);
+                if (group == null)
+                {
+                    return HttpNotFound();
+                }
+                var GroupTeacherSubject = group.TeachersSubjects.ToList();
+                List<string> GTS = new List<string>();
 
-            Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
-            Models.Teachers.Subject subj_buf = new Models.Teachers.Subject();
-            
-            foreach (var c in groupTeacherSubject)
-            {               
-                teacher_buf = db.Teachers.Find(c.TeacherId);
-                subj_buf = db.Subjects.Find(c.SubjectId);
-                GTS.Add(teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
+                Models.Teachers.Subject subj_buf = new Models.Teachers.Subject();
+
+                foreach (var c in GroupTeacherSubject)
+                {
+                    if (c.TeacherId != null)
+                    {
+                        teacher_buf = db.Teachers.Find(c.TeacherId);
+                        subj_buf = db.Subjects.Find(c.SubjectId);
+                        GTS.Add(teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                    }
+                }
+                ViewBag.Teachers = GTS;
+                ViewBag.CountStudents = group.Users.Count();
+                return View(group);
             }
-            ViewBag.Teachers = GTS;
-            ViewBag.CountStudents = group.Users.Count();
-            return View(group);
         }
 
         // GET: Group/Create
@@ -67,85 +75,89 @@ namespace AvaluateTheTeacher1.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult Create([Bind(Include = "GroupId,Name")] Group group)
         {
-            if (ModelState.IsValid)
+            using (var db = new ApplicationDbContext())
             {
-                db.Groups.Add(group);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                if (ModelState.IsValid)
+                {
+                    db.Groups.Add(group);
+                    db.SaveChanges();
+                    return RedirectToRoute("GroupsList");
+                }
 
-            return View(group);
+                return View(group);
+            }
         }
 
         // GET: Group/Edit/5
         [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var search = db.TeacherSubject.Where(x => x.TeacherId == null);
-            foreach (var del in search.ToList())
-                db.TeacherSubject.Remove(del);
-            Group group = db.Groups.Find(id);
-
-            if (group == null)
-            {
-                return HttpNotFound();
-            }
-            var GroupTeacherSubject = group.TeachersSubjects.ToList();
-            var TeacherSubject = db.TeacherSubject.ToList();
-
-            var dictionaryTSTrue = new Dictionary<int, string>();                // Викладач і предмет, які вже зареєстровані в групі
-            var dictionaryTSFalse = new Dictionary<int, string>();               // які не зареєстровані в групі
-
-            //Якщо у групі немає зареєстрованих викладачів та пердметів
-            //Додаємо у словник весь перелік викладачів та предметів
-            Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
-            Models.Teachers.Subject subj_buf = new Models.Teachers.Subject();
-            if (GroupTeacherSubject.Count == 0)
-            {
-
-                foreach (var c in TeacherSubject)
+                if (id == null)
                 {
-                    teacher_buf = db.Teachers.Find(c.TeacherId);
-                    subj_buf = db.Subjects.Find(c.SubjectId);
-                    dictionaryTSFalse.Add(c.Id, teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                 }
-            }
+                var search = dbList.TeacherSubject.Where(x => x.TeacherId == null);
+                foreach (var del in search.ToList())
+                    dbList.TeacherSubject.Remove(del);
 
-            //В іншому випадку - розділяємо їх на два словники
-            else
-            {
-                foreach (var GTS in GroupTeacherSubject)
-                {                    
-                    teacher_buf = db.Teachers.Find(GTS.TeacherId);
-                    subj_buf = db.Subjects.Find(GTS.SubjectId);
-                    dictionaryTSTrue.Add(GTS.Id, teacher_buf.LastName.ToString() + " " + teacher_buf.Name.ToString() + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name.ToString());
-                }
+                Group group = dbList.Groups.Find(id);
 
-                foreach (var GTS in TeacherSubject)
+                if (group == null)
                 {
-                    if (dictionaryTSTrue.Any(m => m.Key == GTS.Id) == false && GTS.TeacherId != null)
+                    return HttpNotFound();
+                }
+                var GroupTeacherSubject = group.TeachersSubjects.ToList();
+                var TeacherSubject = dbList.TeacherSubject.ToList();
+
+                var dictionaryTSTrue = new Dictionary<int, string>();                // Викладач і предмет, які вже зареєстровані в групі
+                var dictionaryTSFalse = new Dictionary<int, string>();               // які не зареєстровані в групі
+
+                //Якщо у групі немає зареєстрованих викладачів та пердметів
+                //Додаємо у словник весь перелік викладачів та предметів
+                Models.Teachers.Teacher teacher_buf = new Models.Teachers.Teacher();
+                Models.Teachers.Subject subj_buf = new Models.Teachers.Subject();
+                if (GroupTeacherSubject.Count == 0)
+                {
+
+                    foreach (var c in TeacherSubject)
                     {
-                        teacher_buf = db.Teachers.Find(GTS.TeacherId);
-                        subj_buf = db.Subjects.Find(GTS.SubjectId);
-                        dictionaryTSFalse.Add(GTS.Id, teacher_buf.LastName + " " + teacher_buf.Name + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name);
+                        teacher_buf = dbList.Teachers.Find(c.TeacherId);
+                        subj_buf = dbList.Subjects.Find(c.SubjectId);
+                        dictionaryTSFalse.Add(c.Id, teacher_buf.SurName + " " + teacher_buf.Name + " " + teacher_buf.LastName.ToString() + " / " + subj_buf.Name);
                     }
                 }
-            }
 
-            var dictionaryTS = new Dictionary<bool, Dictionary<int, string>>();
-            dictionaryTS.Add(true, dictionaryTSTrue);
-            dictionaryTS.Add(false, dictionaryTSFalse);
+                //В іншому випадку - розділяємо їх на два словники
+                else
+                {
+                    foreach (var GTS in GroupTeacherSubject)
+                    {
+                        if (GTS.TeacherId != null)
+                        {
+                            teacher_buf = dbList.Teachers.Find(GTS.TeacherId);
+                            subj_buf = dbList.Subjects.Find(GTS.SubjectId);
+                            dictionaryTSTrue.Add(GTS.Id, teacher_buf.LastName.ToString() + " " + teacher_buf.Name.ToString() + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name.ToString());
+                        }
+                    }
 
-            UpdateGroupViewModel groupView = new UpdateGroupViewModel();
-            groupView.Id = group.GroupId;
-            groupView.Name = group.Name;
-            groupView.TeacheSubjectForGroup = dictionaryTS;
+                    foreach (var GTS in TeacherSubject)
+                    {
+                        if (dictionaryTSTrue.Any(m => m.Key == GTS.Id) == false && GTS.TeacherId != null)
+                        {
+                            teacher_buf = dbList.Teachers.Find(GTS.TeacherId);
+                            subj_buf = dbList.Subjects.Find(GTS.SubjectId);
+                            dictionaryTSFalse.Add(GTS.Id, teacher_buf.LastName + " " + teacher_buf.Name + " " + teacher_buf.SurName.ToString() + " / " + subj_buf.Name);
+                        }
+                    }
+                }
 
-            return View(groupView);
+                var dictionaryTS = new Dictionary<bool, Dictionary<int, string>>();
+                dictionaryTS.Add(true, dictionaryTSTrue);
+                dictionaryTS.Add(false, dictionaryTSFalse);
+                ViewBag.DictionaryTS = dictionaryTS;
+
+                return View(group);
+            
         }
 
         // POST: Group/Edit/5
@@ -154,43 +166,46 @@ namespace AvaluateTheTeacher1.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "admin")]
-        public ActionResult Edit(UpdateGroupViewModel group, int[] TeachersSubjects)
+        public ActionResult Edit([Bind(Include = "GroupId,Name")] Group group, int[] TeachersSubjects)
         {
-            if (ModelState.IsValid)
-            {
-                Group newgroup = db.Groups.Find(group.Id);
-                newgroup.Name = group.Name;
-
-                newgroup.TeachersSubjects.Clear();
-                if (TeachersSubjects != null)
+                if (ModelState.IsValid)
                 {
-                    foreach (var c in db.TeacherSubject.Where(co => TeachersSubjects.Contains(co.Id)))
-                    {
-                        newgroup.TeachersSubjects.Add(c);
-                    }
-                }
+                    Group newgroup = dbList.Groups.Find(group.GroupId);
+                    newgroup.Name = group.Name;
 
-                db.Entry(newgroup).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(group);
+                    newgroup.TeachersSubjects.Clear();
+                    if (TeachersSubjects != null)
+                    {
+                        foreach (var c in dbList.TeacherSubject.Where(co => TeachersSubjects.Contains(co.Id)))
+                        {
+                            newgroup.TeachersSubjects.Add(c);
+                        }
+                    }
+
+                    dbList.Entry(newgroup).State = EntityState.Modified;
+                    dbList.SaveChanges();
+                    return RedirectToRoute("GroupsList");
+                }
+                return View(group);
         }
 
         // GET: Group/Delete/5
         [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            using (var db = new ApplicationDbContext())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Group group = db.Groups.Find(id);
+                if (group == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(group);
             }
-            Group group = db.Groups.Find(id);
-            if (group == null)
-            {
-                return HttpNotFound();
-            }
-            return View(group);
         }
 
         // POST: Group/Delete/5
@@ -199,17 +214,19 @@ namespace AvaluateTheTeacher1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Group group = db.Groups.Find(id);
-            db.Groups.Remove(group);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            using (var db = new ApplicationDbContext())
+            {
+                Group group = db.Groups.Find(id);
+                db.Groups.Remove(group);
+                db.SaveChanges();
+                return RedirectToRoute("GroupsList");
+            }
         }
-       
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                dbList.Dispose();
             }
             base.Dispose(disposing);
         }

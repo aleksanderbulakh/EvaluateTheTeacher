@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AvaluateTheTeacher1.CodeReview.ViewModels
 {
@@ -8,6 +9,8 @@ namespace AvaluateTheTeacher1.CodeReview.ViewModels
         public string teacherName { get; set; }
         public string pathToPhoto { get; set; }
         public string SubjectName { get; set; }
+
+        public List<int> TeacherNotVote { get; set; }
 
         [Required(ErrorMessage = "Виберіть значення.")]
         [Range(1, 10, ErrorMessage = "Виберіть значення.")]

@@ -10,15 +10,16 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class AddingStudentController : AccountController
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        ApplicationDbContext dbList = new ApplicationDbContext();
         // GET: /Account/Register
         [Authorize(Roles = "admin")]
         public ActionResult AddNewStudent()
         {
-            var studentModel = new AddNewStudentViewModel();
-            studentModel.Groups = new SelectList(db.Groups, "GroupId", "Name", 1);
-                        
-            return View(studentModel);
+                var studentModel = new AddNewStudentViewModel();
+                studentModel.Groups = new SelectList(dbList.Groups, "GroupId", "Name", 1);
+
+                return View(studentModel);
+            
         }
 
         //
@@ -42,13 +43,21 @@ namespace AvaluateTheTeacher1.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Подтверждение учетной записи", "Подтвердите вашу учетную запись, щелкнув <a href=\"" + callbackUrl + "\">здесь</a>");
 
-                    return RedirectToAction("ListOfUsers", "Admin");
+                    return RedirectToRoute("ListOfUsers");
                 }
                 AddErrors(result);
             }
 
             // Появление этого сообщения означает наличие ошибки; повторное отображение формы
-            return RedirectToAction("Index", "Home");
+            return RedirectToRoute("HomePage");
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                dbList.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

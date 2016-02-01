@@ -15,8 +15,7 @@ namespace AvaluateTheTeacher1.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
-        ApplicationDbContext db = new ApplicationDbContext();
+        
 
         public ManageController()
         {
@@ -278,7 +277,7 @@ namespace AvaluateTheTeacher1.Controllers
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
-                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+                return RedirectToRoute("Manage", new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);
             return View(model);

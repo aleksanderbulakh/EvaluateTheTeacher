@@ -12,6 +12,7 @@ namespace AvaluateTheTeacher1.Models.Students
         public DateTime From { get; set; }
         public DateTime To { get; set; }
         public bool IsVote { get; set; }
+        public int SemesterId { get; set; }
 
         public virtual ICollection<Subject> Subjects { get; set; }
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }

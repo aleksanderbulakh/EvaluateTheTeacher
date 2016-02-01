@@ -10,10 +10,9 @@ namespace AvaluateTheTeacher1.Controllers
 {
     public class AddingGroupController : AccountController
     {
-        public ApplicationDbContext db = new ApplicationDbContext();
-
+        ApplicationDbContext db = new ApplicationDbContext();
         // GET: AddingGroup
-        [Authorize(Roles ="admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult AddNewGroup()
         {
             return View();
@@ -24,36 +23,40 @@ namespace AvaluateTheTeacher1.Controllers
         [ValidateAntiForgeryToken]
         public async System.Threading.Tasks.Task<ActionResult> AddNewGroup(AddNewGroupViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var group = new Models.Students.Group();
-                group.Name = model.GroupName;
-                db.Groups.Add(group);
-                db.SaveChanges();
-                               
-               
-                for (int index = 0; index < model.CountOfStudent; index++)
+                if (ModelState.IsValid)
                 {
-                    string password = Membership.GeneratePassword(15, 6);
-                    var student = new ApplicationUser { UserName = model.GroupName + "_" + index, GroupId = group.GroupId, PasswordTxt = password };                    
-                    var result = await UserManager.CreateAsync(student, password);
-                    if (result.Succeeded)
+                    var group = new Models.Students.Group();
+                    group.Name = model.GroupName;
+                    db.Groups.Add(group);
+                    db.SaveChanges();
+
+
+                    for (int index = 0; index < model.CountOfStudent; index++)
                     {
-                       
-                        await UserManager.AddToRoleAsync(student.Id, "student");
-                                               
+                        string password = Membership.GeneratePassword(15, 6);
+                        var student = new ApplicationUser { UserName = model.GroupName + "_" + index, GroupId = group.GroupId, PasswordTxt = password };
+                        var result = await UserManager.CreateAsync(student, password);
+                        if (result.Succeeded)
+                        {
+
+                            await UserManager.AddToRoleAsync(student.Id, "student");
+
+                        }
+                        AddErrors(result);
                     }
-                    AddErrors(result);                   
-                    
-
+                    return RedirectToRoute("GroupsList");
                 }
-                return RedirectToAction("Index", "Group");
+                return View(model);
+            
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
             }
-
-
-            return View(model);
+            base.Dispose(disposing);
         }
 
-                
     }
 }

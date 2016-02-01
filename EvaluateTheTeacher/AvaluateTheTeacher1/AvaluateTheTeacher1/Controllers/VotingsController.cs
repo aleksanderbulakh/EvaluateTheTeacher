@@ -15,12 +15,12 @@ namespace AvaluateTheTeacher1.Controllers
             var studentData = await UserManager.FindByNameAsync(User.Identity.Name);
 
             if (votingControle.CheckVote(int.Parse(id.ToString()), studentData))
-                return RedirectToAction("TimeOut");
+                return RedirectToRoute("VoteAccepted");
 
             if (id == null)
                 return HttpNotFound();
 
-            var info = votingControle.Voiting(int.Parse(id.ToString()));
+            var info = votingControle.Voiting(int.Parse(id.ToString()), studentData.GroupId, studentData.Id);
             return View(info);
         }
 
@@ -46,7 +46,7 @@ namespace AvaluateTheTeacher1.Controllers
             return RedirectToAction("VoitingMain", "Raiting");
         }
 
-        public ActionResult TimeOut()
+        public ActionResult VoteAccepted()
         {
             return View();
         }

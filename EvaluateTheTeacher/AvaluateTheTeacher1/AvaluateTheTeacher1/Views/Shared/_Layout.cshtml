@@ -35,16 +35,16 @@
     <header>
         @Html.Partial("_LoginPartial")
         <div class="menu">
-            <a href="/">Головна</a>
-            @Html.ActionLink("Рейтинг", "ListOfTeachers", "ListOfTeachers")
-            @*@if (!User.IsInRole("admin")||)
+            @Html.RouteLink("Головна", "HomePage")
+            @Html.RouteLink("Рейтинг", "ListOfTeachers", new { id = 0 })
+            @if (!User.IsInRole("admin"))
             {
                 if (User.IsInRole("student"))
                 {
-                    @Html.ActionLink("Голосування", "VoitingMain", "Raiting")
+                    @Html.RouteLink("Голосування", "Raiting")
                 }
-            }*@
-            @Html.ActionLink("Дошка відзнаки", "Dashboard", "Teachers")
+            }
+            @Html.RouteLink("Дошка відзнаки", "Dashboard")
         </div>
     </header>
     @RenderBody()
