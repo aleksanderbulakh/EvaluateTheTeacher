@@ -1,4 +1,4 @@
-﻿@model AvaluateTheTeacher1.Models.Teachers.Subject
+﻿@model AvaluateTheTeacher1.CodeReview.ViewModels.SubjectDetailsViewModel
 
 @{
     ViewBag.Title = "Предмет "+Model.Name+" - Оціни викладача";
@@ -13,11 +13,11 @@
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.Cathedra.NameCathedra)
+                @Html.DisplayNameFor(model => model.Cathedra)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Cathedra.NameCathedra)
+                @Html.DisplayFor(model => model.Cathedra)
             </dd>
 
             <dt>
@@ -28,10 +28,15 @@
                 @Html.DisplayFor(model => model.Name)
             </dd>
 
+            <dt>Семестри</dt>
+
+            @foreach (var item in Model.Semesters)
+            {
+                <dd>з @item.From.ToShortDateString() по @item.To.ToShortDateString()</dd>
+            }
         </dl>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
+    <p>        
+        @Html.RouteLink("Назад", "SubjectsList")
     </p>
 </content>

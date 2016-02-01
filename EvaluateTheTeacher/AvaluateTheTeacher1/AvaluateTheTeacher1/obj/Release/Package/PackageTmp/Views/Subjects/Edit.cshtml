@@ -1,4 +1,4 @@
-﻿@model AvaluateTheTeacher1.Models.Teachers.Subject
+﻿@model AvaluateTheTeacher1.CodeReview.ViewModels.SubjectEditViewModel
 
 @{
     ViewBag.Title = "Предмет " + Model.Name + " - Оціни викладача";
@@ -37,6 +37,18 @@
             </div>
 
             <div class="form-group">
+                Семестри
+                @Html.ValidationMessageFor(model => model.Semesters, "", new { @class = "text-danger" })
+                @foreach (var k in Model.Semesters)
+                {
+                    <div class="form-control">
+                        <input type="checkbox" id="semester+@k.Id" name="Semesters" value="@k.Id" @(k.IsChange ? "checked=\"checked\"" : "") />
+                        <label for="semester+@k.Id">з @k.From.ToShortDateString() по @k.To.ToShortDateString()</label>
+                    </div>
+                }
+            </div>
+
+            <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Save" class="btn btn-default" />
                 </div>
@@ -45,7 +57,7 @@
     }
 
     <div>
-        @Html.ActionLink("Back to List", "Index")
+        @Html.RouteLink("Назад", "SubjectsList")
     </div>
 
     @section Scripts {

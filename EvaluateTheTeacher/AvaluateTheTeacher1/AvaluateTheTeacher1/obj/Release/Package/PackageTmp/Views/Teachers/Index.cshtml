@@ -10,7 +10,7 @@
     <h2>Список викладачів</h2>
 
     <p>
-        @Html.ActionLink("Додати викладача", "AddNewTeacher", "AddingTeacher")
+        @Html.RouteLink("Додати викладача", "AddNewTeacher")
     </p>
     <table class="table">
         <tr>
@@ -47,8 +47,8 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Редагувати", "Edit", new { id = item.TeacherId }) |
-                    @Html.ActionLink("Видалити", "Delete", new { id = item.TeacherId })
+                    @Html.RouteLink("Редагувати", "EditTeacher", new { id = item.TeacherId }) |
+                    @Html.RouteLink("Видалити", "DeleteTeacher", new { id = item.TeacherId })
                 </td>
             </tr>
         }

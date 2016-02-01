@@ -9,12 +9,12 @@
         <hr /><h1>@ViewBag.Title</h1>
     </div>
     <div class="admin_menu">
-        @Html.ActionLink("Додавання студента", "AddNewStudent", "AddingStudent", routeValues: null, htmlAttributes: new { title = "" })
-        @Html.ActionLink("Список студентів", "ListOfUsers", "Admin", routeValues: null, htmlAttributes: new { title = "" })
-        @Html.ActionLink("Групи студентів", "Index", "Group", routeValues: null, htmlAttributes: new { title = "" })
-        @Html.ActionLink("Викладачі", "Index", "Teachers", routeValues: null, htmlAttributes: new { title = "" })
-        @Html.ActionLink("Предмети", "Index", "Subjects", routeValues: null, htmlAttributes: new { title = "" })
-        @Html.ActionLink("Налаштування", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Додавання студента", "AddNewStudent", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Список студентів", "ListOfUsers", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Групи студентів", "GroupsList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Викладачі", "TeachersList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Предмети", "SubjectsList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Налаштування", "Manage", routeValues: null, htmlAttributes: new { title = "" })
     </div>
     
 </content>

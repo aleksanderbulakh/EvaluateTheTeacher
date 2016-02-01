@@ -9,7 +9,7 @@
     <h2>Виберіть дію</h2>
 
     <p>
-        @Html.ActionLink("Додати нову групу", "AddNewGroup", "AddingGroup")
+        @Html.RouteLink("Додати нову групу", "CreateGroups")
     </p>
     <table class="table">
         <tr>
@@ -26,9 +26,9 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Редагувати", "Edit", new { id = item.GroupId }) |
-                    @Html.ActionLink("Детальніше", "Details", new { id = item.GroupId }) |
-                    @Html.ActionLink("Видалити", "Delete", new { id = item.GroupId })
+                    @Html.RouteLink("Редагувати", "EditGroups", new { id = item.GroupId }) |
+                    @Html.RouteLink("Детальніше", "DetailsGroups", new { id = item.GroupId }) |
+                    @Html.RouteLink("Видалити", "DeleteGroups", new { id = item.GroupId })
                 </td>
             </tr>
         }
