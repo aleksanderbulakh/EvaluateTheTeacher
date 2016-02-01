@@ -23,14 +23,14 @@ namespace AvaluateTheTeacher1
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        //protected void Application_Error(object sender, System.EventArgs e)
-        //{
-        //    var errorHandel = new MvcApplicationErrorHandler(application: this, exception: this.Server.GetLastError())
-        //    {
-        //        EnableHttpReturnCodes = true,
-        //        PassThroughHttp401 = false
-        //    };
-        //    errorHandel.Execute();
-        //}
+        protected void Application_Error(object sender, System.EventArgs e)
+        {
+            var errorHandel = new MvcApplicationErrorHandler(application: this, exception: this.Server.GetLastError())
+            {
+                EnableHttpReturnCodes = true,
+                PassThroughHttp401 = false
+            };
+            errorHandel.Execute();
+        }
     }
 }
