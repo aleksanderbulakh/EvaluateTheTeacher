@@ -1,0 +1,80 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.MoreInfoForTeacher
+@{ 
+    ViewBag.Title = Model.LastName+" "+Model.Name+" "+Model.SurName+" - Оціни викладача";
+}
+<title>@ViewBag.Title</title>
+<content>
+    <div class="title">
+        <hr><h1>@Model.LastName @Model.Name @Model.SurName</h1>
+    </div>
+    <div class="more-img">
+        <img src="~/TeacherImg/@Model.PathToPhoto" />
+    </div>
+    <table class="more-theacher">
+        <tr>
+            <td>Загальна оцінка курсів, які веде викладач:</td>
+            <td width="20%">@Model.OverallSubject</td>
+        </tr>
+
+
+        <tr>
+            <td>Практична цінність курсів:</td>
+            <td>@Model.ThePracticalValue</td>
+        </tr>
+
+        <tr>
+            <td>Рівень обізнаності викладача матеріалом, який він викладає: </td>
+            <td>@Model.DepthPossessionOf</td>
+        </tr>
+
+        <tr>
+            <td>Ясність та доступність викладення матеріалу: </td>
+            <td>@Model.ClarityAndAccessibility</td>
+        </tr>
+
+        <tr>
+            <td>Якість навчальних матеріалів: </td>
+            <td>@Model.QualityTeachingMaterials</td>
+        </tr>
+
+        <tr>
+            <td>Наскільки викладач може зацікавити своїми предметами:</td>
+            <td>@Model.InterestInTheSubject</td>
+        </tr>
+
+        <tr>
+            <td>Відвідуваність студентами пар викладача:</td>
+            <td>@(Model.NumberOfAttendance*10)%</td>
+        </tr>
+
+        <tr>
+            <td>Активність студентів на заняттях:</td>
+            <td>@Model.ActivityInClass</td>
+        </tr>
+
+        <tr>
+            <td>Складність матеріалу для студентів:</td>
+            <td>@Model.TheDifficultyOfTheCourse</td>
+        </tr>
+
+        <tr>
+            <td>Доступність викладача поза заняттями:</td>
+            <td>@Model.AvailabilityTeacherOutsideLessons</td>
+        </tr>
+
+        <tr>
+            <td>Неупередженість викладача:</td>
+            <td>@Model.RelevantToStudents</td>
+        </tr>
+
+        <tr>
+            <td>Процедура оцінювання:</td>
+            <td>@Model.HowWellTheProcedurePerformedGrading</td>
+        </tr>
+        <tr>
+            <th>Count</th>
+            <td>@Model.CountRaitingVoting</td>
+        </tr>
+
+    </table>
+</content>

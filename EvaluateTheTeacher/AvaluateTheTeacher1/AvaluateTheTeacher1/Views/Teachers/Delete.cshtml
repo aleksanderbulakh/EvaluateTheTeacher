@@ -1,0 +1,63 @@
+﻿@model AvaluateTheTeacher1.Models.Teachers.Teacher
+
+@{
+    ViewBag.Title =Model.LastName + " " + Model.Name + " " + Model.SurName + " - Оціни викладача";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@ViewBag.Title</title>
+<content>
+    <h2>Видалити</h2>
+
+    <h3>Ви впевнені що хочете видалити цього викладача?</h3>
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Cathedra.NameCathedra)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cathedra.NameCathedra)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SurName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SurName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.RouteLink("Назад", "TeachersList")
+            </div>
+        }
+    </div>
+</content>

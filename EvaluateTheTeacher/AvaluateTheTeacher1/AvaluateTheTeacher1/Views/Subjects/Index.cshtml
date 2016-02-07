@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AvaluateTheTeacher1.Models.Teachers.Subject>
+
+@{
+    ViewBag.Title = "Список предметів - Оціни викладача";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@ViewBag.Title</title>
+<content>
+    <p>
+        @Html.RouteLink("Новий предмет", "CreateSubjects")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cathedra.NameCathedra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cathedra.NameCathedra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.RouteLink("Редагувати", "EditSubjects", new { id = item.Id }) |
+                    @Html.RouteLink("Деталі", "DetailsSubjects", new { id = item.Id }) |
+                    @Html.RouteLink("Видалити", "DeleteSubjects", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</content>

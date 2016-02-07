@@ -1,0 +1,39 @@
+﻿@model AvaluateTheTeacher1.Models.IndexViewModel
+@{
+    ViewBag.Title = "Профіль - Оціни викладача";
+}
+<title>@ViewBag.Title</title>
+<content>
+    <div class="title">
+        <hr /><h1>@ViewBag.Title</h1>
+    </div>
+    <p class="text-success">@ViewBag.StatusMessage</p>
+    <div>
+        <h4>Зміна параметрів облікового запису</h4>
+        <img style="width: 300px;margin-left: 40px;"/>
+        <dl class="dl-horizontal">
+            <dt>Пароль:</dt>
+            <dd>
+
+                @if (Model.HasPassword)
+            {
+                    @Html.RouteLink("Змінити", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Створити", "SetPassword")
+                }
+
+            </dd>
+            <!--<dt>Електронна адреса:</dt>
+            <dd>
+                Html.ActionLink("Прикріпити", "AddEmail", "Manage")
+            </dd>-->
+
+            <dt>Логін:</dt>
+            <dd>
+                @Html.RouteLink("Змінити", "ChangeLogin")
+            </dd>
+        </dl>
+    </div>
+</content>

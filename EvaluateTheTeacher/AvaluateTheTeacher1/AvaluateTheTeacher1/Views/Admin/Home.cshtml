@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Адміністрація сайту - Оціни викладача";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@ViewBag.Title</title>
+<content>
+    <div class="title">
+        <hr /><h1>@ViewBag.Title</h1>
+    </div>
+    <div class="admin_menu">
+        @Html.RouteLink("Додавання студента", "AddNewStudent", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Список студентів", "ListOfUsers", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Групи студентів", "GroupsList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Викладачі", "TeachersList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Предмети", "SubjectsList", routeValues: null, htmlAttributes: new { title = "" })
+        @Html.RouteLink("Налаштування", "Manage", routeValues: null, htmlAttributes: new { title = "" })
+    </div>
+    
+</content>
+
