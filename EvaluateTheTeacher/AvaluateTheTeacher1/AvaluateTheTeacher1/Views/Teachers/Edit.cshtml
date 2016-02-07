@@ -77,10 +77,12 @@
             {
                 foreach (var k1 in k.Value)
                 {
+                    if (k1.Value.Count == 0) { continue; }
+                    <h6>семестр @k1.Key</h6>
                     foreach (var k2 in k1.Value)
                     {
                         <input type="checkbox" name="selectedSubjects" value="@k1.Key@k2.Key"
-                               @(k.Key ? "checked=\"checked\"" : "") />@:семестр @k1.Key Назва предмету: @k2.Value <br />
+                               @(k.Key ? "checked=\"checked\"" : "") />@:Назва предмету: @k2.Value <br />
                     }
                 }
             }

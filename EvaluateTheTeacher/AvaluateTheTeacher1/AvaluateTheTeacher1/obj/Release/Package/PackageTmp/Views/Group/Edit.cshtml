@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Група " + Model.Name + " - Оціни викладача";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var dict = new Dictionary<bool, Dictionary<int, Dictionary<int, string>>>();
 }
 
 <title>@ViewBag.Title</title>
@@ -29,18 +30,20 @@
             </div>
 
             <div class="editor-label"><b>Предмети</b></div>
+             
             @foreach (var k in ViewBag.DictionaryTS)
             {
                 foreach (var k1 in k.Value)
                 {
-                    <input type="checkbox" name="TeachersSubjects" value="@k1.Key"
-                           @(k.Key ? "checked=\"checked\"" : "") />@k1.Value <br />
+                    if(k1.Value.Count == 0) { continue; }
+                    <h6>Семестр @k1.Key</h6>
+                    foreach (var k2 in k1.Value)
+                    {
+                        <input type="checkbox" name="TeachersSubjects" value="@k2.Key"
+                           @(k.Key ? "checked=\"checked\"" : "") />@k2.Value <br />
+                    }
                 }
             }
-
-
-
-
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Save" class="btn btn-default" />

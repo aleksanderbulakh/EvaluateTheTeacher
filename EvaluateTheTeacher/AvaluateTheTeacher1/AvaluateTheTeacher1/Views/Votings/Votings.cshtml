@@ -32,11 +32,11 @@
                 {
                     if (i != 0)
                     {
-                        <a href="/Votings/Votings/@Model.TeacherNotVote[i - 1]" class="btn btn-default mobile-submit">&larr; Попередній викладач</a>
+                        <a href=@Url.RouteUrl("Votings", new { id = Model.TeacherNotVote[i - 1] }) class="btn btn-default mobile-submit">&larr; Попередній викладач</a>
                     }
                     if (i != Model.TeacherNotVote.Count - 1)
                     {
-                        <a href="/Votings/Votings/@Model.TeacherNotVote[i + 1]" class="btn btn-default mobile-submit">Наступний викладач &rarr;</a>
+                        <a href=@Url.RouteUrl("Votings", new { id = Model.TeacherNotVote[i + 1] }) class="btn btn-default mobile-submit">Наступний викладач &rarr;</a>
                     }
                     break;
                 }
